@@ -9,15 +9,15 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	db "github.com/tendermint/tm-db"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/swapstrategy"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types/genesis"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/swapstrategy"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
 )
 
 // initOrUpdateTick retrieves the tickInfo from the specified tickIndex and updates both the liquidityNet and LiquidityGross.

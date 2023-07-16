@@ -8,24 +8,24 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/msgservice"
 
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&Pool{}, "osmosis/cl-pool", nil)
-	cdc.RegisterConcrete(&MsgCreateConcentratedPool{}, "osmosis/cl-create-pool", nil)
+	cdc.RegisterConcrete(&Pool{}, "percosis/cl-pool", nil)
+	cdc.RegisterConcrete(&MsgCreateConcentratedPool{}, "percosis/cl-create-pool", nil)
 }
 
 func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {
 	registry.RegisterInterface(
-		"osmosis.swaprouter.v1beta1.PoolI",
+		"percosis.swaprouter.v1beta1.PoolI",
 		(*poolmanagertypes.PoolI)(nil),
 		&Pool{},
 	)
 
 	registry.RegisterInterface(
-		"osmosis.concentratedliquidity.v1beta1.ConcentratedPoolExtension",
+		"percosis.concentratedliquidity.v1beta1.ConcentratedPoolExtension",
 		(*types.ConcentratedPoolExtension)(nil),
 		&Pool{},
 	)

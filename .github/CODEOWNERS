@@ -15,9 +15,9 @@ x/twap/ @nicolaslara @p0mvn
 x/txfees/ @nicolaslara @p0mvn
 x/valset-pref/ @mattverse @stackman27
 
-/.github/ @osmosis-labs/devops
-Dockerfile @osmosis-labs/devops
-.dockerignore @osmosis-labs/devops
-Makefile @osmosis-labs/devops
-/tests/localosmosis/ @osmosis-labs/devops
-/tests/localrelayer/ @osmosis-labs/devops
+/.github/ @percosis-labs/devops
+Dockerfile @percosis-labs/devops
+.dockerignore @percosis-labs/devops
+Makefile @percosis-labs/devops
+/tests/localpercosis/ @percosis-labs/devops
+/tests/localrelayer/ @percosis-labs/devops

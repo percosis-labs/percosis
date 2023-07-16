@@ -6,13 +6,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 const (

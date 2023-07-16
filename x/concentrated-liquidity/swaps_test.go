@@ -6,13 +6,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	clmath "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	clmath "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 var _ = suite.TestingSuite(nil)
@@ -3092,7 +3092,7 @@ func (s *KeeperTestSuite) inverseRelationshipInvariants(firstTokenIn, firstToken
 
 	// Assure that user balance now as it was before both swaps.
 	// TODO: Come back to this choice after deciding if we are using BigDec for swaps
-	// https://github.com/osmosis-labs/osmosis/issues/4475
+	// https://github.com/percosis-labs/percosis/issues/4475
 	userBalanceAfterSwap := s.App.BankKeeper.GetAllBalances(s.Ctx, s.TestAccs[0])
 	poolBalanceAfterSwap := s.App.BankKeeper.GetAllBalances(s.Ctx, poolBefore.GetAddress())
 	for _, coin := range userBalanceBeforeSwap {

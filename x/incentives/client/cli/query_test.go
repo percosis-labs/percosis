@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	"github.com/osmosis-labs/osmosis/v16/x/incentives/types"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/v16/x/incentives/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
@@ -39,55 +39,55 @@ func (s *QueryTestSuite) TestQueriesNeverAlterState() {
 	}{
 		{
 			"Query active gauges",
-			"/osmosis.incentives.Query/ActiveGauges",
+			"/percosis.incentives.Query/ActiveGauges",
 			&types.ActiveGaugesRequest{},
 			&types.ActiveGaugesResponse{},
 		},
 		{
 			"Query active gauges per denom",
-			"/osmosis.incentives.Query/ActiveGaugesPerDenom",
+			"/percosis.incentives.Query/ActiveGaugesPerDenom",
 			&types.ActiveGaugesPerDenomRequest{Denom: "stake"},
 			&types.ActiveGaugesPerDenomResponse{},
 		},
 		{
 			"Query gauge by id",
-			"/osmosis.incentives.Query/GaugeByID",
+			"/percosis.incentives.Query/GaugeByID",
 			&types.GaugeByIDRequest{Id: 1},
 			&types.GaugeByIDResponse{},
 		},
 		{
 			"Query all gauges",
-			"/osmosis.incentives.Query/Gauges",
+			"/percosis.incentives.Query/Gauges",
 			&types.GaugesRequest{},
 			&types.GaugesResponse{},
 		},
 		{
 			"Query lockable durations",
-			"/osmosis.incentives.Query/LockableDurations",
+			"/percosis.incentives.Query/LockableDurations",
 			&types.QueryLockableDurationsRequest{},
 			&types.QueryLockableDurationsResponse{},
 		},
 		{
 			"Query module to distibute coins",
-			"/osmosis.incentives.Query/ModuleToDistributeCoins",
+			"/percosis.incentives.Query/ModuleToDistributeCoins",
 			&types.ModuleToDistributeCoinsRequest{},
 			&types.ModuleToDistributeCoinsResponse{},
 		},
 		{
 			"Query reward estimate",
-			"/osmosis.incentives.Query/RewardsEst",
+			"/percosis.incentives.Query/RewardsEst",
 			&types.RewardsEstRequest{Owner: s.TestAccs[0].String()},
 			&types.RewardsEstResponse{},
 		},
 		{
 			"Query upcoming gauges",
-			"/osmosis.incentives.Query/UpcomingGauges",
+			"/percosis.incentives.Query/UpcomingGauges",
 			&types.UpcomingGaugesRequest{},
 			&types.UpcomingGaugesResponse{},
 		},
 		{
 			"Query upcoming gauges",
-			"/osmosis.incentives.Query/UpcomingGaugesPerDenom",
+			"/percosis.incentives.Query/UpcomingGaugesPerDenom",
 			&types.UpcomingGaugesPerDenomRequest{Denom: "stake"},
 			&types.UpcomingGaugesPerDenomResponse{},
 		},

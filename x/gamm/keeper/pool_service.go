@@ -8,15 +8,15 @@ import (
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 // CalculateSpotPrice returns the spot price of the quote asset in terms of the base asset,
 // using the specified pool.
-// E.g. if pool 1 trades 2 atom for 3 osmo, the quote asset was atom, and the base asset was osmo,
-// this would return 1.5. (Meaning that 1 atom costs 1.5 osmo)
+// E.g. if pool 1 trades 2 atom for 3 perco, the quote asset was atom, and the base asset was perco,
+// this would return 1.5. (Meaning that 1 atom costs 1.5 perco)
 //
 // This function is guaranteed to not panic, but may return an error if:
 // * An internal error within the pool occurs for calculating the spot price
@@ -121,7 +121,7 @@ func (k Keeper) InitializePool(ctx sdk.Context, pool poolmanagertypes.PoolI, sen
 // Leftover tokens that weren't LP'd (due to being at inexact ratios) remain in the sender account.
 //
 // JoinPoolNoSwap determines the maximum amount that can be LP'd without any swap,
-// by looking at the ratio of the total LP'd assets. (e.g. 2 osmo : 1 atom)
+// by looking at the ratio of the total LP'd assets. (e.g. 2 perco : 1 atom)
 // It then finds the maximal amount that can be LP'd.
 func (k Keeper) JoinPoolNoSwap(
 	ctx sdk.Context,

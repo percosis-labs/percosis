@@ -4,16 +4,16 @@ import (
 	"fmt"
 	"testing"
 
-	ibchookstypes "github.com/osmosis-labs/osmosis/x/ibc-hooks/types"
+	ibchookstypes "github.com/percosis-labs/percosis/x/ibc-hooks/types"
 
-	ibcratelimittypes "github.com/osmosis-labs/osmosis/v16/x/ibc-rate-limit/types"
+	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 	"github.com/stretchr/testify/suite"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
 )
 
 type UpgradeTestSuite struct {

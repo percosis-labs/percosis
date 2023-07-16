@@ -7,13 +7,13 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/app"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/cli"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/queryproto"
-	poolmanagertestutil "github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/testutil"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/app"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/cli"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
+	poolmanagertestutil "github.com/percosis-labs/percosis/v16/x/poolmanager/client/testutil"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/crypto/hd"
@@ -71,7 +71,7 @@ func TestIntegrationTestSuite(t *testing.T) {
 
 func TestNewSwapExactAmountOutCmd(t *testing.T) {
 	desc, _ := cli.NewSwapExactAmountOutCmd()
-	tcs := map[string]osmocli.TxCliTestCase[*types.MsgSwapExactAmountOut]{
+	tcs := map[string]percocli.TxCliTestCase[*types.MsgSwapExactAmountOut]{
 		"swap exact amount out": {
 			Cmd: "10stake 20 --swap-route-pool-ids=1 --swap-route-denoms=node0token --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgSwapExactAmountOut{
@@ -82,7 +82,7 @@ func TestNewSwapExactAmountOutCmd(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunTxTestCases(t, desc, tcs)
+	percocli.RunTxTestCases(t, desc, tcs)
 }
 
 // func (s *IntegrationTestSuite) TestGetCmdEstimateSwapExactAmountIn() {
@@ -94,7 +94,7 @@ func TestNewSwapExactAmountOutCmd(t *testing.T) {
 // 		expectErr bool
 // 	}{
 // 		{
-// 			"query pool estimate swap exact amount in", // osmosisd query poolmanager estimate-swap-exact-amount-in 1 cosmos1n8skk06h3kyh550ad9qketlfhc2l5dsdevd3hq 10.0stake --swap-route-pool-ids=1 --swap-route-denoms=node0token
+// 			"query pool estimate swap exact amount in", // percosisd query poolmanager estimate-swap-exact-amount-in 1 cosmos1n8skk06h3kyh550ad9qketlfhc2l5dsdevd3hq 10.0stake --swap-route-pool-ids=1 --swap-route-denoms=node0token
 // 			[]string{
 // 				"1",
 // 				"cosmos1n8skk06h3kyh550ad9qketlfhc2l5dsdevd3hq",
@@ -135,7 +135,7 @@ func TestNewSwapExactAmountOutCmd(t *testing.T) {
 // 		expectErr bool
 // 	}{
 // 		{
-// 			"query pool estimate swap exact amount in", // osmosisd query poolmanager estimate-swap-exact-amount-in 1 cosmos1n8skk06h3kyh550ad9qketlfhc2l5dsdevd3hq 10.0stake --swap-route-pool-ids=1 --swap-route-denoms=node0token
+// 			"query pool estimate swap exact amount in", // percosisd query poolmanager estimate-swap-exact-amount-in 1 cosmos1n8skk06h3kyh550ad9qketlfhc2l5dsdevd3hq 10.0stake --swap-route-pool-ids=1 --swap-route-denoms=node0token
 // 			[]string{
 // 				"1",
 // 				val.Address.String(),
@@ -169,7 +169,7 @@ func TestNewSwapExactAmountOutCmd(t *testing.T) {
 
 func TestNewSwapExactAmountInCmd(t *testing.T) {
 	desc, _ := cli.NewSwapExactAmountInCmd()
-	tcs := map[string]osmocli.TxCliTestCase[*types.MsgSwapExactAmountIn]{
+	tcs := map[string]percocli.TxCliTestCase[*types.MsgSwapExactAmountIn]{
 		"swap exact amount in": {
 			Cmd: "10stake 3 --swap-route-pool-ids=1 --swap-route-denoms=node0token --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgSwapExactAmountIn{
@@ -180,23 +180,23 @@ func TestNewSwapExactAmountInCmd(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunTxTestCases(t, desc, tcs)
+	percocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestGetCmdNumPools(t *testing.T) {
 	desc, _ := cli.GetCmdNumPools()
-	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.NumPoolsRequest]{
+	tcs := map[string]percocli.QueryCliTestCase[*queryproto.NumPoolsRequest]{
 		"basic test": {
 			Cmd:           "",
 			ExpectedQuery: &queryproto.NumPoolsRequest{},
 		},
 	}
-	osmocli.RunQueryTestCases(t, desc, tcs)
+	percocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEstimateSwapExactAmountIn(t *testing.T) {
 	desc, _ := cli.GetCmdEstimateSwapExactAmountIn()
-	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.EstimateSwapExactAmountInRequest]{
+	tcs := map[string]percocli.QueryCliTestCase[*queryproto.EstimateSwapExactAmountInRequest]{
 		"basic test": {
 			Cmd: "1 10stake --swap-route-pool-ids=2 --swap-route-denoms=node0token",
 			ExpectedQuery: &queryproto.EstimateSwapExactAmountInRequest{
@@ -206,12 +206,12 @@ func TestGetCmdEstimateSwapExactAmountIn(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunQueryTestCases(t, desc, tcs)
+	percocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEstimateSwapExactAmountOut(t *testing.T) {
 	desc, _ := cli.GetCmdEstimateSwapExactAmountOut()
-	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.EstimateSwapExactAmountOutRequest]{
+	tcs := map[string]percocli.QueryCliTestCase[*queryproto.EstimateSwapExactAmountOutRequest]{
 		"basic test": {
 			Cmd: "1 10stake --swap-route-pool-ids=2 --swap-route-denoms=node0token",
 			ExpectedQuery: &queryproto.EstimateSwapExactAmountOutRequest{
@@ -221,12 +221,12 @@ func TestGetCmdEstimateSwapExactAmountOut(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunQueryTestCases(t, desc, tcs)
+	percocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEstimateSinglePoolSwapExactAmountIn(t *testing.T) {
 	desc, _ := cli.GetCmdEstimateSinglePoolSwapExactAmountIn()
-	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.EstimateSinglePoolSwapExactAmountInRequest]{
+	tcs := map[string]percocli.QueryCliTestCase[*queryproto.EstimateSinglePoolSwapExactAmountInRequest]{
 		"basic test": {
 			Cmd: "1 10stake node0token",
 			ExpectedQuery: &queryproto.EstimateSinglePoolSwapExactAmountInRequest{
@@ -236,12 +236,12 @@ func TestGetCmdEstimateSinglePoolSwapExactAmountIn(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunQueryTestCases(t, desc, tcs)
+	percocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEstimateSinglePoolSwapExactAmountOut(t *testing.T) {
 	desc, _ := cli.GetCmdEstimateSinglePoolSwapExactAmountOut()
-	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.EstimateSinglePoolSwapExactAmountOutRequest]{
+	tcs := map[string]percocli.QueryCliTestCase[*queryproto.EstimateSinglePoolSwapExactAmountOutRequest]{
 		"basic test": {
 			Cmd: "1 node0token 10stake",
 			ExpectedQuery: &queryproto.EstimateSinglePoolSwapExactAmountOutRequest{
@@ -251,7 +251,7 @@ func TestGetCmdEstimateSinglePoolSwapExactAmountOut(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunQueryTestCases(t, desc, tcs)
+	percocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func (s *IntegrationTestSuite) TestNewCreatePoolCmd() {
@@ -336,7 +336,7 @@ func (s *IntegrationTestSuite) TestNewCreatePoolCmd() {
 			  "%s": "100node0token,100stake",
 			  "%s": "0.001",
 			  "%s": "0.001",
-			  "%s": "osmo1fqlr98d45v5ysqgp6h56kpujcj4cvsjnjq9nck"
+			  "%s": "perco1fqlr98d45v5ysqgp6h56kpujcj4cvsjnjq9nck"
 			}
 			`, cli.PoolFileWeights, cli.PoolFileInitialDeposit, cli.PoolFileSwapFee, cli.PoolFileExitFee, cli.PoolFileFutureGovernor),
 			false, &sdk.TxResponse{}, 0,

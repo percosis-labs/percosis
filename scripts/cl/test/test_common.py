@@ -13,7 +13,7 @@ class SDKTestVector:
         self.expected_quo_trunc = sdk_dec.new(expected_quo_trunc)
 
 # These test vectors are taken from:
-# https://github.com/osmosis-labs/cosmos-sdk/blob/5c0181df6e93b72e7dacde8e08d6a59d316c732f/types/decimal_test.go#L184
+# https://github.com/percosis-labs/cosmos-sdk/blob/5c0181df6e93b72e7dacde8e08d6a59d316c732f/types/decimal_test.go#L184
 sdk_test_vectors = [
     SDKTestVector("0", "0", "0", "0", "0", "0"),
     SDKTestVector("1", "0", "0", "0", "0", "0"),

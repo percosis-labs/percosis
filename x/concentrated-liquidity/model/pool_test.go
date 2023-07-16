@@ -9,12 +9,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	clmath "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	clmath "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 const (
@@ -76,7 +76,7 @@ func (s *ConcentratedPoolTestSuite) TestGetAddress() {
 
 			// if the test case is expected to panic, we use wrong bech32 encoded address instead
 			if tc.expectedPanic {
-				address = "osmo15l7yueqf3tx4cvpt6njvj7zxmvuhkwyrr509e9"
+				address = "perco15l7yueqf3tx4cvpt6njvj7zxmvuhkwyrr509e9"
 			}
 			mock_pool := model.Pool{
 				Id:      1,
@@ -118,7 +118,7 @@ func (s *ConcentratedPoolTestSuite) TestGetIncentivesAddress() {
 
 			// if the test case is expected to panic, we use wrong bech32 encoded address instead
 			if tc.expectedPanic {
-				address = "osmo15l7yueqf3tx4cvpt6njvj7zxmvuhkwyrr509e9"
+				address = "perco15l7yueqf3tx4cvpt6njvj7zxmvuhkwyrr509e9"
 			}
 			mock_pool := model.Pool{
 				Id:                1,
@@ -141,7 +141,7 @@ func (s *ConcentratedPoolTestSuite) TestString() {
 	pool, err := model.NewConcentratedLiquidityPool(1, "foo", "bar", DefaultTickSpacing, DefaultSpreadFactor)
 	s.Require().NoError(err)
 	poolString := pool.String()
-	s.Require().Equal(poolString, "{\"address\":\"osmo19e2mf7cywkv7zaug6nk5f87d07fxrdgrladvymh2gwv5crvm3vnsuewhh7\",\"incentives_address\":\"osmo156gncm3w2hdvuxxaejue8nejxgdgsrvdf7jftntuhxnaarhxcuas4ywjxf\",\"spread_rewards_address\":\"osmo10t3u6ze74jn7et6rluuxyf9vr2arykewmhcx67svg6heuu0gte2syfudcv\",\"id\":1,\"current_tick_liquidity\":\"0.000000000000000000\",\"token0\":\"foo\",\"token1\":\"bar\",\"current_sqrt_price\":\"0.000000000000000000000000000000000000\",\"tick_spacing\":1,\"exponent_at_price_one\":-6,\"spread_factor\":\"0.010000000000000000\",\"last_liquidity_update\":\"0001-01-01T00:00:00Z\"}")
+	s.Require().Equal(poolString, "{\"address\":\"perco19e2mf7cywkv7zaug6nk5f87d07fxrdgrladvymh2gwv5crvm3vnsuewhh7\",\"incentives_address\":\"perco156gncm3w2hdvuxxaejue8nejxgdgsrvdf7jftntuhxnaarhxcuas4ywjxf\",\"spread_rewards_address\":\"perco10t3u6ze74jn7et6rluuxyf9vr2arykewmhcx67svg6heuu0gte2syfudcv\",\"id\":1,\"current_tick_liquidity\":\"0.000000000000000000\",\"token0\":\"foo\",\"token1\":\"bar\",\"current_sqrt_price\":\"0.000000000000000000000000000000000000\",\"tick_spacing\":1,\"exponent_at_price_one\":-6,\"spread_factor\":\"0.010000000000000000\",\"last_liquidity_update\":\"0001-01-01T00:00:00Z\"}")
 }
 
 // TestSpotPrice tests the SpotPrice method of the ConcentratedPoolTestSuite.

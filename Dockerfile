@@ -18,7 +18,7 @@ RUN apk add --no-cache \
     linux-headers
 
 # Download go dependencies
-WORKDIR /osmosis
+WORKDIR /percosis
 COPY go.mod go.sum ./
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/root/go/pkg/mod \
@@ -35,22 +35,22 @@ RUN ARCH=$(uname -m) && WASMVM_VERSION=$(go list -m github.com/CosmWasm/wasmvm |
 # Copy the remaining files
 COPY . .
 
-# Build osmosisd binary
+# Build percosisd binary
 RUN --mount=type=cache,target=/root/.cache/go-build \
     --mount=type=cache,target=/root/go/pkg/mod \
     GOWORK=off go build \
         -mod=readonly \
         -tags "netgo,ledger,muslc" \
         -ldflags \
-            "-X github.com/cosmos/cosmos-sdk/version.Name="osmosis" \
-            -X github.com/cosmos/cosmos-sdk/version.AppName="osmosisd" \
+            "-X github.com/cosmos/cosmos-sdk/version.Name="percosis" \
+            -X github.com/cosmos/cosmos-sdk/version.AppName="percosisd" \
             -X github.com/cosmos/cosmos-sdk/version.Version=${GIT_VERSION} \
             -X github.com/cosmos/cosmos-sdk/version.Commit=${GIT_COMMIT} \
             -X github.com/cosmos/cosmos-sdk/version.BuildTags=netgo,ledger,muslc \
             -w -s -linkmode=external -extldflags '-Wl,-z,muldefs -static'" \
         -trimpath \
-        -o /osmosis/build/osmosisd \
-        /osmosis/cmd/osmosisd/main.go
+        -o /percosis/build/percosisd \
+        /percosis/cmd/percosisd/main.go
 
 # --------------------------------------------------------
 # Runner
@@ -58,16 +58,16 @@ RUN --mount=type=cache,target=/root/.cache/go-build \
 
 FROM ${RUNNER_IMAGE}
 
-COPY --from=builder /osmosis/build/osmosisd /bin/osmosisd
+COPY --from=builder /percosis/build/percosisd /bin/percosisd
 
-ENV HOME /osmosis
+ENV HOME /percosis
 WORKDIR $HOME
 
 EXPOSE 26656
 EXPOSE 26657
 EXPOSE 1317
-# Note: uncomment the line below if you need pprof in localosmosis
+# Note: uncomment the line below if you need pprof in localpercosis
 # We disable it by default in out main Dockerfile for security reasons
 # EXPOSE 6060
 
-ENTRYPOINT ["osmosisd"]
+ENTRYPOINT ["percosisd"]

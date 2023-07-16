@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "codebase":{
-    "git_repo": "https://github.com/osmosis-labs/osmosis",
+    "git_repo": "https://github.com/percosis-labs/percosis",
     "recommended_version": "v15.2.0",
     "compatible_versions": [
       "v15.0.0",
@@ -10,8 +10,8 @@
       "v15.2.0"
     ],
     "binaries": {
-      "linux/amd64": "https://github.com/osmosis-labs/osmosis/releases/download/v15.2.0/osmosisd-15.2.0-linux-amd64?checksum=sha256:3aab2f2668cb5a713d5770e46a777ef01c433753378702d9ae941aa2d1ee5618",
-      "linux/arm64": "https://github.com/osmosis-labs/osmosis/releases/download/v15.2.0/osmosisd-15.2.0-linux-arm64?checksum=sha256:e158d30707a0ea51482237f99676223e81ce5a353966a5c83791d2662a930f35"
+      "linux/amd64": "https://github.com/percosis-labs/percosis/releases/download/v15.2.0/percosisd-15.2.0-linux-amd64?checksum=sha256:3aab2f2668cb5a713d5770e46a777ef01c433753378702d9ae941aa2d1ee5618",
+      "linux/arm64": "https://github.com/percosis-labs/percosis/releases/download/v15.2.0/percosisd-15.2.0-linux-arm64?checksum=sha256:e158d30707a0ea51482237f99676223e81ce5a353966a5c83791d2662a930f35"
     },
     "cosmos_sdk_version": "0.45",
     "consensus": {
@@ -26,7 +26,7 @@
     ],
     "genesis": {
       "name": "v3",
-      "genesis_url": "https://github.com/osmosis-labs/networks/raw/main/osmosis-1/genesis.json"
+      "genesis_url": "https://github.com/percosis-labs/networks/raw/main/percosis-1/genesis.json"
     },
     "versions": [
       {
@@ -105,8 +105,8 @@
           "ics20-1"
         ],
         "binaries": {
-          "linux/amd64": "https://github.com/osmosis-labs/osmosis/releases/download/v15.2.0/osmosisd-15.2.0-linux-amd64?checksum=sha256:3aab2f2668cb5a713d5770e46a777ef01c433753378702d9ae941aa2d1ee5618",
-          "linux/arm64": "https://github.com/osmosis-labs/osmosis/releases/download/v15.2.0/osmosisd-15.2.0-linux-arm64?checksum=sha256:e158d30707a0ea51482237f99676223e81ce5a353966a5c83791d2662a930f35"
+          "linux/amd64": "https://github.com/percosis-labs/percosis/releases/download/v15.2.0/percosisd-15.2.0-linux-amd64?checksum=sha256:3aab2f2668cb5a713d5770e46a777ef01c433753378702d9ae941aa2d1ee5618",
+          "linux/arm64": "https://github.com/percosis-labs/percosis/releases/download/v15.2.0/percosisd-15.2.0-linux-arm64?checksum=sha256:e158d30707a0ea51482237f99676223e81ce5a353966a5c83791d2662a930f35"
         }
       }
     ]

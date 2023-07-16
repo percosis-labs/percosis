@@ -16,9 +16,9 @@ import (
 	paramskeeper "github.com/cosmos/cosmos-sdk/x/params/keeper"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/noapptest"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmoutils/noapptest"
+	"github.com/percosis-labs/percosis/osmoutils/osmoassert"
 )
 
 // We need to setup a test suite with account keeper
@@ -37,7 +37,7 @@ type TestSuite struct {
 func (suite *TestSuite) SetupTest() {
 	// For the test suite, we manually wire a custom store "customStoreKey"
 	// Auth module (for module_account_test.go) which requires params module as well.
-	customStoreKey := sdk.NewKVStoreKey("osmoutil_store_test")
+	customStoreKey := sdk.NewKVStoreKey("percoutil_store_test")
 	suite.authStoreKey = sdk.NewKVStoreKey(authtypes.StoreKey)
 	// setup ctx + stores
 	paramsKey := sdk.NewKVStoreKey(paramstypes.StoreKey)
@@ -87,7 +87,7 @@ var (
 	mockError            = errors.New("mock error")
 )
 
-func TestOsmoUtilsTestSuite(t *testing.T) {
+func TestPercoUtilsTestSuite(t *testing.T) {
 	suite.Run(t, new(TestSuite))
 }
 

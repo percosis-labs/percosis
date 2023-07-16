@@ -1,13 +1,13 @@
 package keeper_test
 
 import (
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
@@ -238,7 +238,7 @@ func (s *KeeperTestSuite) TestPrepareConcentratedLockForSlash() {
 		s.Run(tc.name, func() {
 			s.SetupTest()
 
-			clPool, concentratedLockId, positionId := s.PrepareConcentratedPoolWithCoinsAndLockedFullRangePosition("uosmo", apptesting.USDC)
+			clPool, concentratedLockId, positionId := s.PrepareConcentratedPoolWithCoinsAndLockedFullRangePosition("ufury", apptesting.USDC)
 			clPoolId := clPool.GetId()
 
 			lock, err := s.App.LockupKeeper.GetLockByID(s.Ctx, concentratedLockId)

@@ -5,7 +5,7 @@ import (
 	"strings"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
-	gammmigration "github.com/osmosis-labs/osmosis/v16/x/gamm/types/migration"
+	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
 )
 
 const (
@@ -16,9 +16,9 @@ const (
 // Init registers proposals to update and replace migration records.
 func init() {
 	govtypes.RegisterProposalType(ProposalTypeUpdateMigrationRecords)
-	govtypes.RegisterProposalTypeCodec(&UpdateMigrationRecordsProposal{}, "osmosis/UpdateMigrationRecordsProposal")
+	govtypes.RegisterProposalTypeCodec(&UpdateMigrationRecordsProposal{}, "percosis/UpdateMigrationRecordsProposal")
 	govtypes.RegisterProposalType(ProposalTypeReplaceMigrationRecords)
-	govtypes.RegisterProposalTypeCodec(&ReplaceMigrationRecordsProposal{}, "osmosis/ReplaceMigrationRecordsProposal")
+	govtypes.RegisterProposalTypeCodec(&ReplaceMigrationRecordsProposal{}, "percosis/ReplaceMigrationRecordsProposal")
 }
 
 var (

@@ -4,12 +4,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/x/epochs/types"
 	"github.com/stretchr/testify/require"
 
 	"golang.org/x/exp/maps"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmoutils"
 )
 
 // This test is responsible for testing how epochs increment based off

@@ -5,8 +5,8 @@ set -ex
 # initialize Hermes relayer configuration
 mkdir -p /root/.hermes/
 touch /root/.hermes/config.toml
-echo $OSMO_A_E2E_VAL_MNEMONIC > /root/.hermes/OSMO_A_MNEMONIC.txt
-echo $OSMO_B_E2E_VAL_MNEMONIC > /root/.hermes/OSMO_B_MNEMONIC.txt
+echo $PERCO_A_E2E_VAL_MNEMONIC > /root/.hermes/PERCO_A_MNEMONIC.txt
+echo $PERCO_B_E2E_VAL_MNEMONIC > /root/.hermes/PERCO_B_MNEMONIC.txt
 # setup Hermes relayer configuration
 tee /root/.hermes/config.toml <<EOF
 [global]
@@ -34,13 +34,13 @@ enabled = true
 host = '127.0.0.1'
 port = 3001
 [[chains]]
-id = '$OSMO_A_E2E_CHAIN_ID'
-rpc_addr = 'http://$OSMO_A_E2E_VAL_HOST:26657'
-grpc_addr = 'http://$OSMO_A_E2E_VAL_HOST:9090'
-websocket_addr = 'ws://$OSMO_A_E2E_VAL_HOST:26657/websocket'
+id = '$PERCO_A_E2E_CHAIN_ID'
+rpc_addr = 'http://$PERCO_A_E2E_VAL_HOST:26657'
+grpc_addr = 'http://$PERCO_A_E2E_VAL_HOST:9090'
+websocket_addr = 'ws://$PERCO_A_E2E_VAL_HOST:26657/websocket'
 rpc_timeout = '30s'
-account_prefix = 'osmo'
-key_name = 'val01-osmosis-a'
+account_prefix = 'perco'
+key_name = 'val01-percosis-a'
 store_prefix = 'ibc'
 max_gas = 9000000
 gas_multiplier = 1.5
@@ -50,13 +50,13 @@ clock_drift = '1m' # to accomdate docker containers
 trusting_period = '239seconds'
 trust_threshold = { numerator = '1', denominator = '3' }
 [[chains]]
-id = '$OSMO_B_E2E_CHAIN_ID'
-rpc_addr = 'http://$OSMO_B_E2E_VAL_HOST:26657'
-grpc_addr = 'http://$OSMO_B_E2E_VAL_HOST:9090'
-websocket_addr = 'ws://$OSMO_B_E2E_VAL_HOST:26657/websocket'
+id = '$PERCO_B_E2E_CHAIN_ID'
+rpc_addr = 'http://$PERCO_B_E2E_VAL_HOST:26657'
+grpc_addr = 'http://$PERCO_B_E2E_VAL_HOST:9090'
+websocket_addr = 'ws://$PERCO_B_E2E_VAL_HOST:26657/websocket'
 rpc_timeout = '30s'
-account_prefix = 'osmo'
-key_name = 'val01-osmosis-b'
+account_prefix = 'perco'
+key_name = 'val01-percosis-b'
 store_prefix = 'ibc'
 max_gas = 9000000
 gas_multiplier = 1.5
@@ -68,8 +68,8 @@ trust_threshold = { numerator = '1', denominator = '3' }
 EOF
 
 # import keys
-hermes keys add --chain ${OSMO_B_E2E_CHAIN_ID} --key-name "val01-osmosis-b" --mnemonic-file /root/.hermes/OSMO_B_MNEMONIC.txt
-hermes keys add --chain ${OSMO_A_E2E_CHAIN_ID} --key-name "val01-osmosis-a" --mnemonic-file /root/.hermes/OSMO_A_MNEMONIC.txt
+hermes keys add --chain ${PERCO_B_E2E_CHAIN_ID} --key-name "val01-percosis-b" --mnemonic-file /root/.hermes/PERCO_B_MNEMONIC.txt
+hermes keys add --chain ${PERCO_A_E2E_CHAIN_ID} --key-name "val01-percosis-a" --mnemonic-file /root/.hermes/PERCO_A_MNEMONIC.txt
 
 # start Hermes relayer
 hermes start

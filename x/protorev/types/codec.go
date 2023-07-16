@@ -16,16 +16,16 @@ var (
 
 const (
 	// msgs
-	setHotRoutes             = "osmosis/MsgSetHotRoutes"
-	setDeveloperAccount      = "osmosis/MsgSetDeveloperAccount"
-	setMaxPoolPointsPerTx    = "osmosis/MsgSetMaxPoolPointsPerTx"
-	setMaxPoolPointsPerBlock = "osmosis/MsgSetMaxPoolPointsPerBlock"
-	setPoolWeights           = "osmosis/MsgSetPoolWeights"
-	setBaseDenoms            = "osmosis/MsgSetBaseDenoms"
+	setHotRoutes             = "percosis/MsgSetHotRoutes"
+	setDeveloperAccount      = "percosis/MsgSetDeveloperAccount"
+	setMaxPoolPointsPerTx    = "percosis/MsgSetMaxPoolPointsPerTx"
+	setMaxPoolPointsPerBlock = "percosis/MsgSetMaxPoolPointsPerBlock"
+	setPoolWeights           = "percosis/MsgSetPoolWeights"
+	setBaseDenoms            = "percosis/MsgSetBaseDenoms"
 
 	// proposals
-	setProtoRevEnabledProposal      = "osmosis/SetProtoRevEnabledProposal"
-	setProtoRevAdminAccountProposal = "osmosis/SetProtoRevAdminAccountProposal"
+	setProtoRevEnabledProposal      = "percosis/SetProtoRevEnabledProposal"
+	setProtoRevAdminAccountProposal = "percosis/SetProtoRevAdminAccountProposal"
 )
 
 func init() {

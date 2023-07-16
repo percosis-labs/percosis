@@ -11,8 +11,8 @@ import (
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
 )
 
 type QueryTestSuite struct {
@@ -62,31 +62,31 @@ func (s *QueryTestSuite) TestQueriesNeverAlterState() {
 	}{
 		{
 			"Query all superfluild assets",
-			"/osmosis.superfluid.Query/AllAssets",
+			"/percosis.superfluid.Query/AllAssets",
 			&types.AllAssetsRequest{},
 			&types.AllAssetsResponse{},
 		},
 		{
 			"Query all intermediary accounts",
-			"/osmosis.superfluid.Query/AllIntermediaryAccounts",
+			"/percosis.superfluid.Query/AllIntermediaryAccounts",
 			&types.AllIntermediaryAccountsRequest{},
 			&types.AllIntermediaryAccountsResponse{},
 		},
 		{
-			"Query osmo equivalent multiplier of an asset",
-			"/osmosis.superfluid.Query/AssetMultiplier",
+			"Query perco equivalent multiplier of an asset",
+			"/percosis.superfluid.Query/AssetMultiplier",
 			&types.AssetMultiplierRequest{Denom: "gamm/pool/1"},
 			&types.AssetMultiplierResponse{},
 		},
 		{
 			"Query asset type",
-			"/osmosis.superfluid.Query/AssetType",
+			"/percosis.superfluid.Query/AssetType",
 			&types.AssetTypeRequest{Denom: "gamm/pool/1"},
 			&types.AssetTypeResponse{},
 		},
 		{
 			"Query connected intermediary account",
-			"/osmosis.superfluid.Query/ConnectedIntermediaryAccount",
+			"/percosis.superfluid.Query/ConnectedIntermediaryAccount",
 			&types.ConnectedIntermediaryAccountRequest{LockId: 1},
 			&types.ConnectedIntermediaryAccountResponse{},
 		},
@@ -94,49 +94,49 @@ func (s *QueryTestSuite) TestQueriesNeverAlterState() {
 		// else the response is nil and theres a panic internally.
 		// {
 		// 	"Query estimate sfs delegated amount by validator & denom",
-		// 	"/osmosis.superfluid.Query/EstimateSuperfluidDelegatedAmountByValidatorDenom",
+		// 	"/percosis.superfluid.Query/EstimateSuperfluidDelegatedAmountByValidatorDenom",
 		// 	&types.EstimateSuperfluidDelegatedAmountByValidatorDenomRequest{ValidatorAddress: s.val.String(), Denom: "gamm/pool/1"},
 		// 	&types.EstimateSuperfluidDelegatedAmountByValidatorDenomResponse{},
 		// },
 		{
 			"Query params",
-			"/osmosis.superfluid.Query/Params",
+			"/percosis.superfluid.Query/Params",
 			&types.QueryParamsRequest{},
 			&types.QueryParamsResponse{},
 		},
 		{
 			"Query sfs delegation amount",
-			"/osmosis.superfluid.Query/SuperfluidDelegationAmount",
+			"/percosis.superfluid.Query/SuperfluidDelegationAmount",
 			&types.SuperfluidDelegationAmountRequest{ValidatorAddress: s.val.String(), Denom: "gamm/pool/1", DelegatorAddress: s.TestAccs[0].String()},
 			&types.SuperfluidDelegationAmountResponse{},
 		},
 		{
 			"Query sfs delegation by delegator",
-			"/osmosis.superfluid.Query/SuperfluidDelegationsByDelegator",
+			"/percosis.superfluid.Query/SuperfluidDelegationsByDelegator",
 			&types.SuperfluidDelegationsByDelegatorRequest{DelegatorAddress: s.TestAccs[0].String()},
 			&types.SuperfluidDelegationsByDelegatorResponse{},
 		},
 		{
 			"Query sfs delegation by validator & denom",
-			"/osmosis.superfluid.Query/SuperfluidDelegationsByValidatorDenom",
+			"/percosis.superfluid.Query/SuperfluidDelegationsByValidatorDenom",
 			&types.SuperfluidDelegationsByValidatorDenomRequest{ValidatorAddress: s.val.String(), Denom: "gamm/pool/1"},
 			&types.SuperfluidDelegationsByValidatorDenomResponse{},
 		},
 		{
 			"Query sfs undelegation by delegator",
-			"/osmosis.superfluid.Query/SuperfluidUndelegationsByDelegator",
+			"/percosis.superfluid.Query/SuperfluidUndelegationsByDelegator",
 			&types.SuperfluidUndelegationsByDelegatorRequest{DelegatorAddress: s.TestAccs[0].String(), Denom: "gamm/pool/1"},
 			&types.SuperfluidUndelegationsByDelegatorResponse{},
 		},
 		{
 			"Query total sfs delegation by delegator",
-			"/osmosis.superfluid.Query/TotalDelegationByDelegator",
+			"/percosis.superfluid.Query/TotalDelegationByDelegator",
 			&types.QueryTotalDelegationByDelegatorRequest{DelegatorAddress: s.TestAccs[0].String()},
 			&types.QueryTotalDelegationByDelegatorResponse{},
 		},
 		{
 			"Query total sfs delegations",
-			"/osmosis.superfluid.Query/TotalSuperfluidDelegations",
+			"/percosis.superfluid.Query/TotalSuperfluidDelegations",
 			&types.TotalSuperfluidDelegationsRequest{},
 			&types.TotalSuperfluidDelegationsResponse{},
 		},

@@ -7,12 +7,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	clmodel "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	types "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	clmodel "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	types "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 type lpTest struct {

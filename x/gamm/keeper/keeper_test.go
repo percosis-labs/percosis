@@ -7,10 +7,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
 )
 
 type KeeperTestSuite struct {

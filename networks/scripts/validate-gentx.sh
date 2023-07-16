@@ -1,9 +1,9 @@
 #!/bin/sh
-OSMOSIS_HOME="/tmp/osmosisd$(date +%s)"
-RANDOM_KEY="randomosmosisvalidatorkey"
-CHAIN_ID=osmosis-1
-DENOM=uosmo
-MAXBOND=50000000000000 # 500 Million OSMO
+PERCOSIS_HOME="/tmp/percosisd$(date +%s)"
+RANDOM_KEY="randompercosisvalidatorkey"
+CHAIN_ID=percosis-1
+DENOM=ufury
+MAXBOND=50000000000000 # 500 Million PERCO
 
 GENTX_FILE=$(find ./$CHAIN_ID/gentxs -iname "*.json")
 LEN_GENTX=$(echo ${#GENTX_FILE})
@@ -46,24 +46,24 @@ else
     echo "GentxFile::::"
     echo $GENTX_FILE
 
-    echo "...........Init Osmosis.............."
+    echo "...........Init Percosis.............."
 
-    git clone https://github.com/osmosis-labs/osmosis
-    cd osmosis
+    git clone https://github.com/percosis-labs/percosis
+    cd percosis
     git checkout gentx-launch
     make build
-    chmod +x ./build/osmosisd
+    chmod +x ./build/percosisd
 
-    ./build/osmosisd keys add $RANDOM_KEY --keyring-backend test --home $OSMOSIS_HOME
+    ./build/percosisd keys add $RANDOM_KEY --keyring-backend test --home $PERCOSIS_HOME
 
-    ./build/osmosisd init --chain-id $CHAIN_ID validator --home $OSMOSIS_HOME
+    ./build/percosisd init --chain-id $CHAIN_ID validator --home $PERCOSIS_HOME
 
     echo "..........Fetching genesis......."
-    rm -rf $OSMOSIS_HOME/config/genesis.json
-    curl -s https://raw.githubusercontent.com/osmosis-labs/networks/main/$CHAIN_ID/pregenesis.json >$OSMOSIS_HOME/config/genesis.json
+    rm -rf $PERCOSIS_HOME/config/genesis.json
+    curl -s https://raw.githubusercontent.com/percosis-labs/networks/main/$CHAIN_ID/pregenesis.json >$PERCOSIS_HOME/config/genesis.json
 
     # this genesis time is different from original genesis time, just for validating gentx.
-    sed -i '/genesis_time/c\   \"genesis_time\" : \"2021-03-29T00:00:00Z\",' $OSMOSIS_HOME/config/genesis.json
+    sed -i '/genesis_time/c\   \"genesis_time\" : \"2021-03-29T00:00:00Z\",' $PERCOSIS_HOME/config/genesis.json
 
     GENACC=$(cat ../$GENTX_FILE | sed -n 's|.*"delegator_address":"\([^"]*\)".*|\1|p')
     denomquery=$(jq -r '.body.messages[0].value.denom' ../$GENTX_FILE)
@@ -86,30 +86,30 @@ else
         exit 1
     fi
 
-    ./build/osmosisd add-genesis-account $RANDOM_KEY 100000000000000$DENOM --home $OSMOSIS_HOME \
+    ./build/percosisd add-genesis-account $RANDOM_KEY 100000000000000$DENOM --home $PERCOSIS_HOME \
         --keyring-backend test
 
-    ./build/osmosisd gentx $RANDOM_KEY 90000000000000$DENOM --home $OSMOSIS_HOME \
+    ./build/percosisd gentx $RANDOM_KEY 90000000000000$DENOM --home $PERCOSIS_HOME \
         --keyring-backend test --chain-id $CHAIN_ID
 
-    cp ../$GENTX_FILE $OSMOSIS_HOME/config/gentx/
+    cp ../$GENTX_FILE $PERCOSIS_HOME/config/gentx/
 
     echo "..........Collecting gentxs......."
-    ./build/osmosisd collect-gentxs --home $OSMOSIS_HOME
-    sed -i '/persistent_peers =/c\persistent_peers = ""' $OSMOSIS_HOME/config/config.toml
+    ./build/percosisd collect-gentxs --home $PERCOSIS_HOME
+    sed -i '/persistent_peers =/c\persistent_peers = ""' $PERCOSIS_HOME/config/config.toml
 
-    ./build/osmosisd validate-genesis --home $OSMOSIS_HOME
+    ./build/percosisd validate-genesis --home $PERCOSIS_HOME
 
     echo "..........Starting node......."
-    ./build/osmosisd start --home $OSMOSIS_HOME &
+    ./build/percosisd start --home $PERCOSIS_HOME &
 
     sleep 1800s
 
     echo "...checking network status.."
 
-    ./build/osmosisd status --node http://localhost:26657
+    ./build/percosisd status --node http://localhost:26657
 
     echo "...Cleaning the stuff..."
-    killall osmosisd >/dev/null 2>&1
-    rm -rf $OSMOSIS_HOME >/dev/null 2>&1
+    killall percosisd >/dev/null 2>&1
+    rm -rf $PERCOSIS_HOME >/dev/null 2>&1
 fi

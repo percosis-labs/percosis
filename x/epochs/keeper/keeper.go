@@ -5,7 +5,7 @@ import (
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/x/epochs/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -1,8 +1,8 @@
 [package]
 name = "counter"
-description = "Cosmwasm counter dapp, with permissions for testing Osmosis wasmhooks"
+description = "Cosmwasm counter dapp, with permissions for testing Percosis wasmhooks"
 version = "0.1.0"
-authors = ["osmosis contributors"]
+authors = ["percosis contributors"]
 edition = "2021"
 
 exclude = [

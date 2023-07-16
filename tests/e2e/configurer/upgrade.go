@@ -10,12 +10,12 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	appparams "github.com/osmosis-labs/osmosis/v16/app/params"
-	v16 "github.com/osmosis-labs/osmosis/v16/app/upgrades/v16"
-	"github.com/osmosis-labs/osmosis/v16/tests/e2e/configurer/chain"
-	"github.com/osmosis-labs/osmosis/v16/tests/e2e/configurer/config"
-	"github.com/osmosis-labs/osmosis/v16/tests/e2e/containers"
-	"github.com/osmosis-labs/osmosis/v16/tests/e2e/initialization"
+	appparams "github.com/percosis-labs/percosis/v16/app/params"
+	v16 "github.com/percosis-labs/percosis/v16/app/upgrades/v16"
+	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/chain"
+	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/config"
+	"github.com/percosis-labs/percosis/v16/tests/e2e/containers"
+	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
 )
 
 type UpgradeSettings struct {
@@ -58,7 +58,7 @@ func (uc *UpgradeConfigurer) ConfigureChains() error {
 
 func (uc *UpgradeConfigurer) ConfigureChain(chainConfig *chain.Config) error {
 	uc.t.Logf("starting upgrade e2e infrastructure for chain-id: %s", chainConfig.Id)
-	tmpDir, err := os.MkdirTemp("", "osmosis-e2e-testnet-")
+	tmpDir, err := os.MkdirTemp("", "percosis-e2e-testnet-")
 	if err != nil {
 		return err
 	}
@@ -126,13 +126,13 @@ func (uc *UpgradeConfigurer) CreatePreUpgradeState() error {
 
 	go func() {
 		defer wg.Done()
-		chainA.SendIBC(chainB, chainB.NodeConfigs[0].PublicAddress, initialization.OsmoToken)
+		chainA.SendIBC(chainB, chainB.NodeConfigs[0].PublicAddress, initialization.PercoToken)
 		chainA.SendIBC(chainB, chainB.NodeConfigs[0].PublicAddress, initialization.StakeToken)
 	}()
 
 	go func() {
 		defer wg.Done()
-		chainB.SendIBC(chainA, chainA.NodeConfigs[0].PublicAddress, initialization.OsmoToken)
+		chainB.SendIBC(chainA, chainA.NodeConfigs[0].PublicAddress, initialization.PercoToken)
 		chainB.SendIBC(chainA, chainA.NodeConfigs[0].PublicAddress, initialization.StakeToken)
 	}()
 
@@ -141,24 +141,24 @@ func (uc *UpgradeConfigurer) CreatePreUpgradeState() error {
 
 	wg.Add(2)
 
-	var daiOsmoPoolIdv16 uint64
+	var daiPercoPoolIdv16 uint64
 
 	go func() {
 		defer wg.Done()
-		daiOsmoPoolIdv16 = chainANode.CreateBalancerPool("daiosmov16.json", initialization.ValidatorWalletName)
-		daiOsmoShareDenom := fmt.Sprintf("gamm/pool/%d", daiOsmoPoolIdv16)
-		chainANode.EnableSuperfluidAsset(chainA, daiOsmoShareDenom)
+		daiPercoPoolIdv16 = chainANode.CreateBalancerPool("daipercov16.json", initialization.ValidatorWalletName)
+		daiPercoShareDenom := fmt.Sprintf("gamm/pool/%d", daiPercoPoolIdv16)
+		chainANode.EnableSuperfluidAsset(chainA, daiPercoShareDenom)
 	}()
 
 	go func() {
 		defer wg.Done()
-		chainBNode.CreateBalancerPool("daiosmov16.json", initialization.ValidatorWalletName)
+		chainBNode.CreateBalancerPool("daipercov16.json", initialization.ValidatorWalletName)
 	}()
 
 	// Wait for all goroutines to complete
 	wg.Wait()
 
-	config.DaiOsmoPoolIdv16 = daiOsmoPoolIdv16
+	config.DaiPercoPoolIdv16 = daiPercoPoolIdv16
 
 	var (
 		poolShareDenom             string
@@ -245,7 +245,7 @@ func (uc *UpgradeConfigurer) CreatePreUpgradeState() error {
 	go func() {
 		defer wg.Done()
 		// test swap exact amount in for stable swap pool (only chainA)A
-		chainANode.SwapExactAmountIn("2000stake", "1", fmt.Sprintf("%d", config.PreUpgradeStableSwapPoolId), "uosmo", config.StableswapWallet)
+		chainANode.SwapExactAmountIn("2000stake", "1", fmt.Sprintf("%d", config.PreUpgradeStableSwapPoolId), "ufury", config.StableswapWallet)
 	}()
 
 	// Upload the rate limiting contract to both chains (as they both will be updated)
@@ -401,8 +401,8 @@ func (uc *UpgradeConfigurer) runForkUpgrade() error {
 func (uc *UpgradeConfigurer) upgradeContainers(chainConfig *chain.Config, propHeight int64) error {
 	// upgrade containers to the locally compiled daemon
 	uc.t.Logf("starting upgrade for chain-id: %s...", chainConfig.Id)
-	uc.containerManager.OsmosisRepository = containers.CurrentBranchOsmoRepository
-	uc.containerManager.OsmosisTag = containers.CurrentBranchOsmoTag
+	uc.containerManager.PercosisRepository = containers.CurrentBranchPercoRepository
+	uc.containerManager.PercosisTag = containers.CurrentBranchPercoTag
 
 	for _, node := range chainConfig.NodeConfigs {
 		if err := node.Run(); err != nil {

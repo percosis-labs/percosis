@@ -20,7 +20,7 @@
     }
   },
   "gopls": {
-    "local": "github.com/osmosis-labs/osmosis"
+    "local": "github.com/percosis-labs/percosis"
   },
   "files.eol": "\n",
   "[proto3]": {

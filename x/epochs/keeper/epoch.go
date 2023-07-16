@@ -6,7 +6,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/x/epochs/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

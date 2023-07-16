@@ -4,16 +4,16 @@ import (
 	"testing"
 	"time"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/downtime-detector/client/cli"
-	"github.com/osmosis-labs/osmosis/v16/x/downtime-detector/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/downtime-detector/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/downtime-detector/client/cli"
+	"github.com/percosis-labs/percosis/v16/x/downtime-detector/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/downtime-detector/types"
 )
 
 // We test the custom duration parser via this
 func TestRecoveredSinceQueryCmd(t *testing.T) {
 	desc, _ := cli.RecoveredSinceQueryCmd()
-	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.RecoveredSinceDowntimeOfLengthRequest]{
+	tcs := map[string]percocli.QueryCliTestCase[*queryproto.RecoveredSinceDowntimeOfLengthRequest]{
 		"basic test": {
 			Cmd: "30s 10m",
 			ExpectedQuery: &queryproto.RecoveredSinceDowntimeOfLengthRequest{
@@ -51,5 +51,5 @@ func TestRecoveredSinceQueryCmd(t *testing.T) {
 			},
 		},
 	}
-	osmocli.RunQueryTestCases(t, desc, tcs)
+	percocli.RunQueryTestCases(t, desc, tcs)
 }

@@ -7,14 +7,14 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types/genesis"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils/accum"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
 )
 
 const validPoolId = 1

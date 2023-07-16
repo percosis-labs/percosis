@@ -42,9 +42,9 @@ ifeq ($(LEDGER_ENABLED),true)
   endif
 endif
 
-ifeq (cleveldb,$(findstring cleveldb,$(OSMOSIS_BUILD_OPTIONS)))
+ifeq (cleveldb,$(findstring cleveldb,$(PERCOSIS_BUILD_OPTIONS)))
   build_tags += gcc
-else ifeq (rocksdb,$(findstring rocksdb,$(OSMOSIS_BUILD_OPTIONS)))
+else ifeq (rocksdb,$(findstring rocksdb,$(PERCOSIS_BUILD_OPTIONS)))
   build_tags += gcc
 endif
 build_tags += $(BUILD_TAGS)
@@ -57,18 +57,18 @@ build_tags_comma_sep := $(subst $(whitespace),$(comma),$(build_tags))
 
 # process linker flags
 
-ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=osmosis \
-		  -X github.com/cosmos/cosmos-sdk/version.AppName=osmosisd \
+ldflags = -X github.com/cosmos/cosmos-sdk/version.Name=percosis \
+		  -X github.com/cosmos/cosmos-sdk/version.AppName=percosisd \
 		  -X github.com/cosmos/cosmos-sdk/version.Version=$(VERSION) \
 		  -X github.com/cosmos/cosmos-sdk/version.Commit=$(COMMIT) \
 		  -X "github.com/cosmos/cosmos-sdk/version.BuildTags=$(build_tags_comma_sep)"
 
-ifeq (cleveldb,$(findstring cleveldb,$(OSMOSIS_BUILD_OPTIONS)))
+ifeq (cleveldb,$(findstring cleveldb,$(PERCOSIS_BUILD_OPTIONS)))
   ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=cleveldb
-else ifeq (rocksdb,$(findstring rocksdb,$(OSMOSIS_BUILD_OPTIONS)))
+else ifeq (rocksdb,$(findstring rocksdb,$(PERCOSIS_BUILD_OPTIONS)))
   ldflags += -X github.com/cosmos/cosmos-sdk/types.DBBackend=rocksdb
 endif
-ifeq (,$(findstring nostrip,$(OSMOSIS_BUILD_OPTIONS)))
+ifeq (,$(findstring nostrip,$(PERCOSIS_BUILD_OPTIONS)))
   ldflags += -w -s
 endif
 ifeq ($(LINK_STATICALLY),true)
@@ -79,7 +79,7 @@ ldflags := $(strip $(ldflags))
 
 BUILD_FLAGS := -tags "$(build_tags)" -ldflags '$(ldflags)'
 # check for nostrip option
-ifeq (,$(findstring nostrip,$(OSMOSIS_BUILD_OPTIONS)))
+ifeq (,$(findstring nostrip,$(PERCOSIS_BUILD_OPTIONS)))
   BUILD_FLAGS += -trimpath
 endif
 
@@ -102,7 +102,7 @@ endif
 
 check_version:
 ifneq ($(GO_MINOR_VERSION),20)
-	@echo "ERROR: Go version 1.20 is required for this version of Osmosis."
+	@echo "ERROR: Go version 1.20 is required for this version of Percosis."
 	exit 1
 endif
 
@@ -110,14 +110,14 @@ all: install lint test
 
 build: check_version go.sum
 	mkdir -p $(BUILDDIR)/
-	GOWORK=off go build -mod=readonly  $(BUILD_FLAGS) -o $(BUILDDIR)/ $(GO_MODULE)/cmd/osmosisd
+	GOWORK=off go build -mod=readonly  $(BUILD_FLAGS) -o $(BUILDDIR)/ $(GO_MODULE)/cmd/percosisd
 
 build-all: check_version go.sum
 	mkdir -p $(BUILDDIR)/
 	GOWORK=off go build -mod=readonly $(BUILD_FLAGS) -o $(BUILDDIR)/ ./...
 
 install: check_version go.sum
-	GOWORK=off go install -mod=readonly $(BUILD_FLAGS) $(GO_MODULE)/cmd/osmosisd
+	GOWORK=off go install -mod=readonly $(BUILD_FLAGS) $(GO_MODULE)/cmd/percosisd
 
 # Cross-building for arm64 from amd64 (or viceversa) takes
 # a lot of time due to QEMU virtualization but it's the only way (afaik)
@@ -127,39 +127,39 @@ build-reproducible: build-reproducible-amd64 build-reproducible-arm64
 
 build-reproducible-amd64: go.sum
 	mkdir -p $(BUILDDIR)
-	$(DOCKER) buildx create --name osmobuilder || true
-	$(DOCKER) buildx use osmobuilder
+	$(DOCKER) buildx create --name percobuilder || true
+	$(DOCKER) buildx use percobuilder
 	$(DOCKER) buildx build \
 		--build-arg GO_VERSION=$(GO_VERSION) \
 		--build-arg GIT_VERSION=$(VERSION) \
 		--build-arg GIT_COMMIT=$(COMMIT) \
 		--build-arg RUNNER_IMAGE=alpine:3.17 \
 		--platform linux/amd64 \
-		-t osmosis:local-amd64 \
+		-t percosis:local-amd64 \
 		--load \
 		-f Dockerfile .
-	$(DOCKER) rm -f osmobinary || true
-	$(DOCKER) create -ti --name osmobinary osmosis:local-amd64
-	$(DOCKER) cp osmobinary:/bin/osmosisd $(BUILDDIR)/osmosisd-linux-amd64
-	$(DOCKER) rm -f osmobinary
+	$(DOCKER) rm -f percobinary || true
+	$(DOCKER) create -ti --name percobinary percosis:local-amd64
+	$(DOCKER) cp percobinary:/bin/percosisd $(BUILDDIR)/percosisd-linux-amd64
+	$(DOCKER) rm -f percobinary
 
 build-reproducible-arm64: go.sum
 	mkdir -p $(BUILDDIR)
-	$(DOCKER) buildx create --name osmobuilder || true
-	$(DOCKER) buildx use osmobuilder
+	$(DOCKER) buildx create --name percobuilder || true
+	$(DOCKER) buildx use percobuilder
 	$(DOCKER) buildx build \
 		--build-arg GO_VERSION=$(GO_VERSION) \
 		--build-arg GIT_VERSION=$(VERSION) \
 		--build-arg GIT_COMMIT=$(COMMIT) \
 		--build-arg RUNNER_IMAGE=alpine:3.17 \
 		--platform linux/arm64 \
-		-t osmosis:local-arm64 \
+		-t percosis:local-arm64 \
 		--load \
 		-f Dockerfile .
-	$(DOCKER) rm -f osmobinary || true
-	$(DOCKER) create -ti --name osmobinary osmosis:local-arm64
-	$(DOCKER) cp osmobinary:/bin/osmosisd $(BUILDDIR)/osmosisd-linux-arm64
-	$(DOCKER) rm -f osmobinary
+	$(DOCKER) rm -f percobinary || true
+	$(DOCKER) create -ti --name percobinary percosis:local-arm64
+	$(DOCKER) cp percobinary:/bin/percosisd $(BUILDDIR)/percosisd-linux-arm64
+	$(DOCKER) rm -f percobinary
 
 build-linux: go.sum
 	LEDGER_ENABLED=false GOOS=linux GOARCH=amd64 $(MAKE) build
@@ -179,7 +179,7 @@ go.sum: go.mod
 draw-deps:
 	@# requires brew install graphviz or apt-get install graphviz
 	go get github.com/RobotsAndPencils/goviz
-	@goviz -i ./cmd/osmosisd -d 2 | dot -Tpng -o dependency-graph.png
+	@goviz -i ./cmd/percosisd -d 2 | dot -Tpng -o dependency-graph.png
 
 clean:
 	rm -rf $(CURDIR)/artifacts/
@@ -204,7 +204,7 @@ update-sdk-version:
 	@echo "Updating version to $(VERSION)"
 	@for modfile in $(MODFILES); do \
 		if [ -e "$$modfile" ]; then \
-			sed -i '' 's|github.com/osmosis-labs/cosmos-sdk v[0-9a-z.\-]*|github.com/osmosis-labs/cosmos-sdk $(VERSION)|g' $$modfile; \
+			sed -i '' 's|github.com/percosis-labs/cosmos-sdk v[0-9a-z.\-]*|github.com/percosis-labs/cosmos-sdk $(VERSION)|g' $$modfile; \
 			cd `dirname $$modfile`; \
 			go mod tidy; \
 			cd - > /dev/null; \
@@ -250,7 +250,7 @@ docs:
 .PHONY: docs
 
 protoVer=v0.9
-protoImageName=osmolabs/osmo-proto-gen:$(protoVer)
+protoImageName=percolabs/perco-proto-gen:$(protoVer)
 containerProtoGen=cosmos-sdk-proto-gen-$(protoVer)
 containerProtoFmt=cosmos-sdk-proto-fmt-$(protoVer)
 
@@ -312,7 +312,7 @@ test-sim-bench:
 	@VERSION=$(VERSION) go test -benchmem -run ^BenchmarkFullAppSimulation -bench ^BenchmarkFullAppSimulation -cpuprofile cpu.out $(PACKAGES_SIM)
 
 # test-e2e runs a full e2e test suite
-# deletes any pre-existing Osmosis containers before running.
+# deletes any pre-existing Percosis containers before running.
 #
 # Deletes Docker resources at the end.
 # Utilizes Go cache.
@@ -322,19 +322,19 @@ test-e2e: e2e-setup test-e2e-ci e2e-remove-resources
 # does not do any validation about the state of the Docker environment
 # As a result, avoid using this locally.
 test-e2e-ci:
-	@VERSION=$(VERSION) OSMOSIS_E2E=True OSMOSIS_E2E_DEBUG_LOG=False OSMOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -p 4
+	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=False PERCOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -p 4
 
 # test-e2e-debug runs a full e2e test suite but does
 # not attempt to delete Docker resources at the end.
 test-e2e-debug: e2e-setup
-	@VERSION=$(VERSION) OSMOSIS_E2E=True OSMOSIS_E2E_DEBUG_LOG=True OSMOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) OSMOSIS_E2E_SKIP_CLEANUP=True go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -count=1
+	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=True PERCOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) PERCOSIS_E2E_SKIP_CLEANUP=True go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -count=1
 
 # test-e2e-short runs the e2e test with only short tests.
 # Does not delete any of the containers after running.
 # Deletes any existing containers before running.
 # Does not use Go cache.
 test-e2e-short: e2e-setup
-	@VERSION=$(VERSION) OSMOSIS_E2E=True OSMOSIS_E2E_DEBUG_LOG=True OSMOSIS_E2E_SKIP_UPGRADE=True OSMOSIS_E2E_SKIP_IBC=True OSMOSIS_E2E_SKIP_STATE_SYNC=True OSMOSIS_E2E_SKIP_CLEANUP=True go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -count=1
+	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=True PERCOSIS_E2E_SKIP_UPGRADE=True PERCOSIS_E2E_SKIP_IBC=True PERCOSIS_E2E_SKIP_STATE_SYNC=True PERCOSIS_E2E_SKIP_CLEANUP=True go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -count=1
 
 test-mutation:
 	@bash scripts/mutation-test.sh $(MODULES)
@@ -347,14 +347,14 @@ build-e2e-script:
 	go build -mod=readonly $(BUILD_FLAGS) -o $(BUILDDIR)/ ./tests/e2e/initialization/$(E2E_SCRIPT_NAME)
 
 docker-build-debug:
-	@DOCKER_BUILDKIT=1 docker build -t osmosis:${COMMIT} --build-arg BASE_IMG_TAG=debug --build-arg RUNNER_IMAGE=$(RUNNER_BASE_IMAGE_ALPINE) -f Dockerfile .
-	@DOCKER_BUILDKIT=1 docker tag osmosis:${COMMIT} osmosis:debug
+	@DOCKER_BUILDKIT=1 docker build -t percosis:${COMMIT} --build-arg BASE_IMG_TAG=debug --build-arg RUNNER_IMAGE=$(RUNNER_BASE_IMAGE_ALPINE) -f Dockerfile .
+	@DOCKER_BUILDKIT=1 docker tag percosis:${COMMIT} percosis:debug
 
 docker-build-e2e-init-chain:
-	@DOCKER_BUILDKIT=1 docker build -t osmolabs/osmosis-e2e-init-chain:debug --build-arg E2E_SCRIPT_NAME=chain --platform=linux/x86_64 -f tests/e2e/initialization/init.Dockerfile .
+	@DOCKER_BUILDKIT=1 docker build -t percolabs/percosis-e2e-init-chain:debug --build-arg E2E_SCRIPT_NAME=chain --platform=linux/x86_64 -f tests/e2e/initialization/init.Dockerfile .
 
 docker-build-e2e-init-node:
-	@DOCKER_BUILDKIT=1 docker build -t osmosis-e2e-init-node:debug --build-arg E2E_SCRIPT_NAME=node --platform=linux/x86_64 -f tests/e2e/initialization/init.Dockerfile .
+	@DOCKER_BUILDKIT=1 docker build -t percosis-e2e-init-node:debug --build-arg E2E_SCRIPT_NAME=node --platform=linux/x86_64 -f tests/e2e/initialization/init.Dockerfile .
 
 e2e-setup: e2e-check-image-sha e2e-remove-resources
 	@echo Finished e2e environment setup, ready to start the test
@@ -377,8 +377,8 @@ RUNNER_BASE_IMAGE_NONROOT := gcr.io/distroless/static-debian11:nonroot
 
 docker-build:
 	@DOCKER_BUILDKIT=1 docker build \
-		-t osmosis:local \
-		-t osmosis:local-distroless \
+		-t percosis:local \
+		-t percosis:local-distroless \
 		--build-arg GO_VERSION=$(GO_VERSION) \
 		--build-arg RUNNER_IMAGE=$(RUNNER_BASE_IMAGE_DISTROLESS) \
 		--build-arg GIT_VERSION=$(VERSION) \
@@ -389,7 +389,7 @@ docker-build-distroless: docker-build
 
 docker-build-alpine:
 	@DOCKER_BUILDKIT=1 docker build \
-		-t osmosis:local-alpine \
+		-t percosis:local-alpine \
 		--build-arg GO_VERSION=$(GO_VERSION) \
 		--build-arg RUNNER_IMAGE=$(RUNNER_BASE_IMAGE_ALPINE) \
 		--build-arg GIT_VERSION=$(VERSION) \
@@ -398,7 +398,7 @@ docker-build-alpine:
 
 docker-build-nonroot:
 	@DOCKER_BUILDKIT=1 docker build \
-		-t osmosis:local-nonroot \
+		-t percosis:local-nonroot \
 		--build-arg GO_VERSION=$(GO_VERSION) \
 		--build-arg RUNNER_IMAGE=$(RUNNER_BASE_IMAGE_NONROOT) \
 		--build-arg GIT_VERSION=$(VERSION) \
@@ -431,57 +431,57 @@ markdown:
 ###############################################################################
 
 localnet-keys:
-	. tests/localosmosis/scripts/add_keys.sh
+	. tests/localpercosis/scripts/add_keys.sh
 
 localnet-init: localnet-clean localnet-build
 
 localnet-build:
-	@DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f tests/localosmosis/docker-compose.yml build
+	@DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f tests/localpercosis/docker-compose.yml build
 
 localnet-start:
-	@STATE="" docker-compose -f tests/localosmosis/docker-compose.yml up
+	@STATE="" docker-compose -f tests/localpercosis/docker-compose.yml up
 
 localnet-start-with-state:
-	@STATE=-s docker-compose -f tests/localosmosis/docker-compose.yml up
+	@STATE=-s docker-compose -f tests/localpercosis/docker-compose.yml up
 
 localnet-startd:
-	@STATE="" docker-compose -f tests/localosmosis/docker-compose.yml up -d
+	@STATE="" docker-compose -f tests/localpercosis/docker-compose.yml up -d
 
 localnet-startd-with-state:
-	@STATE=-s docker-compose -f tests/localosmosis/docker-compose.yml up -d
+	@STATE=-s docker-compose -f tests/localpercosis/docker-compose.yml up -d
 
 localnet-stop:
-	@STATE="" docker-compose -f tests/localosmosis/docker-compose.yml down
+	@STATE="" docker-compose -f tests/localpercosis/docker-compose.yml down
 
 localnet-clean:
-	@rm -rfI $(HOME)/.osmosisd-local/
+	@rm -rfI $(HOME)/.percosisd-local/
 
 localnet-state-export-init: localnet-state-export-clean localnet-state-export-build 
 
 localnet-state-export-build:
-	@DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f tests/localosmosis/state_export/docker-compose.yml build
+	@DOCKER_BUILDKIT=1 COMPOSE_DOCKER_CLI_BUILD=1 docker-compose -f tests/localpercosis/state_export/docker-compose.yml build
 
 localnet-state-export-start:
-	@docker-compose -f tests/localosmosis/state_export/docker-compose.yml up
+	@docker-compose -f tests/localpercosis/state_export/docker-compose.yml up
 
 localnet-state-export-startd:
-	@docker-compose -f tests/localosmosis/state_export/docker-compose.yml up -d
+	@docker-compose -f tests/localpercosis/state_export/docker-compose.yml up -d
 
 localnet-state-export-stop:
-	@docker-compose -f tests/localosmosis/docker-compose.yml down
+	@docker-compose -f tests/localpercosis/docker-compose.yml down
 
 localnet-state-export-clean: localnet-clean
 
-# create 100 concentrated-liquidity positions in localosmosis at pool id 1
+# create 100 concentrated-liquidity positions in localpercosis at pool id 1
 localnet-cl-create-positions:
 	go run tests/cl-go-client/main.go --operation 0
 
-# does 100 small randomized swaps in localosmosis at pool id 1
+# does 100 small randomized swaps in localpercosis at pool id 1
 localnet-cl-small-swap:
 	go run tests/cl-go-client/main.go --operation 1
 
 # does 100 large swaps where the output of the previous swap is swapped back at the
-# next swap. localosmosis at pool id 1
+# next swap. localpercosis at pool id 1
 localnet-cl-large-swap:
 	go run tests/cl-go-client/main.go --operation 2
 
@@ -523,13 +523,13 @@ localnet-cl-positions-large-swaps: localnet-cl-create-positions localnet-cl-larg
 # This script retrieves Uniswap v3 Ethereum position data
 # from subgraph. It uses WETH / USDC pool. This is helpful
 # for setting up somewhat realistic positions for testing
-# in localosmosis. It writes the file under
+# in localpercosis. It writes the file under
 # tests/cl-genesis-positions/subgraph_positions.json
 cl-refresh-subgraph-positions:
 	go run ./tests/cl-genesis-positions --operation 0
 
 # This script converts the positions data created by the
-# cl-refresh-subgraph-positions makefile step into an Osmosis
+# cl-refresh-subgraph-positions makefile step into an Percosis
 # genesis. It writes the file under tests/cl-genesis-positions/genesis.json
 cl-refresh-subgraph-genesis:
 	go run ./tests/cl-genesis-positions --operation 1

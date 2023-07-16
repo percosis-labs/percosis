@@ -18,19 +18,19 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 func NewTxCmd() *cobra.Command {
-	txCmd := osmocli.TxIndexCmd(types.ModuleName)
+	txCmd := percocli.TxIndexCmd(types.ModuleName)
 
-	osmocli.AddTxCmd(txCmd, NewSwapExactAmountInCmd)
-	osmocli.AddTxCmd(txCmd, NewSwapExactAmountOutCmd)
-	osmocli.AddTxCmd(txCmd, NewSplitRouteSwapExactAmountIn)
-	osmocli.AddTxCmd(txCmd, NewSplitRouteSwapExactAmountOut)
+	percocli.AddTxCmd(txCmd, NewSwapExactAmountInCmd)
+	percocli.AddTxCmd(txCmd, NewSwapExactAmountOutCmd)
+	percocli.AddTxCmd(txCmd, NewSplitRouteSwapExactAmountIn)
+	percocli.AddTxCmd(txCmd, NewSplitRouteSwapExactAmountOut)
 
 	txCmd.AddCommand(
 		NewCreatePoolCmd(),
@@ -39,35 +39,35 @@ func NewTxCmd() *cobra.Command {
 	return txCmd
 }
 
-func NewSwapExactAmountInCmd() (*osmocli.TxCliDesc, *types.MsgSwapExactAmountIn) {
-	return &osmocli.TxCliDesc{
+func NewSwapExactAmountInCmd() (*percocli.TxCliDesc, *types.MsgSwapExactAmountIn) {
+	return &percocli.TxCliDesc{
 		Use:     "swap-exact-amount-in [token-in] [token-out-min-amount]",
 		Short:   "swap exact amount in",
-		Example: "osmosisd tx poolmanager swap-exact-amount-in 2000000uosmo 1 --swap-route-pool-ids 5 --swap-route-denoms uion --from val --keyring-backend test -b=block --chain-id=localosmosis --fees 10000uosmo",
-		CustomFieldParsers: map[string]osmocli.CustomFieldParserFn{
-			"Routes": osmocli.FlagOnlyParser(swapAmountInRoutes),
+		Example: "percosisd tx poolmanager swap-exact-amount-in 2000000ufury 1 --swap-route-pool-ids 5 --swap-route-denoms uion --from val --keyring-backend test -b=block --chain-id=localpercosis --fees 10000ufury",
+		CustomFieldParsers: map[string]percocli.CustomFieldParserFn{
+			"Routes": percocli.FlagOnlyParser(swapAmountInRoutes),
 		},
-		Flags: osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags: percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 	}, &types.MsgSwapExactAmountIn{}
 }
 
-func NewSwapExactAmountOutCmd() (*osmocli.TxCliDesc, *types.MsgSwapExactAmountOut) {
+func NewSwapExactAmountOutCmd() (*percocli.TxCliDesc, *types.MsgSwapExactAmountOut) {
 	// Can't get rid of this parser without a break, because the args are out of order.
-	return &osmocli.TxCliDesc{
+	return &percocli.TxCliDesc{
 		Use:              "swap-exact-amount-out [token-out] [token-in-max-amount]",
 		Short:            "swap exact amount out",
-		Example:          "osmosisd tx poolmanager swap-exact-amount-out 100uion 1000000 --swap-route-pool-ids 1 --swap-route-denoms uosmo --from val --keyring-backend test -b=block --chain-id=localosmosis --fees 10000uosmo",
+		Example:          "percosisd tx poolmanager swap-exact-amount-out 100uion 1000000 --swap-route-pool-ids 1 --swap-route-denoms ufury --from val --keyring-backend test -b=block --chain-id=localpercosis --fees 10000ufury",
 		NumArgs:          2,
 		ParseAndBuildMsg: NewBuildSwapExactAmountOutMsg,
-		Flags:            osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags:            percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 	}, &types.MsgSwapExactAmountOut{}
 }
 
-func NewSplitRouteSwapExactAmountIn() (*osmocli.TxCliDesc, *types.MsgSplitRouteSwapExactAmountIn) {
-	return &osmocli.TxCliDesc{
+func NewSplitRouteSwapExactAmountIn() (*percocli.TxCliDesc, *types.MsgSplitRouteSwapExactAmountIn) {
+	return &percocli.TxCliDesc{
 		Use:   "split-route-swap-exact-amount-in [token-in-denom] [token-out-min-amount] [flags]",
 		Short: "split route swap exact amount in",
-		Example: `osmosisd tx poolmanager split-route-swap-exact-amount-in uosmo 1 --routes-file="./routes.json" --from val --keyring-backend test -b=block --chain-id=localosmosis --fees 10000uosmo
+		Example: `percosisd tx poolmanager split-route-swap-exact-amount-in ufury 1 --routes-file="./routes.json" --from val --keyring-backend test -b=block --chain-id=localpercosis --fees 10000ufury
 		- routes.json
 		{
 			"Route": [
@@ -79,7 +79,7 @@ func NewSplitRouteSwapExactAmountIn() (*osmocli.TxCliDesc, *types.MsgSplitRouteS
 				},
 				{
 				"pool_id": 2,
-				"token_out_denom": "uosmo"
+				"token_out_denom": "ufury"
 				}
 			  ],
 			  "token_in_amount": 1000
@@ -92,7 +92,7 @@ func NewSplitRouteSwapExactAmountIn() (*osmocli.TxCliDesc, *types.MsgSplitRouteS
 				},
 				{
 				"pool_id": 4,
-				"token_out_denom": "uosmo"
+				"token_out_denom": "ufury"
 				}
 			  ],
 			  "token_in_amount": 999
@@ -100,20 +100,20 @@ func NewSplitRouteSwapExactAmountIn() (*osmocli.TxCliDesc, *types.MsgSplitRouteS
 			]
 		}
 		`,
-		CustomFieldParsers: map[string]osmocli.CustomFieldParserFn{
-			"Routes": osmocli.FlagOnlyParser(NewMsgNewSplitRouteSwapExactAmountIn),
+		CustomFieldParsers: map[string]percocli.CustomFieldParserFn{
+			"Routes": percocli.FlagOnlyParser(NewMsgNewSplitRouteSwapExactAmountIn),
 		},
-		Flags: osmocli.FlagDesc{
+		Flags: percocli.FlagDesc{
 			RequiredFlags: []*flag.FlagSet{FlagSetCreateRoutes()},
 		},
 	}, &types.MsgSplitRouteSwapExactAmountIn{}
 }
 
-func NewSplitRouteSwapExactAmountOut() (*osmocli.TxCliDesc, *types.MsgSplitRouteSwapExactAmountOut) {
-	return &osmocli.TxCliDesc{
+func NewSplitRouteSwapExactAmountOut() (*percocli.TxCliDesc, *types.MsgSplitRouteSwapExactAmountOut) {
+	return &percocli.TxCliDesc{
 		Use:   "split-route-swap-exact-amount-out [token-out-denom] [token-in-max-amount] [flags]",
 		Short: "split route swap exact amount out",
-		Example: `osmosisd tx poolmanager split-route-swap-exact-amount-out uosmo 1 --routes-file="./routes.json" --from val --keyring-backend test -b=block --chain-id=localosmosis --fees 10000uosmo
+		Example: `percosisd tx poolmanager split-route-swap-exact-amount-out ufury 1 --routes-file="./routes.json" --from val --keyring-backend test -b=block --chain-id=localpercosis --fees 10000ufury
 		- routes.json
 		{
 			"route": [
@@ -125,7 +125,7 @@ func NewSplitRouteSwapExactAmountOut() (*osmocli.TxCliDesc, *types.MsgSplitRoute
 					},
 					{
 					"pool_id": 2,
-					"token_in_denom": "uosmo"
+					"token_in_denom": "ufury"
 					}
 				],
 				"token_out_amount": 1000
@@ -138,7 +138,7 @@ func NewSplitRouteSwapExactAmountOut() (*osmocli.TxCliDesc, *types.MsgSplitRoute
 					},
 					{
 					"pool_id": 4,
-					"token_in_denom": "uosmo"
+					"token_in_denom": "ufury"
 					}
 				],
 				"token_out_amount": 999
@@ -146,10 +146,10 @@ func NewSplitRouteSwapExactAmountOut() (*osmocli.TxCliDesc, *types.MsgSplitRoute
 			]
 			}
 		`,
-		CustomFieldParsers: map[string]osmocli.CustomFieldParserFn{
-			"Routes": osmocli.FlagOnlyParser(NewMsgNewSplitRouteSwapExactAmountOut),
+		CustomFieldParsers: map[string]percocli.CustomFieldParserFn{
+			"Routes": percocli.FlagOnlyParser(NewMsgNewSplitRouteSwapExactAmountOut),
 		},
-		Flags: osmocli.FlagDesc{
+		Flags: percocli.FlagDesc{
 			RequiredFlags: []*flag.FlagSet{FlagSetCreateRoutes()},
 		},
 	}, &types.MsgSplitRouteSwapExactAmountOut{}
@@ -244,8 +244,8 @@ func NewCreatePoolCmd() *cobra.Command {
 		Long:  `Must provide path to a pool JSON file (--pool-file) describing the pool to be created`,
 		Example: `Sample pool JSON file contents:
 {
-	"weights": "4uatom,4osmo,2uakt",
-	"initial-deposit": "100uatom,5osmo,20uakt",
+	"weights": "4uatom,4perco,2uakt",
+	"initial-deposit": "100uatom,5perco,20uakt",
 	"swap-fee": "0.01",
 	"exit-fee": "0.01",
 	"future-governor": "168h"

@@ -8,12 +8,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	_ "github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	_ "github.com/percosis-labs/percosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 var (
@@ -40,7 +40,7 @@ var (
 		sdk.NewCoin("bar", sdk.NewInt(10000)),
 	)
 	defaultAcctFunds sdk.Coins = sdk.NewCoins(
-		sdk.NewCoin("uosmo", sdk.NewInt(10000000000)),
+		sdk.NewCoin("ufury", sdk.NewInt(10000000000)),
 		sdk.NewCoin("foo", sdk.NewInt(10000000)),
 		sdk.NewCoin("bar", sdk.NewInt(10000000)),
 		sdk.NewCoin("baz", sdk.NewInt(10000000)),
@@ -853,7 +853,7 @@ func (s *KeeperTestSuite) TestJoinSwapExactAmountInConsistency() {
 		// TODO: Uncomment or remove this following test case once the referenced
 		// issue is resolved.
 		//
-		// Ref: https://github.com/osmosis-labs/osmosis/issues/1196
+		// Ref: https://github.com/percosis-labs/percosis/issues/1196
 		// {
 		// 	name:              "single coin with positive spread factor and zero exit fee",
 		// 	poolSpreadFactor:       sdk.NewDecWithPrec(1, 2),

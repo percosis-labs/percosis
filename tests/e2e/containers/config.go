@@ -6,8 +6,8 @@ type ImageConfig struct {
 	InitRepository string
 	InitTag        string
 
-	OsmosisRepository string
-	OsmosisTag        string
+	PercosisRepository string
+	PercosisTag        string
 
 	RelayerRepository string
 	RelayerTag        string
@@ -15,18 +15,18 @@ type ImageConfig struct {
 
 //nolint:deadcode
 const (
-	// Current Git branch osmosis repo/version. It is meant to be built locally.
-	// It is used when skipping upgrade by setting OSMOSIS_E2E_SKIP_UPGRADE to true).
+	// Current Git branch percosis repo/version. It is meant to be built locally.
+	// It is used when skipping upgrade by setting PERCOSIS_E2E_SKIP_UPGRADE to true).
 	// This image should be pre-built with `make docker-build-debug` either in CI or locally.
-	CurrentBranchOsmoRepository = "osmosis"
-	CurrentBranchOsmoTag        = "debug"
-	// Pre-upgrade osmosis repo/tag to pull.
-	// It should be uploaded to Docker Hub. OSMOSIS_E2E_SKIP_UPGRADE should be unset
+	CurrentBranchPercoRepository = "percosis"
+	CurrentBranchPercoTag        = "debug"
+	// Pre-upgrade percosis repo/tag to pull.
+	// It should be uploaded to Docker Hub. PERCOSIS_E2E_SKIP_UPGRADE should be unset
 	// for this functionality to be used.
-	previousVersionOsmoRepository = "osmolabs/osmosis-dev"
-	previousVersionOsmoTag        = "v15.x-9fa047c2-1687827963"
-	// Pre-upgrade repo/tag for osmosis initialization (this should be one version below upgradeVersion)
-	previousVersionInitRepository = "osmolabs/osmosis-e2e-init-chain"
+	previousVersionPercoRepository = "percolabs/percosis-dev"
+	previousVersionPercoTag        = "v15.x-9fa047c2-1687827963"
+	// Pre-upgrade repo/tag for percosis initialization (this should be one version below upgradeVersion)
+	previousVersionInitRepository = "percolabs/percosis-e2e-init-chain"
 	previousVersionInitTag        = "v15-fast-vote"
 	// Hermes repo/version for relayer
 	relayerRepository = "informalsystems/hermes"
@@ -46,8 +46,8 @@ func NewImageConfig(isUpgrade, isFork bool) ImageConfig {
 		// If upgrade is not tested, we do not need InitRepository and InitTag
 		// because we directly call the initialization logic without
 		// the need for Docker.
-		config.OsmosisRepository = CurrentBranchOsmoRepository
-		config.OsmosisTag = CurrentBranchOsmoTag
+		config.PercosisRepository = CurrentBranchPercoRepository
+		config.PercosisTag = CurrentBranchPercoTag
 		return config
 	}
 
@@ -61,16 +61,16 @@ func NewImageConfig(isUpgrade, isFork bool) ImageConfig {
 		// Normally, validators switch the binaries pre-fork height
 		// Then, once the fork height is reached, the state breaking-logic
 		// is run.
-		config.OsmosisRepository = CurrentBranchOsmoRepository
-		config.OsmosisTag = CurrentBranchOsmoTag
+		config.PercosisRepository = CurrentBranchPercoRepository
+		config.PercosisTag = CurrentBranchPercoTag
 	} else {
 		// Upgrades are run at the time when upgrade height is reached
 		// and are submitted via a governance proposal. Thefore, we
-		// must start running the previous Osmosis version. Then, the node
+		// must start running the previous Percosis version. Then, the node
 		// should auto-upgrade, at which point we can restart the updated
-		// Osmosis validator container.
-		config.OsmosisRepository = previousVersionOsmoRepository
-		config.OsmosisTag = previousVersionOsmoTag
+		// Percosis validator container.
+		config.PercosisRepository = previousVersionPercoRepository
+		config.PercosisTag = previousVersionPercoTag
 	}
 
 	return config

@@ -17,8 +17,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/v16/tests/e2e/initialization"
-	txfeestypes "github.com/osmosis-labs/osmosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
+	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
 )
 
 const (
@@ -31,7 +31,7 @@ const (
 )
 
 var (
-	// We set consensus min fee = .0025 uosmo / gas * 400000 gas = 1000
+	// We set consensus min fee = .0025 ufury / gas * 400000 gas = 1000
 	Fees = txfeestypes.ConsensusMinFee.Mul(sdk.NewDec(GasLimit)).Ceil().TruncateInt64()
 
 	defaultErrRegex = regexp.MustCompile(`(E|e)rror`)
@@ -64,7 +64,7 @@ func NewManager(isUpgrade bool, isFork bool, isDebugLogEnabled bool) (docker *Ma
 	if err != nil {
 		return nil, err
 	}
-	docker.network, err = docker.pool.CreateNetwork("osmosis-testnet")
+	docker.network, err = docker.pool.CreateNetwork("percosis-testnet")
 	if err != nil {
 		return nil, err
 	}
@@ -228,7 +228,7 @@ func (m *Manager) ExecCmd(t *testing.T, containerName string, command []string, 
 
 // RunHermesResource runs a Hermes container. Returns the container resource and error if any.
 // the name of the hermes container is "<chain A id>-<chain B id>-relayer"
-func (m *Manager) RunHermesResource(chainAID, osmoARelayerNodeName, osmoAValMnemonic, chainBID, osmoBRelayerNodeName, osmoBValMnemonic string, hermesCfgPath string) (*dockertest.Resource, error) {
+func (m *Manager) RunHermesResource(chainAID, percoARelayerNodeName, percoAValMnemonic, chainBID, percoBRelayerNodeName, percoBValMnemonic string, hermesCfgPath string) (*dockertest.Resource, error) {
 	hermesResource, err := m.pool.RunWithOptions(
 		&dockertest.RunOptions{
 			Name:       hermesContainerName,
@@ -249,12 +249,12 @@ func (m *Manager) RunHermesResource(chainAID, osmoARelayerNodeName, osmoAValMnem
 				"3031/tcp": {{HostIP: "", HostPort: "3031"}},
 			},
 			Env: []string{
-				fmt.Sprintf("OSMO_A_E2E_CHAIN_ID=%s", chainAID),
-				fmt.Sprintf("OSMO_B_E2E_CHAIN_ID=%s", chainBID),
-				fmt.Sprintf("OSMO_A_E2E_VAL_MNEMONIC=%s", osmoAValMnemonic),
-				fmt.Sprintf("OSMO_B_E2E_VAL_MNEMONIC=%s", osmoBValMnemonic),
-				fmt.Sprintf("OSMO_A_E2E_VAL_HOST=%s", osmoARelayerNodeName),
-				fmt.Sprintf("OSMO_B_E2E_VAL_HOST=%s", osmoBRelayerNodeName),
+				fmt.Sprintf("PERCO_A_E2E_CHAIN_ID=%s", chainAID),
+				fmt.Sprintf("PERCO_B_E2E_CHAIN_ID=%s", chainBID),
+				fmt.Sprintf("PERCO_A_E2E_VAL_MNEMONIC=%s", percoAValMnemonic),
+				fmt.Sprintf("PERCO_B_E2E_VAL_MNEMONIC=%s", percoBValMnemonic),
+				fmt.Sprintf("PERCO_A_E2E_VAL_HOST=%s", percoARelayerNodeName),
+				fmt.Sprintf("PERCO_B_E2E_VAL_HOST=%s", percoBRelayerNodeName),
 			},
 			Entrypoint: []string{
 				"sh",
@@ -281,14 +281,14 @@ func (m *Manager) RunNodeResource(chainId string, containerName, valCondifDir st
 
 	runOpts := &dockertest.RunOptions{
 		Name:       containerName,
-		Repository: m.OsmosisRepository,
-		Tag:        m.OsmosisTag,
+		Repository: m.PercosisRepository,
+		Tag:        m.PercosisTag,
 		NetworkID:  m.network.Network.ID,
 		User:       "root:root",
 		Cmd:        []string{"start"},
 		Mounts: []string{
-			fmt.Sprintf("%s/:/osmosis/.osmosisd", valCondifDir),
-			fmt.Sprintf("%s/scripts:/osmosis", pwd),
+			fmt.Sprintf("%s/:/percosis/.percosisd", valCondifDir),
+			fmt.Sprintf("%s/scripts:/percosis", pwd),
 		},
 	}
 

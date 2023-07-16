@@ -15,10 +15,10 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/v2types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm/v2types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 var _ types.QueryServer = Querier{}
@@ -57,7 +57,7 @@ func (q Querier) Pool(
 	sdkCtx := sdk.UnwrapSDKContext(ctx)
 
 	// GetPool gets pool from poolmanager that has the knowledge of all pool ids
-	// within Osmosis.
+	// within Percosis.
 	pool, err := q.Keeper.poolManager.GetPool(sdkCtx, req.PoolId)
 	if err != nil {
 		return nil, status.Error(codes.Internal, err.Error())

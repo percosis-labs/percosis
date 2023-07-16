@@ -12,7 +12,7 @@ var (
 	// first come first serve basis that is based on the order of the base denoms.
 	DefaultBaseDenoms = []BaseDenom{
 		{
-			Denom:    OsmosisDenomination,
+			Denom:    PercosisDenomination,
 			StepSize: sdk.NewInt(1_000_000),
 		},
 	}

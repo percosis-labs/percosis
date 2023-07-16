@@ -10,15 +10,15 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	poolmanager "github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/twap/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	poolmanager "github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/twap/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/twap/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := osmocli.QueryIndexCmd(types.ModuleName)
+	cmd := percocli.QueryIndexCmd(types.ModuleName)
 	cmd.AddCommand(GetQueryArithmeticCommand())
 	cmd.AddCommand(GetQueryGeometricCommand())
 
@@ -31,11 +31,11 @@ func GetQueryArithmeticCommand() *cobra.Command {
 		Use:     "arithmetic [poolid] [base denom] [start time] [end time]",
 		Short:   "Query arithmetic twap",
 		Aliases: []string{"twap"},
-		Long: osmocli.FormatLongDescDirect(`Query arithmetic twap for pool. Start time must be unix time. End time can be unix time or duration.
+		Long: percocli.FormatLongDescDirect(`Query arithmetic twap for pool. Start time must be unix time. End time can be unix time or duration.
 
 Example:
-{{.CommandPrefix}} arithmetic 1 uosmo 1667088000 24h
-{{.CommandPrefix}} arithmetic 1 uosmo 1667088000 1667174400
+{{.CommandPrefix}} arithmetic 1 ufury 1667088000 24h
+{{.CommandPrefix}} arithmetic 1 ufury 1667088000 1667174400
 `, types.ModuleName),
 		Args: cobra.ExactArgs(4),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -79,11 +79,11 @@ func GetQueryGeometricCommand() *cobra.Command {
 	cmd := &cobra.Command{
 		Use:   "geometric [poolid] [base denom] [start time] [end time]",
 		Short: "Query geometric twap",
-		Long: osmocli.FormatLongDescDirect(`Query geometric twap for pool. Start time must be unix time. End time can be unix time or duration.
+		Long: percocli.FormatLongDescDirect(`Query geometric twap for pool. Start time must be unix time. End time can be unix time or duration.
 
 Example:
-{{.CommandPrefix}} geometric 1 uosmo 1667088000 24h
-{{.CommandPrefix}} geometric 1 uosmo 1667088000 1667174400
+{{.CommandPrefix}} geometric 1 ufury 1667088000 24h
+{{.CommandPrefix}} geometric 1 ufury 1667088000 1667174400
 `, types.ModuleName),
 		Args: cobra.ExactArgs(4),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -152,7 +152,7 @@ func getQuoteDenomFromLiquidity(ctx context.Context, clientCtx client.Context, p
 func twapQueryParseArgs(args []string) (poolId uint64, baseDenom string, startTime time.Time, endTime time.Time, err error) {
 	// boilerplate parse fields
 	// <UINT PARSE>
-	poolId, err = osmocli.ParseUint(args[0], "poolId")
+	poolId, err = percocli.ParseUint(args[0], "poolId")
 	if err != nil {
 		return
 	}
@@ -161,14 +161,14 @@ func twapQueryParseArgs(args []string) (poolId uint64, baseDenom string, startTi
 	baseDenom = strings.TrimSpace(args[1])
 
 	// <UNIX TIME PARSE>
-	startTime, err = osmocli.ParseUnixTime(args[2], "start time")
+	startTime, err = percocli.ParseUnixTime(args[2], "start time")
 	if err != nil {
 		return
 	}
 
 	// END TIME PARSE: ONEOF {<UNIX TIME PARSE>, <DURATION>}
 	// try parsing in unix time, if failed try parsing in duration
-	endTime, err = osmocli.ParseUnixTime(args[3], "end time")
+	endTime, err = percocli.ParseUnixTime(args[3], "end time")
 	if err != nil {
 		// TODO if we don't use protoreflect:
 		// make better error combiner, rather than just returning last error

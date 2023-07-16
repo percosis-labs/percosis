@@ -1,9 +1,9 @@
 package bindings
 
-// OsmosisQuery contains osmosis custom queries.
-// See https://github.com/osmosis-labs/osmosis-bindings/blob/main/packages/bindings/src/query.rs
-type OsmosisQuery struct {
-	/// Given a subdenom minted by a contract via `OsmosisMsg::MintTokens`,
+// PercosisQuery contains percosis custom queries.
+// See https://github.com/percosis-labs/percosis-bindings/blob/main/packages/bindings/src/query.rs
+type PercosisQuery struct {
+	/// Given a subdenom minted by a contract via `PercosisMsg::MintTokens`,
 	/// returns the full denom as used by `BankMsg::Send`.
 	FullDenom *FullDenom `json:"full_denom,omitempty"`
 	/// Returns the admin of a denom, if the denom is a Token Factory denom.

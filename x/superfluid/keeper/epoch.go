@@ -8,14 +8,14 @@ import (
 
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	gammtypes "github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	incentivestypes "github.com/osmosis-labs/osmosis/v16/x/incentives/types"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/osmoutils"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
 )
 
 func (k Keeper) AfterEpochEnd(ctx sdk.Context, epochIdentifier string, _ int64) error {
@@ -23,7 +23,7 @@ func (k Keeper) AfterEpochEnd(ctx sdk.Context, epochIdentifier string, _ int64) 
 }
 
 func (k Keeper) AfterEpochStartBeginBlock(ctx sdk.Context) {
-	// cref [#830](https://github.com/osmosis-labs/osmosis/issues/830),
+	// cref [#830](https://github.com/percosis-labs/percosis/issues/830),
 	// the supplied epoch number is wrong at time of commit. hence we get from the info.
 	curEpoch := k.ek.GetEpochInfo(ctx, k.GetEpochIdentifier(ctx)).CurrentEpoch
 
@@ -37,9 +37,9 @@ func (k Keeper) AfterEpochStartBeginBlock(ctx sdk.Context) {
 	// Update all LP tokens multipliers for the upcoming epoch.
 	// This affects staking reward distribution until the next epochs rewards.
 	// Exclusive of current epoch's rewards, inclusive of next epoch's rewards.
-	ctx.Logger().Info("Update all osmo equivalency multipliers")
+	ctx.Logger().Info("Update all perco equivalency multipliers")
 	for _, asset := range k.GetAllSuperfluidAssets(ctx) {
-		err := k.UpdateOsmoEquivalentMultipliers(ctx, asset, curEpoch)
+		err := k.UpdatePercoEquivalentMultipliers(ctx, asset, curEpoch)
 		if err != nil {
 			// TODO: Revisit what we do here. (halt all distr, only skip this asset)
 			// Since at MVP of feature, we only have one pool of superfluid staking,
@@ -77,7 +77,7 @@ func (k Keeper) MoveSuperfluidDelegationRewardToGauges(ctx sdk.Context) {
 
 		// Send delegation rewards to gauges
 		_ = osmoutils.ApplyFuncIfNoError(ctx, func(cacheCtx sdk.Context) error {
-			// Note! We only send the bond denom (osmo), to avoid attack vectors where people
+			// Note! We only send the bond denom (perco), to avoid attack vectors where people
 			// send many different denoms to the intermediary account, and make a resource exhaustion attack on end block.
 			bondDenom := k.sk.BondDenom(cacheCtx)
 			balance := k.bk.GetBalance(cacheCtx, addr, bondDenom)
@@ -108,9 +108,9 @@ func (k Keeper) distributeSuperfluidGauges(ctx sdk.Context) {
 	}
 }
 
-func (k Keeper) UpdateOsmoEquivalentMultipliers(ctx sdk.Context, asset types.SuperfluidAsset, newEpochNumber int64) error {
+func (k Keeper) UpdatePercoEquivalentMultipliers(ctx sdk.Context, asset types.SuperfluidAsset, newEpochNumber int64) error {
 	if asset.AssetType == types.SuperfluidAssetTypeLPShare {
-		// LP_token_Osmo_equivalent = OSMO_amount_on_pool / LP_token_supply
+		// LP_token_Perco_equivalent = PERCO_amount_on_pool / LP_token_supply
 		poolId := gammtypes.MustGetPoolIdFromShareDenom(asset.Denom)
 		pool, err := k.gk.GetPoolAndPoke(ctx, poolId)
 		if err != nil {
@@ -120,26 +120,26 @@ func (k Keeper) UpdateOsmoEquivalentMultipliers(ctx sdk.Context, asset types.Sup
 			return err
 		}
 
-		// get OSMO amount
+		// get PERCO amount
 		bondDenom := k.sk.BondDenom(ctx)
-		osmoPoolAsset := pool.GetTotalPoolLiquidity(ctx).AmountOf(bondDenom)
-		if osmoPoolAsset.IsZero() {
-			err := fmt.Errorf("pool %d has zero OSMO amount", poolId)
-			// Pool has unexpectedly removed Osmo from its assets.
+		percoPoolAsset := pool.GetTotalPoolLiquidity(ctx).AmountOf(bondDenom)
+		if percoPoolAsset.IsZero() {
+			err := fmt.Errorf("pool %d has zero PERCO amount", poolId)
+			// Pool has unexpectedly removed Perco from its assets.
 			k.Logger(ctx).Error(err.Error())
 			k.BeginUnwindSuperfluidAsset(ctx, 0, asset)
 			return err
 		}
 
-		multiplier := k.calculateOsmoBackingPerShare(pool, osmoPoolAsset)
-		k.SetOsmoEquivalentMultiplier(ctx, newEpochNumber, asset.Denom, multiplier)
+		multiplier := k.calculatePercoBackingPerShare(pool, percoPoolAsset)
+		k.SetPercoEquivalentMultiplier(ctx, newEpochNumber, asset.Denom, multiplier)
 	} else if asset.AssetType == types.SuperfluidAssetTypeConcentratedShare {
-		// LP_token_Osmo_equivalent = OSMO_amount_on_pool / LP_token_supply
+		// LP_token_Perco_equivalent = PERCO_amount_on_pool / LP_token_supply
 		poolId := cltypes.MustGetPoolIdFromShareDenom(asset.Denom)
 		pool, err := k.clk.GetConcentratedPoolById(ctx, poolId)
 		if err != nil {
 			k.Logger(ctx).Error(err.Error())
-			// Pool has unexpectedly removed Osmo from its assets.
+			// Pool has unexpectedly removed Perco from its assets.
 			k.BeginUnwindSuperfluidAsset(ctx, 0, asset)
 			return err
 		}
@@ -168,19 +168,19 @@ func (k Keeper) UpdateOsmoEquivalentMultipliers(ctx sdk.Context, asset types.Sup
 		}
 		assets := sdk.NewCoins(asset0, asset1)
 
-		// get OSMO amount from underlying assets
-		osmoPoolAsset := assets.AmountOf(bondDenom)
-		if osmoPoolAsset.IsZero() {
-			// Pool has unexpectedly removed OSMO from its assets.
-			err := errors.New("pool has unexpectedly removed OSMO as one of its underlying assets")
+		// get PERCO amount from underlying assets
+		percoPoolAsset := assets.AmountOf(bondDenom)
+		if percoPoolAsset.IsZero() {
+			// Pool has unexpectedly removed PERCO from its assets.
+			err := errors.New("pool has unexpectedly removed PERCO as one of its underlying assets")
 			k.Logger(ctx).Error(err.Error())
 			k.BeginUnwindSuperfluidAsset(ctx, 0, asset)
 			return err
 		}
 
 		// calculate multiplier and set it
-		multiplier := osmoPoolAsset.ToDec().Quo(fullRangeLiquidity)
-		k.SetOsmoEquivalentMultiplier(ctx, newEpochNumber, asset.Denom, multiplier)
+		multiplier := percoPoolAsset.ToDec().Quo(fullRangeLiquidity)
+		k.SetPercoEquivalentMultiplier(ctx, newEpochNumber, asset.Denom, multiplier)
 	} else if asset.AssetType == types.SuperfluidAssetTypeNative {
 		// TODO: Consider deleting superfluid asset type native
 		k.Logger(ctx).Error("unsupported superfluid asset type")

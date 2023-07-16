@@ -7,13 +7,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	osmoutils "github.com/osmosis-labs/osmosis/osmoutils"
-	appParams "github.com/osmosis-labs/osmosis/v16/app/params"
-	"github.com/osmosis-labs/osmosis/v16/x/incentives/types"
-	incentivetypes "github.com/osmosis-labs/osmosis/v16/x/incentives/types"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	poolincentivetypes "github.com/osmosis-labs/osmosis/v16/x/pool-incentives/types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	osmoutils "github.com/percosis-labs/percosis/osmoutils"
+	appParams "github.com/percosis-labs/percosis/v16/app/params"
+	"github.com/percosis-labs/percosis/v16/x/incentives/types"
+	incentivetypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	poolincentivetypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 var _ = suite.TestingSuite(nil)
@@ -170,7 +170,7 @@ func (s *KeeperTestSuite) TestDistribute() {
 
 func (s *KeeperTestSuite) TestDistribute_InternalIncentives_NoLock() {
 	fiveKRewardCoins := sdk.NewInt64Coin(defaultRewardDenom, 5000)
-	fiveKRewardCoinsUosmo := sdk.NewInt64Coin(appParams.BaseCoinUnit, 5000)
+	fiveKRewardCoinsUfury := sdk.NewInt64Coin(appParams.BaseCoinUnit, 5000)
 	fifteenKRewardCoins := sdk.NewInt64Coin(defaultRewardDenom, 15000)
 
 	coinsToMint := sdk.NewCoins(sdk.NewCoin(defaultRewardDenom, sdk.NewInt(10000000)), sdk.NewCoin(appParams.BaseCoinUnit, sdk.NewInt(10000000)))
@@ -200,8 +200,8 @@ func (s *KeeperTestSuite) TestDistribute_InternalIncentives_NoLock() {
 		"valid case: gauge with multiple coins": {
 			numPools:              1,
 			gaugeStartTime:        defaultGaugeStartTime,
-			gaugeCoins:            sdk.NewCoins(fiveKRewardCoins, fiveKRewardCoinsUosmo),
-			expectedDistributions: sdk.NewCoins(fiveKRewardCoins, fiveKRewardCoinsUosmo),
+			gaugeCoins:            sdk.NewCoins(fiveKRewardCoins, fiveKRewardCoinsUfury),
+			expectedDistributions: sdk.NewCoins(fiveKRewardCoins, fiveKRewardCoinsUfury),
 			expectErr:             false,
 		},
 		"valid case: multiple gaugeId and poolId": {

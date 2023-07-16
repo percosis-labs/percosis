@@ -16,23 +16,23 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/cosmwasm/msg"
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/model"
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/cosmwasm/msg"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/model"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
 )
 
 func NewTxCmd() *cobra.Command {
-	txCmd := osmocli.TxIndexCmd(types.ModuleName)
-	osmocli.AddTxCmd(txCmd, NewCreateCWPoolCmd)
+	txCmd := percocli.TxIndexCmd(types.ModuleName)
+	percocli.AddTxCmd(txCmd, NewCreateCWPoolCmd)
 	return txCmd
 }
 
-func NewCreateCWPoolCmd() (*osmocli.TxCliDesc, *model.MsgCreateCosmWasmPool) {
-	return &osmocli.TxCliDesc{
+func NewCreateCWPoolCmd() (*percocli.TxCliDesc, *model.MsgCreateCosmWasmPool) {
+	return &percocli.TxCliDesc{
 		Use:              "create-pool [code-id] [instantiate-msg] [sender]",
 		Short:            "create a cosmwasm pool",
-		Example:          "osmosisd tx cosmwasmpool create-pool 1 uion,uosmo --from lo-test1 --keyring-backend test --chain-id localosmosis --fees 875uosmo -b=block",
+		Example:          "percosisd tx cosmwasmpool create-pool 1 uion,ufury --from lo-test1 --keyring-backend test --chain-id localpercosis --fees 875ufury -b=block",
 		NumArgs:          2,
 		ParseAndBuildMsg: BuildCreatePoolMsg,
 	}, &model.MsgCreateCosmWasmPool{}
@@ -67,7 +67,7 @@ func NewCmdUploadCodeIdAndWhitelistProposal() *cobra.Command {
 		Use:     "upload-code-id-and-whitelist [wasm-file-path] [flags]",
 		Args:    cobra.ExactArgs(1),
 		Short:   "Submit an upload code id and whitelist proposal",
-		Example: "osmosisd tx gov submit-proposal upload-code-id-and-whitelist x/cosmwasmpool/bytecode/transmuter.wasm --from lo-test1 --keyring-backend test --title \"Test\" --description \"Test\" -b=block --chain-id localosmosis --fees=100000uosmo --gas=20000000",
+		Example: "percosisd tx gov submit-proposal upload-code-id-and-whitelist x/cosmwasmpool/bytecode/transmuter.wasm --from lo-test1 --keyring-backend test --title \"Test\" --description \"Test\" -b=block --chain-id localpercosis --fees=100000ufury --gas=20000000",
 		RunE: func(cmd *cobra.Command, args []string) error {
 			clientCtx, err := client.GetClientTxContext(cmd)
 			if err != nil {

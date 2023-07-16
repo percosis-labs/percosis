@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 
-	"github.com/osmosis-labs/osmosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/v16/x/protorev/types"
 )
 
 func TestMsgSetHotRoutes(t *testing.T) {
@@ -53,18 +53,18 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     0,
 									TokenIn:  "Juno",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 			},
@@ -86,18 +86,18 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     0,
 									TokenIn:  "Juno",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "eth",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 			},
@@ -119,18 +119,18 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     0,
 									TokenIn:  "Juno",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 				{
@@ -145,18 +145,18 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     0,
 									TokenIn:  "Juno",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 			},
@@ -177,14 +177,14 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								},
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 			},
@@ -200,14 +200,14 @@ func TestMsgSetHotRoutes(t *testing.T) {
 							Trades: []types.Trade{
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 			},
@@ -229,11 +229,11 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     0,
 									TokenIn:  "Juno",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 							},
@@ -244,18 +244,18 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     0,
 									TokenIn:  "Juno",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 								{
 									Pool:     5,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Juno",
 								},
 							},
 							StepSize: validStepSize,
 						},
 					},
-					TokenIn:  types.OsmosisDenomination,
+					TokenIn:  types.PercosisDenomination,
 					TokenOut: "Juno",
 				},
 			},
@@ -271,7 +271,7 @@ func TestMsgSetHotRoutes(t *testing.T) {
 							Trades: []types.Trade{
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 								{
@@ -282,7 +282,7 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     10,
 									TokenIn:  "Akash",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 							},
 							StepSize: validStepSize,
@@ -304,7 +304,7 @@ func TestMsgSetHotRoutes(t *testing.T) {
 							Trades: []types.Trade{
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 								{
@@ -315,7 +315,7 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     10,
 									TokenIn:  "Akash",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 							},
 						},
@@ -336,7 +336,7 @@ func TestMsgSetHotRoutes(t *testing.T) {
 							Trades: []types.Trade{
 								{
 									Pool:     3,
-									TokenIn:  types.OsmosisDenomination,
+									TokenIn:  types.PercosisDenomination,
 									TokenOut: "Atom",
 								},
 								{
@@ -347,7 +347,7 @@ func TestMsgSetHotRoutes(t *testing.T) {
 								{
 									Pool:     10,
 									TokenIn:  "Akash",
-									TokenOut: types.OsmosisDenomination,
+									TokenOut: types.PercosisDenomination,
 								},
 							},
 							StepSize: invalidStepSize,
@@ -584,7 +584,7 @@ func TestMsgSetBaseDenoms(t *testing.T) {
 			false,
 		},
 		{
-			"Invalid message (base denoms does not start with osmosis)",
+			"Invalid message (base denoms does not start with percosis)",
 			createAccount().String(),
 			[]types.BaseDenom{
 				{
@@ -599,7 +599,7 @@ func TestMsgSetBaseDenoms(t *testing.T) {
 			createAccount().String(),
 			[]types.BaseDenom{
 				{
-					Denom:    types.OsmosisDenomination,
+					Denom:    types.PercosisDenomination,
 					StepSize: sdk.NewInt(0),
 				},
 			},
@@ -610,11 +610,11 @@ func TestMsgSetBaseDenoms(t *testing.T) {
 			createAccount().String(),
 			[]types.BaseDenom{
 				{
-					Denom:    types.OsmosisDenomination,
+					Denom:    types.PercosisDenomination,
 					StepSize: sdk.NewInt(1),
 				},
 				{
-					Denom:    types.OsmosisDenomination,
+					Denom:    types.PercosisDenomination,
 					StepSize: sdk.NewInt(1),
 				},
 			},
@@ -625,7 +625,7 @@ func TestMsgSetBaseDenoms(t *testing.T) {
 			createAccount().String(),
 			[]types.BaseDenom{
 				{
-					Denom:    types.OsmosisDenomination,
+					Denom:    types.PercosisDenomination,
 					StepSize: sdk.NewInt(1),
 				},
 			},
@@ -636,7 +636,7 @@ func TestMsgSetBaseDenoms(t *testing.T) {
 			createAccount().String(),
 			[]types.BaseDenom{
 				{
-					Denom:    types.OsmosisDenomination,
+					Denom:    types.PercosisDenomination,
 					StepSize: sdk.NewInt(1),
 				},
 				{
@@ -655,7 +655,7 @@ func TestMsgSetBaseDenoms(t *testing.T) {
 			createAccount().String(),
 			[]types.BaseDenom{
 				{
-					Denom:    types.OsmosisDenomination,
+					Denom:    types.PercosisDenomination,
 					StepSize: sdk.NewInt(1),
 				},
 				{

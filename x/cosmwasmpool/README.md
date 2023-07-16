@@ -3,14 +3,14 @@
 
 ## Overview
 
-The CosmWasm Pool Module is an extension for the Osmosis pools, aiming to create a custom module that allows users to create and manage liquidity pools backed by CosmWasm smart contracts. The feature enables developers to build and deploy custom smart contracts that can be integrated with the rest of the pool types on the Osmosis chain.
+The CosmWasm Pool Module is an extension for the Percosis pools, aiming to create a custom module that allows users to create and manage liquidity pools backed by CosmWasm smart contracts. The feature enables developers to build and deploy custom smart contracts that can be integrated with the rest of the pool types on the Percosis chain.
 
 The module is built on top of the CosmWasm smart contracting platform, which provides a secure and efficient way to develop and execute WebAssembly (Wasm) smart contracts on the Cosmos SDK.
 
 Having pools in CosmWasm provides several benefits, one of which is avoiding the need for chain upgrades when introducing new functionalities or modifying existing ones related to liquidity pools. This advantage is particularly important in the context of speed of development and iteration.
 
 An example of a CosmWasm pool type:
-- [transmuter](https://github.com/osmosis-labs/transmuter)
+- [transmuter](https://github.com/percosis-labs/transmuter)
 
 ## Key Components
 
@@ -358,21 +358,21 @@ pub struct Coin {
 
 ### Governance and Code Id Management
 
-Despite code upload being permissioned by governance on Osmosis, it is allowed to be done by a certain
+Despite code upload being permissioned by governance on Percosis, it is allowed to be done by a certain
 set of addresses:
 
 ```bash
-osmosisd q wasm params
+percosisd q wasm params
 code_upload_access:
   address: ""
   addresses:
-  - osmo1cd4nn8yzdrrsfqsmmvaafq8r03xn38qgqt8fzh
-  - osmo1wl59k23zngj34l7d42y9yltask7rjlnxgccawc7ltrknp6n52fps94qsjd
-  - osmo19vxp8vq8qm368dr026qxh8v82satwaf79y235lfv6wmgpwxx8dtskedaku
-  - osmo1e0x2hnhhwyek7eq3kcxu2x6pt77wdnwz0lutz9fespdr9utq963qr0y5p5
-  - osmo14n3a65fnqz9jve85l23al6m3pjugf0atvrfqh5
-  - osmo15wna5dwylkuzvljsudyn6zfsd4zl0rkg5ge888mzk4vtnjpp0z5q4e9w58
-  - osmo1r02tlyyaqs6tmrfa4jf37t7ewuxr57qp8ghzly
+  - perco1cd4nn8yzdrrsfqsmmvaafq8r03xn38qgqt8fzh
+  - perco1wl59k23zngj34l7d42y9yltask7rjlnxgccawc7ltrknp6n52fps94qsjd
+  - perco19vxp8vq8qm368dr026qxh8v82satwaf79y235lfv6wmgpwxx8dtskedaku
+  - perco1e0x2hnhhwyek7eq3kcxu2x6pt77wdnwz0lutz9fespdr9utq963qr0y5p5
+  - perco14n3a65fnqz9jve85l23al6m3pjugf0atvrfqh5
+  - perco15wna5dwylkuzvljsudyn6zfsd4zl0rkg5ge888mzk4vtnjpp0z5q4e9w58
+  - perco1r02tlyyaqs6tmrfa4jf37t7ewuxr57qp8ghzly
   permission: AnyOfAddresses
 instantiate_default_permission: Everybody
 ```

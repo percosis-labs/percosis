@@ -6,9 +6,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/osmoutils"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
 )
 
 func (s *KeeperTestSuite) TestGRPCParams() {
@@ -66,12 +66,12 @@ func (s *KeeperTestSuite) TestTotalDelegationByValidatorForAsset() {
 		s.Require().Equal(len(valAddrs), len(res.Assets))
 
 		for _, result := range res.Assets {
-			// check osmo equivalent is correct
-			actual_response_osmo := result.OsmoEquivalent
-			needed_response_osmo, err := s.App.SuperfluidKeeper.GetSuperfluidOSMOTokens(ctx, denom, sdk.NewInt(delegation_amount))
+			// check perco equivalent is correct
+			actual_response_perco := result.PercoEquivalent
+			needed_response_perco, err := s.App.SuperfluidKeeper.GetSuperfluidPERCOTokens(ctx, denom, sdk.NewInt(delegation_amount))
 			s.Require().NoError(err)
 
-			s.Require().Equal(actual_response_osmo, needed_response_osmo)
+			s.Require().Equal(actual_response_perco, needed_response_perco)
 
 			// check sfs'd asset amount correct
 			actual_response_asset := result.AmountSfsd
@@ -153,8 +153,8 @@ func (s *KeeperTestSuite) TestGRPCQuerySuperfluidDelegations() {
 			DelegatorAddress: delegator.String(),
 		})
 
-		multiplier0 := s.querier.Keeper.GetOsmoEquivalentMultiplier(s.Ctx, denoms[0])
-		multiplier1 := s.querier.Keeper.GetOsmoEquivalentMultiplier(s.Ctx, denoms[1])
+		multiplier0 := s.querier.Keeper.GetPercoEquivalentMultiplier(s.Ctx, denoms[0])
+		multiplier1 := s.querier.Keeper.GetPercoEquivalentMultiplier(s.Ctx, denoms[1])
 		minRiskFactor := s.querier.Keeper.GetParams(s.Ctx).MinimumRiskFactor
 
 		expectAmount0 := multiplier0.Mul(sdk.NewDec(1000000)).Sub(multiplier0.Mul(sdk.NewDec(1000000)).Mul(minRiskFactor))
@@ -166,8 +166,8 @@ func (s *KeeperTestSuite) TestGRPCQuerySuperfluidDelegations() {
 			sdk.NewInt64Coin(denoms[0], 1000000),
 			sdk.NewInt64Coin(denoms[1], 1000000),
 		)))
-		s.Require().True(res.SuperfluidDelegationRecords[0].EquivalentStakedAmount.IsEqual(sdk.NewCoin("uosmo", expectAmount0.RoundInt())))
-		s.Require().True(res.SuperfluidDelegationRecords[1].EquivalentStakedAmount.IsEqual(sdk.NewCoin("uosmo", expectAmount1.RoundInt())))
+		s.Require().True(res.SuperfluidDelegationRecords[0].EquivalentStakedAmount.IsEqual(sdk.NewCoin("ufury", expectAmount0.RoundInt())))
+		s.Require().True(res.SuperfluidDelegationRecords[1].EquivalentStakedAmount.IsEqual(sdk.NewCoin("ufury", expectAmount1.RoundInt())))
 	}
 
 	// for each validator denom pair, make sure they have 1 delegations
@@ -279,7 +279,7 @@ func (s *KeeperTestSuite) TestUserConcentratedSuperfluidPositionsBondedAndUnbond
 
 	// Set staking parameters (needed since stake is not a valid quote denom).
 	stakingParams := s.App.StakingKeeper.GetParams(s.Ctx)
-	stakingParams.BondDenom = "uosmo"
+	stakingParams.BondDenom = "ufury"
 	s.App.StakingKeeper.SetParams(s.Ctx, stakingParams)
 
 	coins := sdk.NewCoins(sdk.NewCoin("token0", sdk.NewInt(1000000000000)), sdk.NewCoin(s.App.StakingKeeper.BondDenom(s.Ctx), sdk.NewInt(1000000000000)))
@@ -439,8 +439,8 @@ func (s *KeeperTestSuite) TestGRPCQueryTotalDelegationByDelegator() {
 	s.App.StakingKeeper.SetDelegation(s.Ctx, bond1to0)
 	s.App.StakingKeeper.SetDelegation(s.Ctx, bond1to1)
 
-	multiplier0 := s.querier.Keeper.GetOsmoEquivalentMultiplier(s.Ctx, denoms[0])
-	multiplier1 := s.querier.Keeper.GetOsmoEquivalentMultiplier(s.Ctx, denoms[1])
+	multiplier0 := s.querier.Keeper.GetPercoEquivalentMultiplier(s.Ctx, denoms[0])
+	multiplier1 := s.querier.Keeper.GetPercoEquivalentMultiplier(s.Ctx, denoms[1])
 	minRiskFactor := s.querier.Keeper.GetParams(s.Ctx).MinimumRiskFactor
 
 	expectAmount0 := multiplier0.Mul(sdk.NewDec(1000000)).Sub(multiplier0.Mul(sdk.NewDec(1000000)).Mul(minRiskFactor))
@@ -461,11 +461,11 @@ func (s *KeeperTestSuite) TestGRPCQueryTotalDelegationByDelegator() {
 		s.Require().True(res.TotalDelegatedCoins.IsEqual(sdk.NewCoins(
 			sdk.NewInt64Coin(denoms[0], 1000000),
 			sdk.NewInt64Coin(denoms[1], 1000000),
-			sdk.NewInt64Coin("uosmo", 18000000),
+			sdk.NewInt64Coin("ufury", 18000000),
 		)))
 
-		total_osmo_equivalent := sdk.NewCoin("uosmo", expectAmount0.RoundInt().Add(expectAmount1.RoundInt()).Add(sdk.NewInt(18000000)))
+		total_perco_equivalent := sdk.NewCoin("ufury", expectAmount0.RoundInt().Add(expectAmount1.RoundInt()).Add(sdk.NewInt(18000000)))
 
-		s.Require().True(res.TotalEquivalentStakedAmount.IsEqual(total_osmo_equivalent))
+		s.Require().True(res.TotalEquivalentStakedAmount.IsEqual(total_perco_equivalent))
 	}
 }

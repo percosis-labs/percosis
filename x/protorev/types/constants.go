@@ -4,8 +4,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )
 
-// OsmosisDenomination stores the native denom name for Osmosis on chain used for route building
-var OsmosisDenomination string = "uosmo"
+// PercosisDenomination stores the native denom name for Percosis on chain used for route building
+var PercosisDenomination string = "ufury"
 
 // ----------------- Module Execution Time Constants ----------------- //
 

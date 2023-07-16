@@ -3,18 +3,18 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := osmocli.QueryIndexCmd(types.ModuleName)
+	cmd := percocli.QueryIndexCmd(types.ModuleName)
 
 	cmd.AddCommand(
 		GetCmdGaugeIds(),
 		GetCmdDistrInfo(),
-		osmocli.GetParams[*types.QueryParamsRequest](
+		percocli.GetParams[*types.QueryParamsRequest](
 			types.ModuleName, types.NewQueryClient),
 		GetCmdLockableDurations(),
 		GetCmdIncentivizedPools(),
@@ -26,7 +26,7 @@ func GetQueryCmd() *cobra.Command {
 
 // GetCmdGaugeIds takes the pool id and returns the matching gauge ids and durations.
 func GetCmdGaugeIds() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryGaugeIdsRequest](
+	return percocli.SimpleQueryCmd[*types.QueryGaugeIdsRequest](
 		"gauge-ids [pool-id]",
 		"Query the matching gauge ids and durations by pool id",
 		`{{.Short}}{{.ExampleHeader}}
@@ -36,7 +36,7 @@ func GetCmdGaugeIds() *cobra.Command {
 
 // GetCmdDistrInfo takes the pool id and returns the matching gauge ids and weights.
 func GetCmdDistrInfo() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryDistrInfoRequest](
+	return percocli.SimpleQueryCmd[*types.QueryDistrInfoRequest](
 		"distr-info",
 		"Query distribution info",
 		`{{.Short}}{{.ExampleHeader}}
@@ -46,7 +46,7 @@ func GetCmdDistrInfo() *cobra.Command {
 
 // GetCmdLockableDurations returns lockable durations.
 func GetCmdLockableDurations() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryLockableDurationsRequest](
+	return percocli.SimpleQueryCmd[*types.QueryLockableDurationsRequest](
 		"lockable-durations",
 		"Query lockable durations",
 		`Query distribution info.
@@ -57,7 +57,7 @@ Example:
 }
 
 func GetCmdIncentivizedPools() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryIncentivizedPoolsRequest](
+	return percocli.SimpleQueryCmd[*types.QueryIncentivizedPoolsRequest](
 		"incentivized-pools",
 		"Query incentivized pools",
 		`Query incentivized pools.
@@ -68,7 +68,7 @@ Example:
 }
 
 func GetCmdExternalIncentiveGauges() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryExternalIncentiveGaugesRequest](
+	return percocli.SimpleQueryCmd[*types.QueryExternalIncentiveGaugesRequest](
 		"external-incentivized-gauges",
 		"Query external incentivized gauges",
 		`{{.Short}}{{.ExampleHeader}}

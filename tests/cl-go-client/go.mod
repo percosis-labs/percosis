@@ -5,8 +5,8 @@ go 1.20
 require (
 	github.com/cosmos/cosmos-sdk v0.47.3
 	github.com/ignite/cli v0.23.0
-	github.com/osmosis-labs/osmosis/v16 v16.0.0-20230630175215-d5fcd089a71c
-	github.com/osmosis-labs/osmosis/x/epochs v0.0.0-20230328024000-175ec88e4304
+	github.com/percosis-labs/percosis/v16 v16.0.0-20230630175215-d5fcd089a71c
+	github.com/percosis-labs/percosis/x/epochs v0.0.0-20230328024000-175ec88e4304
 
 )
 
@@ -89,8 +89,8 @@ require (
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/mtibben/percent v0.2.1 // indirect
 	github.com/nxadm/tail v1.4.8 // indirect
-	github.com/osmosis-labs/osmosis/osmomath v0.0.3-dev.0.20230621002052-afb82fbaa312 // indirect
-	github.com/osmosis-labs/osmosis/osmoutils v0.0.0-20230623115558-38aaab07d343 // indirect
+	github.com/percosis-labs/percosis/osmomath v0.0.3-dev.0.20230621002052-afb82fbaa312 // indirect
+	github.com/percosis-labs/percosis/osmoutils v0.0.0-20230623115558-38aaab07d343 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.8 // indirect
 	github.com/petermattis/goid v0.0.0-20180202154549-b0b1615b78e5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
@@ -144,19 +144,19 @@ require (
 )
 
 replace (
-	// osmosis-patched wasmd
-	// ToDo: replace the commit hash with v0.31.0-osmo-v15 once the version is tagged
-	github.com/CosmWasm/wasmd => github.com/osmosis-labs/wasmd v0.31.0-osmo-v16
+	// percosis-patched wasmd
+	// ToDo: replace the commit hash with v0.31.0-perco-v15 once the version is tagged
+	github.com/CosmWasm/wasmd => github.com/percosis-labs/wasmd v0.31.0-perco-v16
 	// dragonberry
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-	// Our cosmos-sdk branch is:  https://github.com/osmosis-labs/cosmos-sdk, current branch: v16.x. Direct commit link: https://github.com/osmosis-labs/cosmos-sdk/commit/ed4eb883f2a65bd5343e9d2f6186060f45294cb2
-	github.com/cosmos/cosmos-sdk => github.com/osmosis-labs/cosmos-sdk v0.45.0-rc1.0.20230703010110-ed4eb883f2a6
+	// Our cosmos-sdk branch is:  https://github.com/percosis-labs/cosmos-sdk, current branch: v16.x. Direct commit link: https://github.com/percosis-labs/cosmos-sdk/commit/ed4eb883f2a65bd5343e9d2f6186060f45294cb2
+	github.com/cosmos/cosmos-sdk => github.com/percosis-labs/cosmos-sdk v0.45.0-rc1.0.20230703010110-ed4eb883f2a6
 	// use cosmos-compatible protobufs
 	github.com/gogo/protobuf => github.com/regen-network/protobuf v1.3.3-alpha.regen.1
 
 	github.com/ignite/cli => github.com/p0mvn/cli v0.23.1
 
-	github.com/osmosis-labs/osmosis/v15 => ../../
+	github.com/percosis-labs/percosis/v15 => ../../
 
 	// Informal Tendermint fork
 	github.com/tendermint/tendermint => github.com/informalsystems/tendermint v0.34.24

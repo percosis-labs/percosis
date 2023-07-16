@@ -10,18 +10,18 @@ import (
 )
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgSuperfluidDelegate{}, "osmosis/superfluid-delegate", nil)
-	cdc.RegisterConcrete(&MsgSuperfluidUndelegate{}, "osmosis/superfluid-undelegate", nil)
-	cdc.RegisterConcrete(&MsgLockAndSuperfluidDelegate{}, "osmosis/lock-and-superfluid-delegate", nil)
-	cdc.RegisterConcrete(&MsgSuperfluidUnbondLock{}, "osmosis/superfluid-unbond-lock", nil)
-	cdc.RegisterConcrete(&MsgSuperfluidUndelegateAndUnbondLock{}, "osmosis/sf-undelegate-and-unbond-lock", nil)
-	cdc.RegisterConcrete(&SetSuperfluidAssetsProposal{}, "osmosis/set-superfluid-assets-proposal", nil)
-	cdc.RegisterConcrete(&UpdateUnpoolWhiteListProposal{}, "osmosis/update-unpool-whitelist", nil)
-	cdc.RegisterConcrete(&RemoveSuperfluidAssetsProposal{}, "osmosis/del-superfluid-assets-proposal", nil)
-	cdc.RegisterConcrete(&MsgUnPoolWhitelistedPool{}, "osmosis/unpool-whitelisted-pool", nil)
-	cdc.RegisterConcrete(&MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition{}, "osmosis/unlock-and-migrate", nil)
-	cdc.RegisterConcrete(&MsgCreateFullRangePositionAndSuperfluidDelegate{}, "osmosis/full-range-and-sf-delegate", nil)
-	cdc.RegisterConcrete(&MsgAddToConcentratedLiquiditySuperfluidPosition{}, "osmosis/add-to-cl-superfluid-position", nil)
+	cdc.RegisterConcrete(&MsgSuperfluidDelegate{}, "percosis/superfluid-delegate", nil)
+	cdc.RegisterConcrete(&MsgSuperfluidUndelegate{}, "percosis/superfluid-undelegate", nil)
+	cdc.RegisterConcrete(&MsgLockAndSuperfluidDelegate{}, "percosis/lock-and-superfluid-delegate", nil)
+	cdc.RegisterConcrete(&MsgSuperfluidUnbondLock{}, "percosis/superfluid-unbond-lock", nil)
+	cdc.RegisterConcrete(&MsgSuperfluidUndelegateAndUnbondLock{}, "percosis/sf-undelegate-and-unbond-lock", nil)
+	cdc.RegisterConcrete(&SetSuperfluidAssetsProposal{}, "percosis/set-superfluid-assets-proposal", nil)
+	cdc.RegisterConcrete(&UpdateUnpoolWhiteListProposal{}, "percosis/update-unpool-whitelist", nil)
+	cdc.RegisterConcrete(&RemoveSuperfluidAssetsProposal{}, "percosis/del-superfluid-assets-proposal", nil)
+	cdc.RegisterConcrete(&MsgUnPoolWhitelistedPool{}, "percosis/unpool-whitelisted-pool", nil)
+	cdc.RegisterConcrete(&MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition{}, "percosis/unlock-and-migrate", nil)
+	cdc.RegisterConcrete(&MsgCreateFullRangePositionAndSuperfluidDelegate{}, "percosis/full-range-and-sf-delegate", nil)
+	cdc.RegisterConcrete(&MsgAddToConcentratedLiquiditySuperfluidPosition{}, "percosis/add-to-cl-superfluid-position", nil)
 }
 
 func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {

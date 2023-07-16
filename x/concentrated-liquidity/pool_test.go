@@ -7,14 +7,14 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	cl "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	clmodel "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
-	sftypes "github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	clmodel "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	sftypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
 )
 
 func (s *KeeperTestSuite) TestInitializePool() {
@@ -465,7 +465,7 @@ func (s *KeeperTestSuite) TestDecreaseConcentratedPoolTickSpacing() {
 			s.SetupTest()
 			owner := s.TestAccs[0]
 
-			// Create OSMO <> USDC pool with tick spacing of 100
+			// Create PERCO <> USDC pool with tick spacing of 100
 			concentratedPool := s.PrepareConcentratedPoolWithCoinsAndFullRangePosition(ETH, USDC)
 
 			// Create a position in the pool that is divisible by the tick spacing
@@ -501,7 +501,7 @@ func (s *KeeperTestSuite) TestGetTotalPoolLiquidity() {
 	var (
 		defaultPoolCoinOne = sdk.NewCoin(USDC, sdk.OneInt())
 		defaultPoolCoinTwo = sdk.NewCoin(ETH, sdk.NewInt(2))
-		nonPoolCool        = sdk.NewCoin("uosmo", sdk.NewInt(3))
+		nonPoolCool        = sdk.NewCoin("ufury", sdk.NewInt(3))
 
 		defaultCoins = sdk.NewCoins(defaultPoolCoinOne, defaultPoolCoinTwo)
 	)

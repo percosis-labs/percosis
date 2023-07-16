@@ -25,7 +25,7 @@ num_points_plot = 10000
 # function to approximate
 approximated_fn = lambda x: sp.Pow(2, x)
 
-# fixed point precision used in Osmosis `osmomath` package.
+# fixed point precision used in Percosis `osmomath` package.
 osmomath_precision = 36
 
 # flag controlling whether to plot each approximation.

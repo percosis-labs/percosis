@@ -1,10 +1,10 @@
-# osmosis-1 seed list
+# percosis-1 seed list
 
 ## artifact-staking.io
 
-6bcdbcfd5d2c6ba58460f10dbcfde58278212833\@osmosis.artifact-staking.io:26656
+6bcdbcfd5d2c6ba58460f10dbcfde58278212833\@percosis.artifact-staking.io:26656
 
-# osmosis-1 peer list
+# percosis-1 peer list
 
 ## Cosmostation
 

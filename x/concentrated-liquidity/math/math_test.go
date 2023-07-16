@@ -6,9 +6,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 var (
@@ -415,7 +415,7 @@ func TestGetNextSqrtPriceFromAmount0InRoundingUp(t *testing.T) {
 			liquidity:        osmomath.MustNewDecFromStr("1517882343.751510418088349649"), // liquidity0 calculated above
 			sqrtPriceCurrent: sqrt5000BigDec,
 			amountRemaining:  osmomath.NewBigDec(13370),
-			// round_osmo_prec_up(liquidity / (round_osmo_prec_down(liquidity / sqrtPriceCurrent) + amountRemaining))
+			// round_perco_prec_up(liquidity / (round_perco_prec_down(liquidity / sqrtPriceCurrent) + amountRemaining))
 			expected: osmomath.MustNewDecFromStr("70.666663910857144331148691821263626767"),
 		},
 	}
@@ -478,14 +478,14 @@ func TestGetNextSqrtPriceFromAmount1OutRoundingDown(t *testing.T) {
 			sqrtPriceCurrent: sqrt5000BigDec,
 			liquidity:        osmomath.MustNewDecFromStr("3035764687.503020836176699298"),
 			amountRemaining:  osmomath.MustNewDecFromStr("8398"),
-			// round_osmo_prec_down(sqrtPriceCurrent - round_osmo_prec_up(tokenOut / liquidity))
+			// round_perco_prec_down(sqrtPriceCurrent - round_perco_prec_up(tokenOut / liquidity))
 			expected: osmomath.MustNewDecFromStr("70.710675352300682056656660729199999832"),
 		},
 		"no round up due zeroes at precision end": {
 			sqrtPriceCurrent: osmomath.MustNewDecFromStr("12.5"),
 			liquidity:        osmomath.MustNewDecFromStr("1"),
 			amountRemaining:  osmomath.MustNewDecFromStr("10"),
-			// round_osmo_prec_down(sqrtPriceCurrent - round_osmo_prec_up(tokenOut / liquidity))
+			// round_perco_prec_down(sqrtPriceCurrent - round_perco_prec_up(tokenOut / liquidity))
 			expected: osmomath.MustNewDecFromStr("2.5"),
 		},
 	}

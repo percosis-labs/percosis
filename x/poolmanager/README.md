@@ -41,7 +41,7 @@ storage, assign it to the new pool, and propagate the execution to either `gamm`
 or `concentrated-liquidity` modules.
 
 Note that we define a `CreatePoolMsg` interface:
-<https://github.com/osmosis-labs/osmosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/x/poolmanager/types/msg_create_pool.go#L9>
+<https://github.com/percosis-labs/percosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/x/poolmanager/types/msg_create_pool.go#L9>
 
 Each `balancer`, `stableswap` and `concentrated-liquidity` pool has its own implementation of `CreatePoolMsg`.
 
@@ -49,7 +49,7 @@ Note the `PoolType` type. This is an enumeration of all supported pool types.
 We proto-generate this enumeration:
 
 ```go
-// proto/osmosis/poolmanager/v1beta1/module_route.proto
+// proto/percosis/poolmanager/v1beta1/module_route.proto
 // generates to x/poolmanager/types/module_route.pb.go
 
 // PoolType is an enumeration of all supported pool types.
@@ -277,19 +277,19 @@ Existing Swap types:
 
 ### MsgSwapExactAmountIn
 
-[MsgSwapExactAmountIn](https://github.com/osmosis-labs/osmosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/proto/osmosis/gamm/v1beta1/tx.proto#L79)
+[MsgSwapExactAmountIn](https://github.com/percosis-labs/percosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/proto/percosis/gamm/v1beta1/tx.proto#L79)
 
 ### MsgSwapExactAmountOut
 
-[MsgSwapExactAmountOut](https://github.com/osmosis-labs/osmosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/proto/osmosis/gamm/v1beta1/tx.proto#L102)
+[MsgSwapExactAmountOut](https://github.com/percosis-labs/percosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/proto/percosis/gamm/v1beta1/tx.proto#L102)
 
 ### MsgSplitRouteSwapExactAmountIn
 
-[MsgSplitRouteSwapExactAmountIn](https://github.com/osmosis-labs/osmosis/blob/46e6a0c2051a3a5ef8cdd4ecebfff7305b13ab98/proto/osmosis/poolmanager/v1beta1/tx.proto#L41)
+[MsgSplitRouteSwapExactAmountIn](https://github.com/percosis-labs/percosis/blob/46e6a0c2051a3a5ef8cdd4ecebfff7305b13ab98/proto/percosis/poolmanager/v1beta1/tx.proto#L41)
 
 ## MsgSplitRouteSwapExactAmountOut
 
-[MsgSplitRouteSwapExactAmountOut](https://github.com/osmosis-labs/osmosis/blob/46e6a0c2051a3a5ef8cdd4ecebfff7305b13ab98/proto/osmosis/poolmanager/v1beta1/tx.proto#L85)
+[MsgSplitRouteSwapExactAmountOut](https://github.com/percosis-labs/percosis/blob/46e6a0c2051a3a5ef8cdd4ecebfff7305b13ab98/proto/percosis/poolmanager/v1beta1/tx.proto#L85)
 
 ## Multi-Hop
 
@@ -299,12 +299,12 @@ multiple pools in the process.
 The most cost-efficient route is determined offline and the list of the pools is provided externally, by user, during the broadcasting of the swapping transaction.
 At the moment of execution, the provided route may not be the most cost-efficient one anymore.
 
-When a trade consists of just two OSMO-included routes during a single transaction,
+When a trade consists of just two PERCO-included routes during a single transaction,
 the spread factors on each hop would be automatically halved.
-Example: for converting `ATOM -> OSMO -> LUNA` using two pools with spread factors `0.3% + 0.2%`,
+Example: for converting `ATOM -> PERCO -> LUNA` using two pools with spread factors `0.3% + 0.2%`,
 instead `0.15% + 0.1%` spread factors will be applied.
 
-[Multi-Hop](https://github.com/osmosis-labs/osmosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/x/poolmanager/router.go#L16)
+[Multi-Hop](https://github.com/percosis-labs/percosis/blob/f26ceb958adaaf31510e17ed88f5eab47e2bac03/x/poolmanager/router.go#L16)
 
 ## Route Splitting
 

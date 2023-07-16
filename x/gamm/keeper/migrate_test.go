@@ -7,11 +7,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	gammmigration "github.com/osmosis-labs/osmosis/v16/x/gamm/types/migration"
-	poolincentivestypes "github.com/osmosis-labs/osmosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
+	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
 )
 
 func (s *KeeperTestSuite) TestMigrate() {
@@ -381,7 +381,7 @@ func (s *KeeperTestSuite) TestReplaceMigrationRecords() {
 					ClPoolId:       3,
 				},
 			},
-			overwriteBalancerDenom0: "uosmo",
+			overwriteBalancerDenom0: "ufury",
 			expectErr:               true,
 		},
 		{
@@ -392,7 +392,7 @@ func (s *KeeperTestSuite) TestReplaceMigrationRecords() {
 					ClPoolId:       3,
 				},
 			},
-			overwriteBalancerDenom1: "uosmo",
+			overwriteBalancerDenom1: "ufury",
 			expectErr:               true,
 		},
 		{
@@ -638,7 +638,7 @@ func (s *KeeperTestSuite) TestUpdateMigrationRecords() {
 					ClPoolId:       6,
 				},
 			},
-			overwriteBalancerDenom0: "osmo",
+			overwriteBalancerDenom0: "perco",
 			isPreexistingRecordsSet: false,
 			expectErr:               true,
 		},
@@ -650,7 +650,7 @@ func (s *KeeperTestSuite) TestUpdateMigrationRecords() {
 					ClPoolId:       6,
 				},
 			},
-			overwriteBalancerDenom1: "osmo",
+			overwriteBalancerDenom1: "perco",
 			isPreexistingRecordsSet: false,
 			expectErr:               true,
 		},
@@ -904,9 +904,9 @@ func (suite *KeeperTestSuite) TestRedirectDistributionRecord() {
 
 	var (
 		defaultUsdcAmount = sdk.NewInt(7300000000)
-		defaultOsmoAmount = sdk.NewInt(10000000000)
+		defaultPercoAmount = sdk.NewInt(10000000000)
 		usdcCoin          = sdk.NewCoin("uusdc", defaultUsdcAmount)
-		osmoCoin          = sdk.NewCoin("uosmo", defaultOsmoAmount)
+		percoCoin          = sdk.NewCoin("ufury", defaultPercoAmount)
 	)
 
 	longestLockableDuration, err := suite.App.PoolIncentivesKeeper.GetLongestLockableDuration(suite.Ctx)
@@ -919,18 +919,18 @@ func (suite *KeeperTestSuite) TestRedirectDistributionRecord() {
 		expectError   error
 	}{
 		"happy path": {
-			poolLiquidity: sdk.NewCoins(usdcCoin, osmoCoin),
+			poolLiquidity: sdk.NewCoins(usdcCoin, percoCoin),
 			cfmmPoolId:    uint64(1),
 			clPoolId:      uint64(3),
 		},
 		"error: cfmm pool ID doesn't exist": {
-			poolLiquidity: sdk.NewCoins(usdcCoin, osmoCoin),
+			poolLiquidity: sdk.NewCoins(usdcCoin, percoCoin),
 			cfmmPoolId:    uint64(4),
 			clPoolId:      uint64(3),
 			expectError:   poolincentivestypes.NoGaugeAssociatedWithPoolError{PoolId: 4, Duration: longestLockableDuration},
 		},
 		"error: cl pool ID doesn't exist": {
-			poolLiquidity: sdk.NewCoins(usdcCoin, osmoCoin),
+			poolLiquidity: sdk.NewCoins(usdcCoin, percoCoin),
 			cfmmPoolId:    uint64(1),
 			clPoolId:      uint64(4),
 			expectError:   poolincentivestypes.NoGaugeAssociatedWithPoolError{PoolId: 4, Duration: longestLockableDuration},

@@ -13,9 +13,9 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/sumtree"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	"github.com/osmosis-labs/osmosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/osmoutils/sumtree"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/lockup/types"
 )
 
 // WithdrawAllMaturedLocks withdraws every lock thats in the process of unlocking, and has finished unlocking by
@@ -754,7 +754,7 @@ func (k Keeper) accumulationStore(ctx sdk.Context, denom string) sumtree.Tree {
 // removeTokensFromLock is called by lockup slash function.
 // Called by the superfluid module ONLY.
 func (k Keeper) removeTokensFromLock(ctx sdk.Context, lock *types.PeriodLock, coins sdk.Coins) error {
-	// TODO: Handle 100% slash eventually, not needed for osmosis codebase atm.
+	// TODO: Handle 100% slash eventually, not needed for percosis codebase atm.
 	lock.Coins = lock.Coins.Sub(coins)
 
 	err := k.setLock(ctx, *lock)

@@ -3,13 +3,13 @@ package cli
 import (
 	"github.com/spf13/cobra"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/txfees/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := osmocli.QueryIndexCmd(types.ModuleName)
+	cmd := percocli.QueryIndexCmd(types.ModuleName)
 
 	cmd.AddCommand(
 		GetCmdFeeTokens(),
@@ -21,7 +21,7 @@ func GetQueryCmd() *cobra.Command {
 }
 
 func GetCmdFeeTokens() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryFeeTokensRequest](
+	return percocli.SimpleQueryCmd[*types.QueryFeeTokensRequest](
 		"fee-tokens",
 		"Query the list of non-basedenom fee tokens and their associated pool ids",
 		`{{.Short}}{{.ExampleHeader}}
@@ -32,7 +32,7 @@ func GetCmdFeeTokens() *cobra.Command {
 }
 
 func GetCmdDenomPoolID() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryDenomPoolIdRequest](
+	return percocli.SimpleQueryCmd[*types.QueryDenomPoolIdRequest](
 		"denom-pool-id",
 		"Query the pool id associated with a specific whitelisted fee token",
 		`{{.Short}}{{.ExampleHeader}}
@@ -43,7 +43,7 @@ func GetCmdDenomPoolID() *cobra.Command {
 }
 
 func GetCmdBaseDenom() *cobra.Command {
-	return osmocli.SimpleQueryCmd[*types.QueryBaseDenomRequest](
+	return percocli.SimpleQueryCmd[*types.QueryBaseDenomRequest](
 		"base-denom",
 		"Query the base fee denom",
 		`{{.Short}}{{.ExampleHeader}}

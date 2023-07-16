@@ -15,14 +15,14 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/osmosis-labs/osmosis/v16/simulation/simtypes"
-	gammsimulation "github.com/osmosis-labs/osmosis/v16/x/gamm/simulation"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager"
-	pmclient "github.com/osmosis-labs/osmosis/v16/x/poolmanager/client"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/cli"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/grpc"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	gammsimulation "github.com/percosis-labs/percosis/v16/x/gamm/simulation"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager"
+	pmclient "github.com/percosis-labs/percosis/v16/x/poolmanager/client"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/cli"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/grpc"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 var (
@@ -145,7 +145,7 @@ func (AppModule) ConsensusVersion() uint64 { return 1 }
 // GenerateGenesisState creates a randomized GenState of the poolmanager module.
 func (am AppModule) SimulatorGenesisState(simState *module.SimulationState, s *simtypes.SimCtx) {
 	poolmanagerGen := types.DefaultGenesis()
-	// change the pool creation fee denom from uosmo to stake
+	// change the pool creation fee denom from ufury to stake
 	poolmanagerGen.Params.PoolCreationFee = sdk.NewCoins(gammsimulation.PoolCreationFee)
 	DefaultGenJson := simState.Cdc.MustMarshalJSON(poolmanagerGen)
 	simState.GenState[types.ModuleName] = DefaultGenJson

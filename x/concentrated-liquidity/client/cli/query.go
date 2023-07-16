@@ -4,45 +4,45 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/client/queryproto"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := osmocli.QueryIndexCmd(types.ModuleName)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdPools)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetUserPositions)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPositionById)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableSpreadRewards)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableIncentives)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetIncentiveRecords)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCFMMPoolIdLinkFromConcentratedPoolId)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickLiquidityNetInDirection)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPoolAccumulatorRewards)
-	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickAccumulatorTrackers)
+	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdPools)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetUserPositions)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPositionById)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableSpreadRewards)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableIncentives)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetIncentiveRecords)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCFMMPoolIdLinkFromConcentratedPoolId)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickLiquidityNetInDirection)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPoolAccumulatorRewards)
+	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickAccumulatorTrackers)
 	cmd.AddCommand(
-		osmocli.GetParams[*queryproto.ParamsRequest](
+		percocli.GetParams[*queryproto.ParamsRequest](
 			types.ModuleName, queryproto.NewQueryClient),
 	)
 	return cmd
 }
 
-func GetUserPositions() (*osmocli.QueryDescriptor, *queryproto.UserPositionsRequest) {
-	return &osmocli.QueryDescriptor{
+func GetUserPositions() (*percocli.QueryDescriptor, *queryproto.UserPositionsRequest) {
+	return &percocli.QueryDescriptor{
 			Use:   "user-positions [address]",
 			Short: "Query user's positions",
 			Long: `{{.Short}}{{.ExampleHeader}}
-{{.CommandPrefix}} user-positions osmo12smx2wdlyttvyzvzg54y2vnqwq2qjateuf7thj`,
-			Flags:               osmocli.FlagDesc{OptionalFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
+{{.CommandPrefix}} user-positions perco12smx2wdlyttvyzvzg54y2vnqwq2qjateuf7thj`,
+			Flags:               percocli.FlagDesc{OptionalFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
 			CustomFlagOverrides: poolIdFlagOverride,
 		},
 		&queryproto.UserPositionsRequest{}
 }
 
-func GetPositionById() (*osmocli.QueryDescriptor, *queryproto.PositionByIdRequest) {
-	return &osmocli.QueryDescriptor{
+func GetPositionById() (*percocli.QueryDescriptor, *queryproto.PositionByIdRequest) {
+	return &percocli.QueryDescriptor{
 			Use:   "position-by-id [positionID]",
 			Short: "Query position by ID",
 			Long: `{{.Short}}{{.ExampleHeader}}
@@ -51,8 +51,8 @@ func GetPositionById() (*osmocli.QueryDescriptor, *queryproto.PositionByIdReques
 		&queryproto.PositionByIdRequest{}
 }
 
-func GetCmdPools() (*osmocli.QueryDescriptor, *queryproto.PoolsRequest) {
-	return &osmocli.QueryDescriptor{
+func GetCmdPools() (*percocli.QueryDescriptor, *queryproto.PoolsRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "pools",
 		Short: "Query pools",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -60,8 +60,8 @@ func GetCmdPools() (*osmocli.QueryDescriptor, *queryproto.PoolsRequest) {
 	}, &queryproto.PoolsRequest{}
 }
 
-func GetClaimableSpreadRewards() (*osmocli.QueryDescriptor, *queryproto.ClaimableSpreadRewardsRequest) {
-	return &osmocli.QueryDescriptor{
+func GetClaimableSpreadRewards() (*percocli.QueryDescriptor, *queryproto.ClaimableSpreadRewardsRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "claimable-spread-rewards [positionID]",
 		Short: "Query claimable spread rewards",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -69,8 +69,8 @@ func GetClaimableSpreadRewards() (*osmocli.QueryDescriptor, *queryproto.Claimabl
 	}, &queryproto.ClaimableSpreadRewardsRequest{}
 }
 
-func GetClaimableIncentives() (*osmocli.QueryDescriptor, *queryproto.ClaimableIncentivesRequest) {
-	return &osmocli.QueryDescriptor{
+func GetClaimableIncentives() (*percocli.QueryDescriptor, *queryproto.ClaimableIncentivesRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "claimable-incentives [positionID]",
 		Short: "Query claimable incentives",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -78,8 +78,8 @@ func GetClaimableIncentives() (*osmocli.QueryDescriptor, *queryproto.ClaimableIn
 	}, &queryproto.ClaimableIncentivesRequest{}
 }
 
-func GetIncentiveRecords() (*osmocli.QueryDescriptor, *queryproto.IncentiveRecordsRequest) {
-	return &osmocli.QueryDescriptor{
+func GetIncentiveRecords() (*percocli.QueryDescriptor, *queryproto.IncentiveRecordsRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "incentive-records [poolId]",
 		Short: "Query incentive records for a given pool",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -87,8 +87,8 @@ func GetIncentiveRecords() (*osmocli.QueryDescriptor, *queryproto.IncentiveRecor
 	}, &queryproto.IncentiveRecordsRequest{}
 }
 
-func GetCFMMPoolIdLinkFromConcentratedPoolId() (*osmocli.QueryDescriptor, *queryproto.CFMMPoolIdLinkFromConcentratedPoolIdRequest) {
-	return &osmocli.QueryDescriptor{
+func GetCFMMPoolIdLinkFromConcentratedPoolId() (*percocli.QueryDescriptor, *queryproto.CFMMPoolIdLinkFromConcentratedPoolIdRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "cfmm-pool-link-from-cl [poolId]",
 		Short: "Query cfmm pool id link from concentrated pool id",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -96,8 +96,8 @@ func GetCFMMPoolIdLinkFromConcentratedPoolId() (*osmocli.QueryDescriptor, *query
 	}, &queryproto.CFMMPoolIdLinkFromConcentratedPoolIdRequest{}
 }
 
-func GetTotalLiquidity() (*osmocli.QueryDescriptor, *queryproto.GetTotalLiquidityRequest) {
-	return &osmocli.QueryDescriptor{
+func GetTotalLiquidity() (*percocli.QueryDescriptor, *queryproto.GetTotalLiquidityRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "total-liquidity",
 		Short: "Query total liquidity across all concentrated pool",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -105,17 +105,17 @@ func GetTotalLiquidity() (*osmocli.QueryDescriptor, *queryproto.GetTotalLiquidit
 	}, &queryproto.GetTotalLiquidityRequest{}
 }
 
-func GetTickLiquidityNetInDirection() (*osmocli.QueryDescriptor, *queryproto.LiquidityNetInDirectionRequest) {
-	return &osmocli.QueryDescriptor{
+func GetTickLiquidityNetInDirection() (*percocli.QueryDescriptor, *queryproto.LiquidityNetInDirectionRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "liquidity-net-in-direction [pool-id] [token-in-denom] [start-tick] [use-current-tick] [bound-tick] [use-no-bound]",
 		Short: "Query liquidity net in direction",
 		Long: `{{.Short}}{{.ExampleHeader}}
-{{.CommandPrefix}} 4 uosmo "[-18000000]" true "[-9000000]" true`,
+{{.CommandPrefix}} 4 ufury "[-18000000]" true "[-9000000]" true`,
 	}, &queryproto.LiquidityNetInDirectionRequest{}
 }
 
-func GetPoolAccumulatorRewards() (*osmocli.QueryDescriptor, *queryproto.PoolAccumulatorRewardsRequest) {
-	return &osmocli.QueryDescriptor{
+func GetPoolAccumulatorRewards() (*percocli.QueryDescriptor, *queryproto.PoolAccumulatorRewardsRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "pool-accumulator-rewards [pool-id]",
 		Short: "Query pool accumulator rewards",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -123,8 +123,8 @@ func GetPoolAccumulatorRewards() (*osmocli.QueryDescriptor, *queryproto.PoolAccu
 	}, &queryproto.PoolAccumulatorRewardsRequest{}
 }
 
-func GetTickAccumulatorTrackers() (*osmocli.QueryDescriptor, *queryproto.TickAccumulatorTrackersRequest) {
-	return &osmocli.QueryDescriptor{
+func GetTickAccumulatorTrackers() (*percocli.QueryDescriptor, *queryproto.TickAccumulatorTrackersRequest) {
+	return &percocli.QueryDescriptor{
 		Use:   "tick-accumulator-trackers [pool-id] [tick-index]",
 		Short: "Query tick accumulator trackers",
 		Long: `{{.Short}}{{.ExampleHeader}}

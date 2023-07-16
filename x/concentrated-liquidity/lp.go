@@ -7,10 +7,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	types "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	types "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
 )
 
 const noUnderlyingLockId = uint64(0)

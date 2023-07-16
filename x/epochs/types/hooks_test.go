@@ -9,7 +9,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/errors"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/x/epochs/types"
 )
 
 type KeeperTestSuite struct {

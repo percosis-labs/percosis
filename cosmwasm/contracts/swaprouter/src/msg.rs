@@ -1,6 +1,6 @@
 use cosmwasm_schema::{cw_serde, QueryResponses};
 use cosmwasm_std::{Coin, Decimal, Uint128};
-use osmosis_std::types::osmosis::gamm::v1beta1::SwapAmountInRoute;
+use percosis_std::types::percosis::gamm::v1beta1::SwapAmountInRoute;
 
 #[cw_serde]
 pub struct InstantiateMsg {

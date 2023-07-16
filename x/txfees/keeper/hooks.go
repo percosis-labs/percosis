@@ -3,16 +3,16 @@ package keeper
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	txfeestypes "github.com/osmosis-labs/osmosis/v16/x/txfees/types"
-	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/osmoutils"
+	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	epochstypes "github.com/percosis-labs/percosis/x/epochs/types"
 )
 
 func (k Keeper) BeforeEpochStart(ctx sdk.Context, epochIdentifier string, epochNumber int64) error {
 	return nil
 }
 
-// at the end of each epoch, swap all non-OSMO fees into OSMO and transfer to fee module account
+// at the end of each epoch, swap all non-PERCO fees into PERCO and transfer to fee module account
 func (k Keeper) AfterEpochEnd(ctx sdk.Context, epochIdentifier string, epochNumber int64) error {
 	nonNativeFeeAddr := k.accountKeeper.GetModuleAddress(txfeestypes.NonNativeFeeCollectorName)
 	baseDenom, _ := k.GetBaseDenom(ctx)
@@ -31,7 +31,7 @@ func (k Keeper) AfterEpochEnd(ctx sdk.Context, epochIdentifier string, epochNumb
 		_ = osmoutils.ApplyFuncIfNoError(ctx, func(cacheCtx sdk.Context) error {
 			// We allow full slippage. Theres not really an effective way to bound slippage until TWAP's land,
 			// but even then the point is a bit moot.
-			// The only thing that could be done is a costly griefing attack to reduce the amount of osmo given as tx fees.
+			// The only thing that could be done is a costly griefing attack to reduce the amount of perco given as tx fees.
 			// However the idea of the txfees FeeToken gating is that the pool is sufficiently liquid for that base token.
 			minAmountOut := sdk.ZeroInt()
 			_, err := k.poolManager.SwapExactAmountIn(cacheCtx, nonNativeFeeAddr, feetoken.PoolID, coinBalance, baseDenom, minAmountOut)

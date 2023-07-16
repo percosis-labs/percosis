@@ -14,35 +14,35 @@ const (
 	// getData retrieves the data from the Uniswap subgraph and writes it to disk
 	// under pathToFilesFromRoot + positionsFileName path.
 	getData operation = iota
-	// convertPositions converts the data from the Uniswap subgraph into Osmosis
+	// convertPositions converts the data from the Uniswap subgraph into Percosis
 	// genesis. It reads pathToFilesFromRoot + positionsFileName path
-	// run Osmosis app via apptesting, creates positions and writes the genesis
-	// under pathToFilesFromRoot + osmosisStateFileName path.
+	// run Percosis app via apptesting, creates positions and writes the genesis
+	// under pathToFilesFromRoot + percosisStateFileName path.
 	convertPositions
-	// mergeSubgraphAndLocalOsmosisGenesis merges the genesis created from the subgraph data
-	// with the localosmosis genesis. This command is meant to be called inside the localosmosis
-	// container during setup (see setup.sh). It reads the existing genesis from localosmosisHomePath,
+	// mergeSubgraphAndLocalPercosisGenesis merges the genesis created from the subgraph data
+	// with the localpercosis genesis. This command is meant to be called inside the localpercosis
+	// container during setup (see setup.sh). It reads the existing genesis from localpercosisHomePath,
 	// updates the concentrated liquidity section to append the CL pool created from the subgraph data,
 	// its positions, ticks and accumulators.
-	mergeSubgraphAndLocalOsmosisGenesis
+	mergeSubgraphAndLocalPercosisGenesis
 )
 
 const (
 	pathToFilesFromRoot = "tests/cl-genesis-positions/"
 
 	positionsFileName       = "subgraph_positions.json"
-	osmosisGenesisFileName  = "genesis.json"
+	percosisGenesisFileName  = "genesis.json"
 	bigbangPosiionsFileName = "bigbang_positions.json"
 
-	localOsmosisHomePath = "/osmosis/.osmosisd/"
+	localPercosisHomePath = "/percosis/.percosisd/"
 
 	denom0 = "uusdc"
-	denom1 = "uosmo"
+	denom1 = "ufury"
 )
 
 var (
-	// This is lo-test1 address in localosmosis
-	defaultCreatorAddresses = []sdk.AccAddress{sdk.MustAccAddressFromBech32("osmo1cyyzpxplxdzkeea7kwsydadg87357qnahakaks"), sdk.MustAccAddressFromBech32("osmo18s5lynnmx37hq4wlrw9gdn68sg2uxp5rgk26vv")}
+	// This is lo-test1 address in localpercosis
+	defaultCreatorAddresses = []sdk.AccAddress{sdk.MustAccAddressFromBech32("perco1cyyzpxplxdzkeea7kwsydadg87357qnahakaks"), sdk.MustAccAddressFromBech32("perco18s5lynnmx37hq4wlrw9gdn68sg2uxp5rgk26vv")}
 
 	useKeyringAccounts bool
 
@@ -54,21 +54,21 @@ var (
 func main() {
 	var (
 		desiredOperation int
-		isLocalOsmosis   bool
+		isLocalPercosis   bool
 	)
 
 	flag.BoolVar(&writeBigBangConfigToDisk, "big-bang", false, fmt.Sprintf("flag indicating whether to write the big bang config to disk at path %s", bigbangPosiionsFileName))
-	flag.BoolVar(&writeGenesisToDisk, "genesis", false, fmt.Sprintf("flag indicating whether to write the genesis file to disk at path %s", osmosisGenesisFileName))
+	flag.BoolVar(&writeGenesisToDisk, "genesis", false, fmt.Sprintf("flag indicating whether to write the genesis file to disk at path %s", percosisGenesisFileName))
 	flag.BoolVar(&useKeyringAccounts, "keyring", false, "flag indicating whether to use local test keyring accounts")
-	flag.BoolVar(&isLocalOsmosis, "localosmosis", false, "flag indicating whether this is being run inside the localosmosis container")
-	flag.IntVar(&desiredOperation, "operation", 0, fmt.Sprintf("operation to run:\nget subgraph data: %v, convert subgraph positions to osmo genesis: %v\nmerge converted subgraph genesis and localosmosis genesis: %v", getData, convertPositions, mergeSubgraphAndLocalOsmosisGenesis))
+	flag.BoolVar(&isLocalPercosis, "localpercosis", false, "flag indicating whether this is being run inside the localpercosis container")
+	flag.IntVar(&desiredOperation, "operation", 0, fmt.Sprintf("operation to run:\nget subgraph data: %v, convert subgraph positions to perco genesis: %v\nmerge converted subgraph genesis and localpercosis genesis: %v", getData, convertPositions, mergeSubgraphAndLocalPercosisGenesis))
 
 	flag.Parse()
 
-	fmt.Println("isLocalOsmosis:", isLocalOsmosis)
+	fmt.Println("isLocalPercosis:", isLocalPercosis)
 
 	pathToSaveFilesAt := pathToFilesFromRoot
-	if isLocalOsmosis {
+	if isLocalPercosis {
 		pathToSaveFilesAt = ""
 	}
 
@@ -81,7 +81,7 @@ func main() {
 		GetUniV3SubgraphData(pathToSaveFilesAt + positionsFileName)
 		// See definition for more info.
 	case convertPositions:
-		fmt.Println("Converting positions from subgraph data to Osmosis genesis...")
+		fmt.Println("Converting positions from subgraph data to Percosis genesis...")
 
 		var creatorAddresses []sdk.AccAddress
 		if useKeyringAccounts {
@@ -92,13 +92,13 @@ func main() {
 			creatorAddresses = defaultCreatorAddresses
 		}
 
-		ConvertSubgraphToOsmosisGenesis(creatorAddresses, pathToSaveFilesAt+positionsFileName)
+		ConvertSubgraphToPercosisGenesis(creatorAddresses, pathToSaveFilesAt+positionsFileName)
 		// See definition for more info.
-	case mergeSubgraphAndLocalOsmosisGenesis:
-		fmt.Println("Merging subgraph and local Osmosis genesis...")
-		clState, bankState := ConvertSubgraphToOsmosisGenesis(defaultCreatorAddresses, pathToSaveFilesAt+positionsFileName)
+	case mergeSubgraphAndLocalPercosisGenesis:
+		fmt.Println("Merging subgraph and local Percosis genesis...")
+		clState, bankState := ConvertSubgraphToPercosisGenesis(defaultCreatorAddresses, pathToSaveFilesAt+positionsFileName)
 
-		EditLocalOsmosisGenesis(clState, bankState)
+		EditLocalPercosisGenesis(clState, bankState)
 	default:
 		panic("Invalid operation")
 	}

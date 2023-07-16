@@ -15,42 +15,42 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/v16/app"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	"github.com/osmosis-labs/osmosis/v16/wasmbinding/bindings"
+	"github.com/percosis-labs/percosis/v16/app"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/v16/wasmbinding/bindings"
 )
 
-func SetupCustomApp(t *testing.T, addr sdk.AccAddress) (*app.OsmosisApp, sdk.Context) {
+func SetupCustomApp(t *testing.T, addr sdk.AccAddress) (*app.PercosisApp, sdk.Context) {
 	t.Helper()
 
-	osmosis, ctx := CreateTestInput()
-	wasmKeeper := osmosis.WasmKeeper
+	percosis, ctx := CreateTestInput()
+	wasmKeeper := percosis.WasmKeeper
 
-	storeReflectCode(t, ctx, osmosis, addr)
+	storeReflectCode(t, ctx, percosis, addr)
 
 	cInfo := wasmKeeper.GetCodeInfo(ctx, 1)
 	require.NotNil(t, cInfo)
 
-	return osmosis, ctx
+	return percosis, ctx
 }
 
 func TestQueryFullDenom(t *testing.T) {
 	apptesting.SkipIfWSL(t)
 	actor := RandomAccountAddress()
-	osmosis, ctx := SetupCustomApp(t, actor)
+	percosis, ctx := SetupCustomApp(t, actor)
 
-	reflect := instantiateReflectContract(t, ctx, osmosis, actor)
+	reflect := instantiateReflectContract(t, ctx, percosis, actor)
 	require.NotEmpty(t, reflect)
 
 	// query full denom
-	query := bindings.OsmosisQuery{
+	query := bindings.PercosisQuery{
 		FullDenom: &bindings.FullDenom{
 			CreatorAddr: reflect.String(),
 			Subdenom:    "ustart",
 		},
 	}
 	resp := bindings.FullDenomResponse{}
-	queryCustom(t, ctx, osmosis, reflect, query, &resp)
+	queryCustom(t, ctx, percosis, reflect, query, &resp)
 
 	expected := fmt.Sprintf("factory/%s/ustart", reflect.String())
 	require.EqualValues(t, expected, resp.Denom)
@@ -68,7 +68,7 @@ type ChainResponse struct {
 	Data []byte `json:"data"`
 }
 
-func queryCustom(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, contract sdk.AccAddress, request bindings.OsmosisQuery, response interface{}) {
+func queryCustom(t *testing.T, ctx sdk.Context, percosis *app.PercosisApp, contract sdk.AccAddress, request bindings.PercosisQuery, response interface{}) {
 	t.Helper()
 
 	msgBz, err := json.Marshal(request)
@@ -82,7 +82,7 @@ func queryCustom(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, contrac
 	queryBz, err := json.Marshal(query)
 	require.NoError(t, err)
 
-	resBz, err := osmosis.WasmKeeper.QuerySmart(ctx, contract, queryBz)
+	resBz, err := percosis.WasmKeeper.QuerySmart(ctx, contract, queryBz)
 	require.NoError(t, err)
 	var resp ChainResponse
 	err = json.Unmarshal(resBz, &resp)
@@ -91,11 +91,11 @@ func queryCustom(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, contrac
 	require.NoError(t, err)
 }
 
-func storeReflectCode(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, addr sdk.AccAddress) {
+func storeReflectCode(t *testing.T, ctx sdk.Context, percosis *app.PercosisApp, addr sdk.AccAddress) {
 	t.Helper()
 
-	govKeeper := osmosis.GovKeeper
-	wasmCode, err := os.ReadFile("../testdata/osmo_reflect.wasm")
+	govKeeper := percosis.GovKeeper
+	wasmCode, err := os.ReadFile("../testdata/perco_reflect.wasm")
 	require.NoError(t, err)
 
 	src := wasmtypes.StoreCodeProposalFixture(func(p *wasmtypes.StoreCodeProposal) {
@@ -115,11 +115,11 @@ func storeReflectCode(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, ad
 	require.NoError(t, err)
 }
 
-func instantiateReflectContract(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, funder sdk.AccAddress) sdk.AccAddress {
+func instantiateReflectContract(t *testing.T, ctx sdk.Context, percosis *app.PercosisApp, funder sdk.AccAddress) sdk.AccAddress {
 	t.Helper()
 
 	initMsgBz := []byte("{}")
-	contractKeeper := keeper.NewDefaultPermissionKeeper(osmosis.WasmKeeper)
+	contractKeeper := keeper.NewDefaultPermissionKeeper(percosis.WasmKeeper)
 	codeID := uint64(1)
 	addr, _, err := contractKeeper.Instantiate(ctx, codeID, funder, funder, initMsgBz, "demo contract", nil)
 	require.NoError(t, err)
@@ -127,10 +127,10 @@ func instantiateReflectContract(t *testing.T, ctx sdk.Context, osmosis *app.Osmo
 	return addr
 }
 
-func fundAccount(t *testing.T, ctx sdk.Context, osmosis *app.OsmosisApp, addr sdk.AccAddress, coins sdk.Coins) {
+func fundAccount(t *testing.T, ctx sdk.Context, percosis *app.PercosisApp, addr sdk.AccAddress, coins sdk.Coins) {
 	t.Helper()
 	err := simapp.FundAccount(
-		osmosis.BankKeeper,
+		percosis.BankKeeper,
 		ctx,
 		addr,
 		coins,

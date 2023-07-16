@@ -7,9 +7,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/math"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 const (
@@ -157,19 +157,19 @@ func TestTickToSqrtPrice(t *testing.T) {
 			tickIndex:     -29203900,
 			expectedPrice: sdk.MustNewDecFromStr("0.000779610000000000"),
 		},
-		"Atom <> Osmo, tick -12150000 -> price 0.068500": {
+		"Atom <> Perco, tick -12150000 -> price 0.068500": {
 			tickIndex:     -12150000,
 			expectedPrice: sdk.MustNewDecFromStr("0.068500000000000000"),
 		},
-		"Atom <> Osmo, tick -12150000 + 100 -> price 0.068501": {
+		"Atom <> Perco, tick -12150000 + 100 -> price 0.068501": {
 			tickIndex:     -12149900,
 			expectedPrice: sdk.MustNewDecFromStr("0.068501000000000000"),
 		},
-		"Boot <> Osmo, tick 64576000 -> price 25760000": {
+		"Boot <> Perco, tick 64576000 -> price 25760000": {
 			tickIndex:     64576000,
 			expectedPrice: sdk.MustNewDecFromStr("25760000"),
 		},
-		"Boot <> Osmo, tick 64576000 + 100 -> price 25760000": {
+		"Boot <> Perco, tick 64576000 + 100 -> price 25760000": {
 			tickIndex:     64576100,
 			expectedPrice: sdk.MustNewDecFromStr("25761000"),
 		},
@@ -363,19 +363,19 @@ func TestPriceToTick(t *testing.T) {
 			price:        sdk.MustNewDecFromStr("0.00077961"),
 			tickExpected: -29203900,
 		},
-		"Atom <> Osmo, tick -12150000 -> price 0.068500": {
+		"Atom <> Perco, tick -12150000 -> price 0.068500": {
 			price:        sdk.MustNewDecFromStr("0.0685"),
 			tickExpected: -12150000,
 		},
-		"Atom <> Osmo, tick -12150000 + 100 -> price 0.068501": {
+		"Atom <> Perco, tick -12150000 + 100 -> price 0.068501": {
 			price:        sdk.MustNewDecFromStr("0.068501"),
 			tickExpected: -12149900,
 		},
-		"Boot <> Osmo, tick 64576000 -> price 25760000": {
+		"Boot <> Perco, tick 64576000 -> price 25760000": {
 			price:        sdk.MustNewDecFromStr("25760000"),
 			tickExpected: 64576000,
 		},
-		"Boot <> Osmo, tick 64576000 + 100 -> price 25761000": {
+		"Boot <> Perco, tick 64576000 + 100 -> price 25761000": {
 			price:        sdk.MustNewDecFromStr("25761000"),
 			tickExpected: 64576100,
 		},
@@ -616,7 +616,7 @@ func TestTickToSqrtPricePriceToTick_InverseRelationship(t *testing.T) {
 			require.NoError(t, err)
 
 			// TODO: investigate this separately
-			// https://github.com/osmosis-labs/osmosis/issues/4925
+			// https://github.com/percosis-labs/percosis/issues/4925
 			// require.Equal(t, expectedPrice.String(), priceFromSqrtPrice.String())
 
 			// 5. Compute tick from sqrt price from the original tick.

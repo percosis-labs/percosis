@@ -2,7 +2,7 @@ import subprocess, json, csv
 
 pagination_limit = 1000
 num_validators = 150
-command = "osmosisd q staking validators --output=json --limit=1000"
+command = "percosisd q staking validators --output=json --limit=1000"
 
 # Execute the shell command and capture the response
 process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)

@@ -7,9 +7,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/osmosis-labs/osmosis/v16/app"
-	osmosim "github.com/osmosis-labs/osmosis/v16/simulation/executor"
-	osmosimtypes "github.com/osmosis-labs/osmosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/v16/app"
+	percosim "github.com/percosis-labs/percosis/v16/simulation/executor"
+	percosimtypes "github.com/percosis-labs/percosis/v16/simulation/simtypes"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -24,12 +24,12 @@ import (
 // InitChainFn returns the initial application state using a genesis or the simulation parameters.
 // It panics if the user provides files for both of them.
 // If a file is not given for the genesis or the sim params, it creates a randomized one.
-func InitChainFn() osmosim.InitChainFn {
+func InitChainFn() percosim.InitChainFn {
 	cdc := app.MakeEncodingConfig().Marshaler
-	return func(simManager osmosimtypes.ModuleGenesisGenerator, r *rand.Rand, accs []simtypes.Account, config osmosim.InitializationConfig,
+	return func(simManager percosimtypes.ModuleGenesisGenerator, r *rand.Rand, accs []simtypes.Account, config percosim.InitializationConfig,
 	) (simAccs []simtypes.Account, req abci.RequestInitChain) {
 		// N.B.: wasmd has the following check in its simulator:
-		// https://github.com/osmosis-labs/wasmd/blob/c2ec9092d086b5ac6dd367f33ce8b5cce8e4c5f5/x/wasm/types/types.go#L261-L264
+		// https://github.com/percosis-labs/wasmd/blob/c2ec9092d086b5ac6dd367f33ce8b5cce8e4c5f5/x/wasm/types/types.go#L261-L264
 		// As a result, it is easy to overflow and become negative if seconds are set too large.
 		genesisTime := time.Unix(0, r.Int63())
 
@@ -51,7 +51,7 @@ func InitChainFn() osmosim.InitChainFn {
 		req = abci.RequestInitChain{
 			Time:            genesisTime,
 			ChainId:         config.ChainID,
-			ConsensusParams: osmosim.DefaultRandomConsensusParams(r, appState, cdc),
+			ConsensusParams: percosim.DefaultRandomConsensusParams(r, appState, cdc),
 			// Validators: ...,
 			AppStateBytes: appState,
 			// InitialHeight: ...,
@@ -127,7 +127,7 @@ func updateStakingAndBankState(appState json.RawMessage, cdc codec.JSONCodec) js
 // AppStateRandomizedFn creates calls each module's GenesisState generator function
 // and creates the simulation params.
 func AppStateRandomizedFn(
-	simManager osmosimtypes.ModuleGenesisGenerator, r *rand.Rand, cdc codec.JSONCodec,
+	simManager percosimtypes.ModuleGenesisGenerator, r *rand.Rand, cdc codec.JSONCodec,
 	accs []simtypes.Account, genesisTimestamp time.Time, appParams simtypes.AppParams,
 ) (json.RawMessage, []simtypes.Account) {
 	numAccs := int64(len(accs))
@@ -162,7 +162,7 @@ func AppStateRandomizedFn(
 		GenTimestamp: genesisTimestamp,
 	}
 
-	simManager.GenerateGenesisStates(simState, &osmosimtypes.SimCtx{})
+	simManager.GenerateGenesisStates(simState, &percosimtypes.SimCtx{})
 
 	appState, err := json.Marshal(genesisState)
 	if err != nil {

@@ -11,16 +11,16 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	gammtypes "github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	gammmigration "github.com/osmosis-labs/osmosis/v16/x/gamm/types/migration"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid/keeper"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/osmomath"
+	"github.com/percosis-labs/percosis/osmoutils"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
 )
 
 var (
@@ -338,7 +338,7 @@ func (s *KeeperTestSuite) TestMigrateSuperfluidBondedBalancerToConcentrated() {
 
 			if tc.overwriteValidatorAddress {
 				synthDenomParts := strings.Split(synthLockBeforeMigration.SynthDenom, "/")
-				synthDenomParts[4] = "osmovaloper1n69ghlk6404gzxtmtq0w7ma59n9vd9ed9dplg" // invalid, too short
+				synthDenomParts[4] = "percovaloper1n69ghlk6404gzxtmtq0w7ma59n9vd9ed9dplg" // invalid, too short
 				newSynthDenom := strings.Join(synthDenomParts, "/")
 				synthLockBeforeMigration.SynthDenom = newSynthDenom
 			}
@@ -499,7 +499,7 @@ func (s *KeeperTestSuite) TestMigrateSuperfluidUnbondingBalancerToConcentrated()
 			// Modify migration inputs if necessary
 			if tc.overwriteValidatorAddress {
 				synthDenomParts := strings.Split(synthLockBeforeMigration.SynthDenom, "/")
-				synthDenomParts[4] = "osmovaloper1n69ghlk6404gzxtmtq0w7ma59n9vd9ed9dplg" // invalid, too short
+				synthDenomParts[4] = "percovaloper1n69ghlk6404gzxtmtq0w7ma59n9vd9ed9dplg" // invalid, too short
 				newSynthDenom := strings.Join(synthDenomParts, "/")
 				synthLockBeforeMigration.SynthDenom = newSynthDenom
 			}

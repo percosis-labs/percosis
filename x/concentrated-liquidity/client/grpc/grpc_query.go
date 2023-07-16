@@ -1,7 +1,7 @@
 package grpc 
 
 // THIS FILE IS GENERATED CODE, DO NOT EDIT
-// SOURCE AT `proto/osmosis/concentrated-liquidity/query.yml`
+// SOURCE AT `proto/percosis/concentrated-liquidity/query.yml`
 
 import (
 	context "context"
@@ -10,8 +10,8 @@ import (
 	"google.golang.org/grpc/status"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/client"
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
 )
 
 type Querier struct {

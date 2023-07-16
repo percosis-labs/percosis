@@ -7,9 +7,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/internal/test_helpers"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/internal/test_helpers"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
 )
 
 type BalancerTestSuite struct {
@@ -70,19 +70,19 @@ func (s *KeeperTestSuite) TestEnsureDenomInPool() {
 		expectedErr error
 	}{
 		"all of tokensIn is in pool asset map": {
-			poolAssets:  []balancer.PoolAsset{defaultOsmoPoolAsset, defaultAtomPoolAsset},
+			poolAssets:  []balancer.PoolAsset{defaultPercoPoolAsset, defaultAtomPoolAsset},
 			tokensIn:    sdk.NewCoins(sdk.NewCoin("uatom", sdk.OneInt())),
 			expectPass:  true,
 			expectedErr: nil,
 		},
 		"one of tokensIn is in pool asset map": {
-			poolAssets:  []balancer.PoolAsset{defaultOsmoPoolAsset, defaultAtomPoolAsset},
+			poolAssets:  []balancer.PoolAsset{defaultPercoPoolAsset, defaultAtomPoolAsset},
 			tokensIn:    sdk.NewCoins(sdk.NewCoin("uatom", sdk.OneInt()), sdk.NewCoin("foo", sdk.OneInt())),
 			expectPass:  false,
 			expectedErr: types.ErrDenomNotFoundInPool,
 		},
 		"none of tokensIn is in pool asset map": {
-			poolAssets:  []balancer.PoolAsset{defaultOsmoPoolAsset, defaultAtomPoolAsset},
+			poolAssets:  []balancer.PoolAsset{defaultPercoPoolAsset, defaultAtomPoolAsset},
 			tokensIn:    sdk.NewCoins(sdk.NewCoin("foo", sdk.OneInt())),
 			expectPass:  false,
 			expectedErr: types.ErrDenomNotFoundInPool,

@@ -15,7 +15,7 @@ import (
 	iavlstore "github.com/cosmos/cosmos-sdk/store/iavl"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/sumtree"
+	"github.com/percosis-labs/percosis/osmoutils/sumtree"
 )
 
 type TreeTestSuite struct {

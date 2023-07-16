@@ -12,16 +12,16 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 	transfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	ibcratelimittypes "github.com/osmosis-labs/osmosis/v16/x/ibc-rate-limit/types"
+	"github.com/percosis-labs/percosis/osmoutils/osmoassert"
+	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/v16/app/apptesting"
-	v15 "github.com/osmosis-labs/osmosis/v16/app/upgrades/v15"
-	gamm "github.com/osmosis-labs/osmosis/v16/x/gamm/keeper"
-	balancer "github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	v15 "github.com/percosis-labs/percosis/v16/app/upgrades/v15"
+	gamm "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
+	balancer "github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 )
 
 type UpgradeTestSuite struct {
@@ -29,7 +29,7 @@ type UpgradeTestSuite struct {
 }
 
 var DefaultAcctFunds sdk.Coins = sdk.NewCoins(
-	sdk.NewCoin("uosmo", sdk.NewInt(10000000000)),
+	sdk.NewCoin("ufury", sdk.NewInt(10000000000)),
 	sdk.NewCoin("foo", sdk.NewInt(10000000)),
 	sdk.NewCoin("bar", sdk.NewInt(10000000)),
 	sdk.NewCoin("baz", sdk.NewInt(10000000)),
@@ -168,32 +168,32 @@ func (suite *UpgradeTestSuite) TestMigrateBalancerToStablePools() {
 	suite.validateCons(tokenInStable, tokenIn)
 }
 
-func (suite *UpgradeTestSuite) TestRegisterOsmoIonMetadata() {
+func (suite *UpgradeTestSuite) TestRegisterPercoIonMetadata() {
 	suite.SetupTest() // reset
 
-	expectedUosmodenom := "uosmo"
+	expectedUfurydenom := "ufury"
 	expectedUiondenom := "uion"
 
 	ctx := suite.Ctx
 	bankKeeper := suite.App.BankKeeper
 
 	// meta data should not be found pre-registration of meta data
-	_, found := suite.App.BankKeeper.GetDenomMetaData(ctx, "uosmo")
+	_, found := suite.App.BankKeeper.GetDenomMetaData(ctx, "ufury")
 	suite.Require().False(found)
 
 	_, found = suite.App.BankKeeper.GetDenomMetaData(ctx, "uion")
 	suite.Require().False(found)
 
 	// system under test.
-	v15.RegisterOsmoIonMetadata(ctx, *bankKeeper)
+	v15.RegisterPercoIonMetadata(ctx, *bankKeeper)
 
-	uosmoMetadata, found := suite.App.BankKeeper.GetDenomMetaData(ctx, "uosmo")
+	ufuryMetadata, found := suite.App.BankKeeper.GetDenomMetaData(ctx, "ufury")
 	suite.Require().True(found)
 
 	uionMetadata, found := suite.App.BankKeeper.GetDenomMetaData(ctx, "uion")
 	suite.Require().True(found)
 
-	suite.Require().Equal(expectedUosmodenom, uosmoMetadata.Base)
+	suite.Require().Equal(expectedUfurydenom, ufuryMetadata.Base)
 	suite.Require().Equal(expectedUiondenom, uionMetadata.Base)
 }
 
@@ -229,7 +229,7 @@ func (suite *UpgradeTestSuite) TestSetRateLimits() {
 
 	addr, _, err := contractKeeper.Instantiate(suite.Ctx, codeID, govModule, govModule, initMsgBz, "rate limiting contract", nil)
 	suite.Require().NoError(err)
-	addrStr, err := sdk.Bech32ifyAddressBytes("osmo", addr)
+	addrStr, err := sdk.Bech32ifyAddressBytes("perco", addr)
 	suite.Require().NoError(err)
 	params, err := ibcratelimittypes.NewParams(addrStr)
 	suite.Require().NoError(err)

@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
 )
 
 func TestGetConcentratedLockupDenomFromPoolId(t *testing.T) {

@@ -1,4 +1,4 @@
-module github.com/osmosis-labs/osmosis/v16
+module github.com/percosis-labs/percosis/v16
 
 go 1.20
 
@@ -19,11 +19,11 @@ require (
 	github.com/iancoleman/orderedmap v0.2.0
 	github.com/mattn/go-sqlite3 v1.14.17
 	github.com/ory/dockertest/v3 v3.10.0
-	github.com/osmosis-labs/go-mutesting v0.0.0-20221208041716-b43bcd97b3b3
-	github.com/osmosis-labs/osmosis/osmomath v0.0.3-dev.0.20230629191111-f375469de8b6
-	github.com/osmosis-labs/osmosis/osmoutils v0.0.0-20230709024311-81c831b050de
-	github.com/osmosis-labs/osmosis/x/epochs v0.0.0-20230328024000-175ec88e4304
-	github.com/osmosis-labs/osmosis/x/ibc-hooks v0.0.0-20230602130523-f9a94d8bbd10
+	github.com/percosis-labs/go-mutesting v0.0.0-20221208041716-b43bcd97b3b3
+	github.com/percosis-labs/percosis/osmomath v0.0.3-dev.0.20230629191111-f375469de8b6
+	github.com/percosis-labs/percosis/osmoutils v0.0.0-20230709024311-81c831b050de
+	github.com/percosis-labs/percosis/x/epochs v0.0.0-20230328024000-175ec88e4304
+	github.com/percosis-labs/percosis/x/ibc-hooks v0.0.0-20230602130523-f9a94d8bbd10
 	github.com/pkg/errors v0.9.1
 	github.com/rakyll/statik v0.1.7
 	github.com/spf13/cast v1.5.1
@@ -316,14 +316,14 @@ require (
 )
 
 replace (
-	// osmosis-patched wasmd.
-	github.com/CosmWasm/wasmd => github.com/osmosis-labs/wasmd v0.31.0-osmo-v16
+	// percosis-patched wasmd.
+	github.com/CosmWasm/wasmd => github.com/percosis-labs/wasmd v0.31.0-perco-v16
 	// Security patch for wasmvm. See https://github.com/CosmWasm/advisories/blob/main/CWAs/CWA-2023-002.md
 	github.com/CosmWasm/wasmvm => github.com/CosmWasm/wasmvm v1.2.3
 	// dragonberry
 	github.com/confio/ics23/go => github.com/cosmos/cosmos-sdk/ics23/go v0.8.0
-	// Our cosmos-sdk branch is:  https://github.com/osmosis-labs/cosmos-sdk, current branch: v16.x. Direct commit link: https://github.com/osmosis-labs/cosmos-sdk/commit/ed4eb883f2a65bd5343e9d2f6186060f45294cb2
-	github.com/cosmos/cosmos-sdk => github.com/osmosis-labs/cosmos-sdk v0.45.0-rc1.0.20230703010110-ed4eb883f2a6
+	// Our cosmos-sdk branch is:  https://github.com/percosis-labs/cosmos-sdk, current branch: v16.x. Direct commit link: https://github.com/percosis-labs/cosmos-sdk/commit/ed4eb883f2a65bd5343e9d2f6186060f45294cb2
+	github.com/cosmos/cosmos-sdk => github.com/percosis-labs/cosmos-sdk v0.45.0-rc1.0.20230703010110-ed4eb883f2a6
 
 	// N.B. v0.19.5 contains a breaking change to the IAVL API
 	github.com/cosmos/iavl v0.19.5 => github.com/cosmos/iavl v0.19.4

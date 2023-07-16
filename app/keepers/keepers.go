@@ -36,19 +36,19 @@ import (
 	icq "github.com/cosmos/ibc-apps/modules/async-icq/v4"
 	icqtypes "github.com/cosmos/ibc-apps/modules/async-icq/v4/types"
 
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool"
-	cosmwasmpooltypes "github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/types"
-	downtimedetector "github.com/osmosis-labs/osmosis/v16/x/downtime-detector"
-	downtimetypes "github.com/osmosis-labs/osmosis/v16/x/downtime-detector/types"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm"
-	ibcratelimit "github.com/osmosis-labs/osmosis/v16/x/ibc-rate-limit"
-	ibcratelimittypes "github.com/osmosis-labs/osmosis/v16/x/ibc-rate-limit/types"
-	"github.com/osmosis-labs/osmosis/v16/x/poolmanager"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
-	"github.com/osmosis-labs/osmosis/v16/x/protorev"
-	ibchooks "github.com/osmosis-labs/osmosis/x/ibc-hooks"
-	ibchookskeeper "github.com/osmosis-labs/osmosis/x/ibc-hooks/keeper"
-	ibchookstypes "github.com/osmosis-labs/osmosis/x/ibc-hooks/types"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
+	downtimedetector "github.com/percosis-labs/percosis/v16/x/downtime-detector"
+	downtimetypes "github.com/percosis-labs/percosis/v16/x/downtime-detector/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm"
+	ibcratelimit "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit"
+	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
+	"github.com/percosis-labs/percosis/v16/x/poolmanager"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/v16/x/protorev"
+	ibchooks "github.com/percosis-labs/percosis/x/ibc-hooks"
+	ibchookskeeper "github.com/percosis-labs/percosis/x/ibc-hooks/keeper"
+	ibchookstypes "github.com/percosis-labs/percosis/x/ibc-hooks/types"
 
 	icqkeeper "github.com/cosmos/ibc-apps/modules/async-icq/v4/keeper"
 	icahost "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/host"
@@ -69,37 +69,37 @@ import (
 	// IBC Transfer: Defines the "transfer" IBC port
 	transfer "github.com/cosmos/ibc-go/v4/modules/apps/transfer"
 
-	_ "github.com/osmosis-labs/osmosis/v16/client/docs/statik"
-	owasm "github.com/osmosis-labs/osmosis/v16/wasmbinding"
-	concentratedliquidity "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity"
-	concentratedliquiditytypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	gammkeeper "github.com/osmosis-labs/osmosis/v16/x/gamm/keeper"
-	gammtypes "github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	incentiveskeeper "github.com/osmosis-labs/osmosis/v16/x/incentives/keeper"
-	incentivestypes "github.com/osmosis-labs/osmosis/v16/x/incentives/types"
-	lockupkeeper "github.com/osmosis-labs/osmosis/v16/x/lockup/keeper"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	mintkeeper "github.com/osmosis-labs/osmosis/v16/x/mint/keeper"
-	minttypes "github.com/osmosis-labs/osmosis/v16/x/mint/types"
-	poolincentives "github.com/osmosis-labs/osmosis/v16/x/pool-incentives"
-	poolincentiveskeeper "github.com/osmosis-labs/osmosis/v16/x/pool-incentives/keeper"
-	poolincentivestypes "github.com/osmosis-labs/osmosis/v16/x/pool-incentives/types"
-	protorevkeeper "github.com/osmosis-labs/osmosis/v16/x/protorev/keeper"
-	protorevtypes "github.com/osmosis-labs/osmosis/v16/x/protorev/types"
-	"github.com/osmosis-labs/osmosis/v16/x/superfluid"
-	superfluidkeeper "github.com/osmosis-labs/osmosis/v16/x/superfluid/keeper"
-	superfluidtypes "github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
-	tokenfactorykeeper "github.com/osmosis-labs/osmosis/v16/x/tokenfactory/keeper"
-	tokenfactorytypes "github.com/osmosis-labs/osmosis/v16/x/tokenfactory/types"
-	"github.com/osmosis-labs/osmosis/v16/x/twap"
-	twaptypes "github.com/osmosis-labs/osmosis/v16/x/twap/types"
-	"github.com/osmosis-labs/osmosis/v16/x/txfees"
-	txfeeskeeper "github.com/osmosis-labs/osmosis/v16/x/txfees/keeper"
-	txfeestypes "github.com/osmosis-labs/osmosis/v16/x/txfees/types"
-	valsetpref "github.com/osmosis-labs/osmosis/v16/x/valset-pref"
-	valsetpreftypes "github.com/osmosis-labs/osmosis/v16/x/valset-pref/types"
-	epochskeeper "github.com/osmosis-labs/osmosis/x/epochs/keeper"
-	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
+	_ "github.com/percosis-labs/percosis/v16/client/docs/statik"
+	owasm "github.com/percosis-labs/percosis/v16/wasmbinding"
+	concentratedliquidity "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
+	concentratedliquiditytypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	gammkeeper "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
+	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	incentiveskeeper "github.com/percosis-labs/percosis/v16/x/incentives/keeper"
+	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
+	lockupkeeper "github.com/percosis-labs/percosis/v16/x/lockup/keeper"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	mintkeeper "github.com/percosis-labs/percosis/v16/x/mint/keeper"
+	minttypes "github.com/percosis-labs/percosis/v16/x/mint/types"
+	poolincentives "github.com/percosis-labs/percosis/v16/x/pool-incentives"
+	poolincentiveskeeper "github.com/percosis-labs/percosis/v16/x/pool-incentives/keeper"
+	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	protorevkeeper "github.com/percosis-labs/percosis/v16/x/protorev/keeper"
+	protorevtypes "github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/v16/x/superfluid"
+	superfluidkeeper "github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
+	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	tokenfactorykeeper "github.com/percosis-labs/percosis/v16/x/tokenfactory/keeper"
+	tokenfactorytypes "github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/v16/x/twap"
+	twaptypes "github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/v16/x/txfees"
+	txfeeskeeper "github.com/percosis-labs/percosis/v16/x/txfees/keeper"
+	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	valsetpref "github.com/percosis-labs/percosis/v16/x/valset-pref"
+	valsetpreftypes "github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	epochskeeper "github.com/percosis-labs/percosis/x/epochs/keeper"
+	epochstypes "github.com/percosis-labs/percosis/x/epochs/types"
 )
 
 type AppKeepers struct {
@@ -439,7 +439,7 @@ func (appKeepers *AppKeepers) InitNormalKeepers(
 
 	// The last arguments can contain custom message handlers, and custom query handlers,
 	// if we want to allow any custom callbacks
-	supportedFeatures := "iterator,staking,stargate,osmosis,cosmwasm_1_1,cosmwasm_1_2"
+	supportedFeatures := "iterator,staking,stargate,percosis,cosmwasm_1_1,cosmwasm_1_2"
 
 	wasmOpts = append(owasm.RegisterCustomPlugins(appKeepers.BankKeeper, appKeepers.TokenFactoryKeeper), wasmOpts...)
 	wasmOpts = append(owasm.RegisterStargateQueries(*bApp.GRPCQueryRouter(), appCodec), wasmOpts...)
@@ -528,8 +528,8 @@ func (appKeepers *AppKeepers) WireICS20PreWasmKeeper(
 	hooksKeeper *ibchookskeeper.Keeper,
 ) {
 	// Setup the ICS4Wrapper used by the hooks middleware
-	osmoPrefix := sdk.GetConfig().GetBech32AccountAddrPrefix()
-	wasmHooks := ibchooks.NewWasmHooks(hooksKeeper, nil, osmoPrefix) // The contract keeper needs to be set later
+	percoPrefix := sdk.GetConfig().GetBech32AccountAddrPrefix()
+	wasmHooks := ibchooks.NewWasmHooks(hooksKeeper, nil, percoPrefix) // The contract keeper needs to be set later
 	appKeepers.Ics20WasmHooks = &wasmHooks
 	appKeepers.HooksICS4Wrapper = ibchooks.NewICS4Middleware(
 		appKeepers.IBCKeeper.ChannelKeeper,

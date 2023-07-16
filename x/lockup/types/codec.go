@@ -9,12 +9,12 @@ import (
 )
 
 func RegisterCodec(cdc *codec.LegacyAmino) {
-	cdc.RegisterConcrete(&MsgLockTokens{}, "osmosis/lockup/lock-tokens", nil)
-	cdc.RegisterConcrete(&MsgBeginUnlockingAll{}, "osmosis/lockup/begin-unlock-tokens", nil)
-	cdc.RegisterConcrete(&MsgBeginUnlocking{}, "osmosis/lockup/begin-unlock-period-lock", nil)
-	cdc.RegisterConcrete(&MsgExtendLockup{}, "osmosis/lockup/extend-lockup", nil)
-	cdc.RegisterConcrete(&MsgForceUnlock{}, "osmosis/lockup/force-unlock-tokens", nil)
-	cdc.RegisterConcrete(&MsgSetRewardReceiverAddress{}, "osmosis/lockup/set-reward-receiver-address", nil)
+	cdc.RegisterConcrete(&MsgLockTokens{}, "percosis/lockup/lock-tokens", nil)
+	cdc.RegisterConcrete(&MsgBeginUnlockingAll{}, "percosis/lockup/begin-unlock-tokens", nil)
+	cdc.RegisterConcrete(&MsgBeginUnlocking{}, "percosis/lockup/begin-unlock-period-lock", nil)
+	cdc.RegisterConcrete(&MsgExtendLockup{}, "percosis/lockup/extend-lockup", nil)
+	cdc.RegisterConcrete(&MsgForceUnlock{}, "percosis/lockup/force-unlock-tokens", nil)
+	cdc.RegisterConcrete(&MsgSetRewardReceiverAddress{}, "percosis/lockup/set-reward-receiver-address", nil)
 }
 
 func RegisterInterfaces(registry cdctypes.InterfaceRegistry) {

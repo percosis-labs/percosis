@@ -7,13 +7,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/model"
-	cltypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	gammtypes "github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	gammmigration "github.com/osmosis-labs/osmosis/v16/x/gamm/types/migration"
-	incentivestypes "github.com/osmosis-labs/osmosis/v16/x/incentives/types"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
+	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	epochstypes "github.com/percosis-labs/percosis/x/epochs/types"
 )
 
 // LockupKeeper defines the expected interface needed to retrieve locks.

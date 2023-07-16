@@ -5,18 +5,18 @@ import (
 	icqtypes "github.com/cosmos/ibc-apps/modules/async-icq/v4/types"
 	packetforwardtypes "github.com/strangelove-ventures/packet-forward-middleware/v4/router/types"
 
-	"github.com/osmosis-labs/osmosis/v16/app/upgrades"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
-	protorevtypes "github.com/osmosis-labs/osmosis/v16/x/protorev/types"
-	valsetpreftypes "github.com/osmosis-labs/osmosis/v16/x/valset-pref/types"
+	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	protorevtypes "github.com/percosis-labs/percosis/v16/x/protorev/types"
+	valsetpreftypes "github.com/percosis-labs/percosis/v16/x/valset-pref/types"
 )
 
-// UpgradeName defines the on-chain upgrade name for the Osmosis v15 upgrade.
+// UpgradeName defines the on-chain upgrade name for the Percosis v15 upgrade.
 const UpgradeName = "v15"
 
 // pool ids to migrate
 const (
-	stOSMO_OSMOPoolId   = 833
+	stPERCO_PERCOPoolId   = 833
 	stJUNO_JUNOPoolId   = 817
 	stSTARS_STARSPoolId = 810
 )

@@ -6,9 +6,9 @@ This package contains all logic necessary for initializing configuration
 data either for a new chain or a single node via Docker containers.
 
 The motivation for doing this via Docker is to be able to initialize
-configs of any Osmosis version.
+configs of any Percosis version.
 
-For example, while the latest Osmosis version is v9,
+For example, while the latest Percosis version is v9,
 we might want to spin up a chain of v8 and test the upgrade.
 
 Additionally, there are known file permission errors when initializing
@@ -91,34 +91,34 @@ initResource, err := m.pool.RunWithOptions(
 Assumming that the container was correctly mounted on a volume,
 it produces the following:
 
-- `osmo-test-< chain id >-encode` file
+- `perco-test-< chain id >-encode` file
   - This is encoded metadata about the newly created chain with its nodes
-- `osmo-test-< chain id >` folder
+- `perco-test-< chain id >` folder
   - For every `NodeCondig` provided to the container, it will produce a folder
     with the respective node configs
 
 Example:
 
 ```sh
-$:/tmp/osmosis-e2e-testnet-1167397304 $ ls
-osmo-test-a  osmo-test-a-encode
+$:/tmp/percosis-e2e-testnet-1167397304 $ ls
+perco-test-a  perco-test-a-encode
 
-$:/tmp/osmosis-e2e-testnet-1167397304/osmo-test-a $ cd  osmo-test-a
+$:/tmp/percosis-e2e-testnet-1167397304/perco-test-a $ cd  perco-test-a
 
-$:/tmp/osmosis-e2e-testnet-1167397304/osmo-test-a $ ls
-osmo-test-a-osmosis-00  osmo-test-a-osmosis-11  osmo-test-a-osmosis-22  osmo-test-a-osmosis-33
+$:/tmp/percosis-e2e-testnet-1167397304/perco-test-a $ ls
+perco-test-a-percosis-00  perco-test-a-percosis-11  perco-test-a-percosis-22  perco-test-a-percosis-33
 
-$:/tmp/osmosis-e2e-testnet-1167397304/osmo-test-a $ cd  osmo-test-a-osmosis-00
+$:/tmp/percosis-e2e-testnet-1167397304/perco-test-a $ cd  perco-test-a-percosis-00
 
-$:/tmp/osmosis-e2e-testnet-1167397304/osmo-test-a/osmo-test-a-osmosis-00 $ ls
+$:/tmp/percosis-e2e-testnet-1167397304/perco-test-a/perco-test-a-percosis-00 $ ls
 config  data  keyring-test  wasm
 ```
 
 - Here we mounted the container on
-`/tmp/osmosis-e2e-testnet-1167397304/osmo-test`as a volume
+`/tmp/percosis-e2e-testnet-1167397304/perco-test`as a volume
 - < chain id > = "a"
 - 4 `NodeConfig`s were provided via the `--config` flag
-- `osmo-test-a-encode` output file corresponds to the serialized `internalChain` struct
+- `perco-test-a-encode` output file corresponds to the serialized `internalChain` struct
 defined in `tests/e2e/initialization/chain.go`
 
 ### Initializing a Node (`node`)

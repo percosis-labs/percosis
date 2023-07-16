@@ -3,7 +3,7 @@ use cw_storage_plus::Item;
 
 #[cw_serde]
 pub struct Config {
-    pub osmosis_channel: String,
+    pub percosis_channel: String,
     pub crosschain_swaps_contract: String,
 }
 

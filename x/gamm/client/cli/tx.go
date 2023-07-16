@@ -10,12 +10,12 @@ import (
 	"github.com/spf13/cobra"
 	flag "github.com/spf13/pflag"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/balancer"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	gammmigration "github.com/osmosis-labs/osmosis/v16/x/gamm/types/migration"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/osmoutils/percocli"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/tx"
@@ -25,15 +25,15 @@ import (
 )
 
 func NewTxCmd() *cobra.Command {
-	txCmd := osmocli.TxIndexCmd(types.ModuleName)
-	osmocli.AddTxCmd(txCmd, NewJoinPoolCmd)
-	osmocli.AddTxCmd(txCmd, NewExitPoolCmd)
-	osmocli.AddTxCmd(txCmd, NewSwapExactAmountInCmd)
-	osmocli.AddTxCmd(txCmd, NewSwapExactAmountOutCmd)
-	osmocli.AddTxCmd(txCmd, NewJoinSwapExternAmountIn)
-	osmocli.AddTxCmd(txCmd, NewJoinSwapShareAmountOut)
-	osmocli.AddTxCmd(txCmd, NewExitSwapExternAmountOut)
-	osmocli.AddTxCmd(txCmd, NewExitSwapShareAmountIn)
+	txCmd := percocli.TxIndexCmd(types.ModuleName)
+	percocli.AddTxCmd(txCmd, NewJoinPoolCmd)
+	percocli.AddTxCmd(txCmd, NewExitPoolCmd)
+	percocli.AddTxCmd(txCmd, NewSwapExactAmountInCmd)
+	percocli.AddTxCmd(txCmd, NewSwapExactAmountOutCmd)
+	percocli.AddTxCmd(txCmd, NewJoinSwapExternAmountIn)
+	percocli.AddTxCmd(txCmd, NewJoinSwapShareAmountOut)
+	percocli.AddTxCmd(txCmd, NewExitSwapExternAmountOut)
+	percocli.AddTxCmd(txCmd, NewExitSwapShareAmountIn)
 	txCmd.AddCommand(
 		NewCreatePoolCmd().BuildCommandCustomFn(),
 		NewStableSwapAdjustScalingFactorsCmd(),
@@ -45,15 +45,15 @@ var poolIdFlagOverride = map[string]string{
 	"poolid": FlagPoolId,
 }
 
-func NewCreatePoolCmd() *osmocli.TxCliDesc {
-	desc := osmocli.TxCliDesc{
+func NewCreatePoolCmd() *percocli.TxCliDesc {
+	desc := percocli.TxCliDesc{
 		Use:   "create-pool [flags]",
 		Short: "create a new pool and provide the liquidity to it",
 		Long: `Must provide path to a pool JSON file (--pool-file) describing the pool to be created
 Sample pool JSON file contents for balancer:
 {
-	"weights": "4uatom,4osmo,2uakt",
-	"initial-deposit": "100uatom,5osmo,20uakt",
+	"weights": "4uatom,4perco,2uakt",
+	"initial-deposit": "100uatom,5perco,20uakt",
 	"swap-fee": "0.01",
 	"exit-fee": "0.01",
 	"future-governor": "168h"
@@ -70,7 +70,7 @@ For stableswap (demonstrating need for a 1:1000 scaling factor, see doc)
 `,
 		NumArgs:          0,
 		ParseAndBuildMsg: BuildCreatePoolCmd,
-		Flags: osmocli.FlagDesc{
+		Flags: percocli.FlagDesc{
 			RequiredFlags: []*flag.FlagSet{FlagSetCreatePoolFile()},
 			OptionalFlags: []*flag.FlagSet{FlagSetCreatePoolType()},
 		},
@@ -78,100 +78,100 @@ For stableswap (demonstrating need for a 1:1000 scaling factor, see doc)
 	return &desc
 }
 
-func NewJoinPoolCmd() (*osmocli.TxCliDesc, *types.MsgJoinPool) {
-	return &osmocli.TxCliDesc{
+func NewJoinPoolCmd() (*percocli.TxCliDesc, *types.MsgJoinPool) {
+	return &percocli.TxCliDesc{
 		Use:   "join-pool",
 		Short: "join a new pool and provide the liquidity to it",
 		CustomFlagOverrides: map[string]string{
 			"poolid":         FlagPoolId,
 			"ShareOutAmount": FlagShareAmountOut,
 		},
-		CustomFieldParsers: map[string]osmocli.CustomFieldParserFn{
-			"TokenInMaxs": osmocli.FlagOnlyParser(maxAmountsInParser),
+		CustomFieldParsers: map[string]percocli.CustomFieldParserFn{
+			"TokenInMaxs": percocli.FlagOnlyParser(maxAmountsInParser),
 		},
-		Flags: osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJoinPool()}},
+		Flags: percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJoinPool()}},
 	}, &types.MsgJoinPool{}
 }
 
-func NewExitPoolCmd() (*osmocli.TxCliDesc, *types.MsgExitPool) {
-	return &osmocli.TxCliDesc{
+func NewExitPoolCmd() (*percocli.TxCliDesc, *types.MsgExitPool) {
+	return &percocli.TxCliDesc{
 		Use:   "exit-pool",
 		Short: "exit a new pool and withdraw the liquidity from it",
 		CustomFlagOverrides: map[string]string{
 			"poolid":        FlagPoolId,
 			"ShareInAmount": FlagShareAmountIn,
 		},
-		CustomFieldParsers: map[string]osmocli.CustomFieldParserFn{
-			"TokenOutMins": osmocli.FlagOnlyParser(minAmountsOutParser),
+		CustomFieldParsers: map[string]percocli.CustomFieldParserFn{
+			"TokenOutMins": percocli.FlagOnlyParser(minAmountsOutParser),
 		},
-		Flags: osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetExitPool()}},
+		Flags: percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetExitPool()}},
 	}, &types.MsgExitPool{}
 }
 
-func NewSwapExactAmountInCmd() (*osmocli.TxCliDesc, *types.MsgSwapExactAmountIn) {
-	return &osmocli.TxCliDesc{
+func NewSwapExactAmountInCmd() (*percocli.TxCliDesc, *types.MsgSwapExactAmountIn) {
+	return &percocli.TxCliDesc{
 		Use:   "swap-exact-amount-in [token-in] [token-out-min-amount]",
 		Short: "swap exact amount in",
-		CustomFieldParsers: map[string]osmocli.CustomFieldParserFn{
-			"Routes": osmocli.FlagOnlyParser(swapAmountInRoutes),
+		CustomFieldParsers: map[string]percocli.CustomFieldParserFn{
+			"Routes": percocli.FlagOnlyParser(swapAmountInRoutes),
 		},
-		Flags: osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags: percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 	}, &types.MsgSwapExactAmountIn{}
 }
 
-func NewSwapExactAmountOutCmd() (*osmocli.TxCliDesc, *types.MsgSwapExactAmountOut) {
+func NewSwapExactAmountOutCmd() (*percocli.TxCliDesc, *types.MsgSwapExactAmountOut) {
 	// Can't get rid of this parser without a break, because the args are out of order.
-	return &osmocli.TxCliDesc{
+	return &percocli.TxCliDesc{
 		Use:              "swap-exact-amount-out [token-out] [token-in-max-amount]",
 		Short:            "swap exact amount out",
 		NumArgs:          2,
 		ParseAndBuildMsg: NewBuildSwapExactAmountOutMsg,
-		Flags:            osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags:            percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 	}, &types.MsgSwapExactAmountOut{}
 }
 
-func NewJoinSwapExternAmountIn() (*osmocli.TxCliDesc, *types.MsgJoinSwapExternAmountIn) {
-	return &osmocli.TxCliDesc{
+func NewJoinSwapExternAmountIn() (*percocli.TxCliDesc, *types.MsgJoinSwapExternAmountIn) {
+	return &percocli.TxCliDesc{
 		Use:                 "join-swap-extern-amount-in [token-in] [share-out-min-amount]",
 		Short:               "join swap extern amount in",
 		CustomFlagOverrides: poolIdFlagOverride,
-		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
+		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
 	}, &types.MsgJoinSwapExternAmountIn{}
 }
 
-func NewJoinSwapShareAmountOut() (*osmocli.TxCliDesc, *types.MsgJoinSwapShareAmountOut) {
-	return &osmocli.TxCliDesc{
+func NewJoinSwapShareAmountOut() (*percocli.TxCliDesc, *types.MsgJoinSwapShareAmountOut) {
+	return &percocli.TxCliDesc{
 		Use:                 "join-swap-share-amount-out [token-in-denom] [share-out-amount] [token-in-max-amount] ",
 		Short:               "join swap share amount out",
 		CustomFlagOverrides: poolIdFlagOverride,
-		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
+		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
 	}, &types.MsgJoinSwapShareAmountOut{}
 }
 
-func NewExitSwapExternAmountOut() (*osmocli.TxCliDesc, *types.MsgExitSwapExternAmountOut) {
-	return &osmocli.TxCliDesc{
+func NewExitSwapExternAmountOut() (*percocli.TxCliDesc, *types.MsgExitSwapExternAmountOut) {
+	return &percocli.TxCliDesc{
 		Use:                 "exit-swap-extern-amount-out [token-out] [share-in-max-amount]",
 		Short:               "exit swap extern amount out",
 		CustomFlagOverrides: poolIdFlagOverride,
-		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
+		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
 	}, &types.MsgExitSwapExternAmountOut{}
 }
 
-func NewExitSwapShareAmountIn() (*osmocli.TxCliDesc, *types.MsgExitSwapShareAmountIn) {
-	return &osmocli.TxCliDesc{
+func NewExitSwapShareAmountIn() (*percocli.TxCliDesc, *types.MsgExitSwapShareAmountIn) {
+	return &percocli.TxCliDesc{
 		Use:                 "exit-swap-share-amount-in [token-out-denom] [share-in-amount] [token-out-min-amount]",
 		Short:               "exit swap share amount in",
 		CustomFlagOverrides: poolIdFlagOverride,
-		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
+		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
 	}, &types.MsgExitSwapShareAmountIn{}
 }
 
 // TODO: Change these flags to args. Required flags don't make that much sense.
 func NewStableSwapAdjustScalingFactorsCmd() *cobra.Command {
-	cmd := osmocli.TxCliDesc{
+	cmd := percocli.TxCliDesc{
 		Use:              "adjust-scaling-factors --pool-id=[pool-id] --scaling-factors=[scaling-factors]",
 		Short:            "adjust scaling factors",
-		Example:          "osmosisd adjust-scaling-factors --pool-id=1 --scaling-factors=\"100, 100\"",
+		Example:          "percosisd adjust-scaling-factors --pool-id=1 --scaling-factors=\"100, 100\"",
 		NumArgs:          0,
 		ParseAndBuildMsg: NewStableSwapAdjustScalingFactorsMsg,
 	}.BuildCommandCustomFn()

@@ -4,15 +4,15 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/osmosis-labs/osmosis/v16/x/mint/keeper"
-	"github.com/osmosis-labs/osmosis/v16/x/mint/types"
+	"github.com/percosis-labs/percosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/v16/x/mint/keeper"
+	"github.com/percosis-labs/percosis/v16/x/mint/types"
 )
 
 var customGenesis = types.NewGenesisState(
 	types.NewMinter(sdk.ZeroDec()),
 	types.NewParams(
-		"uosmo",                  // denom
+		"ufury",                  // denom
 		sdk.NewDec(200),          // epoch provisions
 		"year",                   // epoch identifier
 		sdk.NewDecWithPrec(5, 1), // reduction factor
@@ -25,11 +25,11 @@ var customGenesis = types.NewGenesisState(
 		},
 		[]types.WeightedAddress{
 			{
-				Address: "osmo14kjcwdwcqsujkdt8n5qwpd8x8ty2rys5rjrdjj",
+				Address: "perco14kjcwdwcqsujkdt8n5qwpd8x8ty2rys5rjrdjj",
 				Weight:  sdk.NewDecWithPrec(6, 1),
 			},
 			{
-				Address: "osmo1gw445ta0aqn26suz2rg3tkqfpxnq2hs224d7gq",
+				Address: "perco1gw445ta0aqn26suz2rg3tkqfpxnq2hs224d7gq",
 				Weight:  sdk.NewDecWithPrec(4, 1),
 			},
 		},
@@ -75,7 +75,7 @@ func (s *KeeperTestSuite) TestMintInitGenesis() {
 		},
 		"custom genesis": {
 			mintGenesis: customGenesis,
-			mintDenom:   "uosmo",
+			mintDenom:   "ufury",
 
 			expectedEpochProvisions:             sdk.NewDec(200),
 			expectedSupplyOffsetDelta:           sdk.NewInt(keeper.DeveloperVestingAmount).Neg(),

@@ -15,17 +15,17 @@ import (
 	packetforward "github.com/strangelove-ventures/packet-forward-middleware/v4/router"
 	packetforwardtypes "github.com/strangelove-ventures/packet-forward-middleware/v4/router/types"
 
-	ibchookstypes "github.com/osmosis-labs/osmosis/x/ibc-hooks/types"
+	ibchookstypes "github.com/percosis-labs/percosis/x/ibc-hooks/types"
 
 	ica "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts"
 	icatypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/types"
 
 	icqtypes "github.com/cosmos/ibc-apps/modules/async-icq/v4/types"
 
-	downtimemodule "github.com/osmosis-labs/osmosis/v16/x/downtime-detector/module"
-	downtimetypes "github.com/osmosis-labs/osmosis/v16/x/downtime-detector/types"
+	downtimemodule "github.com/percosis-labs/percosis/v16/x/downtime-detector/module"
+	downtimetypes "github.com/percosis-labs/percosis/v16/x/downtime-detector/types"
 
-	ibc_hooks "github.com/osmosis-labs/osmosis/x/ibc-hooks"
+	ibc_hooks "github.com/percosis-labs/percosis/x/ibc-hooks"
 
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/auth"
@@ -57,42 +57,42 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/upgrade"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/partialord"
-	appparams "github.com/osmosis-labs/osmosis/v16/app/params"
-	_ "github.com/osmosis-labs/osmosis/v16/client/docs/statik"
-	"github.com/osmosis-labs/osmosis/v16/simulation/simtypes"
-	concentratedliquidity "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/clmodule"
-	concentratedliquiditytypes "github.com/osmosis-labs/osmosis/v16/x/concentrated-liquidity/types"
-	cwpoolmodule "github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/module"
-	cosmwasmpooltypes "github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/types"
-	"github.com/osmosis-labs/osmosis/v16/x/gamm"
-	gammtypes "github.com/osmosis-labs/osmosis/v16/x/gamm/types"
-	"github.com/osmosis-labs/osmosis/v16/x/ibc-rate-limit/ibcratelimitmodule"
-	ibcratelimittypes "github.com/osmosis-labs/osmosis/v16/x/ibc-rate-limit/types"
-	"github.com/osmosis-labs/osmosis/v16/x/incentives"
-	incentivestypes "github.com/osmosis-labs/osmosis/v16/x/incentives/types"
-	"github.com/osmosis-labs/osmosis/v16/x/lockup"
-	lockuptypes "github.com/osmosis-labs/osmosis/v16/x/lockup/types"
-	"github.com/osmosis-labs/osmosis/v16/x/mint"
-	minttypes "github.com/osmosis-labs/osmosis/v16/x/mint/types"
-	poolincentives "github.com/osmosis-labs/osmosis/v16/x/pool-incentives"
-	poolincentivestypes "github.com/osmosis-labs/osmosis/v16/x/pool-incentives/types"
-	poolmanager "github.com/osmosis-labs/osmosis/v16/x/poolmanager/module"
-	poolmanagertypes "github.com/osmosis-labs/osmosis/v16/x/poolmanager/types"
-	"github.com/osmosis-labs/osmosis/v16/x/protorev"
-	protorevtypes "github.com/osmosis-labs/osmosis/v16/x/protorev/types"
-	superfluid "github.com/osmosis-labs/osmosis/v16/x/superfluid"
-	superfluidtypes "github.com/osmosis-labs/osmosis/v16/x/superfluid/types"
-	"github.com/osmosis-labs/osmosis/v16/x/tokenfactory"
-	tokenfactorytypes "github.com/osmosis-labs/osmosis/v16/x/tokenfactory/types"
-	"github.com/osmosis-labs/osmosis/v16/x/twap/twapmodule"
-	twaptypes "github.com/osmosis-labs/osmosis/v16/x/twap/types"
-	"github.com/osmosis-labs/osmosis/v16/x/txfees"
-	txfeestypes "github.com/osmosis-labs/osmosis/v16/x/txfees/types"
-	valsetpreftypes "github.com/osmosis-labs/osmosis/v16/x/valset-pref/types"
-	valsetprefmodule "github.com/osmosis-labs/osmosis/v16/x/valset-pref/valpref-module"
-	"github.com/osmosis-labs/osmosis/x/epochs"
-	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
+	"github.com/percosis-labs/percosis/osmoutils/partialord"
+	appparams "github.com/percosis-labs/percosis/v16/app/params"
+	_ "github.com/percosis-labs/percosis/v16/client/docs/statik"
+	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	concentratedliquidity "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/clmodule"
+	concentratedliquiditytypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	cwpoolmodule "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/module"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
+	"github.com/percosis-labs/percosis/v16/x/gamm"
+	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/ibcratelimitmodule"
+	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
+	"github.com/percosis-labs/percosis/v16/x/incentives"
+	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
+	"github.com/percosis-labs/percosis/v16/x/lockup"
+	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/v16/x/mint"
+	minttypes "github.com/percosis-labs/percosis/v16/x/mint/types"
+	poolincentives "github.com/percosis-labs/percosis/v16/x/pool-incentives"
+	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	poolmanager "github.com/percosis-labs/percosis/v16/x/poolmanager/module"
+	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/v16/x/protorev"
+	protorevtypes "github.com/percosis-labs/percosis/v16/x/protorev/types"
+	superfluid "github.com/percosis-labs/percosis/v16/x/superfluid"
+	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/v16/x/tokenfactory"
+	tokenfactorytypes "github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/v16/x/twap/twapmodule"
+	twaptypes "github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/v16/x/txfees"
+	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	valsetpreftypes "github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	valsetprefmodule "github.com/percosis-labs/percosis/v16/x/valset-pref/valpref-module"
+	"github.com/percosis-labs/percosis/x/epochs"
+	epochstypes "github.com/percosis-labs/percosis/x/epochs/types"
 )
 
 // moduleAccountPermissions defines module account permissions
@@ -126,7 +126,7 @@ var moduleAccountPermissions = map[string][]string{
 
 // appModules return modules to initialize module manager.
 func appModules(
-	app *OsmosisApp,
+	app *PercosisApp,
 	encodingConfig appparams.EncodingConfig,
 	skipGenesisInvariants bool,
 ) []module.AppModule {
@@ -219,7 +219,7 @@ func OrderEndBlockers(allModuleNames []string) []string {
 	ord.FirstElements(govtypes.ModuleName)
 	ord.LastElements(stakingtypes.ModuleName)
 
-	// only Osmosis modules with endblock code are: twap, crisis, govtypes, staking
+	// only Percosis modules with endblock code are: twap, crisis, govtypes, staking
 	// we don't care about the relative ordering between them.
 	return ord.TotalOrdering()
 }
@@ -285,31 +285,31 @@ func ModuleAccountAddrs() map[string]bool {
 	return modAccAddrs
 }
 
-func (app *OsmosisApp) GetAccountKeeper() simtypes.AccountKeeper {
+func (app *PercosisApp) GetAccountKeeper() simtypes.AccountKeeper {
 	return app.AppKeepers.AccountKeeper
 }
 
-func (app *OsmosisApp) GetBankKeeper() simtypes.BankKeeper {
+func (app *PercosisApp) GetBankKeeper() simtypes.BankKeeper {
 	return app.AppKeepers.BankKeeper
 }
 
 // Required for ibctesting
-func (app *OsmosisApp) GetStakingKeeper() stakingkeeper.Keeper {
+func (app *PercosisApp) GetStakingKeeper() stakingkeeper.Keeper {
 	return *app.AppKeepers.StakingKeeper // Dereferencing the pointer
 }
 
-func (app *OsmosisApp) GetIBCKeeper() *ibckeeper.Keeper {
+func (app *PercosisApp) GetIBCKeeper() *ibckeeper.Keeper {
 	return app.AppKeepers.IBCKeeper // This is a *ibckeeper.Keeper
 }
 
-func (app *OsmosisApp) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
+func (app *PercosisApp) GetScopedIBCKeeper() capabilitykeeper.ScopedKeeper {
 	return app.AppKeepers.ScopedIBCKeeper
 }
 
-func (app *OsmosisApp) GetPoolManagerKeeper() simtypes.PoolManagerKeeper {
+func (app *PercosisApp) GetPoolManagerKeeper() simtypes.PoolManagerKeeper {
 	return app.AppKeepers.PoolManagerKeeper
 }
 
-func (app *OsmosisApp) GetTxConfig() client.TxConfig {
+func (app *PercosisApp) GetTxConfig() client.TxConfig {
 	return MakeEncodingConfig().TxConfig
 }

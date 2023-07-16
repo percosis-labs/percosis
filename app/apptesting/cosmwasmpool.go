@@ -8,12 +8,12 @@ import (
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/cosmwasm"
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/cosmwasm/msg"
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/cosmwasm/msg/transmuter"
-	"github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/model"
+	"github.com/percosis-labs/percosis/osmoutils/cosmwasm"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/cosmwasm/msg"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/cosmwasm/msg/transmuter"
+	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/model"
 
-	cosmwasmpooltypes "github.com/osmosis-labs/osmosis/v16/x/cosmwasmpool/types"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
 )
 
 const (
@@ -107,7 +107,7 @@ func (s *KeeperTestHelper) GetContractCode(contractName string) []byte {
 	workingDir, err := os.Getwd()
 	s.Require().NoError(err)
 
-	projectRootPath := "/osmosis/"
+	projectRootPath := "/percosis/"
 	projectRootIndex := strings.LastIndex(workingDir, projectRootPath) + len(projectRootPath)
 	workingDir = workingDir[:projectRootIndex]
 	code, err := os.ReadFile(workingDir + "x/cosmwasmpool/bytecode/" + contractName + ".wasm")
