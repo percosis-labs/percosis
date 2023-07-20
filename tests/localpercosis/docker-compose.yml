@@ -1,0 +1,29 @@
+version: "3"
+
+services:
+  percosisd:
+    image: local:percosis
+    build:
+      context: ../../
+      dockerfile: Dockerfile
+      args:
+        RUNNER_IMAGE: golang:1.20.3-alpine3.17
+        GO_VERSION: "1.20"
+    volumes:
+      - ./scripts/nativeDenomPoolA.json:/percosis/nativeDenomPoolA.json
+      - ./scripts/nativeDenomPoolB.json:/percosis/nativeDenomPoolB.json
+      - ./scripts/nativeDenomThreeAssetPool.json:/percosis/nativeDenomThreeAssetPool.json
+      - ./scripts/stableswapPool.json:/percosis/stableswapPool.json
+      - ./scripts/setup.sh:/percosis/setup.sh
+      - ../cl-genesis-positions:/percosis/cl-genesis-positions
+      - $HOME/.percosisd-local/:/percosis/.percosisd/
+    entrypoint:
+      - /percosis/setup.sh
+    command:
+      - $STATE
+    ports:
+      - 26657:26657
+      - 1317:1317
+      - 9090:9090
+      - 9091:9091
+      - 6060:6060

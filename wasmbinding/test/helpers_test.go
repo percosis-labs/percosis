@@ -1,0 +1,48 @@
+package wasmbinding
+
+import (
+	"testing"
+	"time"
+
+	"github.com/stretchr/testify/require"
+
+	"github.com/tendermint/tendermint/crypto"
+	"github.com/tendermint/tendermint/crypto/ed25519"
+	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
+
+	"github.com/cosmos/cosmos-sdk/simapp"
+	sdk "github.com/cosmos/cosmos-sdk/types"
+
+	"github.com/percosis-labs/percosis/v16/app"
+)
+
+func CreateTestInput() (*app.PercosisApp, sdk.Context) {
+	percosis := app.Setup(false)
+	ctx := percosis.BaseApp.NewContext(false, tmproto.Header{Height: 1, ChainID: "percosis-1", Time: time.Now().UTC()})
+	return percosis, ctx
+}
+
+func FundAccount(t *testing.T, ctx sdk.Context, percosis *app.PercosisApp, acct sdk.AccAddress) {
+	t.Helper()
+	err := simapp.FundAccount(percosis.BankKeeper, ctx, acct, sdk.NewCoins(
+		sdk.NewCoin("ufury", sdk.NewInt(10000000000)),
+	))
+	require.NoError(t, err)
+}
+
+// we need to make this deterministic (same every test run), as content might affect gas costs
+func keyPubAddr() (crypto.PrivKey, crypto.PubKey, sdk.AccAddress) {
+	key := ed25519.GenPrivKey()
+	pub := key.PubKey()
+	addr := sdk.AccAddress(pub.Address())
+	return key, pub, addr
+}
+
+func RandomAccountAddress() sdk.AccAddress {
+	_, _, addr := keyPubAddr()
+	return addr
+}
+
+func RandomBech32AccountAddress() string {
+	return RandomAccountAddress().String()
+}
