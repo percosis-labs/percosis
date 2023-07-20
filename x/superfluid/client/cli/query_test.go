@@ -11,8 +11,8 @@ import (
 
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 type QueryTestSuite struct {

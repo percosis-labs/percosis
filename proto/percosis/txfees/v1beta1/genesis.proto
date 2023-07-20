@@ -4,7 +4,7 @@ package percosis.txfees.v1beta1;
 import "gogoproto/gogo.proto";
 import "percosis/txfees/v1beta1/feetoken.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/txfees/types";
+option go_package = "github.com/percosis-labs/percosis/x/txfees/types";
 
 // GenesisState defines the txfees module's genesis state.
 message GenesisState {

@@ -4,8 +4,8 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	"github.com/percosis-labs/percosis/x/valset-pref/client/queryproto"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.

@@ -4,9 +4,9 @@ import (
 	"errors"
 	"testing"
 
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/chain"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/containers"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/chain"
+	"github.com/percosis-labs/percosis/tests/e2e/containers"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
 )
 
 type Configurer interface {

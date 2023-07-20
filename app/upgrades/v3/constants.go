@@ -1,6 +1,6 @@
 package v3
 
-import "github.com/percosis-labs/percosis/v16/app/upgrades"
+import "github.com/percosis-labs/percosis/app/upgrades"
 
 const (
 	// UpgradeName defines the on-chain upgrade name for the Percosis v3 upgrade.

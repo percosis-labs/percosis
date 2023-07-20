@@ -1,8 +1,8 @@
 package balancer
 
 import (
-	types "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	types "github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"

@@ -3,7 +3,7 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/gamm/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

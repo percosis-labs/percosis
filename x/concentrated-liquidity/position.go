@@ -14,9 +14,9 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
 	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 )
 
 const MinNumPositions = 2

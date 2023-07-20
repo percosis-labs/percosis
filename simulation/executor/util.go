@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
 )
 
 func getTestingMode(tb testing.TB) (testingMode bool, t *testing.T, b *testing.B) {

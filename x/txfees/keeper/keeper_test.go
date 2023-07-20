@@ -8,10 +8,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	percosisapp "github.com/percosis-labs/percosis/v16/app"
+	percosisapp "github.com/percosis-labs/percosis/app"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 type KeeperTestSuite struct {

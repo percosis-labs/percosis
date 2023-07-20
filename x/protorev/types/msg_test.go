@@ -7,7 +7,7 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/tendermint/tendermint/crypto/ed25519"
 
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 )
 
 func TestMsgSetHotRoutes(t *testing.T) {

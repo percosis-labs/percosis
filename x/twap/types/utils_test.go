@@ -8,7 +8,7 @@ import (
 	"github.com/stretchr/testify/require"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 func TestMaxSpotPriceEquality(t *testing.T) {

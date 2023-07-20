@@ -3,8 +3,8 @@ package keeper_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 )
 
 // TestGetNumberOfTrades tests GetNumberOfTrades and IncrementNumberOfTrades

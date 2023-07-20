@@ -9,7 +9,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	transfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
 	ibctesting "github.com/cosmos/ibc-go/v4/testing"
-	"github.com/percosis-labs/percosis/v16/tests/percosisibctesting"
+	"github.com/percosis-labs/percosis/tests/percosisibctesting"
 )
 
 // Instantiate the cw20 and cw20-ics20 contract

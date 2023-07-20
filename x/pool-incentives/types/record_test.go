@@ -7,7 +7,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/x/pool-incentives/types"
 )
 
 // TestDistrRecord is a test on the weights of distribution gauges.

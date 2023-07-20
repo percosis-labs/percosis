@@ -7,10 +7,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/x/twap"
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/x/twap"
+	"github.com/percosis-labs/percosis/x/twap/types"
 
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var defaultPoolId uint64 = 1

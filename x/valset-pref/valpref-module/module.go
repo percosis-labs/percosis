@@ -17,13 +17,13 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	keeper "github.com/percosis-labs/percosis/v16/x/valset-pref"
-	validatorprefclient "github.com/percosis-labs/percosis/v16/x/valset-pref/client"
-	valsetprefcli "github.com/percosis-labs/percosis/v16/x/valset-pref/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/client/grpc"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	keeper "github.com/percosis-labs/percosis/x/valset-pref"
+	validatorprefclient "github.com/percosis-labs/percosis/x/valset-pref/client"
+	valsetprefcli "github.com/percosis-labs/percosis/x/valset-pref/client/cli"
+	"github.com/percosis-labs/percosis/x/valset-pref/client/grpc"
+	"github.com/percosis-labs/percosis/x/valset-pref/client/queryproto"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 
 var (

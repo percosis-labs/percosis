@@ -13,8 +13,8 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/percosis-labs/percosis/v16/simulation/executor/internal/stats"
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/simulation/executor/internal/stats"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
 )
 
 type simState struct {

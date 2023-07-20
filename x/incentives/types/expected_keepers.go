@@ -5,9 +5,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
 )
 

@@ -3,8 +3,8 @@ package keeper
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // SetParams sets the total set of params.

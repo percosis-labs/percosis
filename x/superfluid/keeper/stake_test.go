@@ -5,10 +5,10 @@ import (
 
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 
 	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"

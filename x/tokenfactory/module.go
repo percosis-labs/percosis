@@ -23,12 +23,12 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	simulation "github.com/percosis-labs/percosis/v16/x/tokenfactory/simulation"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	simulation "github.com/percosis-labs/percosis/x/tokenfactory/simulation"
 
-	"github.com/percosis-labs/percosis/v16/x/tokenfactory/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/tokenfactory/keeper"
-	"github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/x/tokenfactory/client/cli"
+	"github.com/percosis-labs/percosis/x/tokenfactory/keeper"
+	"github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 var (

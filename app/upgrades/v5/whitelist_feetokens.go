@@ -7,8 +7,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	gammkeeper "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	"github.com/percosis-labs/percosis/v16/x/txfees/types"
+	gammkeeper "github.com/percosis-labs/percosis/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 // Every asset with a liquid perco pairing pool on Percosis, as of 12/01/21

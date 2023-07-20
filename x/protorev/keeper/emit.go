@@ -9,7 +9,7 @@ import (
 
 	"github.com/tendermint/tendermint/crypto/tmhash"
 
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 )
 
 // EmitBackrunEvent updates and emits a backrunEvent

@@ -11,8 +11,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/simulation"
 	"github.com/cosmos/cosmos-sdk/types/tx/signing"
 
-	"github.com/percosis-labs/percosis/v16/app/params"
-	tokenfactorytypes "github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/app/params"
+	tokenfactorytypes "github.com/percosis-labs/percosis/x/tokenfactory/types"
 
 	cryptotypes "github.com/cosmos/cosmos-sdk/crypto/types"
 	authsign "github.com/cosmos/cosmos-sdk/x/auth/signing"

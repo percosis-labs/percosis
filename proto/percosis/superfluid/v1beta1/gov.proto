@@ -6,7 +6,7 @@ import "amino/amino.proto";
 import "cosmos_proto/cosmos.proto";
 import "percosis/superfluid/superfluid.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/superfluid/types";
+option go_package = "github.com/percosis-labs/percosis/x/superfluid/types";
 
 // SetSuperfluidAssetsProposal is a gov Content type to update the superfluid
 // assets

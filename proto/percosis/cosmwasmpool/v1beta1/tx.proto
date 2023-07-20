@@ -4,6 +4,6 @@ package percosis.cosmwasmpool.v1beta1;
 import "gogoproto/gogo.proto";
 import "cosmos/base/v1beta1/coin.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types";
+option go_package = "github.com/percosis-labs/percosis/x/cosmwasmpool/types";
 
 service Msg {}

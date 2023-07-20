@@ -4,7 +4,7 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/x/pool-incentives/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.

@@ -6,9 +6,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	clquery "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	clquery "github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 )
 
 // Querier defines a wrapper around the x/concentrated-liquidity keeper providing gRPC method

@@ -27,7 +27,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	"github.com/cosmos/cosmos-sdk/x/genutil"
 
-	"github.com/percosis-labs/percosis/v16/app"
+	"github.com/percosis-labs/percosis/app"
 )
 
 const (

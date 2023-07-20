@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/x/twap/types"
 )
 
 func (s *TestSuite) TestMigrateExistingPools() {

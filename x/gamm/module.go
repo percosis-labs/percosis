@@ -25,14 +25,14 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	"github.com/percosis-labs/percosis/v16/x/gamm/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
-	simulation "github.com/percosis-labs/percosis/v16/x/gamm/simulation"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	"github.com/percosis-labs/percosis/v16/x/gamm/v2types"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	"github.com/percosis-labs/percosis/x/gamm/client/cli"
+	"github.com/percosis-labs/percosis/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
+	simulation "github.com/percosis-labs/percosis/x/gamm/simulation"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/gamm/v2types"
 )
 
 var (

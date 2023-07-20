@@ -12,10 +12,10 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	sdkrand "github.com/percosis-labs/percosis/v16/simulation/simtypes/random"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/internal/cfmm_common"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/internal/test_helpers"
-	types "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	sdkrand "github.com/percosis-labs/percosis/simulation/simtypes/random"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/internal/cfmm_common"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/internal/test_helpers"
+	types "github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 var (

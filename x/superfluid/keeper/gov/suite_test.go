@@ -5,9 +5,9 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 type KeeperTestSuite struct {

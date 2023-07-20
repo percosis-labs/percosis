@@ -13,7 +13,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app"
+	"github.com/percosis-labs/percosis/app"
 )
 
 func CreateTestInput() (*app.PercosisApp, sdk.Context) {

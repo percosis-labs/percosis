@@ -7,7 +7,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
+	"github.com/percosis-labs/percosis/x/incentives/types"
 )
 
 // Simulation parameter constants.

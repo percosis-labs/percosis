@@ -17,12 +17,12 @@ import (
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec"
 
-	ibcratelimit "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit"
-	ibcratelimitclient "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/client"
-	ibcratelimitcli "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/client/grpc"
-	"github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
+	ibcratelimit "github.com/percosis-labs/percosis/x/ibc-rate-limit"
+	ibcratelimitclient "github.com/percosis-labs/percosis/x/ibc-rate-limit/client"
+	ibcratelimitcli "github.com/percosis-labs/percosis/x/ibc-rate-limit/client/cli"
+	"github.com/percosis-labs/percosis/x/ibc-rate-limit/client/grpc"
+	"github.com/percosis-labs/percosis/x/ibc-rate-limit/client/queryproto"
+	"github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
 )
 
 var (

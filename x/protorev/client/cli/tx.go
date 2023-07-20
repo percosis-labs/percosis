@@ -16,7 +16,7 @@ import (
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

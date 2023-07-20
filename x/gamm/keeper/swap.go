@@ -7,9 +7,9 @@ import (
 	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/events"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/poolmanager/events"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // swapExactAmountIn is an internal method for swapping an exact amount of tokens

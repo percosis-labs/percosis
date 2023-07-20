@@ -10,12 +10,12 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	v16 "github.com/percosis-labs/percosis/v16/app/upgrades/v16"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/chain"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/config"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/containers"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/chain"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/config"
+	"github.com/percosis-labs/percosis/tests/e2e/containers"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
 )
 
 type UpgradeSettings struct {

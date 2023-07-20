@@ -48,23 +48,23 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/crisis"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	v10 "github.com/percosis-labs/percosis/v16/app/upgrades/v10"
-	v11 "github.com/percosis-labs/percosis/v16/app/upgrades/v11"
-	v12 "github.com/percosis-labs/percosis/v16/app/upgrades/v12"
-	v13 "github.com/percosis-labs/percosis/v16/app/upgrades/v13"
-	v14 "github.com/percosis-labs/percosis/v16/app/upgrades/v14"
-	v15 "github.com/percosis-labs/percosis/v16/app/upgrades/v15"
-	v16 "github.com/percosis-labs/percosis/v16/app/upgrades/v16"
-	v3 "github.com/percosis-labs/percosis/v16/app/upgrades/v3"
-	v4 "github.com/percosis-labs/percosis/v16/app/upgrades/v4"
-	v5 "github.com/percosis-labs/percosis/v16/app/upgrades/v5"
-	v6 "github.com/percosis-labs/percosis/v16/app/upgrades/v6"
-	v7 "github.com/percosis-labs/percosis/v16/app/upgrades/v7"
-	v8 "github.com/percosis-labs/percosis/v16/app/upgrades/v8"
-	v9 "github.com/percosis-labs/percosis/v16/app/upgrades/v9"
-	_ "github.com/percosis-labs/percosis/v16/client/docs/statik"
+	"github.com/percosis-labs/percosis/app/keepers"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	v10 "github.com/percosis-labs/percosis/app/upgrades/v10"
+	v11 "github.com/percosis-labs/percosis/app/upgrades/v11"
+	v12 "github.com/percosis-labs/percosis/app/upgrades/v12"
+	v13 "github.com/percosis-labs/percosis/app/upgrades/v13"
+	v14 "github.com/percosis-labs/percosis/app/upgrades/v14"
+	v15 "github.com/percosis-labs/percosis/app/upgrades/v15"
+	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
+	v3 "github.com/percosis-labs/percosis/app/upgrades/v3"
+	v4 "github.com/percosis-labs/percosis/app/upgrades/v4"
+	v5 "github.com/percosis-labs/percosis/app/upgrades/v5"
+	v6 "github.com/percosis-labs/percosis/app/upgrades/v6"
+	v7 "github.com/percosis-labs/percosis/app/upgrades/v7"
+	v8 "github.com/percosis-labs/percosis/app/upgrades/v8"
+	v9 "github.com/percosis-labs/percosis/app/upgrades/v9"
+	_ "github.com/percosis-labs/percosis/client/docs/statik"
 )
 
 const appName = "PercosisApp"
@@ -160,7 +160,7 @@ func init() {
 // This should always be called before any other function to avoid inconsistent data
 func initReusablePackageInjections() {
 	// Inject ClawbackVestingAccount account type into osmoutils
-	osmoutils.PercoUtilsExtraAccountTypes = map[reflect.Type]struct{}{
+	osmoutils.OsmoUtilsExtraAccountTypes = map[reflect.Type]struct{}{
 		reflect.TypeOf(&vestingtypes.ClawbackVestingAccount{}): {},
 	}
 }

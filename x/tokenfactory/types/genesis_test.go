@@ -5,7 +5,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 func TestGenesisState_Validate(t *testing.T) {

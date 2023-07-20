@@ -7,12 +7,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/golang/mock/gomock"
 
-	"github.com/percosis-labs/percosis/v16/tests/mocks"
-	"github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/tests/mocks"
+	"github.com/percosis-labs/percosis/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var (
@@ -30,7 +30,7 @@ var (
 // 	"github.com/cosmos/cosmos-sdk/simapp"
 // 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-// 	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+// 	"github.com/percosis-labs/percosis/x/gamm/types"
 // )
 
 // func (s *KeeperTestSuite) TestCleanupPool() {

@@ -7,9 +7,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil/testdata"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
-	"github.com/percosis-labs/percosis/v16/x/txfees/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 var defaultPooledAssetAmount = int64(500)

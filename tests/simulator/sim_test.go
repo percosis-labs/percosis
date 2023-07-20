@@ -13,9 +13,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp/helpers"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	percosim "github.com/percosis-labs/percosis/v16/simulation/executor"
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes/simlogger"
-	txfeetypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	percosim "github.com/percosis-labs/percosis/simulation/executor"
+	"github.com/percosis-labs/percosis/simulation/simtypes/simlogger"
+	txfeetypes "github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 // Profile with:

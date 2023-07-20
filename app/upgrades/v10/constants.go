@@ -1,7 +1,7 @@
 package v10
 
 import (
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	"github.com/percosis-labs/percosis/app/upgrades"
 )
 
 // Last executed block on the v9 code was 4713064.

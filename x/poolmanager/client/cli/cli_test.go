@@ -9,11 +9,11 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
-	poolmanagertestutil "github.com/percosis-labs/percosis/v16/x/poolmanager/client/testutil"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/x/poolmanager/client/cli"
+	"github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
+	poolmanagertestutil "github.com/percosis-labs/percosis/x/poolmanager/client/testutil"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/cosmos/cosmos-sdk/crypto/hd"

@@ -16,12 +16,12 @@ import (
 
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
 
-	percosisApp "github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
+	percosisApp "github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	clgenesis "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	clgenesis "github.com/percosis-labs/percosis/x/concentrated-liquidity/types/genesis"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 func EditLocalPercosisGenesis(updatedCLGenesis *clgenesis.GenesisState, updatedBankGenesis *banktypes.GenesisState) {

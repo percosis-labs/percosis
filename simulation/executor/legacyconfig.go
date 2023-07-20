@@ -12,8 +12,8 @@ import (
 	"github.com/tendermint/tendermint/libs/log"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/percosis-labs/percosis/v16/simulation/executor/internal/stats"
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes/simlogger"
+	"github.com/percosis-labs/percosis/simulation/executor/internal/stats"
+	"github.com/percosis-labs/percosis/simulation/simtypes/simlogger"
 )
 
 // List of available flags for the simulator

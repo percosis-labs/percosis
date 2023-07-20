@@ -12,7 +12,7 @@ import (
 	"github.com/cosmos/ibc-go/v4/testing/simapp/helpers"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/percosis-labs/percosis/v16/app"
+	"github.com/percosis-labs/percosis/app"
 )
 
 type TestChain struct {

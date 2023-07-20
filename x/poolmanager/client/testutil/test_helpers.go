@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	poolmanagercli "github.com/percosis-labs/percosis/v16/x/poolmanager/client/cli"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app"
+	poolmanagercli "github.com/percosis-labs/percosis/x/poolmanager/client/cli"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"

@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

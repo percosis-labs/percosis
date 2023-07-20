@@ -25,9 +25,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/percosis-labs/percosis/v16/x/txfees/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/txfees/keeper"
-	"github.com/percosis-labs/percosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/x/txfees/client/cli"
+	"github.com/percosis-labs/percosis/x/txfees/keeper"
+	"github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 var (

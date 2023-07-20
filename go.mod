@@ -1,4 +1,4 @@
-module github.com/percosis-labs/percosis/v16
+module github.com/percosis-labs/percosis
 
 go 1.20
 

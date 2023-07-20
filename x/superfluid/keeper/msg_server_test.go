@@ -6,15 +6,15 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	v8constants "github.com/percosis-labs/percosis/v16/app/upgrades/v8/constants"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
-	lockupkeeper "github.com/percosis-labs/percosis/v16/x/lockup/keeper"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	v8constants "github.com/percosis-labs/percosis/app/upgrades/v8/constants"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
+	lockupkeeper "github.com/percosis-labs/percosis/x/lockup/keeper"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 var defaultFunds = sdk.NewCoins(defaultPoolAssets[0].Token, sdk.NewCoin("stake", sdk.NewInt(5000000000)))

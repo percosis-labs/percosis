@@ -7,9 +7,9 @@ import (
 	"os"
 	"time"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	percosim "github.com/percosis-labs/percosis/v16/simulation/executor"
-	percosimtypes "github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/app"
+	percosim "github.com/percosis-labs/percosis/simulation/executor"
+	percosimtypes "github.com/percosis-labs/percosis/simulation/simtypes"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	sdk "github.com/cosmos/cosmos-sdk/types"

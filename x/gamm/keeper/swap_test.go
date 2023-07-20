@@ -7,10 +7,10 @@ import (
 	"github.com/golang/mock/gomock"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/tests/mocks"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/tests/mocks"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var _ = suite.TestingSuite(nil)

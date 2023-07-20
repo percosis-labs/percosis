@@ -8,10 +8,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/crypto/keys/ed25519"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	balancer "github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	balancer "github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 func TestMsgCreateBalancerPool_ValidateBasic(t *testing.T) {

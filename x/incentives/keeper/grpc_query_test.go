@@ -8,9 +8,9 @@ import (
 
 	query "github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	pooltypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	pooltypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
 )
 
 var _ = suite.TestingSuite(nil)

@@ -11,9 +11,9 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 
 type valSet struct {

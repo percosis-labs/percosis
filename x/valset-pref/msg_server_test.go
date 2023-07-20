@@ -3,9 +3,9 @@ package keeper_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	valPref "github.com/percosis-labs/percosis/v16/x/valset-pref"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	valPref "github.com/percosis-labs/percosis/x/valset-pref"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 
 func (s *KeeperTestSuite) TestSetValidatorSetPreference() {

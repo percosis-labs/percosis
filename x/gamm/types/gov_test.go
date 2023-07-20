@@ -6,8 +6,8 @@ import (
 	proto "github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
 )
 
 func TestUpdateMigrationRecordsProposalMarshalUnmarshal(t *testing.T) {

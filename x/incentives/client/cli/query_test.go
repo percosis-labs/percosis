@@ -7,8 +7,8 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/x/incentives/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

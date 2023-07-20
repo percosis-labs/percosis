@@ -10,12 +10,12 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 
-	valPref "github.com/percosis-labs/percosis/v16/x/valset-pref"
+	valPref "github.com/percosis-labs/percosis/x/valset-pref"
 )
 
 type KeeperTestSuite struct {

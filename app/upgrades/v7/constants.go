@@ -3,8 +3,8 @@ package v7
 import (
 	"github.com/CosmWasm/wasmd/x/wasm"
 
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	superfluidtypes "github.com/percosis-labs/percosis/x/superfluid/types"
 
 	store "github.com/cosmos/cosmos-sdk/store/types"
 )

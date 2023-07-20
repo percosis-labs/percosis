@@ -7,12 +7,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 func TestMsgSwapExactAmountIn(t *testing.T) {

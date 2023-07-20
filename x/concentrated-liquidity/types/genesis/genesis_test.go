@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types/genesis"
 )
 
 func TestValidateGenesis(t *testing.T) {

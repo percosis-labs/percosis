@@ -7,7 +7,7 @@ import "google/protobuf/duration.proto";
 import "cosmos/base/v1beta1/coin.proto";
 import "percosis/lockup/lock.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/lockup/types";
+option go_package = "github.com/percosis-labs/percosis/x/lockup/types";
 
 // Msg defines the Msg service.
 service Msg {

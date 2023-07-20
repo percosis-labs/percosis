@@ -5,9 +5,9 @@ import (
 
 	svrcmd "github.com/cosmos/cosmos-sdk/server/cmd"
 
-	percosis "github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/cmd/percosisd/cmd"
+	percosis "github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/cmd/percosisd/cmd"
 )
 
 func main() {

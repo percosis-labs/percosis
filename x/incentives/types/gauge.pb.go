@@ -11,7 +11,7 @@ import (
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"
 	github_com_gogo_protobuf_types "github.com/gogo/protobuf/types"
-	types "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	types "github.com/percosis-labs/percosis/x/lockup/types"
 	io "io"
 	math "math"
 	math_bits "math/bits"

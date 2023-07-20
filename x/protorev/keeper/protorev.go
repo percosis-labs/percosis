@@ -3,7 +3,7 @@ package keeper
 import (
 	"fmt"
 
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 

@@ -7,10 +7,10 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/lockup/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/lockup/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

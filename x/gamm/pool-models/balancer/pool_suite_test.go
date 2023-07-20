@@ -12,10 +12,10 @@ import (
 	"github.com/stretchr/testify/suite"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	v10 "github.com/percosis-labs/percosis/v16/app/upgrades/v10"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	v10 "github.com/percosis-labs/percosis/app/upgrades/v10"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 const (

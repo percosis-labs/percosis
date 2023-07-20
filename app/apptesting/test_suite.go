@@ -31,15 +31,15 @@ import (
 	tmtypes "github.com/tendermint/tendermint/proto/tendermint/types"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/percosis-labs/percosis/v16/app"
+	"github.com/percosis-labs/percosis/app"
 
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 
-	lockupkeeper "github.com/percosis-labs/percosis/v16/x/lockup/keeper"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	minttypes "github.com/percosis-labs/percosis/v16/x/mint/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	lockupkeeper "github.com/percosis-labs/percosis/x/lockup/keeper"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	minttypes "github.com/percosis-labs/percosis/x/mint/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 type KeeperTestHelper struct {

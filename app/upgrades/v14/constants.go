@@ -5,8 +5,8 @@ import (
 
 	ibchookstypes "github.com/osmosis-labs/osmosis/x/ibc-hooks/types"
 
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	downtimetypes "github.com/percosis-labs/percosis/v16/x/downtime-detector/types"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	downtimetypes "github.com/percosis-labs/percosis/x/downtime-detector/types"
 )
 
 // UpgradeName defines the on-chain upgrade name for the Percosis v14 upgrade.

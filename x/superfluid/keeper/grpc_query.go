@@ -15,15 +15,15 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
+	appparams "github.com/percosis-labs/percosis/app/params"
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 var _ types.QueryServer = Querier{}

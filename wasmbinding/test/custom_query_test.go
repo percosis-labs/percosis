@@ -15,9 +15,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/wasmbinding/bindings"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/wasmbinding/bindings"
 )
 
 func SetupCustomApp(t *testing.T, addr sdk.AccAddress) (*app.PercosisApp, sdk.Context) {

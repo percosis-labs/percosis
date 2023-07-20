@@ -8,8 +8,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	percosisApp "github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/app/params"
+	percosisApp "github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/app/params"
 )
 
 var (

@@ -9,10 +9,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmomath"
-	sdkrand "github.com/percosis-labs/percosis/v16/simulation/simtypes/random"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/twap"
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
+	sdkrand "github.com/percosis-labs/percosis/simulation/simtypes/random"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/twap"
+	"github.com/percosis-labs/percosis/x/twap/types"
 )
 
 var (

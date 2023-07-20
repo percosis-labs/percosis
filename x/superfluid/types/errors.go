@@ -6,7 +6,7 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 // x/superfluid module errors.

@@ -13,15 +13,15 @@ import (
 	transfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
+	ibcratelimittypes "github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	v15 "github.com/percosis-labs/percosis/v16/app/upgrades/v15"
-	gamm "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	balancer "github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	v15 "github.com/percosis-labs/percosis/app/upgrades/v15"
+	gamm "github.com/percosis-labs/percosis/x/gamm/keeper"
+	balancer "github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 type UpgradeTestSuite struct {

@@ -9,10 +9,10 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	clmodel "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	types "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	clmodel "github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	types "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 type lpTest struct {

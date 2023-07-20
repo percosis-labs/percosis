@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 func TestDeconstructDenom(t *testing.T) {

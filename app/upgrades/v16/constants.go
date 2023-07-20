@@ -1,12 +1,12 @@
 package v16
 
 import (
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	"github.com/percosis-labs/percosis/app/upgrades"
 
 	store "github.com/cosmos/cosmos-sdk/store/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/x/cosmwasmpool/types"
 )
 
 // UpgradeName defines the on-chain upgrade name for the Percosis v16 upgrade.

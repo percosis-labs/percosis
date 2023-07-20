@@ -6,9 +6,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/wasmbinding"
-	"github.com/percosis-labs/percosis/v16/wasmbinding/bindings"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/wasmbinding"
+	"github.com/percosis-labs/percosis/wasmbinding/bindings"
 
 	"github.com/stretchr/testify/require"
 )

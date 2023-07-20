@@ -3,7 +3,7 @@ package types
 import (
 	"fmt"
 
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
+	appparams "github.com/percosis-labs/percosis/app/params"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"

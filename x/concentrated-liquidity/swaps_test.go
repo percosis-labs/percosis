@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/suite"
 
 	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	clmath "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	clmath "github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var _ = suite.TestingSuite(nil)

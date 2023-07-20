@@ -9,17 +9,17 @@ import (
 	"github.com/golang/mock/gomock"
 
 	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/tests/mocks"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	cwpool "github.com/percosis-labs/percosis/v16/x/cosmwasmpool"
-	cwmodel "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/model"
-	gamm "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/tests/mocks"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	cwpool "github.com/percosis-labs/percosis/x/cosmwasmpool"
+	cwmodel "github.com/percosis-labs/percosis/x/cosmwasmpool/model"
+	gamm "github.com/percosis-labs/percosis/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/x/poolmanager"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 type poolSetup struct {

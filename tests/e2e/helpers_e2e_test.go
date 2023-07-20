@@ -8,12 +8,12 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/chain"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/util"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/chain"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
+	"github.com/percosis-labs/percosis/tests/e2e/util"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 var defaultFeePerTx = sdk.NewInt(1000)

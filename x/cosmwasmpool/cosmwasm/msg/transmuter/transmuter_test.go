@@ -8,10 +8,10 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	incentivetypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	tokenfactorytypes "github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	incentivetypes "github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	tokenfactorytypes "github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 const (

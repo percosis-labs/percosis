@@ -3,7 +3,7 @@ package v11
 import (
 	store "github.com/cosmos/cosmos-sdk/store/types"
 
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	"github.com/percosis-labs/percosis/app/upgrades"
 )
 
 // UpgradeName defines the on-chain upgrade name for the Percosis v11 upgrade.

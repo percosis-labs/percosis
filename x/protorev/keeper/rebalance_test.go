@@ -3,10 +3,10 @@ package keeper_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
-	protorevtypes "github.com/percosis-labs/percosis/v16/x/protorev/keeper"
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
+	protorevtypes "github.com/percosis-labs/percosis/x/protorev/keeper"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 )
 
 // Mainnet Arb Route - 2 Asset, Same Weights (Block: 5905150)

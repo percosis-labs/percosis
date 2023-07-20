@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	v9 "github.com/percosis-labs/percosis/v16/app/upgrades/v9"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	v9 "github.com/percosis-labs/percosis/app/upgrades/v9"
 )
 
 type UpgradeTestSuite struct {

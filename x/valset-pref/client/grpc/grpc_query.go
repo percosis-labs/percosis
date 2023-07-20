@@ -10,8 +10,8 @@ import (
 	"google.golang.org/grpc/status"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/client"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/client/queryproto"
+	"github.com/percosis-labs/percosis/x/valset-pref/client"
+	"github.com/percosis-labs/percosis/x/valset-pref/client/queryproto"
 )
 
 type Querier struct {

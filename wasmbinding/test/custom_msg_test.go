@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/app/apptesting"
 
 	"github.com/stretchr/testify/require"
 
@@ -13,8 +13,8 @@ import (
 	wasmvmtypes "github.com/CosmWasm/wasmvm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/wasmbinding/bindings"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/wasmbinding/bindings"
 )
 
 func TestCreateDenomMsg(t *testing.T) {

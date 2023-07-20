@@ -8,8 +8,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // 1 << 256 - 1 where 256 is the max bit length defined for sdk.Int

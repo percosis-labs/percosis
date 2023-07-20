@@ -7,9 +7,9 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	percoapp "github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/x/mint/keeper"
-	"github.com/percosis-labs/percosis/v16/x/mint/types"
+	percoapp "github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/x/mint/keeper"
+	"github.com/percosis-labs/percosis/x/mint/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

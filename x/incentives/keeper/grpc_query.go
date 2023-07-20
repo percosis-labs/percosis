@@ -14,8 +14,8 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 )
 
 var _ types.QueryServer = Querier{}

@@ -4,12 +4,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authkeeper "github.com/cosmos/cosmos-sdk/x/auth/keeper"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	clmodel "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	gammkeeper "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app/keepers"
+	clmodel "github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	gammkeeper "github.com/percosis-labs/percosis/x/gamm/keeper"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
+	"github.com/percosis-labs/percosis/x/poolmanager"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // createConcentratedPoolFromCFMM creates a new concentrated liquidity pool with the desiredDenom0 token as the

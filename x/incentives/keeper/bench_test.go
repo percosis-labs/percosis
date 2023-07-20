@@ -9,9 +9,9 @@ import (
 	"github.com/tendermint/tendermint/crypto/secp256k1"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"

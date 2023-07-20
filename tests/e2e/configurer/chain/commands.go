@@ -13,13 +13,13 @@ import (
 
 	"github.com/tendermint/tendermint/libs/bytes"
 
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/config"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/util"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/config"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
+	"github.com/percosis-labs/percosis/tests/e2e/util"
 
-	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	ibcratelimittypes "github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
@@ -28,7 +28,7 @@ import (
 	"github.com/tendermint/tendermint/p2p"
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	app "github.com/percosis-labs/percosis/v16/app"
+	app "github.com/percosis-labs/percosis/app"
 
 	paramsutils "github.com/cosmos/cosmos-sdk/x/params/client/utils"
 )

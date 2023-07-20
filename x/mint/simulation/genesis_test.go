@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/x/mint/simulation"
-	"github.com/percosis-labs/percosis/v16/x/mint/types"
+	"github.com/percosis-labs/percosis/x/mint/simulation"
+	"github.com/percosis-labs/percosis/x/mint/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"

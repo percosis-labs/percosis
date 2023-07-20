@@ -10,9 +10,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/authz"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/app/keepers"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	txfeestypes "github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 func CreateUpgradeHandler(

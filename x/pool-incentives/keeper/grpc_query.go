@@ -10,9 +10,9 @@ import (
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	incentivetypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
-	"github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	incentivetypes "github.com/percosis-labs/percosis/x/incentives/types"
+	"github.com/percosis-labs/percosis/x/pool-incentives/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var _ types.QueryServer = Querier{}

@@ -16,7 +16,7 @@ import (
 	"golang.org/x/exp/maps"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
 )
 
 // Manager defines a simulation manager that provides the high level utility

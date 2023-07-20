@@ -11,12 +11,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	percoapp "github.com/percosis-labs/percosis/v16/app"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	clmodule "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/clmodule"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
+	percoapp "github.com/percosis-labs/percosis/app"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	clmodule "github.com/percosis-labs/percosis/x/concentrated-liquidity/clmodule"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types/genesis"
 )
 
 type singlePoolGenesisEntry struct {

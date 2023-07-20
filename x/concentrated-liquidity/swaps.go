@@ -8,13 +8,13 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	events "github.com/percosis-labs/percosis/v16/x/poolmanager/events"
+	events "github.com/percosis-labs/percosis/x/poolmanager/events"
 
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/swapstrategy"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/swapstrategy"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // SwapState defines the state of a swap.

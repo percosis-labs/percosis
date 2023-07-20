@@ -4,9 +4,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/x/twap/types"
 
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 // twapStrategy is an interface for computing TWAPs.

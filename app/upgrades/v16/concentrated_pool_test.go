@@ -7,10 +7,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	v16 "github.com/percosis-labs/percosis/v16/app/upgrades/v16"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
-	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
+	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
 )
 
 type ConcentratedUpgradeTestSuite struct {

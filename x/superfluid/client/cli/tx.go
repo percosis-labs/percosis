@@ -10,7 +10,7 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/flags"
@@ -19,8 +19,8 @@ import (
 	govcli "github.com/cosmos/cosmos-sdk/x/gov/client/cli"
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 // GetTxCmd returns the transaction commands for this module.

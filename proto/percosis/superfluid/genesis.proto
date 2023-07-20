@@ -5,7 +5,7 @@ import "gogoproto/gogo.proto";
 import "percosis/superfluid/superfluid.proto";
 import "percosis/superfluid/params.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/superfluid/types";
+option go_package = "github.com/percosis-labs/percosis/x/superfluid/types";
 
 // GenesisState defines the module's genesis state.
 message GenesisState {

@@ -8,11 +8,11 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper/internal/events"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper/internal/events"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 type msgServer struct {

@@ -4,12 +4,12 @@ import (
 	gocontext "context"
 	"testing"
 
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	poolmanagerqueryproto "github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	poolmanagerqueryproto "github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
 )
 
 type QueryTestSuite struct {

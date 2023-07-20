@@ -1,7 +1,7 @@
 package app
 
 import (
-	"github.com/percosis-labs/percosis/v16/app/params"
+	"github.com/percosis-labs/percosis/app/params"
 
 	"github.com/cosmos/cosmos-sdk/std"
 )

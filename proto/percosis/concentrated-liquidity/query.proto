@@ -16,7 +16,7 @@ import "google/protobuf/duration.proto";
 import "percosis/concentrated-liquidity/position.proto";
 import "percosis/concentrated-liquidity/incentive_record.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto";
+option go_package = "github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto";
 
 service Query {
   // Pools returns all concentrated liquidity pools

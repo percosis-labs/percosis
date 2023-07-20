@@ -3,7 +3,7 @@ package keeper
 import (
 	"time"
 
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper/internal/events"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper/internal/events"
 	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"

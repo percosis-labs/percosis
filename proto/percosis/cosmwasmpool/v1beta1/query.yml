@@ -1,7 +1,7 @@
 keeper: 
-  path: "github.com/percosis-labs/percosis/v16/x/cosmwasmpool"
+  path: "github.com/percosis-labs/percosis/x/cosmwasmpool"
   struct: "Keeper"
-client_path: "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/client"
+client_path: "github.com/percosis-labs/percosis/x/cosmwasmpool/client"
 queries:
   Params:
     proto_wrapper:

@@ -10,7 +10,7 @@ import (
 
 	types "github.com/cosmos/cosmos-sdk/types"
 	gomock "github.com/golang/mock/gomock"
-	types0 "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	types0 "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // MockCFMMPoolI is a mock of CFMMPoolI interface.

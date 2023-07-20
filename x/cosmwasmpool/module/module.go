@@ -15,14 +15,14 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	cosmwasmpool "github.com/percosis-labs/percosis/v16/x/cosmwasmpool"
-	moduleclient "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/client"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/client/grpc"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/model"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	cosmwasmpool "github.com/percosis-labs/percosis/x/cosmwasmpool"
+	moduleclient "github.com/percosis-labs/percosis/x/cosmwasmpool/client"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/client/cli"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/client/grpc"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/client/queryproto"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/model"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/types"
 )
 
 var (

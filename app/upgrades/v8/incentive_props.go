@@ -4,8 +4,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	poolincentiveskeeper "github.com/percosis-labs/percosis/v16/x/pool-incentives/keeper"
-	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	poolincentiveskeeper "github.com/percosis-labs/percosis/x/pool-incentives/keeper"
+	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
 )
 
 // This file implements logic for accelerated incentive proposals.

@@ -10,7 +10,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
 )
 
 const forkHeight = 10

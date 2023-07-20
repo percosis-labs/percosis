@@ -11,11 +11,11 @@ import (
 	ante "github.com/cosmos/cosmos-sdk/x/auth/ante"
 	"github.com/cosmos/cosmos-sdk/x/auth/signing"
 
-	percoante "github.com/percosis-labs/percosis/v16/ante"
-	v9 "github.com/percosis-labs/percosis/v16/app/upgrades/v9"
+	percoante "github.com/percosis-labs/percosis/ante"
+	v9 "github.com/percosis-labs/percosis/app/upgrades/v9"
 
-	txfeeskeeper "github.com/percosis-labs/percosis/v16/x/txfees/keeper"
-	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	txfeeskeeper "github.com/percosis-labs/percosis/x/txfees/keeper"
+	txfeestypes "github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 // Link to default ante handler used by cosmos sdk:

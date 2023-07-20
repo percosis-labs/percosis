@@ -5,7 +5,7 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
-	"github.com/percosis-labs/percosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/x/txfees/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

@@ -5,8 +5,8 @@ import (
 	flag "github.com/spf13/pflag"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.

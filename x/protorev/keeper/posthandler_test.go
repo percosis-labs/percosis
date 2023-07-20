@@ -12,10 +12,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	authsigning "github.com/cosmos/cosmos-sdk/x/auth/signing"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
-	"github.com/percosis-labs/percosis/v16/x/protorev/keeper"
-	"github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/protorev/keeper"
+	"github.com/percosis-labs/percosis/x/protorev/types"
 )
 
 // BenchmarkBalancerSwapHighestLiquidityArb benchmarks a balancer swap that creates a single three hop arbitrage

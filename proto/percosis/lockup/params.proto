@@ -3,7 +3,7 @@ package percosis.lockup;
 
 import "gogoproto/gogo.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/lockup/types";
+option go_package = "github.com/percosis-labs/percosis/x/lockup/types";
 
 message Params {
   repeated string force_unlock_allowed_addresses = 1

@@ -27,11 +27,11 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/percosis-labs/percosis/v16/x/mint/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/mint/client/rest"
-	"github.com/percosis-labs/percosis/v16/x/mint/keeper"
-	"github.com/percosis-labs/percosis/v16/x/mint/simulation"
-	"github.com/percosis-labs/percosis/v16/x/mint/types"
+	"github.com/percosis-labs/percosis/x/mint/client/cli"
+	"github.com/percosis-labs/percosis/x/mint/client/rest"
+	"github.com/percosis-labs/percosis/x/mint/keeper"
+	"github.com/percosis-labs/percosis/x/mint/simulation"
+	"github.com/percosis-labs/percosis/x/mint/types"
 )
 
 var (

@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

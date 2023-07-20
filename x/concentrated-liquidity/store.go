@@ -11,9 +11,9 @@ import (
 	"github.com/gogo/protobuf/proto"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types/genesis"
 )
 
 const (

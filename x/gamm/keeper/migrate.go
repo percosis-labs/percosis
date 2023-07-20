@@ -5,10 +5,10 @@ import (
 	"sort"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/store/prefix"
 	sdk "github.com/cosmos/cosmos-sdk/types"

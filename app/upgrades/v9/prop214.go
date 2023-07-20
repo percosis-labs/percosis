@@ -3,8 +3,8 @@ package v9
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	gammkeeper "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
+	gammkeeper "github.com/percosis-labs/percosis/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
 )
 
 // Executes prop214, https://www.mintscan.io/percosis/proposals/214

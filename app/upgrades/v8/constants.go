@@ -1,8 +1,8 @@
 package v8
 
 import (
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	v8constants "github.com/percosis-labs/percosis/v16/app/upgrades/v8/constants"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	v8constants "github.com/percosis-labs/percosis/app/upgrades/v8/constants"
 )
 
 const (

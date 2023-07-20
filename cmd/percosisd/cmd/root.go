@@ -8,7 +8,7 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 
-	"github.com/percosis-labs/percosis/v16/app/params"
+	"github.com/percosis-labs/percosis/app/params"
 
 	"github.com/spf13/cast"
 	"github.com/spf13/cobra"
@@ -44,7 +44,7 @@ import (
 
 	"github.com/cosmos/cosmos-sdk/client/config"
 
-	percosis "github.com/percosis-labs/percosis/v16/app"
+	percosis "github.com/percosis-labs/percosis/app"
 )
 
 // NewRootCmd creates a new root command for simd. It is called once in the

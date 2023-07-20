@@ -6,10 +6,10 @@ import (
 	"sort"
 	"strings"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper/internal/events"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper/internal/events"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

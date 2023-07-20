@@ -6,9 +6,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	percosimtypes "github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	valsetkeeper "github.com/percosis-labs/percosis/v16/x/valset-pref"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	percosimtypes "github.com/percosis-labs/percosis/simulation/simtypes"
+	valsetkeeper "github.com/percosis-labs/percosis/x/valset-pref"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 
 func RandomMsgSetValSetPreference(k valsetkeeper.Keeper, sim *percosimtypes.SimCtx, ctx sdk.Context) (*types.MsgSetValidatorSetPreference, error) {

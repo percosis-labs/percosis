@@ -1,8 +1,8 @@
 package client
 
 import (
-	"github.com/percosis-labs/percosis/v16/x/superfluid/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/client/rest"
+	"github.com/percosis-labs/percosis/x/superfluid/client/cli"
+	"github.com/percosis-labs/percosis/x/superfluid/client/rest"
 
 	govclient "github.com/cosmos/cosmos-sdk/x/gov/client"
 )

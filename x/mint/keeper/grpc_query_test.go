@@ -3,7 +3,7 @@ package keeper_test
 import (
 	"context"
 
-	"github.com/percosis-labs/percosis/v16/x/mint/types"
+	"github.com/percosis-labs/percosis/x/mint/types"
 )
 
 func (s *KeeperTestSuite) TestGRPCParams() {

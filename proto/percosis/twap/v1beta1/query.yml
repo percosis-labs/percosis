@@ -1,7 +1,7 @@
 keeper: 
-  path: "github.com/percosis-labs/percosis/v16/x/twap"
+  path: "github.com/percosis-labs/percosis/x/twap"
   struct: "Keeper"
-client_path: "github.com/percosis-labs/percosis/v16/x/twap/client"
+client_path: "github.com/percosis-labs/percosis/x/twap/client"
 queries:
   ArithmeticTwap:
     proto_wrapper:

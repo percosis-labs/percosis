@@ -7,9 +7,9 @@ import (
 
 	codectypes "github.com/cosmos/cosmos-sdk/codec/types"
 
-	"github.com/percosis-labs/percosis/v16/x/poolmanager"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/poolmanager"
+	"github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 // This file should evolve to being code gen'd, off of `proto/poolmanager/v1beta/query.yml`

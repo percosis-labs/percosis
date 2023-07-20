@@ -29,8 +29,8 @@ import (
 	"github.com/tendermint/tendermint/privval"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	percosisApp "github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/util"
+	percosisApp "github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/tests/e2e/util"
 )
 
 type internalNode struct {

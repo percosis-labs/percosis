@@ -4,11 +4,11 @@ import (
 	"fmt"
 	"strings"
 
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 const (

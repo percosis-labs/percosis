@@ -26,12 +26,12 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	percosimtypes "github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	"github.com/percosis-labs/percosis/v16/x/mint/client/rest"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/simulation"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	percosimtypes "github.com/percosis-labs/percosis/simulation/simtypes"
+	"github.com/percosis-labs/percosis/x/mint/client/rest"
+	"github.com/percosis-labs/percosis/x/superfluid/client/cli"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/x/superfluid/simulation"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 var (

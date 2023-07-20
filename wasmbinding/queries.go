@@ -5,8 +5,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/wasmbinding/bindings"
-	tokenfactorykeeper "github.com/percosis-labs/percosis/v16/x/tokenfactory/keeper"
+	"github.com/percosis-labs/percosis/wasmbinding/bindings"
+	tokenfactorykeeper "github.com/percosis-labs/percosis/x/tokenfactory/keeper"
 )
 
 type QueryPlugin struct {

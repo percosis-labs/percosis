@@ -1,13 +1,13 @@
 package v9
 
 import (
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	"github.com/percosis-labs/percosis/app/upgrades"
 
 	store "github.com/cosmos/cosmos-sdk/store/types"
 
 	icahosttypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/host/types"
 
-	tokenfactorytypes "github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	tokenfactorytypes "github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 // UpgradeName defines the on-chain upgrade name for the Percosis v9 upgrade.

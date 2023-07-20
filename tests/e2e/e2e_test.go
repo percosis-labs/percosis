@@ -19,20 +19,20 @@ import (
 	"github.com/osmosis-labs/osmosis/osmomath"
 	ibchookskeeper "github.com/osmosis-labs/osmosis/x/ibc-hooks/keeper"
 
-	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	ibcratelimittypes "github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	v16 "github.com/percosis-labs/percosis/v16/app/upgrades/v16"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/chain"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/config"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
-	clmath "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/chain"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/config"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
+	clmath "github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 // TODO: Find more scalable way to do this

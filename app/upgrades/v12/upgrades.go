@@ -11,12 +11,12 @@ import (
 	icahosttypes "github.com/cosmos/ibc-go/v4/modules/apps/27-interchain-accounts/host/types"
 	ibctransfertypes "github.com/cosmos/ibc-go/v4/modules/apps/transfer/types"
 
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	superfluidtypes "github.com/percosis-labs/percosis/x/superfluid/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	twaptypes "github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/app/keepers"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	twaptypes "github.com/percosis-labs/percosis/x/twap/types"
 )
 
 // We set the app version to pre-upgrade because it will be incremented by one

@@ -1,8 +1,8 @@
 package gammsimulation
 
 import (
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	"github.com/percosis-labs/percosis/v16/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	"github.com/percosis-labs/percosis/x/gamm/keeper"
 )
 
 func DefaultActions(keeper keeper.Keeper) []simtypes.Action {

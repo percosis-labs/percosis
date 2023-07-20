@@ -11,10 +11,10 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	clmath "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	clmath "github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 const (

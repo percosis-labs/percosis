@@ -3,8 +3,8 @@ package poolmanager_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	poolmanagerKeeper "github.com/percosis-labs/percosis/v16/x/poolmanager"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	poolmanagerKeeper "github.com/percosis-labs/percosis/x/poolmanager"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var (

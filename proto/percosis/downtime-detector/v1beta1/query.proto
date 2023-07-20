@@ -13,7 +13,7 @@ import "cosmos_proto/cosmos.proto";
 import "google/protobuf/duration.proto";
 import "google/protobuf/timestamp.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/downtime-detector/client/queryproto";
+option go_package = "github.com/percosis-labs/percosis/x/downtime-detector/client/queryproto";
 
 service Query {
   rpc RecoveredSinceDowntimeOfLength(RecoveredSinceDowntimeOfLengthRequest)

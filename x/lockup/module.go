@@ -28,13 +28,13 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	"github.com/percosis-labs/percosis/v16/x/lockup/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/lockup/client/rest"
-	"github.com/percosis-labs/percosis/v16/x/lockup/keeper"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	"github.com/percosis-labs/percosis/x/lockup/client/cli"
+	"github.com/percosis-labs/percosis/x/lockup/client/rest"
+	"github.com/percosis-labs/percosis/x/lockup/keeper"
 
-	simulation "github.com/percosis-labs/percosis/v16/x/lockup/simulation"
-	"github.com/percosis-labs/percosis/v16/x/lockup/types"
+	simulation "github.com/percosis-labs/percosis/x/lockup/simulation"
+	"github.com/percosis-labs/percosis/x/lockup/types"
 )
 
 var (

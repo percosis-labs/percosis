@@ -1,7 +1,7 @@
 keeper: 
-  path: "github.com/percosis-labs/percosis/v16/x/downtime-detector"
+  path: "github.com/percosis-labs/percosis/x/downtime-detector"
   struct: "Keeper"
-client_path: "github.com/percosis-labs/percosis/v16/x/downtime-detector/client"
+client_path: "github.com/percosis-labs/percosis/x/downtime-detector/client"
 queries:
   RecoveredSinceDowntimeOfLength:
     proto_wrapper:

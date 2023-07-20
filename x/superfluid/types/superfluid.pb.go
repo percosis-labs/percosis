@@ -10,7 +10,7 @@ import (
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
 	_ "github.com/gogo/protobuf/types"
-	types1 "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	types1 "github.com/percosis-labs/percosis/x/lockup/types"
 	io "io"
 	math "math"
 	math_bits "math/bits"

@@ -18,13 +18,13 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cosmosclient"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	clqueryproto "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	poolmanagerqueryproto "github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	clqueryproto "github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	incentivestypes "github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	poolmanagerqueryproto "github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
 )
 

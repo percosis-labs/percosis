@@ -8,9 +8,9 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/x/twap/client"
-	"github.com/percosis-labs/percosis/v16/x/twap/client/queryproto"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/x/twap/client"
+	"github.com/percosis-labs/percosis/x/twap/client/queryproto"
 )
 
 type QueryTestSuite struct {

@@ -8,12 +8,12 @@ import (
 	"github.com/stretchr/testify/suite"
 
 	osmoutils "github.com/osmosis-labs/osmosis/osmoutils"
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
-	incentivetypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	poolincentivetypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/x/incentives/types"
+	incentivetypes "github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	poolincentivetypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var _ = suite.TestingSuite(nil)

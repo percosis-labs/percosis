@@ -12,11 +12,11 @@ import (
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils"
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
-	"github.com/percosis-labs/percosis/v16/x/twap"
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
-	"github.com/percosis-labs/percosis/v16/x/twap/types/twapmock"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/twap"
+	"github.com/percosis-labs/percosis/x/twap/types"
+	"github.com/percosis-labs/percosis/x/twap/types/twapmock"
 )
 
 var (

@@ -5,8 +5,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	"github.com/percosis-labs/percosis/app/keepers"
+	"github.com/percosis-labs/percosis/app/upgrades"
 )
 
 // CreateUpgradeHandler returns an x/upgrade handler for the Percosis v4 on-chain

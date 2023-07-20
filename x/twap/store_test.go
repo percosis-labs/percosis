@@ -7,10 +7,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/x/twap"
+	"github.com/percosis-labs/percosis/x/twap"
 
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/twap/types"
 )
 
 // TestTrackChangedPool takes a list of poolIds as test cases, and runs one list per block.

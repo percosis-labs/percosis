@@ -13,7 +13,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/wasmbinding"
+	"github.com/percosis-labs/percosis/wasmbinding"
 
 	authtypes "github.com/cosmos/cosmos-sdk/x/auth/types"
 	banktypes "github.com/cosmos/cosmos-sdk/x/bank/types"
@@ -22,17 +22,17 @@ import (
 	slashingtypes "github.com/cosmos/cosmos-sdk/x/slashing/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	concentratedliquidityquery "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
-	downtimequerytypes "github.com/percosis-labs/percosis/v16/x/downtime-detector/client/queryproto"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	minttypes "github.com/percosis-labs/percosis/v16/x/mint/types"
-	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
-	poolmanagerqueryproto "github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
-	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
-	twapquerytypes "github.com/percosis-labs/percosis/v16/x/twap/client/queryproto"
-	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	concentratedliquidityquery "github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
+	downtimequerytypes "github.com/percosis-labs/percosis/x/downtime-detector/client/queryproto"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	incentivestypes "github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	minttypes "github.com/percosis-labs/percosis/x/mint/types"
+	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
+	poolmanagerqueryproto "github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
+	superfluidtypes "github.com/percosis-labs/percosis/x/superfluid/types"
+	twapquerytypes "github.com/percosis-labs/percosis/x/twap/client/queryproto"
+	txfeestypes "github.com/percosis-labs/percosis/x/txfees/types"
 	epochtypes "github.com/osmosis-labs/osmosis/x/epochs/types"
 )
 

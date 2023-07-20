@@ -27,12 +27,12 @@ import (
 	simtypes "github.com/cosmos/cosmos-sdk/types/simulation"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	percosimtypes "github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	"github.com/percosis-labs/percosis/v16/x/incentives/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/incentives/keeper"
-	"github.com/percosis-labs/percosis/v16/x/incentives/simulation"
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
-	"github.com/percosis-labs/percosis/v16/x/mint/client/rest"
+	percosimtypes "github.com/percosis-labs/percosis/simulation/simtypes"
+	"github.com/percosis-labs/percosis/x/incentives/client/cli"
+	"github.com/percosis-labs/percosis/x/incentives/keeper"
+	"github.com/percosis-labs/percosis/x/incentives/simulation"
+	"github.com/percosis-labs/percosis/x/incentives/types"
+	"github.com/percosis-labs/percosis/x/mint/client/rest"
 )
 
 var (

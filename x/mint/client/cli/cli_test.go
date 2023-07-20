@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmcli "github.com/tendermint/tendermint/libs/cli"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/x/mint/client/cli"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/x/mint/client/cli"
 
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	clitestutil "github.com/cosmos/cosmos-sdk/testutil/cli"

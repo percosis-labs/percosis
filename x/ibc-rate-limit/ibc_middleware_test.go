@@ -15,11 +15,11 @@ import (
 	ibctesting "github.com/cosmos/ibc-go/v4/testing"
 	"github.com/stretchr/testify/suite"
 
-	txfeetypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	txfeetypes "github.com/percosis-labs/percosis/x/txfees/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/tests/percosisibctesting"
-	"github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/tests/percosisibctesting"
+	"github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
 )
 
 type MiddlewareTestSuite struct {

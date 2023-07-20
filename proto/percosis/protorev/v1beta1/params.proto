@@ -4,7 +4,7 @@ package percosis.protorev.v1beta1;
 import "gogoproto/gogo.proto";
 import "cosmos_proto/cosmos.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/protorev/types";
+option go_package = "github.com/percosis-labs/percosis/x/protorev/types";
 
 // Params defines the parameters for the module.
 message Params {

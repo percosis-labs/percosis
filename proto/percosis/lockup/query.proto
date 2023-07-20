@@ -9,7 +9,7 @@ import "google/protobuf/duration.proto";
 import "percosis/lockup/lock.proto";
 import "percosis/lockup/params.proto";
 
-option go_package = "github.com/percosis-labs/percosis/v16/x/lockup/types";
+option go_package = "github.com/percosis-labs/percosis/x/lockup/types";
 
 // Query defines the gRPC querier service.
 service Query {

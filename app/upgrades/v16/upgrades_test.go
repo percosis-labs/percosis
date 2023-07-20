@@ -15,12 +15,12 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	v16 "github.com/percosis-labs/percosis/v16/app/upgrades/v16"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
-	protorevtypes "github.com/percosis-labs/percosis/v16/x/protorev/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/x/cosmwasmpool/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
+	protorevtypes "github.com/percosis-labs/percosis/x/protorev/types"
 )
 
 type UpgradeTestSuite struct {

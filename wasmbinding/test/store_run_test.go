@@ -14,8 +14,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/app/apptesting"
 )
 
 func TestNoStorageWithoutProposal(t *testing.T) {

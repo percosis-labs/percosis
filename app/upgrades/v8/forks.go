@@ -3,7 +3,7 @@ package v8
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
+	"github.com/percosis-labs/percosis/app/keepers"
 )
 
 // RunForkLogic executes height-gated on-chain fork logic for the Percosis v8

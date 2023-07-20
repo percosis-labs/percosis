@@ -8,17 +8,17 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
+	"github.com/percosis-labs/percosis/app/keepers"
+	"github.com/percosis-labs/percosis/app/upgrades"
 
 	cosmwasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	distrtypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
-	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
-	tokenfactorykeeper "github.com/percosis-labs/percosis/v16/x/tokenfactory/keeper"
-	tokenfactorytypes "github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/x/cosmwasmpool/types"
+	superfluidtypes "github.com/percosis-labs/percosis/x/superfluid/types"
+	tokenfactorykeeper "github.com/percosis-labs/percosis/x/tokenfactory/keeper"
+	tokenfactorytypes "github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 const (

@@ -9,9 +9,9 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 const (

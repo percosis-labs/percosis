@@ -11,11 +11,11 @@ import (
 	flag "github.com/spf13/pflag"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/client/tx"

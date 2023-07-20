@@ -3,7 +3,7 @@ package v15
 import (
 	packetforwardtypes "github.com/strangelove-ventures/packet-forward-middleware/v4/router/types"
 
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 	sdk "github.com/cosmos/cosmos-sdk/types"
@@ -15,19 +15,19 @@ import (
 	icqkeeper "github.com/cosmos/ibc-apps/modules/async-icq/v4/keeper"
 	icqtypes "github.com/cosmos/ibc-apps/modules/async-icq/v4/types"
 
-	"github.com/percosis-labs/percosis/v16/wasmbinding"
-	ibcratelimit "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit"
-	ibcratelimittypes "github.com/percosis-labs/percosis/v16/x/ibc-rate-limit/types"
+	"github.com/percosis-labs/percosis/wasmbinding"
+	ibcratelimit "github.com/percosis-labs/percosis/x/ibc-rate-limit"
+	ibcratelimittypes "github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
 
 	bankkeeper "github.com/cosmos/cosmos-sdk/x/bank/keeper"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	gammkeeper "github.com/percosis-labs/percosis/v16/x/gamm/keeper"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager"
+	"github.com/percosis-labs/percosis/app/keepers"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	gammkeeper "github.com/percosis-labs/percosis/x/gamm/keeper"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	"github.com/percosis-labs/percosis/x/poolmanager"
 )
 
 func CreateUpgradeHandler(

@@ -17,8 +17,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
-	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
+	txfeestypes "github.com/percosis-labs/percosis/x/txfees/types"
 )
 
 const (

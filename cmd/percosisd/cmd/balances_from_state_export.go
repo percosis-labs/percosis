@@ -13,9 +13,9 @@ import (
 	tmtypes "github.com/tendermint/tendermint/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/server"

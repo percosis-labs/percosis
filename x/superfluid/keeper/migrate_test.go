@@ -13,14 +13,14 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/keeper"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/superfluid/keeper"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 var (

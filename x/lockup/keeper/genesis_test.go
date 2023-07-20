@@ -8,9 +8,9 @@ import (
 	"github.com/stretchr/testify/require"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	percoapp "github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/x/lockup"
-	"github.com/percosis-labs/percosis/v16/x/lockup/types"
+	percoapp "github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/x/lockup"
+	"github.com/percosis-labs/percosis/x/lockup/types"
 
 	"github.com/cosmos/cosmos-sdk/simapp"
 	sdk "github.com/cosmos/cosmos-sdk/types"

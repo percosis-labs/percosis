@@ -4,13 +4,13 @@ import (
 	"math/rand"
 	"time"
 
-	percosimtypes "github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	percosimtypes "github.com/percosis-labs/percosis/simulation/simtypes"
 
 	"github.com/cosmos/cosmos-sdk/baseapp"
 
-	"github.com/percosis-labs/percosis/v16/x/incentives/keeper"
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/incentives/keeper"
+	"github.com/percosis-labs/percosis/x/incentives/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 
 	"github.com/cosmos/cosmos-sdk/codec"
 	simappparams "github.com/cosmos/cosmos-sdk/simapp/params"

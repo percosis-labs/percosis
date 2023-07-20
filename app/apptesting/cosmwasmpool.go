@@ -9,11 +9,11 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/cosmwasm"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/cosmwasm/msg"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/cosmwasm/msg/transmuter"
-	"github.com/percosis-labs/percosis/v16/x/cosmwasmpool/model"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/cosmwasm/msg"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/cosmwasm/msg/transmuter"
+	"github.com/percosis-labs/percosis/x/cosmwasmpool/model"
 
-	cosmwasmpooltypes "github.com/percosis-labs/percosis/v16/x/cosmwasmpool/types"
+	cosmwasmpooltypes "github.com/percosis-labs/percosis/x/cosmwasmpool/types"
 )
 
 const (

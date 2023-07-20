@@ -21,9 +21,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/percosis-labs/percosis/v16/simulation/executor/internal/executortypes"
-	"github.com/percosis-labs/percosis/v16/simulation/executor/internal/stats"
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/simulation/executor/internal/executortypes"
+	"github.com/percosis-labs/percosis/simulation/executor/internal/stats"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
 )
 
 const AverageBlockTime = 6 * time.Second

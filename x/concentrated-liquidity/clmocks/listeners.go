@@ -1,7 +1,7 @@
 package clmocks
 
 import (
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 )

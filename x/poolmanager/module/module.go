@@ -15,14 +15,14 @@ import (
 	"github.com/spf13/cobra"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	gammsimulation "github.com/percosis-labs/percosis/v16/x/gamm/simulation"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager"
-	pmclient "github.com/percosis-labs/percosis/v16/x/poolmanager/client"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/grpc"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	gammsimulation "github.com/percosis-labs/percosis/x/gamm/simulation"
+	"github.com/percosis-labs/percosis/x/poolmanager"
+	pmclient "github.com/percosis-labs/percosis/x/poolmanager/client"
+	"github.com/percosis-labs/percosis/x/poolmanager/client/cli"
+	"github.com/percosis-labs/percosis/x/poolmanager/client/grpc"
+	"github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
+	"github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 var (

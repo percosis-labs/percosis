@@ -11,11 +11,11 @@ import (
 	"github.com/stretchr/testify/require"
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	appparams "github.com/percosis-labs/percosis/v16/app/params"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/configurer/config"
+	appparams "github.com/percosis-labs/percosis/app/params"
+	"github.com/percosis-labs/percosis/tests/e2e/configurer/config"
 
-	"github.com/percosis-labs/percosis/v16/tests/e2e/containers"
-	"github.com/percosis-labs/percosis/v16/tests/e2e/initialization"
+	"github.com/percosis-labs/percosis/tests/e2e/containers"
+	"github.com/percosis-labs/percosis/tests/e2e/initialization"
 )
 
 type Config struct {

@@ -10,13 +10,13 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	clmath "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	clmodel "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	gammmigration "github.com/percosis-labs/percosis/v16/x/gamm/types/migration"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	clmath "github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	clmodel "github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"
 )
 
 type BenchTestSuite struct {

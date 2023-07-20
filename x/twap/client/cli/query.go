@@ -11,9 +11,9 @@ import (
 	"github.com/spf13/cobra"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	poolmanager "github.com/percosis-labs/percosis/v16/x/poolmanager/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/twap/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/twap/types"
+	poolmanager "github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
+	"github.com/percosis-labs/percosis/x/twap/client/queryproto"
+	"github.com/percosis-labs/percosis/x/twap/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module.

@@ -7,10 +7,10 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	lockuptypes "github.com/percosis-labs/percosis/v16/x/lockup/types"
-	"github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
+	"github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 type MigrationType int

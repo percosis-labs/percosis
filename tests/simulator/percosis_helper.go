@@ -7,10 +7,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/simulation"
 	db "github.com/tendermint/tm-db"
 
-	simexec "github.com/percosis-labs/percosis/v16/simulation/executor"
+	simexec "github.com/percosis-labs/percosis/simulation/executor"
 
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
 )
 
 func PercosisAppCreator(logger log.Logger, db db.DB) simtypes.AppCreator {

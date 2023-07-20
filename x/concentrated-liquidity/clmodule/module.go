@@ -16,17 +16,17 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/module"
 
-	"github.com/percosis-labs/percosis/v16/simulation/simtypes"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/cli"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/queryproto"
-	clmodel "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/simulation"
+	"github.com/percosis-labs/percosis/simulation/simtypes"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/client/cli"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
+	clmodel "github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/simulation"
 
-	clkeeper "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	clclient "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/client/grpc"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
+	clkeeper "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	clclient "github.com/percosis-labs/percosis/x/concentrated-liquidity/client"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/client/grpc"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types/genesis"
 )
 
 var (

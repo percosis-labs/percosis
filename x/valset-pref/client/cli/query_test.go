@@ -7,10 +7,10 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	valPref "github.com/percosis-labs/percosis/v16/x/valset-pref"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/client/queryproto"
-	"github.com/percosis-labs/percosis/v16/x/valset-pref/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	valPref "github.com/percosis-labs/percosis/x/valset-pref"
+	"github.com/percosis-labs/percosis/x/valset-pref/client/queryproto"
+	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 
 type QueryTestSuite struct {

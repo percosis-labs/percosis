@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/suite"
 
-	configurer "github.com/percosis-labs/percosis/v16/tests/e2e/configurer"
+	configurer "github.com/percosis-labs/percosis/tests/e2e/configurer"
 )
 
 const (

@@ -13,13 +13,13 @@ import (
 
 	"github.com/osmosis-labs/osmosis/osmomath"
 	"github.com/osmosis-labs/osmosis/osmoutils/accum"
-	"github.com/percosis-labs/percosis/v16/app"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/math"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/model"
-	cltypes "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
-	clgenesis "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types/genesis"
+	"github.com/percosis-labs/percosis/app"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
+	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
+	clgenesis "github.com/percosis-labs/percosis/x/concentrated-liquidity/types/genesis"
 )
 
 type BigBangPositions struct {

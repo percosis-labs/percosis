@@ -7,10 +7,10 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/module"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/percosis-labs/percosis/v16/app/keepers"
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	lockupkeeper "github.com/percosis-labs/percosis/v16/x/lockup/keeper"
-	superfluidtypes "github.com/percosis-labs/percosis/v16/x/superfluid/types"
+	"github.com/percosis-labs/percosis/app/keepers"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	lockupkeeper "github.com/percosis-labs/percosis/x/lockup/keeper"
+	superfluidtypes "github.com/percosis-labs/percosis/x/superfluid/types"
 )
 
 func CreateUpgradeHandler(

@@ -7,9 +7,9 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	appParams "github.com/percosis-labs/percosis/v16/app/params"
-	stableswap "github.com/percosis-labs/percosis/v16/x/gamm/pool-models/stableswap"
-	"github.com/percosis-labs/percosis/v16/x/gamm/types"
+	appParams "github.com/percosis-labs/percosis/app/params"
+	stableswap "github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
+	"github.com/percosis-labs/percosis/x/gamm/types"
 )
 
 func baseCreatePoolMsgGen(sender sdk.AccAddress) *stableswap.MsgCreateStableswapPool {

@@ -4,7 +4,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	txfeestypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	txfeestypes "github.com/percosis-labs/percosis/x/txfees/types"
 	epochstypes "github.com/osmosis-labs/osmosis/x/epochs/types"
 )
 

@@ -1,6 +1,6 @@
 package executortypes
 
-import "github.com/percosis-labs/percosis/v16/simulation/simtypes"
+import "github.com/percosis-labs/percosis/simulation/simtypes"
 
 func totalFrequency(actions []simtypes.ActionsWithMetadata) int {
 	totalFrequency := 0

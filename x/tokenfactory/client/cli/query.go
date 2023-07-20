@@ -12,7 +12,7 @@ import (
 	// sdk "github.com/cosmos/cosmos-sdk/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
-	"github.com/percosis-labs/percosis/v16/x/tokenfactory/types"
+	"github.com/percosis-labs/percosis/x/tokenfactory/types"
 )
 
 // GetQueryCmd returns the cli query commands for this module

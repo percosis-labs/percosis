@@ -7,12 +7,12 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	incentivestypes "github.com/percosis-labs/percosis/v16/x/incentives/types"
-	"github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
-	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
-	poolmanagertypes "github.com/percosis-labs/percosis/v16/x/poolmanager/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	incentivestypes "github.com/percosis-labs/percosis/x/incentives/types"
+	"github.com/percosis-labs/percosis/x/pool-incentives/types"
+	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
+	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 )
 
 type KeeperTestSuite struct {

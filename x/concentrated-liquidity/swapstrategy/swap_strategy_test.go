@@ -8,10 +8,10 @@ import (
 	"github.com/stretchr/testify/suite"
 
 	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	cl "github.com/percosis-labs/percosis/v16/x/concentrated-liquidity"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/swapstrategy"
-	"github.com/percosis-labs/percosis/v16/x/concentrated-liquidity/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/swapstrategy"
+	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 
 type StrategyTestSuite struct {

@@ -1,8 +1,8 @@
 package v12
 
 import (
-	"github.com/percosis-labs/percosis/v16/app/upgrades"
-	twaptypes "github.com/percosis-labs/percosis/v16/x/twap/types"
+	"github.com/percosis-labs/percosis/app/upgrades"
+	twaptypes "github.com/percosis-labs/percosis/x/twap/types"
 
 	store "github.com/cosmos/cosmos-sdk/store/types"
 )

@@ -4,7 +4,7 @@ import (
 	"context"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/x/incentives/types"
+	"github.com/percosis-labs/percosis/x/incentives/types"
 
 	errorsmod "cosmossdk.io/errors"
 	sdk "github.com/cosmos/cosmos-sdk/types"

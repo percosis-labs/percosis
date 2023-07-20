@@ -16,12 +16,12 @@ import (
 	wasmkeeper "github.com/CosmWasm/wasmd/x/wasm/keeper"
 
 	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/percosis-labs/percosis/v16/x/gamm/pool-models/balancer"
-	gammtypes "github.com/percosis-labs/percosis/v16/x/gamm/types"
-	minttypes "github.com/percosis-labs/percosis/v16/x/mint/types"
-	txfeetypes "github.com/percosis-labs/percosis/v16/x/txfees/types"
+	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
+	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
+	minttypes "github.com/percosis-labs/percosis/x/mint/types"
+	txfeetypes "github.com/percosis-labs/percosis/x/txfees/types"
 
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
+	"github.com/percosis-labs/percosis/app/apptesting"
 
 	"github.com/stretchr/testify/suite"
 
@@ -32,9 +32,9 @@ import (
 	channeltypes "github.com/cosmos/ibc-go/v4/modules/core/04-channel/types"
 	ibctesting "github.com/cosmos/ibc-go/v4/testing"
 
-	"github.com/percosis-labs/percosis/v16/tests/percosisibctesting"
+	"github.com/percosis-labs/percosis/tests/percosisibctesting"
 
-	"github.com/percosis-labs/percosis/v16/tests/ibc-hooks/testutils"
+	"github.com/percosis-labs/percosis/tests/ibc-hooks/testutils"
 )
 
 type HooksTestSuite struct {

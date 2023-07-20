@@ -15,10 +15,10 @@ import (
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
 	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
-	"github.com/percosis-labs/percosis/v16/app/apptesting"
-	"github.com/percosis-labs/percosis/v16/x/mint/keeper"
-	"github.com/percosis-labs/percosis/v16/x/mint/types"
-	poolincentivestypes "github.com/percosis-labs/percosis/v16/x/pool-incentives/types"
+	"github.com/percosis-labs/percosis/app/apptesting"
+	"github.com/percosis-labs/percosis/x/mint/keeper"
+	"github.com/percosis-labs/percosis/x/mint/types"
+	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
 )
 
 type KeeperTestSuite struct {
