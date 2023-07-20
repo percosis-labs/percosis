@@ -10,7 +10,7 @@ require (
 	github.com/tendermint/tendermint v0.37.0-rc1
 )
 
-require github.com/percosis-labs/percosis v16.0.0-20230630175215-d5fcd089a71c
+require github.com/percosis-labs/percosis v16.15.1-fury.1
 
 require (
 	cosmossdk.io/errors v1.0.0-beta.7 // indirect
