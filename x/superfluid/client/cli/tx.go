@@ -25,7 +25,7 @@ import (
 
 // GetTxCmd returns the transaction commands for this module.
 func GetTxCmd() *cobra.Command {
-	cmd := percocli.TxIndexCmd(types.ModuleName)
+	cmd := osmocli.TxIndexCmd(types.ModuleName)
 	cmd.AddCommand(
 		NewSuperfluidDelegateCmd(),
 		NewSuperfluidUndelegateCmd(),
@@ -35,9 +35,9 @@ func GetTxCmd() *cobra.Command {
 		NewCmdLockAndSuperfluidDelegate(),
 		NewCmdUnPoolWhitelistedPool(),
 	)
-	percocli.AddTxCmd(cmd, NewCreateFullRangePositionAndSuperfluidDelegateCmd)
-	percocli.AddTxCmd(cmd, NewAddToConcentratedLiquiditySuperfluidPositionCmd)
-	percocli.AddTxCmd(cmd, NewUnlockAndMigrateSharesToFullRangeConcentratedPositionCmd)
+	osmocli.AddTxCmd(cmd, NewCreateFullRangePositionAndSuperfluidDelegateCmd)
+	osmocli.AddTxCmd(cmd, NewAddToConcentratedLiquiditySuperfluidPositionCmd)
+	osmocli.AddTxCmd(cmd, NewUnlockAndMigrateSharesToFullRangeConcentratedPositionCmd)
 
 	return cmd
 }
@@ -81,21 +81,21 @@ func NewSuperfluidDelegateCmd() *cobra.Command {
 }
 
 func NewSuperfluidUndelegateCmd() *cobra.Command {
-	return percocli.BuildTxCli[*types.MsgSuperfluidUndelegate](&percocli.TxCliDesc{
+	return osmocli.BuildTxCli[*types.MsgSuperfluidUndelegate](&osmocli.TxCliDesc{
 		Use:   "undelegate [lock_id] [flags]",
 		Short: "superfluid undelegate a lock from a validator",
 	})
 }
 
 func NewSuperfluidUnbondLockCmd() *cobra.Command {
-	return percocli.BuildTxCli[*types.MsgSuperfluidUnbondLock](&percocli.TxCliDesc{
+	return osmocli.BuildTxCli[*types.MsgSuperfluidUnbondLock](&osmocli.TxCliDesc{
 		Use:   "unbond-lock [lock_id] [flags]",
 		Short: "unbond lock that has been superfluid staked",
 	})
 }
 
 func NewSuperfluidUndelegateAndUnbondLockCmd() *cobra.Command {
-	return percocli.BuildTxCli[*types.MsgSuperfluidUndelegateAndUnbondLock](&percocli.TxCliDesc{
+	return osmocli.BuildTxCli[*types.MsgSuperfluidUndelegateAndUnbondLock](&osmocli.TxCliDesc{
 		Use:   "undelegate-and-unbond-lock [lock_id] [coin]",
 		Short: "superfluid undelegate and unbond lock for the given amount of coin",
 	})
@@ -305,7 +305,7 @@ func NewCmdLockAndSuperfluidDelegate() *cobra.Command {
 }
 
 func NewCmdUnPoolWhitelistedPool() *cobra.Command {
-	return percocli.BuildTxCli[*types.MsgUnPoolWhitelistedPool](&percocli.TxCliDesc{
+	return osmocli.BuildTxCli[*types.MsgUnPoolWhitelistedPool](&osmocli.TxCliDesc{
 		Use:   "unpool-whitelisted-pool [pool_id] [flags]",
 		Short: "unpool whitelisted pool",
 	})
@@ -365,8 +365,8 @@ func NewCmdUpdateUnpoolWhitelistProposal() *cobra.Command {
 	return cmd
 }
 
-func NewCreateFullRangePositionAndSuperfluidDelegateCmd() (*percocli.TxCliDesc, *types.MsgCreateFullRangePositionAndSuperfluidDelegate) {
-	return &percocli.TxCliDesc{
+func NewCreateFullRangePositionAndSuperfluidDelegateCmd() (*osmocli.TxCliDesc, *types.MsgCreateFullRangePositionAndSuperfluidDelegate) {
+	return &osmocli.TxCliDesc{
 		Use:     "create-full-range-position-and-sf-delegate [coins] [val_addr] [pool-id]",
 		Short:   "creates a full range concentrated position and superfluid delegates it to the provided validator",
 		Example: "create-full-range-position-and-sf-delegate 100000000ufury,10000udai 45 --from val --chain-id percosis-1",
@@ -408,16 +408,16 @@ func parseUpdateUnpoolWhitelistArgsToContent(flags *flag.FlagSet) (govtypes.Cont
 	return content, nil
 }
 
-func NewAddToConcentratedLiquiditySuperfluidPositionCmd() (*percocli.TxCliDesc, *types.MsgAddToConcentratedLiquiditySuperfluidPosition) {
-	return &percocli.TxCliDesc{
+func NewAddToConcentratedLiquiditySuperfluidPositionCmd() (*osmocli.TxCliDesc, *types.MsgAddToConcentratedLiquiditySuperfluidPosition) {
+	return &osmocli.TxCliDesc{
 		Use:     "add-to-superfluid-cl-position [position-id] [token-0] [token-1]",
 		Short:   "add to an existing superfluid staked concentrated liquidity position",
 		Example: "add-to-superfluid-cl-position 10 1000000000ufury 10000000uion",
 	}, &types.MsgAddToConcentratedLiquiditySuperfluidPosition{}
 }
 
-func NewUnlockAndMigrateSharesToFullRangeConcentratedPositionCmd() (*percocli.TxCliDesc, *types.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition) {
-	return &percocli.TxCliDesc{
+func NewUnlockAndMigrateSharesToFullRangeConcentratedPositionCmd() (*osmocli.TxCliDesc, *types.MsgUnlockAndMigrateSharesToFullRangeConcentratedPosition) {
+	return &osmocli.TxCliDesc{
 		Use:     "unlock-and-migrate-to-cl [lock-id] [shares-to-migrate] [token-out-mins]",
 		Short:   "unlock and migrate gamm shares to full range concentrated position",
 		Example: "unlock-and-migrate-cl 10 25000000000gamm/pool/2 1000000000ufury,10000000uion",

@@ -10,10 +10,10 @@ import (
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 
 	cmd.AddCommand(
-		percocli.GetParams[*queryproto.ParamsRequest](
+		osmocli.GetParams[*queryproto.ParamsRequest](
 			types.ModuleName, queryproto.NewQueryClient),
 	)
 

@@ -163,19 +163,19 @@ func TestNewCreatePoolCmd(t *testing.T) {
 			jsonFile := testutil.WriteToNewTempFile(tt, tc.json)
 			Cmd := fmt.Sprintf("--pool-file=%s --from=%s", jsonFile.Name(), testAddresses[0].String())
 
-			txTc := percocli.TxCliTestCase[*balancer.MsgCreateBalancerPool]{
+			txTc := osmocli.TxCliTestCase[*balancer.MsgCreateBalancerPool]{
 				Cmd:                    Cmd,
 				ExpectedErr:            tc.expectErr,
 				OnlyCheckValidateBasic: true,
 			}
-			percocli.RunTxTestCase(tt, desc, &txTc)
+			osmocli.RunTxTestCase(tt, desc, &txTc)
 		})
 	}
 }
 
 func TestNewJoinPoolCmd(t *testing.T) {
 	desc, _ := cli.NewJoinPoolCmd()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgJoinPool]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgJoinPool]{
 		"join pool": {
 			Cmd: "--pool-id=1  --pool-id=1 --max-amounts-in=100stake --share-amount-out=100 --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgJoinPool{
@@ -186,12 +186,12 @@ func TestNewJoinPoolCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewExitPoolCmd(t *testing.T) {
 	desc, _ := cli.NewExitPoolCmd()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgExitPool]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgExitPool]{
 		"exit pool": {
 			Cmd: "--min-amounts-out=100stake --pool-id=1 --share-amount-in=10 --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgExitPool{
@@ -202,12 +202,12 @@ func TestNewExitPoolCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewSwapExactAmountOutCmd(t *testing.T) {
 	desc, _ := cli.NewSwapExactAmountOutCmd()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgSwapExactAmountOut]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgSwapExactAmountOut]{
 		"swap exact amount out": {
 			Cmd: "10stake 20 --swap-route-pool-ids=1 --swap-route-denoms=node0token --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgSwapExactAmountOut{
@@ -218,12 +218,12 @@ func TestNewSwapExactAmountOutCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewSwapExactAmountInCmd(t *testing.T) {
 	desc, _ := cli.NewSwapExactAmountInCmd()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgSwapExactAmountIn]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgSwapExactAmountIn]{
 		"swap exact amount in": {
 			Cmd: "10stake 3 --swap-route-pool-ids=1 --swap-route-denoms=node0token --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgSwapExactAmountIn{
@@ -234,12 +234,12 @@ func TestNewSwapExactAmountInCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewJoinSwapExternAmountInCmd(t *testing.T) {
 	desc, _ := cli.NewJoinSwapExternAmountIn()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgJoinSwapExternAmountIn]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgJoinSwapExternAmountIn]{
 		"swap exact amount in": {
 			Cmd: "10stake 1 --pool-id=1 --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgJoinSwapExternAmountIn{
@@ -250,12 +250,12 @@ func TestNewJoinSwapExternAmountInCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewJoinSwapShareAmountOutCmd(t *testing.T) {
 	desc, _ := cli.NewJoinSwapShareAmountOut()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgJoinSwapShareAmountOut]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgJoinSwapShareAmountOut]{
 		"swap exact amount in": {
 			Cmd: "stake 10 1 --pool-id=1 --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgJoinSwapShareAmountOut{
@@ -267,12 +267,12 @@ func TestNewJoinSwapShareAmountOutCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewExitSwapExternAmountOutCmd(t *testing.T) {
 	desc, _ := cli.NewExitSwapExternAmountOut()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgExitSwapExternAmountOut]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgExitSwapExternAmountOut]{
 		"swap exact amount in": {
 			Cmd: "10stake 1 --pool-id=1 --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgExitSwapExternAmountOut{
@@ -283,12 +283,12 @@ func TestNewExitSwapExternAmountOutCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestNewExitSwapShareAmountInCmd(t *testing.T) {
 	desc, _ := cli.NewExitSwapShareAmountIn()
-	tcs := map[string]percocli.TxCliTestCase[*types.MsgExitSwapShareAmountIn]{
+	tcs := map[string]osmocli.TxCliTestCase[*types.MsgExitSwapShareAmountIn]{
 		"swap exact amount in": {
 			Cmd: "stake 10 1 --pool-id=1 --from=" + testAddresses[0].String(),
 			ExpectedMsg: &types.MsgExitSwapShareAmountIn{
@@ -300,12 +300,12 @@ func TestNewExitSwapShareAmountInCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunTxTestCases(t, desc, tcs)
+	osmocli.RunTxTestCases(t, desc, tcs)
 }
 
 func TestGetCmdPools(t *testing.T) {
 	desc, _ := cli.GetCmdPools()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QueryPoolsRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QueryPoolsRequest]{
 		"basic test": {
 			Cmd: "--offset=2",
 			ExpectedQuery: &types.QueryPoolsRequest{
@@ -313,23 +313,23 @@ func TestGetCmdPools(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdPool(t *testing.T) {
 	desc, _ := cli.GetCmdPool()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QueryPoolRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QueryPoolRequest]{
 		"basic test": {
 			Cmd:           "1",
 			ExpectedQuery: &types.QueryPoolRequest{PoolId: 1},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdSpotPrice(t *testing.T) {
 	desc, _ := cli.GetCmdSpotPrice()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QuerySpotPriceRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QuerySpotPriceRequest]{
 		"basic test": {
 			Cmd: "1 ufury ibc/111",
 			ExpectedQuery: &types.QuerySpotPriceRequest{
@@ -339,12 +339,12 @@ func TestGetCmdSpotPrice(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEstimateSwapExactAmountIn(t *testing.T) {
 	desc, _ := cli.GetCmdEstimateSwapExactAmountIn()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QuerySwapExactAmountInRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QuerySwapExactAmountInRequest]{
 		"basic test": {
 			Cmd: "1 osm11vmx8jtggpd9u7qr0t8vxclycz85u925sazglr7 10stake --swap-route-pool-ids=2 --swap-route-denoms=node0token",
 			ExpectedQuery: &types.QuerySwapExactAmountInRequest{
@@ -355,12 +355,12 @@ func TestGetCmdEstimateSwapExactAmountIn(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEstimateSwapExactAmountOut(t *testing.T) {
 	desc, _ := cli.GetCmdEstimateSwapExactAmountOut()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QuerySwapExactAmountOutRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QuerySwapExactAmountOutRequest]{
 		"basic test": {
 			Cmd: "1 osm11vmx8jtggpd9u7qr0t8vxclycz85u925sazglr7 10stake --swap-route-pool-ids=2 --swap-route-denoms=node0token",
 			ExpectedQuery: &types.QuerySwapExactAmountOutRequest{
@@ -371,5 +371,5 @@ func TestGetCmdEstimateSwapExactAmountOut(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }

@@ -22,14 +22,14 @@ import (
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdPool)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdSpotPrice)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdPool)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdPools)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdEstimateSwapExactAmountIn)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdEstimateSwapExactAmountOut)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetConcentratedPoolIdLinkFromCFMMRequest)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdPool)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdSpotPrice)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdPool)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdPools)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdEstimateSwapExactAmountIn)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdEstimateSwapExactAmountOut)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetConcentratedPoolIdLinkFromCFMMRequest)
 	cmd.AddCommand(
 		GetCmdNumPools(),
 		GetCmdPoolParams(),
@@ -49,8 +49,8 @@ var customRouterFlagOverride = map[string]string{
 
 // Deprecated: use x/poolmanager's Pool query.
 // nolint: staticcheck
-func GetCmdPool() (*percocli.QueryDescriptor, *types.QueryPoolRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdPool() (*osmocli.QueryDescriptor, *types.QueryPoolRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "pool [poolID]",
 		Short: "Query pool",
 		// Deprecated: use x/poolmanager's Pool query.
@@ -82,8 +82,8 @@ func writeOutputBoilerplate(ctx client.Context, out []byte) error {
 	return nil
 }
 
-func GetCmdPools() (*percocli.QueryDescriptor, *types.QueryPoolsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdPools() (*osmocli.QueryDescriptor, *types.QueryPoolsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "pools",
 		Short: "Query pools",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -93,7 +93,7 @@ func GetCmdPools() (*percocli.QueryDescriptor, *types.QueryPoolsRequest) {
 
 // nolint: staticcheck
 func GetCmdNumPools() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryNumPoolsRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryNumPoolsRequest](
 		"num-pools",
 		"Query number of pools",
 		"{{.Short}}",
@@ -162,7 +162,7 @@ $ %s query gamm pool-params 1
 }
 
 func GetCmdTotalShares() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryTotalSharesRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryTotalSharesRequest](
 		"total-share [poolID]",
 		"Query total-share",
 		`Query total-share.
@@ -174,7 +174,7 @@ Example:
 }
 
 func GetCmdQueryTotalLiquidity() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryTotalLiquidityRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryTotalLiquidityRequest](
 		"total-liquidity",
 		"Query total-liquidity",
 		`Query total-liquidity.
@@ -186,8 +186,8 @@ Example:
 }
 
 // Deprecated: use alternate in x/poolmanager.
-func GetCmdSpotPrice() (*percocli.QueryDescriptor, *types.QuerySpotPriceRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdSpotPrice() (*osmocli.QueryDescriptor, *types.QuerySpotPriceRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "spot-price <pool-ID> [quote-asset-denom] [base-asset-denom]",
 		Short: "Query spot-price (LEGACY, arguments are reversed!!)",
 		Long: `Query spot price (Legacy).{{.ExampleHeader}}
@@ -197,28 +197,28 @@ func GetCmdSpotPrice() (*percocli.QueryDescriptor, *types.QuerySpotPriceRequest)
 }
 
 // Deprecated: use alternate in x/poolmanager.
-func GetCmdEstimateSwapExactAmountIn() (*percocli.QueryDescriptor, *types.QuerySwapExactAmountInRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdEstimateSwapExactAmountIn() (*osmocli.QueryDescriptor, *types.QuerySwapExactAmountInRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "estimate-swap-exact-amount-in <poolID> <sender> <tokenIn>",
 		Short: "Query estimate-swap-exact-amount-in",
 		Long: `Query estimate-swap-exact-amount-in.{{.ExampleHeader}}
 {{.CommandPrefix}} estimate-swap-exact-amount-in 1 osm11vmx8jtggpd9u7qr0t8vxclycz85u925sazglr7 1000stake --swap-route-pool-ids=2 --swap-route-pool-ids=3`,
 		ParseQuery:          EstimateSwapExactAmountInParseArgs,
-		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 		QueryFnName:         "EstimateSwapExactAmountIn",
 		CustomFlagOverrides: customRouterFlagOverride,
 	}, &types.QuerySwapExactAmountInRequest{}
 }
 
 // Deprecated: use alternate in x/poolmanager.
-func GetCmdEstimateSwapExactAmountOut() (*percocli.QueryDescriptor, *types.QuerySwapExactAmountOutRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdEstimateSwapExactAmountOut() (*osmocli.QueryDescriptor, *types.QuerySwapExactAmountOutRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "estimate-swap-exact-amount-out <poolID> <sender> <tokenOut>",
 		Short: "Query estimate-swap-exact-amount-out",
 		Long: `Query estimate-swap-exact-amount-out.{{.ExampleHeader}}
 {{.CommandPrefix}} estimate-swap-exact-amount-out 1 osm11vmx8jtggpd9u7qr0t8vxclycz85u925sazglr7 1000stake --swap-route-pool-ids=2 --swap-route-pool-ids=3`,
 		ParseQuery:          EstimateSwapExactAmountOutParseArgs,
-		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 		QueryFnName:         "EstimateSwapExactAmountOut",
 		CustomFlagOverrides: customRouterFlagOverride,
 	}, &types.QuerySwapExactAmountOutRequest{}
@@ -315,7 +315,7 @@ $ %s query gamm pools-with-filter <min_liquidity> <pool_type>
 
 // GetCmdPoolType returns pool type given pool id.
 func GetCmdPoolType() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryPoolTypeRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryPoolTypeRequest](
 		"pool-type <pool_id>",
 		"Query pool type",
 		`Query pool type
@@ -327,8 +327,8 @@ Example:
 }
 
 // GetConcentratedPoolIdLinkFromCFMMRequest returns concentrated pool id that is linked to the given cfmm pool id.
-func GetConcentratedPoolIdLinkFromCFMMRequest() (*percocli.QueryDescriptor, *types.QueryConcentratedPoolIdLinkFromCFMMRequest) {
-	return &percocli.QueryDescriptor{
+func GetConcentratedPoolIdLinkFromCFMMRequest() (*osmocli.QueryDescriptor, *types.QueryConcentratedPoolIdLinkFromCFMMRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "cl-pool-link-from-cfmm [poolID]",
 		Short: "Query concentrated pool id link from cfmm pool id",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -340,7 +340,7 @@ func GetConcentratedPoolIdLinkFromCFMMRequest() (*percocli.QueryDescriptor, *typ
 // Deprecated: please use the alternative in x/poolmanager
 // nolint: staticcheck
 func GetCmdTotalPoolLiquidity() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryTotalPoolLiquidityRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryTotalPoolLiquidityRequest](
 		"total-pool-liquidity [poolID]",
 		"Query total-pool-liquidity",
 		`Query total-pool-liquidity.

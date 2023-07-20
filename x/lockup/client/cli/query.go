@@ -23,15 +23,15 @@ import (
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 
 	qcGetter := types.NewQueryClient
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdModuleBalance)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdModuleLockedAmount)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdAccountUnlockingCoins)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdAccountLockedPastTime)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdAccountLockedPastTimeNotUnlockingOnly)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdTotalLockedByDenom)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdModuleBalance)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdModuleLockedAmount)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdAccountUnlockingCoins)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdAccountLockedPastTime)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdAccountLockedPastTimeNotUnlockingOnly)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdTotalLockedByDenom)
 	cmd.AddCommand(
 		GetCmdAccountUnlockableCoins(),
 		GetCmdAccountLockedCoins(),
@@ -47,7 +47,7 @@ func GetQueryCmd() *cobra.Command {
 		GetCmdSyntheticLockupByLockupID(),
 		GetCmdAccountLockedDuration(),
 		GetCmdNextLockID(),
-		percocli.GetParams[*types.QueryParamsRequest](
+		osmocli.GetParams[*types.QueryParamsRequest](
 			types.ModuleName, types.NewQueryClient),
 	)
 
@@ -57,8 +57,8 @@ func GetQueryCmd() *cobra.Command {
 // GetCmdModuleBalance returns full balance of the lockup module.
 // Lockup module is where coins of locks are held.
 // This includes locked balance and unlocked balance of the module.
-func GetCmdModuleBalance() (*percocli.QueryDescriptor, *types.ModuleBalanceRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdModuleBalance() (*osmocli.QueryDescriptor, *types.ModuleBalanceRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "module-balance",
 		Short: "Query module balance",
 		Long:  `{{.Short}}`,
@@ -67,8 +67,8 @@ func GetCmdModuleBalance() (*percocli.QueryDescriptor, *types.ModuleBalanceReque
 
 // GetCmdModuleLockedAmount returns locked balance of the module,
 // which are all the tokens not unlocking + tokens that are not finished unlocking.
-func GetCmdModuleLockedAmount() (*percocli.QueryDescriptor, *types.ModuleLockedAmountRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdModuleLockedAmount() (*osmocli.QueryDescriptor, *types.ModuleLockedAmountRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "module-locked-amount",
 		Short: "Query locked amount",
 		Long:  `{{.Short}}`,
@@ -114,8 +114,8 @@ $ %s query lockup account-unlockable-coins <address>
 }
 
 // GetCmdAccountUnlockingCoins returns unlocking coins of a specific account.
-func GetCmdAccountUnlockingCoins() (*percocli.QueryDescriptor, *types.AccountUnlockingCoinsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdAccountUnlockingCoins() (*osmocli.QueryDescriptor, *types.AccountUnlockingCoinsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "account-unlocking-coins <address>",
 		Short: "Query account's unlocking coins",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -125,7 +125,7 @@ func GetCmdAccountUnlockingCoins() (*percocli.QueryDescriptor, *types.AccountUnl
 
 // GetCmdAccountLockedCoins returns locked coins that that are still in a locked state from the specified account.
 func GetCmdAccountLockedCoins() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountLockedCoinsRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountLockedCoinsRequest](
 		"account-locked-coins <address>",
 		"Query account's locked coins",
 		`{{.Short}}{{.ExampleHeader}}
@@ -134,8 +134,8 @@ func GetCmdAccountLockedCoins() *cobra.Command {
 }
 
 // GetCmdAccountLockedPastTime returns locks of an account with unlock time beyond timestamp.
-func GetCmdAccountLockedPastTime() (*percocli.QueryDescriptor, *types.AccountLockedPastTimeRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdAccountLockedPastTime() (*osmocli.QueryDescriptor, *types.AccountLockedPastTimeRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "account-locked-pastime <address> <timestamp>",
 		Short: "Query locked records of an account with unlock time beyond timestamp",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -146,8 +146,8 @@ func GetCmdAccountLockedPastTime() (*percocli.QueryDescriptor, *types.AccountLoc
 
 // GetCmdAccountLockedPastTimeNotUnlockingOnly returns locks of an account with unlock time beyond provided timestamp
 // amongst the locks that are in the unlocking queue.
-func GetCmdAccountLockedPastTimeNotUnlockingOnly() (*percocli.QueryDescriptor, *types.AccountLockedPastTimeNotUnlockingOnlyRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdAccountLockedPastTimeNotUnlockingOnly() (*osmocli.QueryDescriptor, *types.AccountLockedPastTimeNotUnlockingOnlyRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "account-locked-pastime-not-unlocking <address> <timestamp>",
 		Short: "Query locked records of an account with unlock time beyond timestamp within not unlocking queue.",
 		Long: `{{.Short}}
@@ -159,7 +159,7 @@ Timestamp is UNIX time in seconds.{{.ExampleHeader}}
 
 // GetCmdAccountUnlockedBeforeTime returns locks with unlock time before the provided timestamp.
 func GetCmdAccountUnlockedBeforeTime() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountUnlockedBeforeTimeRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountUnlockedBeforeTimeRequest](
 		"account-locked-beforetime <address> <timestamp>",
 		"Query account's unlocked records before specific time",
 		`{{.Short}}
@@ -171,7 +171,7 @@ Timestamp is UNIX time in seconds.{{.ExampleHeader}}
 // GetCmdAccountLockedPastTimeDenom returns locks of an account whose unlock time is
 // beyond given timestamp, and locks with the specified denom.
 func GetCmdAccountLockedPastTimeDenom() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountLockedPastTimeDenomRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountLockedPastTimeDenomRequest](
 		"account-locked-pastime-denom <address> <timestamp> <denom>",
 		"Query account's lock records by address, timestamp, denom",
 		`{{.Short}}
@@ -182,33 +182,33 @@ Timestamp is UNIX time in seconds.{{.ExampleHeader}}
 
 // GetCmdLockedByID returns lock by id.
 func GetCmdLockedByID() *cobra.Command {
-	q := percocli.QueryDescriptor{
+	q := osmocli.QueryDescriptor{
 		Use:   "lock-by-id <id>",
 		Short: "Query account's lock record by id",
 		Long: `{{.Short}}{{.ExampleHeader}}
 {{.CommandPrefix}} lock-by-id 1`,
 		QueryFnName: "LockedByID",
 	}
-	q.Long = percocli.FormatLongDesc(q.Long, percocli.NewLongMetadata(types.ModuleName).WithShort(q.Short))
-	return percocli.BuildQueryCli[*types.LockedRequest](&q, types.NewQueryClient)
+	q.Long = osmocli.FormatLongDesc(q.Long, osmocli.NewLongMetadata(types.ModuleName).WithShort(q.Short))
+	return osmocli.BuildQueryCli[*types.LockedRequest](&q, types.NewQueryClient)
 }
 
 // GetCmdLockRewardReceiver returns reward receiver for the given lock id
 func GetCmdLockRewardReceiver() *cobra.Command {
-	q := percocli.QueryDescriptor{
+	q := osmocli.QueryDescriptor{
 		Use:   "lock-reward-receiver <lock-id>",
 		Short: "Query lock's reward receiver",
 		Long: `{{.Short}}{{.ExampleHeader}}
 {{.CommandPrefix}} lock-reward-receiver 1`,
 		QueryFnName: "LockRewardReceiver",
 	}
-	q.Long = percocli.FormatLongDesc(q.Long, percocli.NewLongMetadata(types.ModuleName).WithShort(q.Short))
-	return percocli.BuildQueryCli[*types.LockRewardReceiverRequest](&q, types.NewQueryClient)
+	q.Long = osmocli.FormatLongDesc(q.Long, osmocli.NewLongMetadata(types.ModuleName).WithShort(q.Short))
+	return osmocli.BuildQueryCli[*types.LockRewardReceiverRequest](&q, types.NewQueryClient)
 }
 
 // GetCmdNextLockID returns next lock id to be created.
 func GetCmdNextLockID() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.NextLockIDRequest](
+	return osmocli.SimpleQueryCmd[*types.NextLockIDRequest](
 		"next-lock-id",
 		"Query next lock id to be created",
 		`{{.Short}}`, types.ModuleName, types.NewQueryClient)
@@ -217,7 +217,7 @@ func GetCmdNextLockID() *cobra.Command {
 // GetCmdSyntheticLockupsByLockupID returns synthetic lockups by lockup id.
 // nolint: staticcheck
 func GetCmdSyntheticLockupsByLockupID() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.SyntheticLockupsByLockupIDRequest](
+	return osmocli.SimpleQueryCmd[*types.SyntheticLockupsByLockupIDRequest](
 		"synthetic-lockups-by-lock-id <id>",
 		"Query synthetic lockups by lockup id (is deprecated for synthetic-lockup-by-lock-id)",
 		`{{.Short}}`, types.ModuleName, types.NewQueryClient)
@@ -225,7 +225,7 @@ func GetCmdSyntheticLockupsByLockupID() *cobra.Command {
 
 // GetCmdSyntheticLockupByLockupID returns synthetic lockup by lockup id.
 func GetCmdSyntheticLockupByLockupID() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.SyntheticLockupByLockupIDRequest](
+	return osmocli.SimpleQueryCmd[*types.SyntheticLockupByLockupIDRequest](
 		"synthetic-lockup-by-lock-id <id>",
 		"Query synthetic lock by underlying lockup id",
 		`{{.Short}}`, types.ModuleName, types.NewQueryClient)
@@ -233,7 +233,7 @@ func GetCmdSyntheticLockupByLockupID() *cobra.Command {
 
 // GetCmdAccountLockedLongerDuration returns account locked records with longer duration.
 func GetCmdAccountLockedLongerDuration() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountLockedLongerDurationRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountLockedLongerDurationRequest](
 		"account-locked-longer-duration <address> <duration>",
 		"Query account locked records with longer duration",
 		`{{.Short}}`, types.ModuleName, types.NewQueryClient)
@@ -241,7 +241,7 @@ func GetCmdAccountLockedLongerDuration() *cobra.Command {
 
 // GetCmdAccountLockedLongerDuration returns account locked records with longer duration.
 func GetCmdAccountLockedDuration() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountLockedDurationRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountLockedDurationRequest](
 		"account-locked-duration <address> <duration>",
 		"Query account locked records with a specific duration",
 		`{{.Short}}{{.ExampleHeader}}
@@ -250,7 +250,7 @@ func GetCmdAccountLockedDuration() *cobra.Command {
 
 // GetCmdAccountLockedLongerDurationNotUnlockingOnly returns account locked records with longer duration from unlocking only queue.
 func GetCmdAccountLockedLongerDurationNotUnlockingOnly() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountLockedLongerDurationNotUnlockingOnlyRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountLockedLongerDurationNotUnlockingOnlyRequest](
 		"account-locked-longer-duration-not-unlocking <address> <duration>",
 		"Query account locked records with longer duration from unlocking only queue",
 		`{{.Short}}`, types.ModuleName, types.NewQueryClient)
@@ -259,22 +259,22 @@ func GetCmdAccountLockedLongerDurationNotUnlockingOnly() *cobra.Command {
 // GetCmdAccountLockedLongerDurationDenom returns account's locks for a specific denom
 // with longer duration than the given duration.
 func GetCmdAccountLockedLongerDurationDenom() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.AccountLockedLongerDurationDenomRequest](
+	return osmocli.SimpleQueryCmd[*types.AccountLockedLongerDurationDenomRequest](
 		"account-locked-longer-duration-denom <address> <duration> <denom>",
 		"Query locked records for a denom with longer duration",
 		`{{.Short}}`, types.ModuleName, types.NewQueryClient)
 }
 
-func GetCmdTotalLockedByDenom() (*percocli.QueryDescriptor, *types.LockedDenomRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdTotalLockedByDenom() (*osmocli.QueryDescriptor, *types.LockedDenomRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "total-locked-of-denom <denom>",
 		Short: "Query locked amount for a specific denom bigger then duration provided",
-		Long: percocli.FormatLongDescDirect(`{{.Short}}{{.ExampleHeader}}
+		Long: osmocli.FormatLongDescDirect(`{{.Short}}{{.ExampleHeader}}
 {{.CommandPrefix}} total-locked-of-denom ufury --min-duration=0s`, types.ModuleName),
 		CustomFlagOverrides: map[string]string{
 			"duration": FlagMinDuration,
 		},
-		Flags: percocli.FlagDesc{OptionalFlags: []*pflag.FlagSet{FlagSetMinDuration()}},
+		Flags: osmocli.FlagDesc{OptionalFlags: []*pflag.FlagSet{FlagSetMinDuration()}},
 	}, &types.LockedDenomRequest{}
 }
 

@@ -12,7 +12,7 @@ import (
 
 func TestGetCmdGauges(t *testing.T) {
 	desc, _ := GetCmdGauges()
-	tcs := map[string]percocli.QueryCliTestCase[*types.GaugesRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.GaugesRequest]{
 		"basic test": {
 			Cmd: "--offset=2",
 			ExpectedQuery: &types.GaugesRequest{
@@ -20,32 +20,32 @@ func TestGetCmdGauges(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdToDistributeCoins(t *testing.T) {
 	desc, _ := GetCmdToDistributeCoins()
-	tcs := map[string]percocli.QueryCliTestCase[*types.ModuleToDistributeCoinsRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.ModuleToDistributeCoinsRequest]{
 		"basic test": {
 			Cmd: "", ExpectedQuery: &types.ModuleToDistributeCoinsRequest{},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdGaugeByID(t *testing.T) {
 	desc, _ := GetCmdGaugeByID()
-	tcs := map[string]percocli.QueryCliTestCase[*types.GaugeByIDRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.GaugeByIDRequest]{
 		"basic test": {
 			Cmd: "1", ExpectedQuery: &types.GaugeByIDRequest{Id: 1},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdActiveGauges(t *testing.T) {
 	desc, _ := GetCmdActiveGauges()
-	tcs := map[string]percocli.QueryCliTestCase[*types.ActiveGaugesRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.ActiveGaugesRequest]{
 		"basic test": {
 			Cmd: "--offset=2",
 			ExpectedQuery: &types.ActiveGaugesRequest{
@@ -53,12 +53,12 @@ func TestGetCmdActiveGauges(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdActiveGaugesPerDenom(t *testing.T) {
 	desc, _ := GetCmdActiveGaugesPerDenom()
-	tcs := map[string]percocli.QueryCliTestCase[*types.ActiveGaugesPerDenomRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.ActiveGaugesPerDenomRequest]{
 		"basic test": {
 			Cmd: "ufury --offset=2",
 			ExpectedQuery: &types.ActiveGaugesPerDenomRequest{
@@ -67,12 +67,12 @@ func TestGetCmdActiveGaugesPerDenom(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdUpcomingGauges(t *testing.T) {
 	desc, _ := GetCmdUpcomingGauges()
-	tcs := map[string]percocli.QueryCliTestCase[*types.UpcomingGaugesRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.UpcomingGaugesRequest]{
 		"basic test": {
 			Cmd: "--offset=2",
 			ExpectedQuery: &types.UpcomingGaugesRequest{
@@ -80,12 +80,12 @@ func TestGetCmdUpcomingGauges(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdUpcomingGaugesPerDenom(t *testing.T) {
 	desc, _ := GetCmdUpcomingGaugesPerDenom()
-	tcs := map[string]percocli.QueryCliTestCase[*types.UpcomingGaugesPerDenomRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.UpcomingGaugesPerDenomRequest]{
 		"basic test": {
 			Cmd: "ufury --offset=2",
 			ExpectedQuery: &types.UpcomingGaugesPerDenomRequest{
@@ -94,5 +94,5 @@ func TestGetCmdUpcomingGaugesPerDenom(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }

@@ -23,10 +23,10 @@ import (
 
 // NewCmdTx returns the cli transaction commands for this module
 func NewCmdTx() *cobra.Command {
-	txCmd := percocli.TxIndexCmd(types.ModuleName)
-	percocli.AddTxCmd(txCmd, CmdSetDeveloperAccount)
-	percocli.AddTxCmd(txCmd, CmdSetMaxPoolPointsPerTx)
-	percocli.AddTxCmd(txCmd, CmdSetMaxPoolPointsPerBlock)
+	txCmd := osmocli.TxIndexCmd(types.ModuleName)
+	osmocli.AddTxCmd(txCmd, CmdSetDeveloperAccount)
+	osmocli.AddTxCmd(txCmd, CmdSetMaxPoolPointsPerTx)
+	osmocli.AddTxCmd(txCmd, CmdSetMaxPoolPointsPerBlock)
 	txCmd.AddCommand(
 		CmdSetDeveloperHotRoutes().BuildCommandCustomFn(),
 		CmdSetPoolWeights().BuildCommandCustomFn(),
@@ -38,8 +38,8 @@ func NewCmdTx() *cobra.Command {
 }
 
 // CmdSetDeveloperHotRoutes implements the command to set the protorev hot routes
-func CmdSetDeveloperHotRoutes() *percocli.TxCliDesc {
-	desc := percocli.TxCliDesc{
+func CmdSetDeveloperHotRoutes() *osmocli.TxCliDesc {
+	desc := osmocli.TxCliDesc{
 		Use:   "set-hot-routes [path/to/routes.json]",
 		Short: "set the protorev hot routes",
 		Long: `Must provide a json file with all of the hot routes that will be set. 
@@ -82,8 +82,8 @@ func CmdSetDeveloperHotRoutes() *percocli.TxCliDesc {
 }
 
 // CmdSetDeveloperAccount implements the command to set the protorev developer account
-func CmdSetDeveloperAccount() (*percocli.TxCliDesc, *types.MsgSetDeveloperAccount) {
-	return &percocli.TxCliDesc{
+func CmdSetDeveloperAccount() (*osmocli.TxCliDesc, *types.MsgSetDeveloperAccount) {
+	return &osmocli.TxCliDesc{
 		Use:     "set-developer-account [sdk.AccAddress]",
 		Short:   "set the protorev developer account",
 		NumArgs: 1,
@@ -102,8 +102,8 @@ func CmdSetDeveloperAccount() (*percocli.TxCliDesc, *types.MsgSetDeveloperAccoun
 }
 
 // CmdSetMaxPoolPointsPerTx implements the command to set the max pool points per tx
-func CmdSetMaxPoolPointsPerTx() (*percocli.TxCliDesc, *types.MsgSetMaxPoolPointsPerTx) {
-	return &percocli.TxCliDesc{
+func CmdSetMaxPoolPointsPerTx() (*osmocli.TxCliDesc, *types.MsgSetMaxPoolPointsPerTx) {
+	return &osmocli.TxCliDesc{
 		Use:     "set-max-pool-points-per-tx [uint64]",
 		Short:   "set the max pool points that can be consumed per tx",
 		NumArgs: 1,
@@ -122,8 +122,8 @@ func CmdSetMaxPoolPointsPerTx() (*percocli.TxCliDesc, *types.MsgSetMaxPoolPoints
 }
 
 // CmdSetMaxPoolPointsPerBlock implements the command to set the max pool points per block
-func CmdSetMaxPoolPointsPerBlock() (*percocli.TxCliDesc, *types.MsgSetMaxPoolPointsPerBlock) {
-	return &percocli.TxCliDesc{
+func CmdSetMaxPoolPointsPerBlock() (*osmocli.TxCliDesc, *types.MsgSetMaxPoolPointsPerBlock) {
+	return &osmocli.TxCliDesc{
 		Use:     "set-max-pool-points-per-block [uint64]",
 		Short:   "set the max pool points that can be consumed per block",
 		NumArgs: 1,
@@ -142,8 +142,8 @@ func CmdSetMaxPoolPointsPerBlock() (*percocli.TxCliDesc, *types.MsgSetMaxPoolPoi
 }
 
 // CmdSetPoolWeights implements the command to set the pool weights used to estimate execution costs
-func CmdSetPoolWeights() *percocli.TxCliDesc {
-	desc := percocli.TxCliDesc{
+func CmdSetPoolWeights() *osmocli.TxCliDesc {
+	desc := osmocli.TxCliDesc{
 		Use:   "set-pool-weights [path/to/routes.json]",
 		Short: "set the protorev pool weights",
 		Long: `Must provide a json file with all the pool weights that will be set. 
@@ -163,8 +163,8 @@ func CmdSetPoolWeights() *percocli.TxCliDesc {
 }
 
 // CmdSetBaseDenoms implements the command to set the base denoms used in the highest liquidity method
-func CmdSetBaseDenoms() *percocli.TxCliDesc {
-	desc := percocli.TxCliDesc{
+func CmdSetBaseDenoms() *osmocli.TxCliDesc {
+	desc := osmocli.TxCliDesc{
 		Use:   "set-base-denoms [path/to/denoms.json]",
 		Short: "set the protorev base denoms",
 		Long: `Must provide a json file with all the base denoms that will be set. 

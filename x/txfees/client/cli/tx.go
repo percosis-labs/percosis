@@ -21,7 +21,7 @@ import (
 const FlagFeeTokens = "fee-tokens"
 
 func NewTxCmd() *cobra.Command {
-	txCmd := percocli.TxIndexCmd(types.ModuleName)
+	txCmd := osmocli.TxIndexCmd(types.ModuleName)
 	return txCmd
 }
 

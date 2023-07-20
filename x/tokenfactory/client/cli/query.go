@@ -17,21 +17,21 @@ import (
 
 // GetQueryCmd returns the cli query commands for this module
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdDenomAuthorityMetadata)
-	percocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdDenomsFromCreator)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdDenomAuthorityMetadata)
+	osmocli.AddQueryCmd(cmd, types.NewQueryClient, GetCmdDenomsFromCreator)
 
 	cmd.AddCommand(
-		percocli.GetParams[*types.QueryParamsRequest](
+		osmocli.GetParams[*types.QueryParamsRequest](
 			types.ModuleName, types.NewQueryClient),
 	)
 
 	return cmd
 }
 
-func GetCmdDenomAuthorityMetadata() (*percocli.QueryDescriptor, *types.QueryDenomAuthorityMetadataRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdDenomAuthorityMetadata() (*osmocli.QueryDescriptor, *types.QueryDenomAuthorityMetadataRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "denom-authority-metadata [denom] [flags]",
 		Short: "Get the authority metadata for a specific denom",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -39,8 +39,8 @@ func GetCmdDenomAuthorityMetadata() (*percocli.QueryDescriptor, *types.QueryDeno
 	}, &types.QueryDenomAuthorityMetadataRequest{}
 }
 
-func GetCmdDenomsFromCreator() (*percocli.QueryDescriptor, *types.QueryDenomsFromCreatorRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdDenomsFromCreator() (*osmocli.QueryDescriptor, *types.QueryDenomsFromCreatorRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "denoms-from-creator [creator address] [flags]",
 		Short: "Returns a list of all tokens created by a specific creator address",
 		Long: `{{.Short}}{{.ExampleHeader}}

@@ -10,7 +10,7 @@ import (
 
 func TestGetCmdCurrentEpoch(t *testing.T) {
 	desc, _ := cli.GetCmdCurrentEpoch()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QueryCurrentEpochRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QueryCurrentEpochRequest]{
 		"basic test": {
 			Cmd: "day",
 			ExpectedQuery: &types.QueryCurrentEpochRequest{
@@ -18,16 +18,16 @@ func TestGetCmdCurrentEpoch(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }
 
 func TestGetCmdEpochsInfo(t *testing.T) {
 	desc, _ := cli.GetCmdEpochInfos()
-	tcs := map[string]percocli.QueryCliTestCase[*types.QueryEpochsInfoRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*types.QueryEpochsInfoRequest]{
 		"basic test": {
 			Cmd:           "",
 			ExpectedQuery: &types.QueryEpochsInfoRequest{},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }

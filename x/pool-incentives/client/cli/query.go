@@ -9,12 +9,12 @@ import (
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 
 	cmd.AddCommand(
 		GetCmdGaugeIds(),
 		GetCmdDistrInfo(),
-		percocli.GetParams[*types.QueryParamsRequest](
+		osmocli.GetParams[*types.QueryParamsRequest](
 			types.ModuleName, types.NewQueryClient),
 		GetCmdLockableDurations(),
 		GetCmdIncentivizedPools(),
@@ -26,7 +26,7 @@ func GetQueryCmd() *cobra.Command {
 
 // GetCmdGaugeIds takes the pool id and returns the matching gauge ids and durations.
 func GetCmdGaugeIds() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryGaugeIdsRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryGaugeIdsRequest](
 		"gauge-ids [pool-id]",
 		"Query the matching gauge ids and durations by pool id",
 		`{{.Short}}{{.ExampleHeader}}
@@ -36,7 +36,7 @@ func GetCmdGaugeIds() *cobra.Command {
 
 // GetCmdDistrInfo takes the pool id and returns the matching gauge ids and weights.
 func GetCmdDistrInfo() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryDistrInfoRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryDistrInfoRequest](
 		"distr-info",
 		"Query distribution info",
 		`{{.Short}}{{.ExampleHeader}}
@@ -46,7 +46,7 @@ func GetCmdDistrInfo() *cobra.Command {
 
 // GetCmdLockableDurations returns lockable durations.
 func GetCmdLockableDurations() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryLockableDurationsRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryLockableDurationsRequest](
 		"lockable-durations",
 		"Query lockable durations",
 		`Query distribution info.
@@ -57,7 +57,7 @@ Example:
 }
 
 func GetCmdIncentivizedPools() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryIncentivizedPoolsRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryIncentivizedPoolsRequest](
 		"incentivized-pools",
 		"Query incentivized pools",
 		`Query incentivized pools.
@@ -68,7 +68,7 @@ Example:
 }
 
 func GetCmdExternalIncentiveGauges() *cobra.Command {
-	return percocli.SimpleQueryCmd[*types.QueryExternalIncentiveGaugesRequest](
+	return osmocli.SimpleQueryCmd[*types.QueryExternalIncentiveGaugesRequest](
 		"external-incentivized-gauges",
 		"Query external incentivized gauges",
 		`{{.Short}}{{.ExampleHeader}}

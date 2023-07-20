@@ -23,13 +23,13 @@ import (
 )
 
 func NewTxCmd() *cobra.Command {
-	txCmd := percocli.TxIndexCmd(types.ModuleName)
-	percocli.AddTxCmd(txCmd, NewCreateCWPoolCmd)
+	txCmd := osmocli.TxIndexCmd(types.ModuleName)
+	osmocli.AddTxCmd(txCmd, NewCreateCWPoolCmd)
 	return txCmd
 }
 
-func NewCreateCWPoolCmd() (*percocli.TxCliDesc, *model.MsgCreateCosmWasmPool) {
-	return &percocli.TxCliDesc{
+func NewCreateCWPoolCmd() (*osmocli.TxCliDesc, *model.MsgCreateCosmWasmPool) {
+	return &osmocli.TxCliDesc{
 		Use:              "create-pool [code-id] [instantiate-msg] [sender]",
 		Short:            "create a cosmwasm pool",
 		Example:          "percosisd tx cosmwasmpool create-pool 1 uion,ufury --from lo-test1 --keyring-backend test --chain-id localpercosis --fees 875ufury -b=block",

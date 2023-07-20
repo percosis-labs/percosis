@@ -11,38 +11,38 @@ import (
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdPools)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetUserPositions)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPositionById)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableSpreadRewards)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableIncentives)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetIncentiveRecords)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCFMMPoolIdLinkFromConcentratedPoolId)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickLiquidityNetInDirection)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPoolAccumulatorRewards)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickAccumulatorTrackers)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdPools)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetUserPositions)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPositionById)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableSpreadRewards)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetClaimableIncentives)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetIncentiveRecords)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCFMMPoolIdLinkFromConcentratedPoolId)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickLiquidityNetInDirection)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetPoolAccumulatorRewards)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetTickAccumulatorTrackers)
 	cmd.AddCommand(
-		percocli.GetParams[*queryproto.ParamsRequest](
+		osmocli.GetParams[*queryproto.ParamsRequest](
 			types.ModuleName, queryproto.NewQueryClient),
 	)
 	return cmd
 }
 
-func GetUserPositions() (*percocli.QueryDescriptor, *queryproto.UserPositionsRequest) {
-	return &percocli.QueryDescriptor{
+func GetUserPositions() (*osmocli.QueryDescriptor, *queryproto.UserPositionsRequest) {
+	return &osmocli.QueryDescriptor{
 			Use:   "user-positions [address]",
 			Short: "Query user's positions",
 			Long: `{{.Short}}{{.ExampleHeader}}
 {{.CommandPrefix}} user-positions perco12smx2wdlyttvyzvzg54y2vnqwq2qjateuf7thj`,
-			Flags:               percocli.FlagDesc{OptionalFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
+			Flags:               osmocli.FlagDesc{OptionalFlags: []*flag.FlagSet{FlagSetJustPoolId()}},
 			CustomFlagOverrides: poolIdFlagOverride,
 		},
 		&queryproto.UserPositionsRequest{}
 }
 
-func GetPositionById() (*percocli.QueryDescriptor, *queryproto.PositionByIdRequest) {
-	return &percocli.QueryDescriptor{
+func GetPositionById() (*osmocli.QueryDescriptor, *queryproto.PositionByIdRequest) {
+	return &osmocli.QueryDescriptor{
 			Use:   "position-by-id [positionID]",
 			Short: "Query position by ID",
 			Long: `{{.Short}}{{.ExampleHeader}}
@@ -51,8 +51,8 @@ func GetPositionById() (*percocli.QueryDescriptor, *queryproto.PositionByIdReque
 		&queryproto.PositionByIdRequest{}
 }
 
-func GetCmdPools() (*percocli.QueryDescriptor, *queryproto.PoolsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdPools() (*osmocli.QueryDescriptor, *queryproto.PoolsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "pools",
 		Short: "Query pools",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -60,8 +60,8 @@ func GetCmdPools() (*percocli.QueryDescriptor, *queryproto.PoolsRequest) {
 	}, &queryproto.PoolsRequest{}
 }
 
-func GetClaimableSpreadRewards() (*percocli.QueryDescriptor, *queryproto.ClaimableSpreadRewardsRequest) {
-	return &percocli.QueryDescriptor{
+func GetClaimableSpreadRewards() (*osmocli.QueryDescriptor, *queryproto.ClaimableSpreadRewardsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "claimable-spread-rewards [positionID]",
 		Short: "Query claimable spread rewards",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -69,8 +69,8 @@ func GetClaimableSpreadRewards() (*percocli.QueryDescriptor, *queryproto.Claimab
 	}, &queryproto.ClaimableSpreadRewardsRequest{}
 }
 
-func GetClaimableIncentives() (*percocli.QueryDescriptor, *queryproto.ClaimableIncentivesRequest) {
-	return &percocli.QueryDescriptor{
+func GetClaimableIncentives() (*osmocli.QueryDescriptor, *queryproto.ClaimableIncentivesRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "claimable-incentives [positionID]",
 		Short: "Query claimable incentives",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -78,8 +78,8 @@ func GetClaimableIncentives() (*percocli.QueryDescriptor, *queryproto.ClaimableI
 	}, &queryproto.ClaimableIncentivesRequest{}
 }
 
-func GetIncentiveRecords() (*percocli.QueryDescriptor, *queryproto.IncentiveRecordsRequest) {
-	return &percocli.QueryDescriptor{
+func GetIncentiveRecords() (*osmocli.QueryDescriptor, *queryproto.IncentiveRecordsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "incentive-records [poolId]",
 		Short: "Query incentive records for a given pool",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -87,8 +87,8 @@ func GetIncentiveRecords() (*percocli.QueryDescriptor, *queryproto.IncentiveReco
 	}, &queryproto.IncentiveRecordsRequest{}
 }
 
-func GetCFMMPoolIdLinkFromConcentratedPoolId() (*percocli.QueryDescriptor, *queryproto.CFMMPoolIdLinkFromConcentratedPoolIdRequest) {
-	return &percocli.QueryDescriptor{
+func GetCFMMPoolIdLinkFromConcentratedPoolId() (*osmocli.QueryDescriptor, *queryproto.CFMMPoolIdLinkFromConcentratedPoolIdRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "cfmm-pool-link-from-cl [poolId]",
 		Short: "Query cfmm pool id link from concentrated pool id",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -96,8 +96,8 @@ func GetCFMMPoolIdLinkFromConcentratedPoolId() (*percocli.QueryDescriptor, *quer
 	}, &queryproto.CFMMPoolIdLinkFromConcentratedPoolIdRequest{}
 }
 
-func GetTotalLiquidity() (*percocli.QueryDescriptor, *queryproto.GetTotalLiquidityRequest) {
-	return &percocli.QueryDescriptor{
+func GetTotalLiquidity() (*osmocli.QueryDescriptor, *queryproto.GetTotalLiquidityRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "total-liquidity",
 		Short: "Query total liquidity across all concentrated pool",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -105,8 +105,8 @@ func GetTotalLiquidity() (*percocli.QueryDescriptor, *queryproto.GetTotalLiquidi
 	}, &queryproto.GetTotalLiquidityRequest{}
 }
 
-func GetTickLiquidityNetInDirection() (*percocli.QueryDescriptor, *queryproto.LiquidityNetInDirectionRequest) {
-	return &percocli.QueryDescriptor{
+func GetTickLiquidityNetInDirection() (*osmocli.QueryDescriptor, *queryproto.LiquidityNetInDirectionRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "liquidity-net-in-direction [pool-id] [token-in-denom] [start-tick] [use-current-tick] [bound-tick] [use-no-bound]",
 		Short: "Query liquidity net in direction",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -114,8 +114,8 @@ func GetTickLiquidityNetInDirection() (*percocli.QueryDescriptor, *queryproto.Li
 	}, &queryproto.LiquidityNetInDirectionRequest{}
 }
 
-func GetPoolAccumulatorRewards() (*percocli.QueryDescriptor, *queryproto.PoolAccumulatorRewardsRequest) {
-	return &percocli.QueryDescriptor{
+func GetPoolAccumulatorRewards() (*osmocli.QueryDescriptor, *queryproto.PoolAccumulatorRewardsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "pool-accumulator-rewards [pool-id]",
 		Short: "Query pool accumulator rewards",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -123,8 +123,8 @@ func GetPoolAccumulatorRewards() (*percocli.QueryDescriptor, *queryproto.PoolAcc
 	}, &queryproto.PoolAccumulatorRewardsRequest{}
 }
 
-func GetTickAccumulatorTrackers() (*percocli.QueryDescriptor, *queryproto.TickAccumulatorTrackersRequest) {
-	return &percocli.QueryDescriptor{
+func GetTickAccumulatorTrackers() (*osmocli.QueryDescriptor, *queryproto.TickAccumulatorTrackersRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "tick-accumulator-trackers [pool-id] [tick-index]",
 		Short: "Query tick accumulator trackers",
 		Long: `{{.Short}}{{.ExampleHeader}}

@@ -21,14 +21,14 @@ import (
 )
 
 func NewTxCmd() *cobra.Command {
-	txCmd := percocli.TxIndexCmd(types.ModuleName)
-	percocli.AddTxCmd(txCmd, NewCreatePositionCmd)
-	percocli.AddTxCmd(txCmd, NewAddToPositionCmd)
-	percocli.AddTxCmd(txCmd, NewWithdrawPositionCmd)
-	percocli.AddTxCmd(txCmd, NewCreateConcentratedPoolCmd)
-	percocli.AddTxCmd(txCmd, NewCollectSpreadRewardsCmd)
-	percocli.AddTxCmd(txCmd, NewCollectIncentivesCmd)
-	percocli.AddTxCmd(txCmd, NewFungifyChargedPositionsCmd)
+	txCmd := osmocli.TxIndexCmd(types.ModuleName)
+	osmocli.AddTxCmd(txCmd, NewCreatePositionCmd)
+	osmocli.AddTxCmd(txCmd, NewAddToPositionCmd)
+	osmocli.AddTxCmd(txCmd, NewWithdrawPositionCmd)
+	osmocli.AddTxCmd(txCmd, NewCreateConcentratedPoolCmd)
+	osmocli.AddTxCmd(txCmd, NewCollectSpreadRewardsCmd)
+	osmocli.AddTxCmd(txCmd, NewCollectIncentivesCmd)
+	osmocli.AddTxCmd(txCmd, NewFungifyChargedPositionsCmd)
 	return txCmd
 }
 
@@ -36,8 +36,8 @@ var poolIdFlagOverride = map[string]string{
 	"poolid": FlagPoolId,
 }
 
-func NewCreateConcentratedPoolCmd() (*percocli.TxCliDesc, *clmodel.MsgCreateConcentratedPool) {
-	return &percocli.TxCliDesc{
+func NewCreateConcentratedPoolCmd() (*osmocli.TxCliDesc, *clmodel.MsgCreateConcentratedPool) {
+	return &osmocli.TxCliDesc{
 		Use:     "create-pool [denom-0] [denom-1] [tick-spacing] [spread-factor]",
 		Short:   "create a concentrated liquidity pool with the given denom pair, tick spacing, and spread factor",
 		Long:    "denom-1 (the quote denom), tick spacing, and spread factors must all be authorized by the concentrated liquidity module",
@@ -45,48 +45,48 @@ func NewCreateConcentratedPoolCmd() (*percocli.TxCliDesc, *clmodel.MsgCreateConc
 	}, &clmodel.MsgCreateConcentratedPool{}
 }
 
-func NewCreatePositionCmd() (*percocli.TxCliDesc, *types.MsgCreatePosition) {
-	return &percocli.TxCliDesc{
+func NewCreatePositionCmd() (*osmocli.TxCliDesc, *types.MsgCreatePosition) {
+	return &osmocli.TxCliDesc{
 		Use:     "create-position [pool-id] [lower-tick] [upper-tick] [tokensProvided] [token-0-min-amount] [token-1-min-amount]",
 		Short:   "create or add to existing concentrated liquidity position",
 		Example: "percosisd tx concentratedliquidity create-position 1 \"[-69082]\" 69082 10000ufury,10000uion 0 0 --from val --chain-id percosis-1 -b block --keyring-backend test --fees 1000ufury",
 	}, &types.MsgCreatePosition{}
 }
 
-func NewAddToPositionCmd() (*percocli.TxCliDesc, *types.MsgAddToPosition) {
-	return &percocli.TxCliDesc{
+func NewAddToPositionCmd() (*osmocli.TxCliDesc, *types.MsgAddToPosition) {
+	return &osmocli.TxCliDesc{
 		Use:     "add-to-position [position-id] [token-0] [token-1]",
 		Short:   "add to an existing concentrated liquidity position",
 		Example: "percosisd tx concentratedliquidity add-to-position 10 1000000000ufury 10000000uion --from val --chain-id localpercosis -b block --keyring-backend test --fees 1000000ufury",
 	}, &types.MsgAddToPosition{}
 }
 
-func NewWithdrawPositionCmd() (*percocli.TxCliDesc, *types.MsgWithdrawPosition) {
-	return &percocli.TxCliDesc{
+func NewWithdrawPositionCmd() (*osmocli.TxCliDesc, *types.MsgWithdrawPosition) {
+	return &osmocli.TxCliDesc{
 		Use:     "withdraw-position [position-id] [liquidity]",
 		Short:   "withdraw from an existing concentrated liquidity position",
 		Example: "percosisd tx concentratedliquidity withdraw-position 1 1000 --from val --chain-id localpercosis --keyring-backend=test --fees=1000ufury",
 	}, &types.MsgWithdrawPosition{}
 }
 
-func NewCollectSpreadRewardsCmd() (*percocli.TxCliDesc, *types.MsgCollectSpreadRewards) {
-	return &percocli.TxCliDesc{
+func NewCollectSpreadRewardsCmd() (*osmocli.TxCliDesc, *types.MsgCollectSpreadRewards) {
+	return &osmocli.TxCliDesc{
 		Use:     "collect-spread-rewards [position-ids]",
 		Short:   "collect spread rewards from liquidity position(s)",
 		Example: "percosisd tx concentratedliquidity collect-spread-rewards 998 --from val --chain-id localpercosis -b block --keyring-backend test --fees 1000000ufury",
 	}, &types.MsgCollectSpreadRewards{}
 }
 
-func NewCollectIncentivesCmd() (*percocli.TxCliDesc, *types.MsgCollectIncentives) {
-	return &percocli.TxCliDesc{
+func NewCollectIncentivesCmd() (*osmocli.TxCliDesc, *types.MsgCollectIncentives) {
+	return &osmocli.TxCliDesc{
 		Use:     "collect-incentives [position-ids]",
 		Short:   "collect incentives from liquidity position(s)",
 		Example: "percosisd tx concentratedliquidity collect-incentives 1 --from val --chain-id localpercosis -b block --keyring-backend test --fees 10000ufury",
 	}, &types.MsgCollectIncentives{}
 }
 
-func NewFungifyChargedPositionsCmd() (*percocli.TxCliDesc, *types.MsgFungifyChargedPositions) {
-	return &percocli.TxCliDesc{
+func NewFungifyChargedPositionsCmd() (*osmocli.TxCliDesc, *types.MsgFungifyChargedPositions) {
+	return &osmocli.TxCliDesc{
 		Use:     "fungify-positions [position-ids]",
 		Short:   "Combine fully charged positions within the same range into a new single fully charged position",
 		Example: "percosisd tx concentratedliquidity fungify-positions 1,2 --from val --keyring-backend test -b=block --chain-id=localpercosis --gas=1000000 --fees 20000ufury",

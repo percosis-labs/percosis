@@ -18,52 +18,52 @@ var customRouterFlagOverride = map[string]string{
 
 // GetQueryCmd returns the cli query commands for this module.
 func GetQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdNumPools)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSwapExactAmountIn)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSwapExactAmountOut)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSinglePoolSwapExactAmountIn)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSinglePoolSwapExactAmountOut)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdSpotPrice)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdTotalPoolLiquidity)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdAllPools)
-	percocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdPool)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdNumPools)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSwapExactAmountIn)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSwapExactAmountOut)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSinglePoolSwapExactAmountIn)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdEstimateSinglePoolSwapExactAmountOut)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdSpotPrice)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdTotalPoolLiquidity)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdAllPools)
+	osmocli.AddQueryCmd(cmd, queryproto.NewQueryClient, GetCmdPool)
 
 	return cmd
 }
 
 // GetCmdEstimateSwapExactAmountIn returns estimation of output coin when amount of x token input.
-func GetCmdEstimateSwapExactAmountIn() (*percocli.QueryDescriptor, *queryproto.EstimateSwapExactAmountInRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdEstimateSwapExactAmountIn() (*osmocli.QueryDescriptor, *queryproto.EstimateSwapExactAmountInRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "estimate-swap-exact-amount-in <poolID> <tokenIn>",
 		Short: "Query estimate-swap-exact-amount-in",
 		Long: `Query estimate-swap-exact-amount-in.{{.ExampleHeader}}
 {{.CommandPrefix}} estimate-swap-exact-amount-in 1  1000stake --swap-route-pool-ids=2 --swap-route-pool-ids=3`,
 		ParseQuery:          EstimateSwapExactAmountInParseArgs,
-		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 		QueryFnName:         "EstimateSwapExactAmountIn",
 		CustomFlagOverrides: customRouterFlagOverride,
 	}, &queryproto.EstimateSwapExactAmountInRequest{}
 }
 
 // GetCmdEstimateSwapExactAmountOut returns estimation of input coin to get exact amount of x token output.
-func GetCmdEstimateSwapExactAmountOut() (*percocli.QueryDescriptor, *queryproto.EstimateSwapExactAmountOutRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdEstimateSwapExactAmountOut() (*osmocli.QueryDescriptor, *queryproto.EstimateSwapExactAmountOutRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "estimate-swap-exact-amount-out <poolID> <tokenOut>",
 		Short: "Query estimate-swap-exact-amount-out",
 		Long: `Query estimate-swap-exact-amount-out.{{.ExampleHeader}}
 {{.CommandPrefix}} estimate-swap-exact-amount-out 1 1000stake --swap-route-pool-ids=2 --swap-route-pool-ids=3`,
 		ParseQuery:          EstimateSwapExactAmountOutParseArgs,
-		Flags:               percocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
+		Flags:               osmocli.FlagDesc{RequiredFlags: []*flag.FlagSet{FlagSetMultihopSwapRoutes()}},
 		QueryFnName:         "EstimateSwapExactAmountOut",
 		CustomFlagOverrides: customRouterFlagOverride,
 	}, &queryproto.EstimateSwapExactAmountOutRequest{}
 }
 
 // GetCmdNumPools return number of pools available.
-func GetCmdNumPools() (*percocli.QueryDescriptor, *queryproto.NumPoolsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdNumPools() (*osmocli.QueryDescriptor, *queryproto.NumPoolsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "num-pools",
 		Short: "Query number of pools",
 		Long:  "{{.Short}}",
@@ -71,8 +71,8 @@ func GetCmdNumPools() (*percocli.QueryDescriptor, *queryproto.NumPoolsRequest) {
 }
 
 // GetCmdAllPools return all pools available across Percosis modules.
-func GetCmdAllPools() (*percocli.QueryDescriptor, *queryproto.AllPoolsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdAllPools() (*osmocli.QueryDescriptor, *queryproto.AllPoolsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "all-pools",
 		Short: "Query all pools on the Percosis chain",
 		Long:  "{{.Short}}",
@@ -80,8 +80,8 @@ func GetCmdAllPools() (*percocli.QueryDescriptor, *queryproto.AllPoolsRequest) {
 }
 
 // GetCmdPool returns pool information.
-func GetCmdPool() (*percocli.QueryDescriptor, *queryproto.PoolRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdPool() (*osmocli.QueryDescriptor, *queryproto.PoolRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "pool [poolID]",
 		Short: "Query pool",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -89,8 +89,8 @@ func GetCmdPool() (*percocli.QueryDescriptor, *queryproto.PoolRequest) {
 	}, &queryproto.PoolRequest{}
 }
 
-func GetCmdSpotPrice() (*percocli.QueryDescriptor, *queryproto.SpotPriceRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdSpotPrice() (*osmocli.QueryDescriptor, *queryproto.SpotPriceRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "spot-price <pool-ID> [quote-asset-denom] [base-asset-denom]",
 		Short: "Query spot-price",
 		Long: `Query spot-price
@@ -136,8 +136,8 @@ func EstimateSwapExactAmountOutParseArgs(args []string, fs *flag.FlagSet) (proto
 }
 
 // GetCmdEstimateSinglePoolSwapExactAmountIn returns estimation of output coin when amount of x token input.
-func GetCmdEstimateSinglePoolSwapExactAmountIn() (*percocli.QueryDescriptor, *queryproto.EstimateSinglePoolSwapExactAmountInRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdEstimateSinglePoolSwapExactAmountIn() (*osmocli.QueryDescriptor, *queryproto.EstimateSinglePoolSwapExactAmountInRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "estimate-single-pool-swap-exact-amount-in <poolID> <tokenIn> <tokenOutDenom>",
 		Short: "Query estimate-single-pool-swap-exact-amount-in",
 		Long: `Query estimate-single-pool-swap-exact-amount-in.{{.ExampleHeader}}
@@ -147,8 +147,8 @@ func GetCmdEstimateSinglePoolSwapExactAmountIn() (*percocli.QueryDescriptor, *qu
 }
 
 // GetCmdEstimateSinglePoolSwapExactAmountOut returns estimation of input coin to get exact amount of x token output.
-func GetCmdEstimateSinglePoolSwapExactAmountOut() (*percocli.QueryDescriptor, *queryproto.EstimateSinglePoolSwapExactAmountOutRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdEstimateSinglePoolSwapExactAmountOut() (*osmocli.QueryDescriptor, *queryproto.EstimateSinglePoolSwapExactAmountOutRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "estimate-single-pool-swap-exact-amount-out <poolID> <tokenInDenom> <tokenOut>",
 		Short: "Query estimate-single-pool-swap-exact-amount-out",
 		Long: `Query estimate-single-pool-swap-exact-amount-out.{{.ExampleHeader}}
@@ -157,8 +157,8 @@ func GetCmdEstimateSinglePoolSwapExactAmountOut() (*percocli.QueryDescriptor, *q
 	}, &queryproto.EstimateSinglePoolSwapExactAmountOutRequest{}
 }
 
-func GetCmdTotalPoolLiquidity() (*percocli.QueryDescriptor, *queryproto.TotalPoolLiquidityRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdTotalPoolLiquidity() (*osmocli.QueryDescriptor, *queryproto.TotalPoolLiquidityRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "total-pool-liquidity [poolID]",
 		Short: "Query total-pool-liquidity",
 		Long: `{{.Short}} 

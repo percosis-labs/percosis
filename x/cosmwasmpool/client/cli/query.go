@@ -10,21 +10,21 @@ import (
 
 // NewQueryCmd returns the cli query commands for this module.
 func NewQueryCmd() *cobra.Command {
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 
 	qcGetter := queryproto.NewQueryClient
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdPools)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdContractInfoByPoolId)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdPools)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdContractInfoByPoolId)
 	cmd.AddCommand(
-		percocli.GetParams[*queryproto.ParamsRequest](
+		osmocli.GetParams[*queryproto.ParamsRequest](
 			types.ModuleName, queryproto.NewQueryClient),
 	)
 
 	return cmd
 }
 
-func GetCmdPools() (*percocli.QueryDescriptor, *queryproto.PoolsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdPools() (*osmocli.QueryDescriptor, *queryproto.PoolsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "pools",
 		Short: "Query pools",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -32,8 +32,8 @@ func GetCmdPools() (*percocli.QueryDescriptor, *queryproto.PoolsRequest) {
 	}, &queryproto.PoolsRequest{}
 }
 
-func GetCmdContractInfoByPoolId() (*percocli.QueryDescriptor, *queryproto.ContractInfoByPoolIdRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdContractInfoByPoolId() (*osmocli.QueryDescriptor, *queryproto.ContractInfoByPoolIdRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "contract-info [pool-id]",
 		Short: "Query contract info by pool id",
 		Long: `{{.Short}}{{.ExampleHeader}}

@@ -20,23 +20,23 @@ import (
 // GetQueryCmd returns the query commands for this module.
 func GetQueryCmd() *cobra.Command {
 	// group incentives queries under a subcommand
-	cmd := percocli.QueryIndexCmd(types.ModuleName)
+	cmd := osmocli.QueryIndexCmd(types.ModuleName)
 	qcGetter := types.NewQueryClient
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdGauges)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdToDistributeCoins)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdGaugeByID)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdActiveGauges)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdActiveGaugesPerDenom)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdUpcomingGauges)
-	percocli.AddQueryCmd(cmd, qcGetter, GetCmdUpcomingGaugesPerDenom)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdGauges)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdToDistributeCoins)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdGaugeByID)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdActiveGauges)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdActiveGaugesPerDenom)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdUpcomingGauges)
+	osmocli.AddQueryCmd(cmd, qcGetter, GetCmdUpcomingGaugesPerDenom)
 	cmd.AddCommand(GetCmdRewardsEst())
 
 	return cmd
 }
 
 // GetCmdGauges returns all available gauges.
-func GetCmdGauges() (*percocli.QueryDescriptor, *types.GaugesRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdGauges() (*osmocli.QueryDescriptor, *types.GaugesRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "gauges",
 		Short: "Query all available gauges",
 		Long:  "{{.Short}}",
@@ -44,8 +44,8 @@ func GetCmdGauges() (*percocli.QueryDescriptor, *types.GaugesRequest) {
 }
 
 // GetCmdToDistributeCoins returns coins that are going to be distributed.
-func GetCmdToDistributeCoins() (*percocli.QueryDescriptor, *types.ModuleToDistributeCoinsRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdToDistributeCoins() (*osmocli.QueryDescriptor, *types.ModuleToDistributeCoinsRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "to-distribute-coins",
 		Short: "Query coins that is going to be distributed",
 		Long:  `{{.Short}}`,
@@ -53,8 +53,8 @@ func GetCmdToDistributeCoins() (*percocli.QueryDescriptor, *types.ModuleToDistri
 }
 
 // GetCmdGaugeByID returns a gauge by ID.
-func GetCmdGaugeByID() (*percocli.QueryDescriptor, *types.GaugeByIDRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdGaugeByID() (*osmocli.QueryDescriptor, *types.GaugeByIDRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "gauge-by-id [id]",
 		Short: "Query gauge by id.",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -64,8 +64,8 @@ func GetCmdGaugeByID() (*percocli.QueryDescriptor, *types.GaugeByIDRequest) {
 }
 
 // GetCmdActiveGauges returns active gauges.
-func GetCmdActiveGauges() (*percocli.QueryDescriptor, *types.ActiveGaugesRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdActiveGauges() (*osmocli.QueryDescriptor, *types.ActiveGaugesRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "active-gauges",
 		Short: "Query active gauges",
 		Long:  `{{.Short}}`,
@@ -73,8 +73,8 @@ func GetCmdActiveGauges() (*percocli.QueryDescriptor, *types.ActiveGaugesRequest
 }
 
 // GetCmdActiveGaugesPerDenom returns active gauges for a specified denom.
-func GetCmdActiveGaugesPerDenom() (*percocli.QueryDescriptor, *types.ActiveGaugesPerDenomRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdActiveGaugesPerDenom() (*osmocli.QueryDescriptor, *types.ActiveGaugesPerDenomRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "active-gauges-per-den [den]denom [denom]",
 		Short: "Query active gauges per denom",
 		Long: `{{.Short}}{{.ExampleHeader}}
@@ -83,8 +83,8 @@ func GetCmdActiveGaugesPerDenom() (*percocli.QueryDescriptor, *types.ActiveGauge
 }
 
 // GetCmdUpcomingGauges returns scheduled gauges.
-func GetCmdUpcomingGauges() (*percocli.QueryDescriptor, *types.UpcomingGaugesRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdUpcomingGauges() (*osmocli.QueryDescriptor, *types.UpcomingGaugesRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "upcoming-gauges",
 		Short: "Query upcoming gauges",
 		Long:  `{{.Short}}`,
@@ -92,8 +92,8 @@ func GetCmdUpcomingGauges() (*percocli.QueryDescriptor, *types.UpcomingGaugesReq
 }
 
 // GetCmdUpcomingGaugesPerDenom returns scheduled gauges for specified denom..
-func GetCmdUpcomingGaugesPerDenom() (*percocli.QueryDescriptor, *types.UpcomingGaugesPerDenomRequest) {
-	return &percocli.QueryDescriptor{
+func GetCmdUpcomingGaugesPerDenom() (*osmocli.QueryDescriptor, *types.UpcomingGaugesPerDenomRequest) {
+	return &osmocli.QueryDescriptor{
 		Use:   "upcoming-gauges-per-denom [denom]",
 		Short: "Query scheduled gauges per denom",
 		Long:  `{{.Short}}`,

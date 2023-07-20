@@ -13,7 +13,7 @@ import (
 // We test the custom duration parser via this
 func TestRecoveredSinceQueryCmd(t *testing.T) {
 	desc, _ := cli.RecoveredSinceQueryCmd()
-	tcs := map[string]percocli.QueryCliTestCase[*queryproto.RecoveredSinceDowntimeOfLengthRequest]{
+	tcs := map[string]osmocli.QueryCliTestCase[*queryproto.RecoveredSinceDowntimeOfLengthRequest]{
 		"basic test": {
 			Cmd: "30s 10m",
 			ExpectedQuery: &queryproto.RecoveredSinceDowntimeOfLengthRequest{
@@ -51,5 +51,5 @@ func TestRecoveredSinceQueryCmd(t *testing.T) {
 			},
 		},
 	}
-	percocli.RunQueryTestCases(t, desc, tcs)
+	osmocli.RunQueryTestCases(t, desc, tcs)
 }

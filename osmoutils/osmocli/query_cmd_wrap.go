@@ -1,4 +1,4 @@
-package percocli
+package osmocli
 
 import (
 	"context"
