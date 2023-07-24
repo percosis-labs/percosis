@@ -7,8 +7,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s"
 	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 	clmodel "github.com/percosis-labs/percosis/x/concentrated-liquidity/model"

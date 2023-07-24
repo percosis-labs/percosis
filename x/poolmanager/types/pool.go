@@ -4,7 +4,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	proto "github.com/gogo/protobuf/proto"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 )
 
 // PoolI defines an interface for pools that hold tokens.

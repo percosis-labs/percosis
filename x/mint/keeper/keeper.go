@@ -7,7 +7,7 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/x/mint/types"
 	poolincentivestypes "github.com/percosis-labs/percosis/x/pool-incentives/types"
 

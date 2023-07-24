@@ -16,9 +16,9 @@ import (
 	paramskeeper "github.com/cosmos/cosmos-sdk/x/params/keeper"
 	paramstypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/noapptest"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/noapptest"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 )
 
 // We need to setup a test suite with account keeper

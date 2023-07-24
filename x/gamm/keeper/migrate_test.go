@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
 	"github.com/percosis-labs/percosis/app/apptesting"
 	"github.com/percosis-labs/percosis/x/gamm/types"
 	gammmigration "github.com/percosis-labs/percosis/x/gamm/types/migration"

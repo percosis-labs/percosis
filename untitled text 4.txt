@@ -1,0 +1,2456 @@
+0
+club_name "Arsenal - Football"
+staker_address "juno10etkjh545jjx8de38jexcs39pnq5znnp3a699d"
+staking_start_timestamp "1671632571999044307"
+staked_amount "99000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+1
+club_name "Liverpool - Football"
+staker_address "juno10etkjh545jjx8de38jexcs39pnq5znnp3a699d"
+staking_start_timestamp "1665421139186369756"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+2
+club_name "Liverpool - Football"
+staker_address "juno10gkr0xujp6ssggd6rfv9v60efh8m30ylx2khv0"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+3
+club_name "Washington Nationals - Baseball"
+staker_address "juno10gkr0xujp6ssggd6rfv9v60efh8m30ylx2khv0"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+4
+club_name "Brooklyn Nets - Basketball"
+staker_address "juno10hwsk4lh46xca5zcm93hpwp9arq2yx0hdwyjk6"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+5
+club_name "Los Angeles Lakers - Basketball"
+staker_address "juno10hwsk4lh46xca5zcm93hpwp9arq2yx0hdwyjk6"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+6
+club_name "Green Bay Packers - American Football"
+staker_address "juno10lnxkvncgdxqv8z8aee9pvyf9h8ddcmlq8kwr9"
+staking_start_timestamp "1672174986753734611"
+staked_amount "3000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+7
+club_name "Argentina - Football"
+staker_address "juno128s0628a7p8vntrn9lk2wtzmrzwf3vf3gfkmdt"
+staking_start_timestamp "1665740276455726360"
+staked_amount "13400000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+8
+club_name "San Francisco Giants - Baseball"
+staker_address "juno128s0628a7p8vntrn9lk2wtzmrzwf3vf3gfkmdt"
+staking_start_timestamp "1665740029950387563"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+9
+club_name "Los Angeles Angels - Baseball"
+staker_address "juno12hv0zzzhw3yr5cdmsvev6ygf3xe8v82tfct3ks"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+10
+club_name "Buffalo Bills - American Football"
+staker_address "juno12tp8dkx5g7nfjgpknggks93q7nlur6yydf44yw"
+staking_start_timestamp "1665413942477099616"
+staked_amount "4718790000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+11
+club_name "England - Football"
+staker_address "juno132lz34dwgzfc8g8may404rksrsv6nt8lq32rml"
+staking_start_timestamp "1665414130163417077"
+staked_amount "3553080000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+12
+club_name "Manchester City - Football"
+staker_address "juno132lz34dwgzfc8g8may404rksrsv6nt8lq32rml"
+staking_start_timestamp "1665414130163417077"
+staked_amount "7480840000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+13
+club_name "Liverpool - Football"
+staker_address "juno13cpzepvuj9n0utu00cmun0f4a98enttzw29jcv"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2324560000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+14
+club_name "Green Bay Packers - American Football"
+staker_address "juno13jsyt6jfqwsen7syuayvkypka6zzth6lqn2k35"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+15
+club_name "Borussia Dortmund - Football"
+staker_address "juno13rahkx54qeaknt3uk7d2a9upetyznf62tt85lh"
+staking_start_timestamp "1665413942477099616"
+staked_amount "4925970000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+16
+club_name "New England Patriots - American Football"
+staker_address "juno13xjrerteau5qrtr8a53zd0aj969xzw5qhxgvgt"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1207620000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+17
+club_name "PSG - Football"
+staker_address "juno13xjrerteau5qrtr8a53zd0aj969xzw5qhxgvgt"
+staking_start_timestamp "1665413942477099616"
+staked_amount "11632290000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+18
+club_name "Ajax - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889033399566273"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+19
+club_name "Al Hilal S - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889051262926659"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+20
+club_name "Al Sadd - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890309493794774"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+21
+club_name "Atalanta - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890285454064563"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+22
+club_name "Bayern Munich Fan Club - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890260609375376"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+23
+club_name "Belgium - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890236189215416"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+24
+club_name "Borussia Dortmund - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890218192809039"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+25
+club_name "Brazil - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890205781767038"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+26
+club_name "Brooklyn Nets - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890175302597890"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+27
+club_name "Buffalo Bills - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890156718873626"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+28
+club_name "Chelsea - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890144417217464"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+29
+club_name "Chennai Super Kings - Cricket"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890120444285415"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+30
+club_name "Chicago Bears - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890096384425038"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+31
+club_name "Chicago Bulls - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890072356598969"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+32
+club_name "Dallas Cowboys - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890054304702043"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+33
+club_name "Dallas Mavericks - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890035813668587"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+34
+club_name "Denver Broncos - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890023932072212"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+35
+club_name "Fan Club Utrecht - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671890005806020638"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+36
+club_name "Feyenoord Rotterdam - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889987810332527"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+37
+club_name "France - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889970155992157"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+38
+club_name "Germany - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889951246148658"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+39
+club_name "Green Bay Packers - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889812964449364"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+40
+club_name "Houston Rockets - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889800434259062"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+41
+club_name "India - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889770026778618"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+42
+club_name "Inter Milan - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889751290280469"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+43
+club_name "Italy - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889727270423826"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+44
+club_name "Juventus - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889709082004411"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+45
+club_name "Kansas City Chiefs - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889697225696682"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+46
+club_name "Kolkata Knight Riders - Cricket"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889679019802546"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+47
+club_name "Liverpool - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889666614679484"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+48
+club_name "Los Angeles Angels - Baseball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889648768559168"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+49
+club_name "Los Angeles Lakers - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889624964883949"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+50
+club_name "Manchester City - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889589047792490"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+51
+club_name "Manchester United - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889571223263266"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+52
+club_name "Memphis Grizzlies - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889553064693808"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+53
+club_name "Miami Dolphins - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889534240154449"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+54
+club_name "Milwaukee Bucks - Basketball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889515922107932"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+55
+club_name "Mumbai Indians - Cricket"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889497558423775"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+56
+club_name "New England Patriots - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889479528457684"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+57
+club_name "New England Revolution - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889461515492294"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+58
+club_name "New York Yankees - Baseball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889449370692547"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+59
+club_name "PSG - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889208544643548"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+60
+club_name "PSV Eindhoven - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889196641571646"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+61
+club_name "Philadelphia Eagles - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889178717284334"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+62
+club_name "Poland - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889160421847545"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+63
+club_name "Real Madrid - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889136543158902"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+64
+club_name "Royal Challengers Bangalore - Cricket"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889118220972509"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+65
+club_name "San Francisco Giants - Baseball"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889106084879497"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+66
+club_name "Sevilla Fan Club - Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889087711122971"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+67
+club_name "Tampa Bay Buccaneers - American Football"
+staker_address "juno1408ycttvtnkszuxsald7qvfhhr3c7xw6kxqga4"
+staking_start_timestamp "1671889069435945918"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+68
+club_name "Ajax - Football"
+staker_address "juno145xte5t95nc7um25s859cfcnkc45w9mvefzugq"
+staking_start_timestamp "1670924229554551162"
+staked_amount "7000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+69
+club_name "Al Hilal S - Football"
+staker_address "juno145xte5t95nc7um25s859cfcnkc45w9mvefzugq"
+staking_start_timestamp "1671178474342641990"
+staked_amount "3000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+70
+club_name "Al Sadd - Football"
+staker_address "juno145xte5t95nc7um25s859cfcnkc45w9mvefzugq"
+staking_start_timestamp "1671217681961403793"
+staked_amount "1000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+71
+club_name "Arsenal - Football"
+staker_address "juno145xte5t95nc7um25s859cfcnkc45w9mvefzugq"
+staking_start_timestamp "1671218464370168902"
+staked_amount "3000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+72
+club_name "New York Yankees - Baseball"
+staker_address "juno15zqntg33gzpkawfr73n743mcnr6rhg4ql7p3y0"
+staking_start_timestamp "1665659202793710360"
+staked_amount "250000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+73
+club_name "Ajax - Football"
+staker_address "juno1628nq7a4e94gw9xcczvc3mzyg7vqw4vszxc5ek"
+staking_start_timestamp "1666554484914676669"
+staked_amount "6229000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+74
+club_name "Barcelona - Football"
+staker_address "juno1628nq7a4e94gw9xcczvc3mzyg7vqw4vszxc5ek"
+staking_start_timestamp "1666189899614446656"
+staked_amount "5000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+75
+club_name "Ajax - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665458480829313749"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+76
+club_name "Al Hilal S - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665458491022226094"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+77
+club_name "Al Sadd - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665458503143936313"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+78
+club_name "Argentina - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665413942477099616"
+staked_amount "120000020000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+79
+club_name "Arsenal - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665414130163417077"
+staked_amount "458409640000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+80
+club_name "Atalanta - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665458521383811753"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+81
+club_name "Bayern Munich Fan Club - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665458539997416075"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+82
+club_name "Belgium - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665458551948059842"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+83
+club_name "Borussia Dortmund - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665497323118938933"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+84
+club_name "Brazil - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665421372218586823"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+85
+club_name "Brooklyn Nets - Basketball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665497376135358832"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+86
+club_name "Buffalo Bills - American Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665497423776890525"
+staked_amount "200000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+87
+club_name "Chelsea - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1671711345256841591"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+88
+club_name "Chennai Super Kings - Cricket"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1671711375096153826"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+89
+club_name "Chicago Bears - American Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1671817239285030468"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+90
+club_name "Chicago Bulls - Basketball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665982785093181375"
+staked_amount "100000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+91
+club_name "Dallas Cowboys - American Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283699687306930"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+92
+club_name "Dallas Mavericks - Basketball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283717655756323"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+93
+club_name "Denver Broncos - American Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283736030682201"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+94
+club_name "Fan Club Utrecht - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283754279128536"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+95
+club_name "Feyenoord Rotterdam - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283778476252720"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+96
+club_name "France - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283796456319604"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+97
+club_name "Germany - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283831677596576"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+98
+club_name "Green Bay Packers - American Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283855964250924"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+99
+club_name "Houston Rockets - Basketball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283874532881664"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+100
+club_name "India - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665414130163417077"
+staked_amount "132572320000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+101
+club_name "Inter Milan - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283893105859903"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+102
+club_name "Italy - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1666283911210207404"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+103
+club_name "Juventus - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1671879815142834705"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+104
+club_name "Kolkata Knight Riders - Cricket"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1671879863367913511"
+staked_amount "20000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+105
+club_name "Liverpool - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1671817166893780515"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+106
+club_name "Los Angeles Lakers - Basketball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665414130163417077"
+staked_amount "200066960000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+107
+club_name "Manchester United - Football"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665982936076584385"
+staked_amount "150000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+108
+club_name "New York Yankees - Baseball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665414130163417077"
+staked_amount "23264580000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+109
+club_name "San Francisco Giants - Baseball"
+staker_address "juno16w6chfrrg930cqcfewdzse6szgjk6577rj4jds"
+staking_start_timestamp "1665982990328614470"
+staked_amount "100000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+110
+club_name "Fan Club Utrecht - Football"
+staker_address "juno16x9ynd6v2nkvgqfgsc3w9nwe2q6v2wfvj2mn35"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1278440000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+111
+club_name "Real Madrid - Football"
+staker_address "juno16x9ynd6v2nkvgqfgsc3w9nwe2q6v2wfvj2mn35"
+staking_start_timestamp "1665413942477099616"
+staked_amount "100000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+112
+club_name "New York Yankees - Baseball"
+staker_address "juno17mejkaedrv978s99lmrs3xugxpwd3hjq76t2p8"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2371100000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+113
+club_name "Arsenal - Football"
+staker_address "juno17mtmjwr8aegumgz8nkq45fsmy5zd9qw3glhzsr"
+staking_start_timestamp "1665678042152682528"
+staked_amount "2500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+114
+club_name "Barcelona - Football"
+staker_address "juno17mtmjwr8aegumgz8nkq45fsmy5zd9qw3glhzsr"
+staking_start_timestamp "1665678161591678121"
+staked_amount "101000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+115
+club_name "Ajax - Football"
+staker_address "juno17u9m4sgfg3ahdenacfq4j6uzm4qucf5u5phx9p"
+staking_start_timestamp "1665414130163417077"
+staked_amount "12672270000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+116
+club_name "New England Patriots - American Football"
+staker_address "juno184p2jhsjxfgjdthxxnnpwxusvusd3uyft802uf"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+117
+club_name "Ajax - Football"
+staker_address "juno18827ahntzvtt9rucytumlgy7rgpvgc32skheun"
+staking_start_timestamp "1665564316457764531"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+118
+club_name "Barcelona - Football"
+staker_address "juno18827ahntzvtt9rucytumlgy7rgpvgc32skheun"
+staking_start_timestamp "1666029169296883870"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+119
+club_name "Bayern Munich Fan Club - Football"
+staker_address "juno18827ahntzvtt9rucytumlgy7rgpvgc32skheun"
+staking_start_timestamp "1666029247861180735"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+120
+club_name "Al Sadd - Football"
+staker_address "juno18nvzkc48042mkks8p98nk7dsrmzygsdqgfu7ag"
+staking_start_timestamp "1666116091355877172"
+staked_amount "600000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+121
+club_name "Barcelona - Football"
+staker_address "juno18nvzkc48042mkks8p98nk7dsrmzygsdqgfu7ag"
+staking_start_timestamp "1666115977102849318"
+staked_amount "1000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+122
+club_name "Inter Milan - Football"
+staker_address "juno18nvzkc48042mkks8p98nk7dsrmzygsdqgfu7ag"
+staking_start_timestamp "1666116011468144276"
+staked_amount "1000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+123
+club_name "PSG - Football"
+staker_address "juno18nvzkc48042mkks8p98nk7dsrmzygsdqgfu7ag"
+staking_start_timestamp "1666111730273630995"
+staked_amount "1000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+124
+club_name "Real Madrid - Football"
+staker_address "juno18nvzkc48042mkks8p98nk7dsrmzygsdqgfu7ag"
+staking_start_timestamp "1666115922957962542"
+staked_amount "1000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+125
+club_name "Ajax - Football"
+staker_address "juno18rrjwjpvun3chf0sf5mffqefcwcnp3e637282x"
+staking_start_timestamp "1665416622927806305"
+staked_amount "155000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+126
+club_name "Argentina - Football"
+staker_address "juno18rrjwjpvun3chf0sf5mffqefcwcnp3e637282x"
+staking_start_timestamp "1671897405743037738"
+staked_amount "50000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+127
+club_name "Washington Nationals - Baseball"
+staker_address "juno19fumfhgfvp2q7lffvaypwwmuz93wfrdsrjulgz"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+128
+club_name "Green Bay Packers - American Football"
+staker_address "juno19qn4nc0hspf8wrtmpvs5esqc9nvlncg57yc94c"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+129
+club_name "Arsenal - Football"
+staker_address "juno1a6zd5stguyeuce8garxm8lhned3rtlcq2mlw84"
+staking_start_timestamp "1666057974036323462"
+staked_amount "5000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+130
+club_name "Manchester City - Football"
+staker_address "juno1a6zd5stguyeuce8garxm8lhned3rtlcq2mlw84"
+staking_start_timestamp "1666003803112471580"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+131
+club_name "PSG - Football"
+staker_address "juno1a9crn83zwq9p65ka5606uhtzrqj5lz228l8k3j"
+staking_start_timestamp "1671825321763797760"
+staked_amount "0"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+132
+club_name "Brooklyn Nets - Basketball"
+staker_address "juno1acdwttp2s090697t0y0z8xcwhrq325esf7xffh"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347700000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+133
+club_name "Manchester City - Football"
+staker_address "juno1afuv7jmaxgalv89sx7c8hy273hk9u3sncjddh5"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+134
+club_name "Miami Dolphins - American Football"
+staker_address "juno1afuv7jmaxgalv89sx7c8hy273hk9u3sncjddh5"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2557130000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+135
+club_name "Ajax - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671705448500085060"
+staked_amount "100000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+136
+club_name "Al Hilal S - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671705466347766518"
+staked_amount "100000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+137
+club_name "Al Sadd - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671707592521190770"
+staked_amount "100000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+138
+club_name "Argentina - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671707485649444447"
+staked_amount "1000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+139
+club_name "Arsenal - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671707455020192804"
+staked_amount "3000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+140
+club_name "Atalanta - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671707834558624057"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+141
+club_name "Barcelona - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671708015518636753"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+142
+club_name "Bayern Munich Fan Club - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671708610045906785"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+143
+club_name "Belgium - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671708712777318371"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+144
+club_name "Borussia Dortmund - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671708869473291369"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+145
+club_name "Brazil - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1665413942477099616"
+staked_amount "30537820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+146
+club_name "Brooklyn Nets - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671708911760408697"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+147
+club_name "Buffalo Bills - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710259033865534"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+148
+club_name "Chelsea - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710289282127510"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+149
+club_name "Chennai Super Kings - Cricket"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710520533413110"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+150
+club_name "Chicago Bears - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710544736894390"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+151
+club_name "Chicago Bulls - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710563383482405"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+152
+club_name "Dallas Cowboys - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710587669202602"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+153
+club_name "Dallas Mavericks - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710624019375192"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+154
+club_name "Denver Broncos - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710648363548108"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+155
+club_name "England - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710684659527537"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+156
+club_name "Fan Club Utrecht - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710709243652677"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+157
+club_name "Feyenoord Rotterdam - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710739681497168"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+158
+club_name "France - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710762419234540"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+159
+club_name "Germany - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710786812700352"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+160
+club_name "Green Bay Packers - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710829618866390"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+161
+club_name "Houston Rockets - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671710847672133363"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+162
+club_name "India - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711047887556838"
+staked_amount "2000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+163
+club_name "Inter Milan - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711077851037176"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+164
+club_name "Italy - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711102607337471"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+165
+club_name "Juventus - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711145458148330"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+166
+club_name "Kansas City Chiefs - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711175533747504"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+167
+club_name "Kolkata Knight Riders - Cricket"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711200024173813"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+168
+club_name "Liverpool - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1665414130163417077"
+staked_amount "16627530000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+169
+club_name "Los Angeles Angels - Baseball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711266331459703"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+170
+club_name "Los Angeles Lakers - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184350000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+171
+club_name "Manchester City - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711368996771162"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+172
+club_name "Manchester United - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711392948223890"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+173
+club_name "Memphis Grizzlies - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711434868427433"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+174
+club_name "Miami Dolphins - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711453628809317"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+175
+club_name "Milwaukee Bucks - Basketball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711490344959496"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+176
+club_name "Mumbai Indians - Cricket"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711508601646317"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+177
+club_name "New England Patriots - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711563075037510"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+178
+club_name "New England Revolution - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711581128087850"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+179
+club_name "New York Yankees - Baseball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184350000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+180
+club_name "PSG - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711629046623392"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+181
+club_name "PSV Eindhoven - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711653367311843"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+182
+club_name "Philadelphia Eagles - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711671202689451"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+183
+club_name "Poland - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711695083159177"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+184
+club_name "Real Madrid - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711713223812785"
+staked_amount "500000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+185
+club_name "Royal Challengers Bangalore - Cricket"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1665414130163417077"
+staked_amount "12811890000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+186
+club_name "San Francisco Giants - Baseball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711731245749609"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+187
+club_name "Sevilla Fan Club - Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711749430126604"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+188
+club_name "Sunrisers Hyderabad - Cricket"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711767452588722"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+189
+club_name "Tampa Bay Buccaneers - American Football"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711791168967596"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+190
+club_name "Washington Nationals - Baseball"
+staker_address "juno1am27r4lpshq8vpztwrzwn77hzjn0cavylg7rqf"
+staking_start_timestamp "1671711814931337934"
+staked_amount "200000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+191
+club_name "Arsenal - Football"
+staker_address "juno1apvsay7qcqx6mrh7d4acva0y3chf445rjpezxf"
+staking_start_timestamp "1665916100843139900"
+staked_amount "2000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+192
+club_name "Ajax - Football"
+staker_address "juno1avwjwmdhl7uw9n5j3qy6dwa25nxxajlhrlqm2p"
+staking_start_timestamp "1665416658972918531"
+staked_amount "1000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+193
+club_name "Arsenal - Football"
+staker_address "juno1c0dgwxvccwv4evvksypmw8hj80enalhqnp6akk"
+staking_start_timestamp "1665413942477099616"
+staked_amount "7087620000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+194
+club_name "Washington Nationals - Baseball"
+staker_address "juno1c0dgwxvccwv4evvksypmw8hj80enalhqnp6akk"
+staking_start_timestamp "1665414130163417077"
+staked_amount "3695070000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+195
+club_name "Poland - Football"
+staker_address "juno1cg3wlxa739mdq2v4gf4r2za77yypgl9uz6stxy"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2371090000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+196
+club_name "Ajax - Football"
+staker_address "juno1cvg5dsprer8c7xl0cl966qq0emnjthtwveprfc"
+staking_start_timestamp "1665605523760320717"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+197
+club_name "Sevilla Fan Club - Football"
+staker_address "juno1d6v6rq4qnfgtqx2q4rpw40pa4g2wxszeehy6c3"
+staking_start_timestamp "1665413942477099616"
+staked_amount "16271090000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+198
+club_name "Al Hilal S - Football"
+staker_address "juno1dfqmnv8yn3auz5s5ca7sukz7772m2m5mp059cy"
+staking_start_timestamp "1665413942477099616"
+staked_amount "44750000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+199
+club_name "Al Sadd - Football"
+staker_address "juno1dfqmnv8yn3auz5s5ca7sukz7772m2m5mp059cy"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1393780000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+200
+club_name "Inter Milan - Football"
+staker_address "juno1dng7j00fyt4zj2h3uua65myvva4cmk3rnydc2f"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2394360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+201
+club_name "Sevilla Fan Club - Football"
+staker_address "juno1dng7j00fyt4zj2h3uua65myvva4cmk3rnydc2f"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1207630000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+202
+club_name "Mumbai Indians - Cricket"
+staker_address "juno1dnkzxf5n98htpqwn7h6fhqam8vdtmm73ulhgw3"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+203
+club_name "Al Sadd - Football"
+staker_address "juno1dph0g7mctpxmn6yzhgpumq4fvkypv0pmnnq6vw"
+staking_start_timestamp "1665413942477099616"
+staked_amount "604709900000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+204
+club_name "Houston Rockets - Basketball"
+staker_address "juno1dph0g7mctpxmn6yzhgpumq4fvkypv0pmnnq6vw"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1277430000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+205
+club_name "Dallas Mavericks - Basketball"
+staker_address "juno1e45ldlfy42daqfv5c34m63g3mcu0w2d5lf3kdg"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+206
+club_name "Liverpool - Football"
+staker_address "juno1e45ldlfy42daqfv5c34m63g3mcu0w2d5lf3kdg"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+207
+club_name "Tampa Bay Buccaneers - American Football"
+staker_address "juno1e45ldlfy42daqfv5c34m63g3mcu0w2d5lf3kdg"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+208
+club_name "Liverpool - Football"
+staker_address "juno1e945wx8sulrr0jmwh93hytp2pmsxx2k4fuvyv5"
+staking_start_timestamp "1665677668768968221"
+staked_amount "4000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+209
+club_name "New York Yankees - Baseball"
+staker_address "juno1e945wx8sulrr0jmwh93hytp2pmsxx2k4fuvyv5"
+staking_start_timestamp "1665678468554136421"
+staked_amount "4000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+210
+club_name "Real Madrid - Football"
+staker_address "juno1e945wx8sulrr0jmwh93hytp2pmsxx2k4fuvyv5"
+staking_start_timestamp "1665677313053351533"
+staked_amount "4876000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+211
+club_name "Al Hilal S - Football"
+staker_address "juno1ekv2t6mjq5navgqjluhl9gvfp32mdm4p0c3x8x"
+staking_start_timestamp "1665420465581542248"
+staked_amount "10000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+212
+club_name "Argentina - Football"
+staker_address "juno1ekv2t6mjq5navgqjluhl9gvfp32mdm4p0c3x8x"
+staking_start_timestamp "1665420556879090245"
+staked_amount "15000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+213
+club_name "Houston Rockets - Basketball"
+staker_address "juno1el5l7rh08rd4fzrxs7f00ujqq76ky2xcgam4gp"
+staking_start_timestamp "1665414130163417077"
+staked_amount "0"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+214
+club_name "Juventus - Football"
+staker_address "juno1el5l7rh08rd4fzrxs7f00ujqq76ky2xcgam4gp"
+staking_start_timestamp "1665413942477099616"
+staked_amount "1000900000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+215
+club_name "Ajax - Football"
+staker_address "juno1feq3jl0tuz0x4hy8leh6rhc6k6grpu66p77drk"
+staking_start_timestamp "1666188859476300147"
+staked_amount "51000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+216
+club_name "Ajax - Football"
+staker_address "juno1g0aqnrlcq9eaadsxwudkhc7ep25gpga2gm0wgy"
+staking_start_timestamp "1672843511289486153"
+staked_amount "10000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+217
+club_name "Liverpool - Football"
+staker_address "juno1g7rjxgngyu3nukd85jpk57jz4538ch8hw2sute"
+staking_start_timestamp "1665414130163417077"
+staked_amount "46927140000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+218
+club_name "Manchester City - Football"
+staker_address "juno1gaw7eagrenml2z2a9jstyvuz30j4qxesrltu05"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2324550000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+219
+club_name "Manchester City - Football"
+staker_address "juno1hyxea0xa08wv4y30v5q9g2jwls8cgdk66yzp23"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2440900000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+220
+club_name "India - Football"
+staker_address "juno1hz4yjs3yfyhxkwjg45r65zaluuhrp8c4jrs86v"
+staking_start_timestamp "1665413942477099616"
+staked_amount "5097700000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+221
+club_name "Liverpool - Football"
+staker_address "juno1j37aljze5knsr5rh6pr7wlfpkglx3vv4plfpqc"
+staking_start_timestamp "1665516323625605934"
+staked_amount "1001000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+222
+club_name "Royal Challengers Bangalore - Cricket"
+staker_address "juno1j4puyq8jqa8glk29s7cteanmudvs0ljxx3ard8"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+223
+club_name "Juventus - Football"
+staker_address "juno1jece8t34lfcs43ugaauyjplc7gs9zwn5d3jg0n"
+staking_start_timestamp "1665414130163417077"
+staked_amount "3555450000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+224
+club_name "Ajax - Football"
+staker_address "juno1jemax3m2j7qnqt0f3s82ehvjtp0enfa4td40hk"
+staking_start_timestamp "1665414130163417077"
+staked_amount "13538000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+225
+club_name "Manchester United - Football"
+staker_address "juno1jftmddzq2zxaa39ky2nudj3p3nkdd7tfntse89"
+staking_start_timestamp "1671459854164105484"
+staked_amount "5000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+226
+club_name "Sunrisers Hyderabad - Cricket"
+staker_address "juno1jwu3df64fvdhrnre66tvt0wlqe0s32edvwwlka"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2533860000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+227
+club_name "Germany - Football"
+staker_address "juno1keetv7hdnh4txflctpejezrsm3qycmkfcv60sj"
+staking_start_timestamp "1665413942477099616"
+staked_amount "4651490000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+228
+club_name "Washington Nationals - Baseball"
+staker_address "juno1kxpfnesq9vm7z9uwnfmt83pwwdwgc28vk6hfy0"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+229
+club_name "Liverpool - Football"
+staker_address "juno1luenw70qaffh40dgyrknrpuvjh7n8ufg3kw7kw"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+230
+club_name "Houston Rockets - Basketball"
+staker_address "juno1mckpt4rz6jp3raeer97gcxv3894dxfk9g9nx54"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+231
+club_name "Manchester United - Football"
+staker_address "juno1mk2yasfjljrvrxrjwj5823xh6lctkjc9aw7p56"
+staking_start_timestamp "1665988679616352842"
+staked_amount "10000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+232
+club_name "Ajax - Football"
+staker_address "juno1mta0dhctcdcpf5t8dt5g6c6ft8u0zxrn7w3gl2"
+staking_start_timestamp "1666430943634266809"
+staked_amount "25000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+233
+club_name "Ajax - Football"
+staker_address "juno1n42rh26hxuqtqrufymtehfk0xft2f5hv67c0j6"
+staking_start_timestamp "1675767770544870771"
+staked_amount "11000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+234
+club_name "New York Yankees - Baseball"
+staker_address "juno1nu5jfcwjcwaqxea9m56w2gwnyaugenylpwsyaz"
+staking_start_timestamp "1671835204118946746"
+staked_amount "50000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+235
+club_name "Arsenal - Football"
+staker_address "juno1p3njlnxsnucnktt2m5qd9vfexvqv5qs573smgr"
+staking_start_timestamp "1665569163069494939"
+staked_amount "888000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+236
+club_name "Dallas Cowboys - American Football"
+staker_address "juno1p5dx69r0034dfhttl564q3dnargz3hd92ydm9q"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347700000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+237
+club_name "Philadelphia Eagles - American Football"
+staker_address "juno1ph8t05un67egpeuxjke4sv5499vw6ra8ejs32f"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+238
+club_name "Manchester United - Football"
+staker_address "juno1pp6dh6mskk020pg722jenpn2g3qen9l0hmfylx"
+staking_start_timestamp "1665413942477099616"
+staked_amount "29997900000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+239
+club_name "Arsenal - Football"
+staker_address "juno1q308uvw9lpyqc507732840nkczx9mv5j2rwfve"
+staking_start_timestamp "1672407708747182515"
+staked_amount "1000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+240
+club_name "Liverpool - Football"
+staker_address "juno1q308uvw9lpyqc507732840nkczx9mv5j2rwfve"
+staking_start_timestamp "1671851109053894863"
+staked_amount "7000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+241
+club_name "Manchester City - Football"
+staker_address "juno1q52my0v8gsvtemdch49rh8xaac6e4w5622pvfn"
+staking_start_timestamp "1665413942477099616"
+staked_amount "3562310000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+242
+club_name "Miami Dolphins - American Football"
+staker_address "juno1q52my0v8gsvtemdch49rh8xaac6e4w5622pvfn"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1189010000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+243
+club_name "Liverpool - Football"
+staker_address "juno1q5x63dwfq76cgqcry05rpmyf9ylr9jcq8pkcv6"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2324560000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+244
+club_name "Chelsea - Football"
+staker_address "juno1r76xl88z8payyt0zx333c5v5hh5rjp2aja2efr"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2440910000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+245
+club_name "Dallas Mavericks - Basketball"
+staker_address "juno1rl6zs8zpv8z06gkj9ytgnf8g7hlssxr4uhwqr5"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347700000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+246
+club_name "Juventus - Football"
+staker_address "juno1rl6zs8zpv8z06gkj9ytgnf8g7hlssxr4uhwqr5"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+247
+club_name "Liverpool - Football"
+staker_address "juno1rl6zs8zpv8z06gkj9ytgnf8g7hlssxr4uhwqr5"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1207630000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+248
+club_name "Tampa Bay Buccaneers - American Football"
+staker_address "juno1rl6zs8zpv8z06gkj9ytgnf8g7hlssxr4uhwqr5"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+249
+club_name "Arsenal - Football"
+staker_address "juno1se0v4mlnzq4s3pndfxu5fwzhp70jelr40r0q6g"
+staking_start_timestamp "1671016716587719232"
+staked_amount "0"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+250
+club_name "Juventus - Football"
+staker_address "juno1sjerj0cfr78zjx2p76te3waj48dmu5q6der6mg"
+staking_start_timestamp "1665414130163417077"
+staked_amount "4728180000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+251
+club_name "Arsenal - Football"
+staker_address "juno1skf4uk8fwvxaq796vje79k85r587086rcdy3e5"
+staking_start_timestamp "1665863940700929465"
+staked_amount "2000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+252
+club_name "Argentina - Football"
+staker_address "juno1sxe0q4ayv9gtkmmgnqye60ze5h7nmm5m4kjwlh"
+staking_start_timestamp "1671880558701992169"
+staked_amount "120000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+253
+club_name "Brooklyn Nets - Basketball"
+staker_address "juno1sxe0q4ayv9gtkmmgnqye60ze5h7nmm5m4kjwlh"
+staking_start_timestamp "1671880908006970161"
+staked_amount "106000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+254
+club_name "Buffalo Bills - American Football"
+staker_address "juno1sxe0q4ayv9gtkmmgnqye60ze5h7nmm5m4kjwlh"
+staking_start_timestamp "1671880980442515622"
+staked_amount "90000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+255
+club_name "Royal Challengers Bangalore - Cricket"
+staker_address "juno1sxe0q4ayv9gtkmmgnqye60ze5h7nmm5m4kjwlh"
+staking_start_timestamp "1671881010672989190"
+staked_amount "100000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+256
+club_name "San Francisco Giants - Baseball"
+staker_address "juno1sxe0q4ayv9gtkmmgnqye60ze5h7nmm5m4kjwlh"
+staking_start_timestamp "1671881041361252735"
+staked_amount "100000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+257
+club_name "Ajax - Football"
+staker_address "juno1sxeycthdwwnzy98f6e7wnshvmymhrd42tnp25m"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1210010000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+258
+club_name "Arsenal - Football"
+staker_address "juno1tjs54s5y077auvqcqt9rhv6cndyvlmh2n5srgv"
+staking_start_timestamp "1665420864948987301"
+staked_amount "6000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+259
+club_name "Chicago Bulls - Basketball"
+staker_address "juno1trsc97vgya5eul7dseccnzk7ynfeaqfv94a95e"
+staking_start_timestamp "1665477456501403539"
+staked_amount "300001000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+260
+club_name "England - Football"
+staker_address "juno1trsc97vgya5eul7dseccnzk7ynfeaqfv94a95e"
+staking_start_timestamp "1665413942477099616"
+staked_amount "205903290000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+261
+club_name "Liverpool - Football"
+staker_address "juno1tyj3ls8w296a2pjn3ysyrjf9v0q0gfjyq364uc"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+262
+club_name "Washington Nationals - Baseball"
+staker_address "juno1tyj3ls8w296a2pjn3ysyrjf9v0q0gfjyq364uc"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+263
+club_name "Chennai Super Kings - Cricket"
+staker_address "juno1tzn95umh6xaqgrl0cqm7xs0hzfwpcskhccz54d"
+staking_start_timestamp "1666025261608110093"
+staked_amount "1001000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+264
+club_name "Liverpool - Football"
+staker_address "juno1tzn95umh6xaqgrl0cqm7xs0hzfwpcskhccz54d"
+staking_start_timestamp "1666025069621049321"
+staked_amount "1001000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+265
+club_name "Los Angeles Lakers - Basketball"
+staker_address "juno1tzn95umh6xaqgrl0cqm7xs0hzfwpcskhccz54d"
+staking_start_timestamp "1666025849503197809"
+staked_amount "1001000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+266
+club_name "Royal Challengers Bangalore - Cricket"
+staker_address "juno1tzn95umh6xaqgrl0cqm7xs0hzfwpcskhccz54d"
+staking_start_timestamp "1666025597041057035"
+staked_amount "1001000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+267
+club_name "Chennai Super Kings - Cricket"
+staker_address "juno1uajkd872jll96vw6qqr6nvapfm6hr976qrxfun"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347830000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+268
+club_name "Fan Club Utrecht - Football"
+staker_address "juno1umx59cxpult9j76c9ueu85kzultfzlmngalc2a"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347820000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+269
+club_name "Real Madrid - Football"
+staker_address "juno1umx59cxpult9j76c9ueu85kzultfzlmngalc2a"
+staking_start_timestamp "1665414130163417077"
+staked_amount "7362120000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+270
+club_name "Manchester United - Football"
+staker_address "juno1uxylhand5q6j3xg2qxwzl9hez7a20j8aeh2jms"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2347830000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+271
+club_name "Arsenal - Football"
+staker_address "juno1vd6nak22s0cs3nc3qpnkvr3m9gv96xnntah8xe"
+staking_start_timestamp "1672102471774713844"
+staked_amount "9254000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+272
+club_name "Manchester United - Football"
+staker_address "juno1vd6nak22s0cs3nc3qpnkvr3m9gv96xnntah8xe"
+staking_start_timestamp "1665414130163417077"
+staked_amount "11655560000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+273
+club_name "Ajax - Football"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1666283711634308199"
+staked_amount "0"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+274
+club_name "Argentina - Football"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1666283754279128536"
+staked_amount "20000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+275
+club_name "Brazil - Football"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1671817729727175444"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+276
+club_name "Chelsea - Football"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1671818051658131872"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+277
+club_name "India - Football"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1665414130163417077"
+staked_amount "32347830000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+278
+club_name "Los Angeles Lakers - Basketball"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1671817669202476239"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+279
+club_name "New York Yankees - Baseball"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+280
+club_name "Poland - Football"
+staker_address "juno1vsatytmjva20hfp8xz8fnxtkt6u2azgje22hsx"
+staking_start_timestamp "1666283663141160889"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+281
+club_name "Liverpool - Football"
+staker_address "juno1w3x49n5dtuc72ky8m4vmx8pkrlv33vnvp8z6hw"
+staking_start_timestamp "1665414130163417077"
+staked_amount "2324550000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+282
+club_name "Tampa Bay Buccaneers - American Football"
+staker_address "juno1w3x49n5dtuc72ky8m4vmx8pkrlv33vnvp8z6hw"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+283
+club_name "Feyenoord Rotterdam - Football"
+staker_address "juno1w687tllee8hlq9v4c2nmhjndarc2mwex8rad8f"
+staking_start_timestamp "1665413942477099616"
+staked_amount "4905070000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+284
+club_name "Miami Dolphins - American Football"
+staker_address "juno1yesazejfmyn725nh4jxp39cnj2ada88mxgtchz"
+staking_start_timestamp "1672033250120231236"
+staked_amount "2000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+285
+club_name "Ajax - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666285910856835352"
+staked_amount "20000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+286
+club_name "Al Hilal S - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507245597678410"
+staked_amount "0"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+287
+club_name "Argentina - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286911121674158"
+staked_amount "20000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+288
+club_name "Arsenal - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666285977137635585"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+289
+club_name "Barcelona - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286048756786543"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+290
+club_name "Bayern Munich Fan Club - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286007240694456"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+291
+club_name "Brazil - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286103634889215"
+staked_amount "20000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+292
+club_name "Chelsea - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286189597715451"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+293
+club_name "England - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666508643396285502"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+294
+club_name "France - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507403405555778"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+295
+club_name "Germany - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286249882136769"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+296
+club_name "Italy - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507757260139977"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+297
+club_name "Juventus - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286292112226609"
+staked_amount "20000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+298
+club_name "Liverpool - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666286334415272384"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+299
+club_name "Manchester City - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507605723070908"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+300
+club_name "Manchester United - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507581666428537"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+301
+club_name "PSG - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507805366034303"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+302
+club_name "Real Madrid - Football"
+staker_address "juno1z2uecn5khjexks0reldjjfm5a9ssj6zvny5x85"
+staking_start_timestamp "1666507847874759189"
+staked_amount "10000000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+303
+club_name "Real Madrid - Football"
+staker_address "juno1zfh6ccddln9e4fkwse7fcquvecpnnxyk334jwz"
+staking_start_timestamp "1665569454826995399"
+staked_amount "1000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+304
+club_name "New England Revolution - Football"
+staker_address "juno1zgt0mpkguy2hj9mm0zn5tcs3lj4j70pvuqr7mx"
+staking_start_timestamp "1665413942477099616"
+staked_amount "2347700000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+305
+club_name "Washington Nationals - Baseball"
+staker_address "juno1zgt0mpkguy2hj9mm0zn5tcs3lj4j70pvuqr7mx"
+staking_start_timestamp "1665414130163417077"
+staked_amount "1184360000"
+staking_duration 0
+reward_amount "0"
+auto_stake false
+306
+club_name "Arsenal - Football"
+staker_address "juno1zrkcj9j46s8tts3avyjs8qma0styt554jntcuq"
+staking_start_timestamp "1665634150117029162"
+staked_amount "4046000000"
+staking_duration 0
+reward_amount "0"
+auto_stake false

@@ -10,8 +10,8 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	sdkrand "github.com/percosis-labs/percosis/simulation/simtypes/random"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/internal/cfmm_common"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/internal/test_helpers"

@@ -16,7 +16,7 @@ import (
 
 	packetforwardingtypes "github.com/strangelove-ventures/packet-forward-middleware/v4/router/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
 	ibchookskeeper "github.com/osmosis-labs/osmosis/x/ibc-hooks/keeper"
 
 	ibcratelimittypes "github.com/percosis-labs/percosis/x/ibc-rate-limit/types"
@@ -25,7 +25,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	coretypes "github.com/tendermint/tendermint/rpc/core/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	appparams "github.com/percosis-labs/percosis/app/params"
 	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
 	"github.com/percosis-labs/percosis/tests/e2e/configurer/chain"

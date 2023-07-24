@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	"github.com/percosis-labs/percosis/x/gamm/types"
 )
 

@@ -15,7 +15,7 @@ import (
 
 	govtypes "github.com/cosmos/cosmos-sdk/x/gov/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 	clmodel "github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )

@@ -8,7 +8,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	"github.com/percosis-labs/percosis/app/apptesting"
 	"github.com/percosis-labs/percosis/x/twap"
 	"github.com/percosis-labs/percosis/x/twap/types"

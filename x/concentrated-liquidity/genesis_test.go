@@ -10,7 +10,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/osmomath s/accum"
 	percoapp "github.com/percosis-labs/percosis/app"
 	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
 	clmodule "github.com/percosis-labs/percosis/x/concentrated-liquidity/clmodule"

@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/x/lockup/types"
 
 	errorsmod "cosmossdk.io/errors"

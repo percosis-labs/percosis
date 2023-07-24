@@ -5,7 +5,7 @@ import (
 
 	errorsmod "cosmossdk.io/errors"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 	"github.com/percosis-labs/percosis/x/superfluid/types"
 

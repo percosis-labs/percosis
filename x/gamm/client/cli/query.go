@@ -15,7 +15,7 @@ import (
 	flag "github.com/spf13/pflag"
 	"gopkg.in/yaml.v2"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
 	"github.com/percosis-labs/percosis/x/gamm/types"
 )

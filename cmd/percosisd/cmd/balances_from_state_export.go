@@ -12,7 +12,7 @@ import (
 	tmjson "github.com/tendermint/tendermint/libs/json"
 	tmtypes "github.com/tendermint/tendermint/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	appparams "github.com/percosis-labs/percosis/app/params"
 	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"

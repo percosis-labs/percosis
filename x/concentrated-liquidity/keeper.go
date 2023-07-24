@@ -7,7 +7,7 @@ import (
 
 	paramtypes "github.com/cosmos/cosmos-sdk/x/params/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
 

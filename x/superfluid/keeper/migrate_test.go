@@ -11,8 +11,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/app/apptesting"
 	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"

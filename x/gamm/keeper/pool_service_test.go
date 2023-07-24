@@ -8,8 +8,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	_ "github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	_ "github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
 	"github.com/percosis-labs/percosis/x/gamm/types"

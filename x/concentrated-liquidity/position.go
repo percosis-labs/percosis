@@ -12,8 +12,8 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/cosmos/cosmos-sdk/types/query"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/accum"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"

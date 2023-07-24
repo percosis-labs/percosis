@@ -13,8 +13,8 @@ import (
 	"github.com/stretchr/testify/suite"
 	abci "github.com/tendermint/tendermint/abci/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/app/apptesting"
 	v16 "github.com/percosis-labs/percosis/app/upgrades/v16"
 	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"

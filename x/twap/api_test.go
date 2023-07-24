@@ -8,7 +8,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
 	sdkrand "github.com/percosis-labs/percosis/simulation/simtypes/random"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
 	"github.com/percosis-labs/percosis/x/twap"

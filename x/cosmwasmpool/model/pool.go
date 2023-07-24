@@ -9,7 +9,7 @@ import (
 	"github.com/percosis-labs/percosis/x/cosmwasmpool/types"
 	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"
 
-	cosmwasmutils "github.com/osmosis-labs/osmosis/osmoutils/cosmwasm"
+	cosmwasmutils "github.com/percosis-labs/percosis/osmomath s/cosmwasm"
 )
 
 type Pool struct {

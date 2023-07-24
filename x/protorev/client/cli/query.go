@@ -6,7 +6,7 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 
 	"github.com/percosis-labs/percosis/x/protorev/types"
 )

@@ -13,7 +13,7 @@ import (
 
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/sumtree"
+	"github.com/percosis-labs/percosis/osmomath s/sumtree"
 	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 	"github.com/percosis-labs/percosis/x/lockup/types"
 )

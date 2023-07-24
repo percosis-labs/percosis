@@ -40,7 +40,7 @@ message Pool {
   string token1 = 7;
 
   string current_sqrt_price = 8 [
-    (gogoproto.customtype) = "github.com/osmosis-labs/osmosis/osmomath.BigDec",
+    (gogoproto.customtype) = "github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury.BigDec",
     (gogoproto.moretags) = "yaml:\"spot_price\"",
     (gogoproto.nullable) = false
   ];

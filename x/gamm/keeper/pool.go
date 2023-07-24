@@ -9,7 +9,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	sdkerrors "github.com/cosmos/cosmos-sdk/types/errors"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
 	"github.com/percosis-labs/percosis/x/gamm/types"

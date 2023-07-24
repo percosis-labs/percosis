@@ -7,7 +7,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	appparams "github.com/percosis-labs/percosis/app/params"
 	"github.com/percosis-labs/percosis/x/poolmanager/types"
 )

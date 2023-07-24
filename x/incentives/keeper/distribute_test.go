@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/suite"
 
-	osmoutils "github.com/osmosis-labs/osmosis/osmoutils"
+	osmoutils "github.com/percosis-labs/percosis/osmomath s"
 	appParams "github.com/percosis-labs/percosis/app/params"
 	"github.com/percosis-labs/percosis/x/incentives/types"
 	incentivetypes "github.com/percosis-labs/percosis/x/incentives/types"

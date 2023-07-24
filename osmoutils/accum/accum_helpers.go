@@ -3,7 +3,7 @@ package accum
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 )
 
 // initOrUpdatePosition creates a new position or override an existing position

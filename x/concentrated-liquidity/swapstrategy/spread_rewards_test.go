@@ -3,7 +3,7 @@ package swapstrategy_test
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/swapstrategy"
 )
 

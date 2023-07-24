@@ -9,8 +9,8 @@ import (
 	"github.com/spf13/pflag"
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 	"github.com/percosis-labs/percosis/x/valset-pref/types"
 )
 

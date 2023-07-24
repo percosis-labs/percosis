@@ -6,7 +6,7 @@ import (
 
 	legacysimulationtype "github.com/cosmos/cosmos-sdk/types/simulation"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/simulation/simtypes"
 	"github.com/percosis-labs/percosis/x/lockup/keeper"
 	"github.com/percosis-labs/percosis/x/lockup/types"

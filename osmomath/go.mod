@@ -1,4 +1,4 @@
-module github.com/osmosis-labs/osmosis/osmomath
+module github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury
 
 go 1.20
 

@@ -57,7 +57,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/x/upgrade"
 	upgradetypes "github.com/cosmos/cosmos-sdk/x/upgrade/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/partialord"
+	"github.com/percosis-labs/percosis/osmomath s/partialord"
 	appparams "github.com/percosis-labs/percosis/app/params"
 	_ "github.com/percosis-labs/percosis/client/docs/statik"
 	"github.com/percosis-labs/percosis/simulation/simtypes"

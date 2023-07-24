@@ -17,7 +17,7 @@ import (
 	"github.com/ignite/cli/ignite/pkg/cosmosaccount"
 	"github.com/ignite/cli/ignite/pkg/cosmosclient"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	clqueryproto "github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"

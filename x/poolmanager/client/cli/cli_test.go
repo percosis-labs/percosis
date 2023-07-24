@@ -7,8 +7,8 @@ import (
 	"github.com/gogo/protobuf/proto"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 	"github.com/percosis-labs/percosis/app"
 	"github.com/percosis-labs/percosis/x/poolmanager/client/cli"
 	"github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"

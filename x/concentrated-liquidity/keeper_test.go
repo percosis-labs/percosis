@@ -10,9 +10,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/accum"
 	concentrated_liquidity "github.com/percosis-labs/percosis/x/concentrated-liquidity"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/clmocks"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"

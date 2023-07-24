@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 	"github.com/percosis-labs/percosis/x/downtime-detector/client/cli"
 	"github.com/percosis-labs/percosis/x/downtime-detector/client/queryproto"
 	"github.com/percosis-labs/percosis/x/downtime-detector/types"

@@ -7,8 +7,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/testutil"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s/accum"
 	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/client/queryproto"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"

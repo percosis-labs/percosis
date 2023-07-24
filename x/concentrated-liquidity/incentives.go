@@ -11,8 +11,8 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/query"
 	"golang.org/x/exp/slices"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/osmomath s"
+	"github.com/percosis-labs/percosis/osmomath s/accum"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"

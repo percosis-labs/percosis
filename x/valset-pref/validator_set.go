@@ -9,8 +9,8 @@ import (
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 	"github.com/gogo/protobuf/proto"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s"
 	appParams "github.com/percosis-labs/percosis/app/params"
 	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 	"github.com/percosis-labs/percosis/x/valset-pref/types"

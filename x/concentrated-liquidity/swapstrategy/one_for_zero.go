@@ -7,7 +7,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	dbm "github.com/tendermint/tm-db"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )

@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	stakingtypes "github.com/cosmos/cosmos-sdk/x/staking/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 	"github.com/percosis-labs/percosis/x/superfluid/types"
 )

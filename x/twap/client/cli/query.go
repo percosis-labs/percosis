@@ -10,7 +10,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/client/flags"
 	"github.com/spf13/cobra"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmocli"
+	"github.com/percosis-labs/percosis/osmomath s/osmocli"
 	poolmanager "github.com/percosis-labs/percosis/x/poolmanager/client/queryproto"
 	"github.com/percosis-labs/percosis/x/twap/client/queryproto"
 	"github.com/percosis-labs/percosis/x/twap/types"

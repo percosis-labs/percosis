@@ -11,7 +11,7 @@ import (
 	"github.com/cosmos/cosmos-sdk/types/query"
 	distributiontypes "github.com/cosmos/cosmos-sdk/x/distribution/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/accum"
+	"github.com/percosis-labs/percosis/osmomath s/accum"
 	cl "github.com/percosis-labs/percosis/x/concentrated-liquidity"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/model"

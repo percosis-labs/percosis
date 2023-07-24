@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/suite"
 	tmproto "github.com/tendermint/tendermint/proto/tendermint/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/osmoassert"
+	"github.com/percosis-labs/percosis/osmomath s/osmoassert"
 	percoapp "github.com/percosis-labs/percosis/app"
 	"github.com/percosis-labs/percosis/x/mint/keeper"
 	"github.com/percosis-labs/percosis/x/mint/types"

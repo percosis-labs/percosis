@@ -8,7 +8,7 @@ import (
 	wasmtypes "github.com/CosmWasm/wasmd/x/wasm/types"
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils/cosmwasm"
+	"github.com/percosis-labs/percosis/osmomath s/cosmwasm"
 	"github.com/percosis-labs/percosis/x/cosmwasmpool/cosmwasm/msg"
 	"github.com/percosis-labs/percosis/x/cosmwasmpool/cosmwasm/msg/transmuter"
 	"github.com/percosis-labs/percosis/x/cosmwasmpool/model"

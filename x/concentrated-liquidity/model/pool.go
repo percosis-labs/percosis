@@ -7,8 +7,8 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
+	"github.com/percosis-labs/percosis/osmomath s"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 	poolmanagertypes "github.com/percosis-labs/percosis/x/poolmanager/types"

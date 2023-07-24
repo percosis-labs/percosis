@@ -6,7 +6,7 @@ import (
 
 	"github.com/tendermint/tendermint/libs/log"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 	incentivestypes "github.com/percosis-labs/percosis/x/incentives/types"
 	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"

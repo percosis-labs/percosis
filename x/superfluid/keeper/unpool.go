@@ -5,7 +5,7 @@ import (
 
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmoutils"
+	"github.com/percosis-labs/percosis/osmomath s"
 	gammtypes "github.com/percosis-labs/percosis/x/gamm/types"
 	lockuptypes "github.com/percosis-labs/percosis/x/lockup/types"
 

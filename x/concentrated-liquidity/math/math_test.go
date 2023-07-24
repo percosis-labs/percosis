@@ -6,7 +6,7 @@ import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 	"github.com/stretchr/testify/require"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
+	"github.com/percosis-labs/percosis/osmomath v0.0.3-dev.fury"
 	"github.com/percosis-labs/percosis/x/concentrated-liquidity/math"
 	cltypes "github.com/percosis-labs/percosis/x/concentrated-liquidity/types"
 )
