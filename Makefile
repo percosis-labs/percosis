@@ -110,14 +110,14 @@ all: install lint test
 
 build: check_version go.sum
 	mkdir -p $(BUILDDIR)/
-	GOWORK=off go build -mod=readonly  $(BUILD_FLAGS) -o $(BUILDDIR)/ $(GO_MODULE)/cmd/percosisd
+	GOWORK=off go build   $(BUILD_FLAGS) -o $(BUILDDIR)/ $(GO_MODULE)/cmd/percosisd
 
 build-all: check_version go.sum
 	mkdir -p $(BUILDDIR)/
-	GOWORK=off go build -mod=readonly $(BUILD_FLAGS) -o $(BUILDDIR)/ ./...
+	GOWORK=off go build  $(BUILD_FLAGS) -o $(BUILDDIR)/ ./...
 
 install: check_version go.sum
-	GOWORK=off go install -mod=readonly $(BUILD_FLAGS) $(GO_MODULE)/cmd/percosisd
+	GOWORK=off go install $(BUILD_FLAGS) $(GO_MODULE)/cmd/percosisd
 
 # Cross-building for arm64 from amd64 (or viceversa) takes
 # a lot of time due to QEMU virtualization but it's the only way (afaik)
@@ -166,7 +166,7 @@ build-linux: go.sum
 
 build-contract-tests-hooks:
 	mkdir -p $(BUILDDIR)
-	go build -mod=readonly $(BUILD_FLAGS) -o $(BUILDDIR)/ ./cmd/contract_tests
+	go build  $(BUILD_FLAGS) -o $(BUILDDIR)/ ./cmd/contract_tests
 
 go-mod-cache: go.sum
 	@echo "--> Download go modules to local cache"
@@ -291,22 +291,22 @@ test: test-unit test-build
 test-all: test-race test-cover
 
 test-unit:
-	@VERSION=$(VERSION) SKIP_WASM_WSL_TESTS=$(SKIP_WASM_WSL_TESTS) go test -mod=readonly -tags='ledger test_ledger_mock norace' $(PACKAGES_UNIT)
+	@VERSION=$(VERSION) SKIP_WASM_WSL_TESTS=$(SKIP_WASM_WSL_TESTS) go test  -tags='ledger test_ledger_mock norace' $(PACKAGES_UNIT)
 
 test-race:
-	@VERSION=$(VERSION) go test -mod=readonly -race -tags='ledger test_ledger_mock' $(PACKAGES_UNIT)
+	@VERSION=$(VERSION) go test  -race -tags='ledger test_ledger_mock' $(PACKAGES_UNIT)
 
 test-cover:
-	@VERSION=$(VERSION) go test -mod=readonly -timeout 30m -coverprofile=coverage.txt -tags='norace' -covermode=atomic $(PACKAGES_UNIT)
+	@VERSION=$(VERSION) go test  -timeout 30m -coverprofile=coverage.txt -tags='norace' -covermode=atomic $(PACKAGES_UNIT)
 
 test-sim-suite:
-	@VERSION=$(VERSION) go test -mod=readonly $(PACKAGES_SIM)
+	@VERSION=$(VERSION) go test  $(PACKAGES_SIM)
 
 test-sim-app:
-	@VERSION=$(VERSION) go test -mod=readonly -run ^TestFullAppSimulation -v $(PACKAGES_SIM)
+	@VERSION=$(VERSION) go test  -run ^TestFullAppSimulation -v $(PACKAGES_SIM)
 
 test-sim-determinism:
-	@VERSION=$(VERSION) go test -mod=readonly -run ^TestAppStateDeterminism -v $(PACKAGES_SIM)
+	@VERSION=$(VERSION) go test  -run ^TestAppStateDeterminism -v $(PACKAGES_SIM)
 
 test-sim-bench:
 	@VERSION=$(VERSION) go test -benchmem -run ^BenchmarkFullAppSimulation -bench ^BenchmarkFullAppSimulation -cpuprofile cpu.out $(PACKAGES_SIM)
@@ -322,29 +322,29 @@ test-e2e: e2e-setup test-e2e-ci e2e-remove-resources
 # does not do any validation about the state of the Docker environment
 # As a result, avoid using this locally.
 test-e2e-ci:
-	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=False PERCOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -p 4
+	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=False PERCOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) go test  -timeout=25m -v $(PACKAGES_E2E) -p 4
 
 # test-e2e-debug runs a full e2e test suite but does
 # not attempt to delete Docker resources at the end.
 test-e2e-debug: e2e-setup
-	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=True PERCOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) PERCOSIS_E2E_SKIP_CLEANUP=True go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -count=1
+	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=True PERCOSIS_E2E_UPGRADE_VERSION=$(E2E_UPGRADE_VERSION) PERCOSIS_E2E_SKIP_CLEANUP=True go test  -timeout=25m -v $(PACKAGES_E2E) -count=1
 
 # test-e2e-short runs the e2e test with only short tests.
 # Does not delete any of the containers after running.
 # Deletes any existing containers before running.
 # Does not use Go cache.
 test-e2e-short: e2e-setup
-	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=True PERCOSIS_E2E_SKIP_UPGRADE=True PERCOSIS_E2E_SKIP_IBC=True PERCOSIS_E2E_SKIP_STATE_SYNC=True PERCOSIS_E2E_SKIP_CLEANUP=True go test -mod=readonly -timeout=25m -v $(PACKAGES_E2E) -count=1
+	@VERSION=$(VERSION) PERCOSIS_E2E=True PERCOSIS_E2E_DEBUG_LOG=True PERCOSIS_E2E_SKIP_UPGRADE=True PERCOSIS_E2E_SKIP_IBC=True PERCOSIS_E2E_SKIP_STATE_SYNC=True PERCOSIS_E2E_SKIP_CLEANUP=True go test  -timeout=25m -v $(PACKAGES_E2E) -count=1
 
 test-mutation:
 	@bash scripts/mutation-test.sh $(MODULES)
 
 benchmark:
-	@go test -mod=readonly -bench=. $(PACKAGES_UNIT)
+	@go test  -bench=. $(PACKAGES_UNIT)
 
 build-e2e-script:
 	mkdir -p $(BUILDDIR)
-	go build -mod=readonly $(BUILD_FLAGS) -o $(BUILDDIR)/ ./tests/e2e/initialization/$(E2E_SCRIPT_NAME)
+	go build  $(BUILD_FLAGS) -o $(BUILDDIR)/ ./tests/e2e/initialization/$(E2E_SCRIPT_NAME)
 
 docker-build-debug:
 	@DOCKER_BUILDKIT=1 docker build -t percolabs:${COMMIT} --build-arg BASE_IMG_TAG=debug --build-arg RUNNER_IMAGE=$(RUNNER_BASE_IMAGE_ALPINE) -f Dockerfile .

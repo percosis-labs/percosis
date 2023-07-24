@@ -3,7 +3,7 @@ package apptesting
 import (
 	sdk "github.com/cosmos/cosmos-sdk/types"
 
-	"github.com/osmosis-labs/osmosis/osmomath"
+	"github.com/percosis-labs/percosis/osmomath"
 	gammkeeper "github.com/percosis-labs/percosis/x/gamm/keeper"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/balancer"
 	"github.com/percosis-labs/percosis/x/gamm/pool-models/stableswap"
